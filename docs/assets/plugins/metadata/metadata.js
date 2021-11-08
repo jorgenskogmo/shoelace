@@ -306,7 +306,7 @@
       const version = document.createElement('div');
       version.classList.add('sidebar-version');
       version.textContent = isDev ? 'Development' : isNext ? 'Next' : metadata.package.version;
-      target.appendChild(version);
+      // target.appendChild(version);
 
       // Store version for reuse
       sessionStorage.setItem('klik-version', metadata.package.version);
@@ -325,7 +325,7 @@
           <klik-icon name="twitter"></klik-icon> Follow
         </klik-button>
       `;
-      target.appendChild(buttons);
+      // target.appendChild(buttons);
     });
 
     hook.beforeEach(async function (content, next) {

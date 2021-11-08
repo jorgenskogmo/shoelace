@@ -14,6 +14,8 @@
   - [Community](/resources/community)
   - [Contributing](/resources/contributing)
   - [Changelog](/resources/changelog)
+  - [Parity](/resources/parity)
+  - [Things todo](/resources/work)
 
 - Components
   - [Alert](/components/alert)

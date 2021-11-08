@@ -140,7 +140,7 @@ const App = () => (
 Use the `label` attribute to give the range an accessible label. For labels that contain HTML, use the `label` slot instead.
 
 ```html preview
-<klik-range label="Volume" min="0" max="100"></klik-input>
+<klik-range label="Volume" min="0" max="100"></klik-range>
 ```
 
 ```jsx react

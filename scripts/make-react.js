@@ -60,8 +60,6 @@ components.map(component => {
   index.push(`export { default as ${componentName} } from './${tagWithoutPrefix}';`);
   // index.push(`export { default as ${component.name} } from './${tagWithoutPrefix}';`);
 
-  console.log(`${component.name} > ${componentName}`);
-
   fs.writeFileSync(componentFile, source, 'utf8');
 });
 
