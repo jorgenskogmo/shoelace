@@ -1,30 +1,5 @@
 <div class="splash">
 <div class="splash-start">
-<img class="splash-logo" src="/assets/images/wordmark.svg" alt="Shoelace">
-
-# <span hidden>Shoelace:</span> A forward-thinking library of web components.
-
-- Works with all frameworks 🧩
-- Works with CDNs 🚛
-- Fully customizable with CSS 🎨
-- Includes a dark theme 🌛
-- Built with accessibility in mind ♿️
-- First-class [React support](/frameworks/react)
-- Open source 😸
-
-Designed in New Hampshire by [Cory LaViska](https://twitter.com/claviska).
-</div>
-<div class="splash-end">
-<img class="splash-image" src="/assets/images/undraw-content-team.svg" alt="Cartoon of people assembling components while standing on a giant laptop.">
-</div>
-</div>
-
-[![jsDelivr](https://data.jsdelivr.com/v1/package/npm/@shoelace-style/shoelace/badge)](https://www.jsdelivr.com/package/npm/@shoelace-style/shoelace)
-[![npm](https://img.shields.io/npm/dw/@shoelace-style/shoelace?label=npm&style=flat-square)](https://www.npmjs.com/package/@shoelace-style/shoelace)
-[![License](https://img.shields.io/badge/license-MIT-232323.svg?style=flat-square)](https://github.com/shoelace-style/shoelace/blob/next/LICENSE.md)<br>
-[![Discord](https://img.shields.io/badge/Discord-Join%20the%20chat-5965f2.svg?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/mg8f26C)
-[![Twitter](https://img.shields.io/badge/Twitter-Follow-00acee.svg?style=flat-square&logo=twitter&logoColor=white)](https://twitter.com/shoelace_style)
-[![Sponsor](https://img.shields.io/badge/GitHub-Code-232323.svg?style=flat-square&logo=github&logoColor=white)](https://github.com/shoelace-style/shoelace)
 
 ## Quick Start
 
