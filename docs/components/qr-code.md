@@ -1,6 +1,6 @@
 # QR Code
 
-[component-header:sl-qr-code]
+[component-header:klik-qr-code]
 
 Generates a [QR code](https://www.qrcode.com/) and renders it using the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
 
@@ -8,19 +8,19 @@ QR codes are useful for providing small pieces of information to users who can q
 
 ```html preview
 <div class="qr-overview">
-  <sl-qr-code value="https://shoelace.style/" label="Scan this code to visit Shoelace on the web!"></sl-qr-code>
+  <klik-qr-code value="https://shoelace.style/" label="Scan this code to visit Shoelace on the web!"></klik-qr-code>
   <br>
 
-  <sl-input maxlength="255" clearable></sl-input>
+  <klik-input maxlength="255" clearable></klik-input>
 </div>
 
 <script>
   const container = document.querySelector('.qr-overview');
-  const qrCode = container.querySelector('sl-qr-code');
-  const input = container.querySelector('sl-input');
+  const qrCode = container.querySelector('klik-qr-code');
+  const input = container.querySelector('klik-input');
 
   input.value = qrCode.value;
-  input.addEventListener('sl-input', () => qrCode.value = input.value);
+  input.addEventListener('klik-input', () => qrCode.value = input.value);
 </script>
 
 <style>
@@ -28,7 +28,7 @@ QR codes are useful for providing small pieces of information to users who can q
     max-width: 256px;
   }
 
-  .qr-overview sl-input {
+  .qr-overview klik-input {
     margin-top: 1rem;
   }
 </style>
@@ -43,7 +43,7 @@ const css = `
     max-width: 256px;
   }
 
-  .qr-overview sl-input {
+  .qr-overview klik-input {
     margin-top: 1rem;
   }
 `;
@@ -73,7 +73,7 @@ const App = () => {
 Use the `fill` and `background` attributes to modify the QR code's colors. You should always ensure good contrast for optimal compatibility with QR code scanners.
 
 ```html preview
-<sl-qr-code value="https://shoelace.style/" fill="deeppink" background="white"></sl-qr-code>
+<klik-qr-code value="https://shoelace.style/" fill="deeppink" background="white"></klik-qr-code>
 ```
 
 ```jsx react
@@ -89,7 +89,7 @@ const App = () => (
 Use the `size` attribute to change the size of the QR code.
 
 ```html preview
-<sl-qr-code value="https://shoelace.style/" size="64"></sl-qr-code>
+<klik-qr-code value="https://shoelace.style/" size="64"></klik-qr-code>
 ```
 
 ```jsx react
@@ -105,7 +105,7 @@ const App = () => (
 Create a rounded effect with the `radius` attribute.
 
 ```html preview
-<sl-qr-code value="https://shoelace.style/" radius="0.5"></sl-qr-code>
+<klik-qr-code value="https://shoelace.style/" radius="0.5"></klik-qr-code>
 ```
 
 ```jsx react
@@ -122,10 +122,10 @@ QR codes can be rendered with various levels of [error correction](https://www.q
 
 ```html preview
 <div class="qr-error-correction">
-  <sl-qr-code value="https://shoelace.style/" error-correction="L"></sl-qr-code>
-  <sl-qr-code value="https://shoelace.style/" error-correction="M"></sl-qr-code>
-  <sl-qr-code value="https://shoelace.style/" error-correction="Q"></sl-qr-code>
-  <sl-qr-code value="https://shoelace.style/" error-correction="H"></sl-qr-code>
+  <klik-qr-code value="https://shoelace.style/" error-correction="L"></klik-qr-code>
+  <klik-qr-code value="https://shoelace.style/" error-correction="M"></klik-qr-code>
+  <klik-qr-code value="https://shoelace.style/" error-correction="Q"></klik-qr-code>
+  <klik-qr-code value="https://shoelace.style/" error-correction="H"></klik-qr-code>
 </div>
 
 <style>
@@ -164,4 +164,4 @@ const App = () => {
 };
 ```
 
-[component-metadata:sl-qr-code]
+[component-metadata:klik-qr-code]

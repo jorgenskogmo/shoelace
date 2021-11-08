@@ -12,11 +12,11 @@ import '../icon/icon';
  * @slot - One or more breadcrumb items to display.
  * @slot separator - The separator to use between breadcrumb items.
  *
- * @dependency sl-icon
+ * @dependency klik-icon
  *
  * @csspart base - The component's base wrapper.
  */
-@customElement('sl-breadcrumb')
+@customElement('klik-breadcrumb')
 export default class SlBreadcrumb extends LitElement {
   static styles = styles;
 
@@ -43,7 +43,7 @@ export default class SlBreadcrumb extends LitElement {
 
   handleSlotChange() {
     const items = [...this.defaultSlot.assignedElements({ flatten: true })].filter(
-      item => item.tagName.toLowerCase() === 'sl-breadcrumb-item'
+      item => item.tagName.toLowerCase() === 'klik-breadcrumb-item'
     ) as SlBreadcrumbItem[];
 
     items.map((item, index) => {
@@ -69,7 +69,7 @@ export default class SlBreadcrumb extends LitElement {
       </nav>
 
       <slot name="separator" hidden aria-hidden="true">
-        <sl-icon name="chevron-right" library="system"></sl-icon>
+        <klik-icon name="chevron-right" library="system"></klik-icon>
       </slot>
     `;
   }
@@ -77,6 +77,6 @@ export default class SlBreadcrumb extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-breadcrumb': SlBreadcrumb;
+    'klik-breadcrumb': SlBreadcrumb;
   }
 }

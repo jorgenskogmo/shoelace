@@ -9,10 +9,10 @@ import styles from './include.styles';
  * @since 2.0
  * @status stable
  *
- * @event sl-load - Emitted when the included file is loaded.
- * @event {{ status: number }} sl-error - Emitted when the included file fails to load due to an error.
+ * @event klik-load - Emitted when the included file is loaded.
+ * @event {{ status: number }} klik-error - Emitted when the included file fails to load due to an error.
  */
-@customElement('sl-include')
+@customElement('klik-include')
 export default class SlInclude extends LitElement {
   static styles = styles;
 
@@ -52,7 +52,7 @@ export default class SlInclude extends LitElement {
       }
 
       if (!file.ok) {
-        emit(this, 'sl-error', { detail: { status: file.status } });
+        emit(this, 'klik-error', { detail: { status: file.status } });
         return;
       }
 
@@ -62,9 +62,9 @@ export default class SlInclude extends LitElement {
         [...this.querySelectorAll('script')].map(script => this.executeScript(script));
       }
 
-      emit(this, 'sl-load');
+      emit(this, 'klik-load');
     } catch {
-      emit(this, 'sl-error', { detail: { status: -1 } });
+      emit(this, 'klik-error', { detail: { status: -1 } });
     }
   }
 
@@ -75,6 +75,6 @@ export default class SlInclude extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-include': SlInclude;
+    'klik-include': SlInclude;
   }
 }

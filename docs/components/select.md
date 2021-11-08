@@ -1,19 +1,19 @@
 # Select
 
-[component-header:sl-select]
+[component-header:klik-select]
 
 Selects allow you to choose one or more items from a dropdown menu.
 
 ```html preview
-<sl-select>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-  <sl-divider></sl-divider>
-  <sl-menu-item value="option-4">Option 4</sl-menu-item>
-  <sl-menu-item value="option-5">Option 5</sl-menu-item>
-  <sl-menu-item value="option-6">Option 6</sl-menu-item>
-</sl-select>
+<klik-select>
+  <klik-menu-item value="option-1">Option 1</klik-menu-item>
+  <klik-menu-item value="option-2">Option 2</klik-menu-item>
+  <klik-menu-item value="option-3">Option 3</klik-menu-item>
+  <klik-divider></klik-divider>
+  <klik-menu-item value="option-4">Option 4</klik-menu-item>
+  <klik-menu-item value="option-5">Option 5</klik-menu-item>
+  <klik-menu-item value="option-6">Option 6</klik-menu-item>
+</klik-select>
 ```
 
 ```jsx react
@@ -32,7 +32,7 @@ const App = () => (
 );
 ```
 
-?> This component doesn't work with standard forms. Use [`<sl-form>`](/components/form) instead.
+?> This component doesn't work with standard forms. Use [`<klik-form>`](/components/form) instead.
 
 ## Examples
 
@@ -41,11 +41,11 @@ const App = () => (
 Use the `placeholder` attribute to add a placeholder.
 
 ```html preview
-<sl-select placeholder="Select one">
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<klik-select placeholder="Select one">
+  <klik-menu-item value="option-1">Option 1</klik-menu-item>
+  <klik-menu-item value="option-2">Option 2</klik-menu-item>
+  <klik-menu-item value="option-3">Option 3</klik-menu-item>
+</klik-select>
 ```
 
 ```jsx react
@@ -65,11 +65,11 @@ const App = () => (
 Use the `clearable` attribute to make the control clearable.
 
 ```html preview
-<sl-select placeholder="Clearable" clearable>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<klik-select placeholder="Clearable" clearable>
+  <klik-menu-item value="option-1">Option 1</klik-menu-item>
+  <klik-menu-item value="option-2">Option 2</klik-menu-item>
+  <klik-menu-item value="option-3">Option 3</klik-menu-item>
+</klik-select>
 ```
 
 ```jsx react
@@ -89,11 +89,11 @@ const App = () => (
 Add the `filled` attribute to draw a filled select.
 
 ```html preview
-<sl-select filled>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<klik-select filled>
+  <klik-menu-item value="option-1">Option 1</klik-menu-item>
+  <klik-menu-item value="option-2">Option 2</klik-menu-item>
+  <klik-menu-item value="option-3">Option 3</klik-menu-item>
+</klik-select>
 ```
 
 ```jsx react
@@ -113,11 +113,11 @@ const App = () => (
 Use the `pill` attribute to give selects rounded edges.
 
 ```html preview
-<sl-select pill>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<klik-select pill>
+  <klik-menu-item value="option-1">Option 1</klik-menu-item>
+  <klik-menu-item value="option-2">Option 2</klik-menu-item>
+  <klik-menu-item value="option-3">Option 3</klik-menu-item>
+</klik-select>
 ```
 
 ```jsx react
@@ -137,11 +137,11 @@ const App = () => (
 Use the `disabled` attribute to disable a select.
 
 ```html preview
-<sl-select placeholder="Disabled" disabled>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<klik-select placeholder="Disabled" disabled>
+  <klik-menu-item value="option-1">Option 1</klik-menu-item>
+  <klik-menu-item value="option-2">Option 2</klik-menu-item>
+  <klik-menu-item value="option-3">Option 3</klik-menu-item>
+</klik-select>
 ```
 
 ```jsx react
@@ -161,15 +161,15 @@ const App = () => (
 To allow multiple options to be selected, use the `multiple` attribute. It's a good practice to use `clearable` when this option is enabled. When using this option, `value` will be an array instead of a string.
 
 ```html preview
-<sl-select placeholder="Select a few" multiple clearable>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-  <sl-divider></sl-divider>
-  <sl-menu-item value="option-4">Option 4</sl-menu-item>
-  <sl-menu-item value="option-5">Option 5</sl-menu-item>
-  <sl-menu-item value="option-6">Option 6</sl-menu-item>
-</sl-select>
+<klik-select placeholder="Select a few" multiple clearable>
+  <klik-menu-item value="option-1">Option 1</klik-menu-item>
+  <klik-menu-item value="option-2">Option 2</klik-menu-item>
+  <klik-menu-item value="option-3">Option 3</klik-menu-item>
+  <klik-divider></klik-divider>
+  <klik-menu-item value="option-4">Option 4</klik-menu-item>
+  <klik-menu-item value="option-5">Option 5</klik-menu-item>
+  <klik-menu-item value="option-6">Option 6</klik-menu-item>
+</klik-select>
 ```
 
 ```jsx react
@@ -193,17 +193,17 @@ const App = () => (
 Options can be grouped visually using menu labels and dividers.
 
 ```html preview
-<sl-select placeholder="Select one">
-  <sl-menu-label>Group 1</sl-menu-label>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-  <sl-divider></sl-divider>
-  <sl-menu-label>Group 2</sl-menu-label>
-  <sl-menu-item value="option-4">Option 4</sl-menu-item>
-  <sl-menu-item value="option-5">Option 5</sl-menu-item>
-  <sl-menu-item value="option-6">Option 6</sl-menu-item>
-</sl-select>
+<klik-select placeholder="Select one">
+  <klik-menu-label>Group 1</klik-menu-label>
+  <klik-menu-item value="option-1">Option 1</klik-menu-item>
+  <klik-menu-item value="option-2">Option 2</klik-menu-item>
+  <klik-menu-item value="option-3">Option 3</klik-menu-item>
+  <klik-divider></klik-divider>
+  <klik-menu-label>Group 2</klik-menu-label>
+  <klik-menu-item value="option-4">Option 4</klik-menu-item>
+  <klik-menu-item value="option-5">Option 5</klik-menu-item>
+  <klik-menu-item value="option-6">Option 6</klik-menu-item>
+</klik-select>
 ```
 
 ```jsx react
@@ -229,27 +229,27 @@ const App = () => (
 Use the `size` attribute to change a select's size.
 
 ```html preview
-<sl-select placeholder="Small" size="small" multiple>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<klik-select placeholder="Small" size="small" multiple>
+  <klik-menu-item value="option-1">Option 1</klik-menu-item>
+  <klik-menu-item value="option-2">Option 2</klik-menu-item>
+  <klik-menu-item value="option-3">Option 3</klik-menu-item>
+</klik-select>
 
 <br>
 
-<sl-select placeholder="Medium" size="medium" multiple>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<klik-select placeholder="Medium" size="medium" multiple>
+  <klik-menu-item value="option-1">Option 1</klik-menu-item>
+  <klik-menu-item value="option-2">Option 2</klik-menu-item>
+  <klik-menu-item value="option-3">Option 3</klik-menu-item>
+</klik-select>
 
 <br>
 
-<sl-select placeholder="Large" size="large" multiple>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<klik-select placeholder="Large" size="large" multiple>
+  <klik-menu-item value="option-1">Option 1</klik-menu-item>
+  <klik-menu-item value="option-2">Option 2</klik-menu-item>
+  <klik-menu-item value="option-3">Option 3</klik-menu-item>
+</klik-select>
 ```
 
 ```jsx react
@@ -288,24 +288,24 @@ The `value` property is bound to the current selection. As the selection changes
 
 ```html preview
 <div class="selecting-example">
-  <sl-select>
-    <sl-menu-item value="option-1">Option 1</sl-menu-item>
-    <sl-menu-item value="option-2">Option 2</sl-menu-item>
-    <sl-menu-item value="option-3">Option 3</sl-menu-item>
-  </sl-select>
+  <klik-select>
+    <klik-menu-item value="option-1">Option 1</klik-menu-item>
+    <klik-menu-item value="option-2">Option 2</klik-menu-item>
+    <klik-menu-item value="option-3">Option 3</klik-menu-item>
+  </klik-select>
 
   <br>
 
-  <sl-button data-option="option-1">Set 1</sl-button>
-  <sl-button data-option="option-2">Set 2</sl-button>
-  <sl-button data-option="option-3">Set 3</sl-button>
+  <klik-button data-option="option-1">Set 1</klik-button>
+  <klik-button data-option="option-2">Set 2</klik-button>
+  <klik-button data-option="option-3">Set 3</klik-button>
 </div>
 
 <script>
   const container = document.querySelector('.selecting-example');
-  const select = container.querySelector('sl-select');
+  const select = container.querySelector('klik-select');
 
-  [...container.querySelectorAll('sl-button')].map(button => {
+  [...container.querySelectorAll('klik-button')].map(button => {
     button.addEventListener('click', () => {
       select.value = button.dataset.option; 
     });
@@ -343,11 +343,11 @@ const App = () => {
 Use the `label` attribute to give the select an accessible label. For labels that contain HTML, use the `label` slot instead.
 
 ```html preview
-<sl-select label="Select one">
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-</sl-select>
+<klik-select label="Select one">
+  <klik-menu-item value="option-1">Option 1</klik-menu-item>
+  <klik-menu-item value="option-2">Option 2</klik-menu-item>
+  <klik-menu-item value="option-3">Option 3</klik-menu-item>
+</klik-select>
 ```
 
 ```jsx react
@@ -367,14 +367,14 @@ const App = () => (
 Add descriptive help text to a select with the `help-text` attribute. For help texts that contain HTML, use the `help-text` slot instead.
 
 ```html preview
-<sl-select 
+<klik-select 
   label="Experience" 
   help-text="Please tell us your skill level."
 >
-  <sl-menu-item value="1">Novice</sl-menu-item>
-  <sl-menu-item value="2">Intermediate</sl-menu-item>
-  <sl-menu-item value="3">Advanced</sl-menu-item>
-</sl-select>
+  <klik-menu-item value="1">Novice</klik-menu-item>
+  <klik-menu-item value="2">Intermediate</klik-menu-item>
+  <klik-menu-item value="3">Advanced</klik-menu-item>
+</klik-select>
 ```
 
 ```jsx react
@@ -397,29 +397,29 @@ const App = () => (
 Use the `prefix` and `suffix` slots to add icons.
 
 ```html preview
-<sl-select placeholder="Small" size="small">
-  <sl-icon name="house" slot="prefix"></sl-icon>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-  <sl-icon name="chat" slot="suffix"></sl-icon>
-</sl-select>
+<klik-select placeholder="Small" size="small">
+  <klik-icon name="house" slot="prefix"></klik-icon>
+  <klik-menu-item value="option-1">Option 1</klik-menu-item>
+  <klik-menu-item value="option-2">Option 2</klik-menu-item>
+  <klik-menu-item value="option-3">Option 3</klik-menu-item>
+  <klik-icon name="chat" slot="suffix"></klik-icon>
+</klik-select>
 <br>
-<sl-select placeholder="Medium" size="medium">
-  <sl-icon name="house" slot="prefix"></sl-icon>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-  <sl-icon name="chat" slot="suffix"></sl-icon>
-</sl-select>
+<klik-select placeholder="Medium" size="medium">
+  <klik-icon name="house" slot="prefix"></klik-icon>
+  <klik-menu-item value="option-1">Option 1</klik-menu-item>
+  <klik-menu-item value="option-2">Option 2</klik-menu-item>
+  <klik-menu-item value="option-3">Option 3</klik-menu-item>
+  <klik-icon name="chat" slot="suffix"></klik-icon>
+</klik-select>
 <br>
-<sl-select placeholder="Large" size="large">
-  <sl-icon name="house" slot="prefix"></sl-icon>
-  <sl-menu-item value="option-1">Option 1</sl-menu-item>
-  <sl-menu-item value="option-2">Option 2</sl-menu-item>
-  <sl-menu-item value="option-3">Option 3</sl-menu-item>
-  <sl-icon name="chat" slot="suffix"></sl-icon>
-</sl-select>
+<klik-select placeholder="Large" size="large">
+  <klik-icon name="house" slot="prefix"></klik-icon>
+  <klik-menu-item value="option-1">Option 1</klik-menu-item>
+  <klik-menu-item value="option-2">Option 2</klik-menu-item>
+  <klik-menu-item value="option-3">Option 3</klik-menu-item>
+  <klik-icon name="chat" slot="suffix"></klik-icon>
+</klik-select>
 ```
 
 ```jsx react
@@ -454,4 +454,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-select]
+[component-metadata:klik-select]

@@ -1,11 +1,11 @@
 # Card
 
-[component-header:sl-card]
+[component-header:klik-card]
 
 Cards can be used to group related subjects in a container.
 
 ```html preview
-<sl-card class="card-overview">
+<klik-card class="card-overview">
   <img 
     slot="image" 
     src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" 
@@ -17,10 +17,10 @@ Cards can be used to group related subjects in a container.
   <small>6 weeks old</small>
 
   <div slot="footer">
-    <sl-button type="primary" pill>More Info</sl-button>
-    <sl-rating></sl-rating>
+    <klik-button type="primary" pill>More Info</klik-button>
+    <klik-rating></klik-rating>
   </div>
-</sl-card>
+</klik-card>
 
 <style>
   .card-overview {
@@ -28,7 +28,7 @@ Cards can be used to group related subjects in a container.
   }
 
   .card-overview small {
-    color: rgb(var(--sl-color-neutral-500));
+    color: rgb(var(--klik-color-neutral-500));
   }
 
   .card-overview [slot="footer"] {
@@ -52,7 +52,7 @@ const css = `
   }
 
   .card-overview small {
-    color: rgb(var(--sl-color-neutral-500));
+    color: rgb(var(--klik-color-neutral-500));
   }
 
   .card-overview [slot="footer"] {
@@ -93,9 +93,9 @@ const App = () => (
 Basic cards aren't very exciting, but they can display any content you want them to.
 
 ```html preview
-<sl-card class="card-basic">
+<klik-card class="card-basic">
   This is just a basic card. No image, no header, and no footer. Just your content.
-</sl-card>
+</klik-card>
 
 <style>
   .card-basic {
@@ -129,15 +129,15 @@ const App = () => (
 Headers can be used to display titles and more.
 
 ```html preview
-<sl-card class="card-header">
+<klik-card class="card-header">
   <div slot="header">
     Header Title
 
-    <sl-icon-button name="gear"></sl-icon-button>
+    <klik-icon-button name="gear"></klik-icon-button>
   </div>
 
   This card has a header. You can put all sorts of things in it!
-</sl-card>
+</klik-card>
 
 <style>
   .card-header {
@@ -154,8 +154,8 @@ Headers can be used to display titles and more.
     margin: 0;
   }
 
-  .card-header sl-icon-button {
-    font-size: var(--sl-font-size-medium);
+  .card-header klik-icon-button {
+    font-size: var(--klik-font-size-medium);
   }
 </style>
 ```
@@ -178,8 +178,8 @@ const css = `
     margin: 0;
   }
 
-  .card-header sl-icon-button {
-    font-size: var(--sl-font-size-medium);
+  .card-header klik-icon-button {
+    font-size: var(--klik-font-size-medium);
   }
 `;
 
@@ -205,14 +205,14 @@ const App = () => (
 Footers can be used to display actions, summaries, or other relevant content.
 
 ```html preview
-<sl-card class="card-footer">
+<klik-card class="card-footer">
   This card has a footer. You can put all sorts of things in it!
 
   <div slot="footer">
-    <sl-rating></sl-rating>
-    <sl-button slot="footer" type="primary">Preview</sl-button>
+    <klik-rating></klik-rating>
+    <klik-button slot="footer" type="primary">Preview</klik-button>
   </div>
-</sl-card>
+</klik-card>
 
 <style>
   .card-footer {
@@ -267,14 +267,14 @@ const App = () => (
 Cards accept an `image` slot. The image is displayed atop the card and stretches to fit.
 
 ```html preview
-<sl-card class="card-image">
+<klik-card class="card-image">
   <img 
     slot="image" 
     src="https://images.unsplash.com/photo-1547191783-94d5f8f6d8b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80" 
     alt="A kitten walks towards camera on top of pallet."
   >
   This is a kitten, but not just any kitten. This kitten likes walking along pallets.
-</sl-card>
+</klik-card>
 
 <style>
   .card-image {
@@ -308,4 +308,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-card]
+[component-metadata:klik-card]

@@ -14,7 +14,7 @@ import styles from './skeleton.styles';
  * @cssproperty --color - The color of the skeleton.
  * @cssproperty --sheen-color - The sheen color when the skeleton is in its loading state.
  */
-@customElement('sl-skeleton')
+@customElement('klik-skeleton')
 export default class SlSkeleton extends LitElement {
   static styles = styles;
 
@@ -41,6 +41,6 @@ export default class SlSkeleton extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-skeleton': SlSkeleton;
+    'klik-skeleton': SlSkeleton;
   }
 }

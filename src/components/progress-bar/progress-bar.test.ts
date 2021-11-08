@@ -3,12 +3,12 @@ import { expect, fixture, html } from '@open-wc/testing';
 import '../../../dist/shoelace.js';
 import type SlProgressBar from './progress-bar';
 
-describe('<sl-progress-bar>', () => {
+describe('<klik-progress-bar>', () => {
   let el: SlProgressBar;
 
   describe('when provided just a value parameter', async () => {
     before(async () => {
-      el = await fixture<SlProgressBar>(html`<sl-progress-bar value="25"></sl-progress-bar>`);
+      el = await fixture<SlProgressBar>(html`<klik-progress-bar value="25"></klik-progress-bar>`);
     });
 
     it('should render a component that passes accessibility test.', async () => {
@@ -22,7 +22,7 @@ describe('<sl-progress-bar>', () => {
 
     before(async () => {
       el = await fixture<SlProgressBar>(
-        html`<sl-progress-bar title="Titled Progress Ring" value="25"></sl-progress-bar>`
+        html`<klik-progress-bar title="Titled Progress Ring" value="25"></klik-progress-bar>`
       );
       base = el.shadowRoot?.querySelector('[part="base"]') as HTMLDivElement;
       indicator = el.shadowRoot?.querySelector('[part="indicator"]') as HTMLDivElement;
@@ -46,7 +46,7 @@ describe('<sl-progress-bar>', () => {
 
     before(async () => {
       el = await fixture<SlProgressBar>(
-        html`<sl-progress-bar title="Titled Progress Ring" indeterminate></sl-progress-bar>`
+        html`<klik-progress-bar title="Titled Progress Ring" indeterminate></klik-progress-bar>`
       );
       base = el.shadowRoot?.querySelector('[part="base"]') as HTMLDivElement;
     });
@@ -63,7 +63,7 @@ describe('<sl-progress-bar>', () => {
   describe('when provided a ariaLabel, and value parameter', async () => {
     before(async () => {
       el = await fixture<SlProgressBar>(
-        html`<sl-progress-bar ariaLabel="Labelled Progress Ring" value="25"></sl-progress-bar>`
+        html`<klik-progress-bar ariaLabel="Labelled Progress Ring" value="25"></klik-progress-bar>`
       );
     });
 
@@ -77,7 +77,7 @@ describe('<sl-progress-bar>', () => {
       el = await fixture<SlProgressBar>(
         html`
           <label id="labelledby">Progress Ring Label</label>
-          <sl-progress-bar ariaLabelledBy="labelledby" value="25"></sl-progress-bar>
+          <klik-progress-bar ariaLabelledBy="labelledby" value="25"></klik-progress-bar>
         `
       );
     });

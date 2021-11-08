@@ -13,15 +13,15 @@ export default css`
     position: relative;
     display: flex;
     align-items: stretch;
-    font-family: var(--sl-font-sans);
-    font-size: var(--sl-font-size-medium);
-    font-weight: var(--sl-font-weight-normal);
-    line-height: var(--sl-line-height-normal);
-    letter-spacing: var(--sl-letter-spacing-normal);
+    font-family: var(--klik-font-sans);
+    font-size: var(--klik-font-size-medium);
+    font-weight: var(--klik-font-weight-normal);
+    line-height: var(--klik-line-height-normal);
+    letter-spacing: var(--klik-letter-spacing-normal);
     text-align: left;
-    color: rgb(var(--sl-color-neutral-700));
-    padding: var(--sl-spacing-2x-small) var(--sl-spacing-x-large);
-    transition: var(--sl-transition-fast) fill;
+    color: rgb(var(--klik-color-neutral-700));
+    padding: var(--klik-spacing-2x-small) var(--klik-spacing-x-large);
+    transition: var(--klik-transition-fast) fill;
     user-select: none;
     white-space: nowrap;
     cursor: pointer;
@@ -29,7 +29,7 @@ export default css`
 
   .menu-item.menu-item--disabled {
     outline: none;
-    color: rgb(var(--sl-color-neutral-400));
+    color: rgb(var(--klik-color-neutral-400));
     cursor: not-allowed;
   }
 
@@ -44,7 +44,7 @@ export default css`
   }
 
   .menu-item .menu-item__prefix ::slotted(*) {
-    margin-right: var(--sl-spacing-x-small);
+    margin-right: var(--klik-spacing-x-small);
   }
 
   .menu-item .menu-item__suffix {
@@ -54,7 +54,7 @@ export default css`
   }
 
   .menu-item .menu-item__suffix ::slotted(*) {
-    margin-left: var(--sl-spacing-x-small);
+    margin-left: var(--klik-spacing-x-small);
   }
 
   :host(:focus) {
@@ -62,10 +62,10 @@ export default css`
   }
 
   :host(:hover:not([aria-disabled='true'])) .menu-item,
-  :host(${focusVisibleSelector}:not(.sl-focus-invisible):not([aria-disabled='true'])) .menu-item {
+  :host(${focusVisibleSelector}:not(.klik-focus-invisible):not([aria-disabled='true'])) .menu-item {
     outline: none;
-    background-color: rgb(var(--sl-color-primary-600));
-    color: rgb(var(--sl-color-neutral-0));
+    background-color: rgb(var(--klik-color-primary-600));
+    color: rgb(var(--klik-color-neutral-0));
   }
 
   .menu-item .menu-item__check {

@@ -6,11 +6,11 @@ import styles from './button-group.styles';
  * @since 2.0
  * @status stable
  *
- * @slot - One or more `<sl-button>` elements to display in the button group.
+ * @slot - One or more `<klik-button>` elements to display in the button group.
  *
  * @csspart base - The component's base wrapper.
  */
-@customElement('sl-button-group')
+@customElement('klik-button-group')
 export default class SlButtonGroup extends LitElement {
   static styles = styles;
 
@@ -21,22 +21,22 @@ export default class SlButtonGroup extends LitElement {
 
   handleFocus(event: CustomEvent) {
     const button = findButton(event.target as HTMLElement);
-    button?.classList.add('sl-button-group__button--focus');
+    button?.classList.add('klik-button-group__button--focus');
   }
 
   handleBlur(event: CustomEvent) {
     const button = findButton(event.target as HTMLElement);
-    button?.classList.remove('sl-button-group__button--focus');
+    button?.classList.remove('klik-button-group__button--focus');
   }
 
   handleMouseOver(event: CustomEvent) {
     const button = findButton(event.target as HTMLElement);
-    button?.classList.add('sl-button-group__button--hover');
+    button?.classList.add('klik-button-group__button--hover');
   }
 
   handleMouseOut(event: CustomEvent) {
     const button = findButton(event.target as HTMLElement);
-    button?.classList.remove('sl-button-group__button--hover');
+    button?.classList.remove('klik-button-group__button--hover');
   }
 
   handleSlotChange() {
@@ -47,10 +47,10 @@ export default class SlButtonGroup extends LitElement {
       const button = findButton(el);
 
       if (button) {
-        button.classList.add('sl-button-group__button');
-        button.classList.toggle('sl-button-group__button--first', index === 0);
-        button.classList.toggle('sl-button-group__button--inner', index > 0 && index < slottedElements.length - 1);
-        button.classList.toggle('sl-button-group__button--last', index === slottedElements.length - 1);
+        button.classList.add('klik-button-group__button');
+        button.classList.toggle('klik-button-group__button--first', index === 0);
+        button.classList.toggle('klik-button-group__button--inner', index > 0 && index < slottedElements.length - 1);
+        button.classList.toggle('klik-button-group__button--last', index === slottedElements.length - 1);
       }
     });
   }
@@ -74,11 +74,11 @@ export default class SlButtonGroup extends LitElement {
 }
 
 function findButton(el: HTMLElement) {
-  return el.tagName.toLowerCase() === 'sl-button' ? el : el.querySelector('sl-button');
+  return el.tagName.toLowerCase() === 'klik-button' ? el : el.querySelector('klik-button');
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-button-group': SlButtonGroup;
+    'klik-button-group': SlButtonGroup;
   }
 }

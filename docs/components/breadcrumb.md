@@ -1,18 +1,18 @@
 # Breadcrumb
 
-[component-header:sl-breadcrumb]
+[component-header:klik-breadcrumb]
 
 Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
 
 Breadcrumbs are usually placed before a page's main content with the current page shown last to indicate the user's position in the navigation.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item>Catalog</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Clothing</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Women's</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Shirts &amp; Tops</sl-breadcrumb-item>
-</sl-breadcrumb>
+<klik-breadcrumb>
+  <klik-breadcrumb-item>Catalog</klik-breadcrumb-item>
+  <klik-breadcrumb-item>Clothing</klik-breadcrumb-item>
+  <klik-breadcrumb-item>Women's</klik-breadcrumb-item>
+  <klik-breadcrumb-item>Shirts &amp; Tops</klik-breadcrumb-item>
+</klik-breadcrumb>
 ```
 
 ```jsx react
@@ -37,23 +37,23 @@ By default, breadcrumb items are rendered as buttons so you can use them to navi
 For websites, you'll probably want to use links instead. You can make any breadcrumb item a link by applying an `href` attribute to it. Now, when the user activates it, they'll be taken to the corresponding page — no event listeners required.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item href="https://example.com/home">
+<klik-breadcrumb>
+  <klik-breadcrumb-item href="https://example.com/home">
     Homepage
-  </sl-breadcrumb-item>
+  </klik-breadcrumb-item>
 
-  <sl-breadcrumb-item href="https://example.com/home/services">
+  <klik-breadcrumb-item href="https://example.com/home/services">
     Our Services
-  </sl-breadcrumb-item>
+  </klik-breadcrumb-item>
 
-  <sl-breadcrumb-item href="https://example.com/home/services/digital">
+  <klik-breadcrumb-item href="https://example.com/home/services/digital">
     Digital Media
-  </sl-breadcrumb-item>
+  </klik-breadcrumb-item>
 
-  <sl-breadcrumb-item href="https://example.com/home/services/digital/web-design">
+  <klik-breadcrumb-item href="https://example.com/home/services/digital/web-design">
     Web Design
-  </sl-breadcrumb-item>
-</sl-breadcrumb>
+  </klik-breadcrumb-item>
+</klik-breadcrumb>
 ```
 
 ```jsx react
@@ -85,30 +85,30 @@ const App = () => (
 Use the `separator` slot to change the separator that goes between breadcrumb items. Icons work well, but you can also use text or an image.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-icon name="dot" slot="separator"></sl-icon>
-  <sl-breadcrumb-item>First</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Second</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Third</sl-breadcrumb-item> 
-</sl-breadcrumb>
+<klik-breadcrumb>
+  <klik-icon name="dot" slot="separator"></klik-icon>
+  <klik-breadcrumb-item>First</klik-breadcrumb-item>
+  <klik-breadcrumb-item>Second</klik-breadcrumb-item>
+  <klik-breadcrumb-item>Third</klik-breadcrumb-item> 
+</klik-breadcrumb>
 
 <br>
 
-<sl-breadcrumb>
-  <sl-icon name="arrow-right" slot="separator"></sl-icon>
-  <sl-breadcrumb-item>First</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Second</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Third</sl-breadcrumb-item> 
-</sl-breadcrumb>
+<klik-breadcrumb>
+  <klik-icon name="arrow-right" slot="separator"></klik-icon>
+  <klik-breadcrumb-item>First</klik-breadcrumb-item>
+  <klik-breadcrumb-item>Second</klik-breadcrumb-item>
+  <klik-breadcrumb-item>Third</klik-breadcrumb-item> 
+</klik-breadcrumb>
 
 <br>
 
-<sl-breadcrumb>
+<klik-breadcrumb>
   <span slot="separator">/</span>
-  <sl-breadcrumb-item>First</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Second</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Third</sl-breadcrumb-item> 
-</sl-breadcrumb>
+  <klik-breadcrumb-item>First</klik-breadcrumb-item>
+  <klik-breadcrumb-item>Second</klik-breadcrumb-item>
+  <klik-breadcrumb-item>Third</klik-breadcrumb-item> 
+</klik-breadcrumb>
 ```
 
 ```jsx react
@@ -118,7 +118,7 @@ import { SlBreadcrumb, SlBreadcrumbItem, SlIcon } from '@shoelace-style/shoelace
 const App = () => (
   <>
     <SlBreadcrumb>
-      <sl-icon name="dot" slot="separator" />
+      <klik-icon name="dot" slot="separator" />
       <SlBreadcrumbItem>First</SlBreadcrumbItem>
       <SlBreadcrumbItem>Second</SlBreadcrumbItem>
       <SlBreadcrumbItem>Third</SlBreadcrumbItem> 
@@ -127,7 +127,7 @@ const App = () => (
     <br />
 
     <SlBreadcrumb>
-      <sl-icon name="arrow-right" slot="separator" />
+      <klik-icon name="arrow-right" slot="separator" />
       <SlBreadcrumbItem>First</SlBreadcrumbItem>
       <SlBreadcrumbItem>Second</SlBreadcrumbItem>
       <SlBreadcrumbItem>Third</SlBreadcrumbItem> 
@@ -150,14 +150,14 @@ const App = () => (
 Use the `prefix` slot to add content before any breadcrumb item.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item>
-    <sl-icon slot="prefix" name="house"></sl-icon>
+<klik-breadcrumb>
+  <klik-breadcrumb-item>
+    <klik-icon slot="prefix" name="house"></klik-icon>
     Home
-  </sl-breadcrumb-item>
-  <sl-breadcrumb-item>Articles</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Traveling</sl-breadcrumb-item>
-</sl-breadcrumb>
+  </klik-breadcrumb-item>
+  <klik-breadcrumb-item>Articles</klik-breadcrumb-item>
+  <klik-breadcrumb-item>Traveling</klik-breadcrumb-item>
+</klik-breadcrumb>
 ```
 
 ```jsx react
@@ -166,7 +166,7 @@ import { SlBreadcrumb, SlBreadcrumbItem, SlIcon } from '@shoelace-style/shoelace
 const App = () => (
   <SlBreadcrumb>
     <SlBreadcrumbItem>
-      <sl-icon slot="prefix" name="house"></sl-icon>
+      <klik-icon slot="prefix" name="house"></klik-icon>
       Home
     </SlBreadcrumbItem>
     <SlBreadcrumbItem>Articles</SlBreadcrumbItem>
@@ -180,14 +180,14 @@ const App = () => (
 Use the `suffix` slot to add content after any breadcrumb item.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item>Documents</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Policies</sl-breadcrumb-item>
-  <sl-breadcrumb-item>
+<klik-breadcrumb>
+  <klik-breadcrumb-item>Documents</klik-breadcrumb-item>
+  <klik-breadcrumb-item>Policies</klik-breadcrumb-item>
+  <klik-breadcrumb-item>
     Security
-    <sl-icon slot="suffix" name="shield-lock"></sl-icon>
-  </sl-breadcrumb-item>
-</sl-breadcrumb>
+    <klik-icon slot="suffix" name="shield-lock"></klik-icon>
+  </klik-breadcrumb-item>
+</klik-breadcrumb>
 ```
 
 ```jsx react
@@ -210,24 +210,24 @@ const App = () => (
 Dropdown menus can be placed in a prefix or suffix slot to provide additional options.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item>Homepage</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Our Services</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Digital Media</sl-breadcrumb-item>
-  <sl-breadcrumb-item>
+<klik-breadcrumb>
+  <klik-breadcrumb-item>Homepage</klik-breadcrumb-item>
+  <klik-breadcrumb-item>Our Services</klik-breadcrumb-item>
+  <klik-breadcrumb-item>Digital Media</klik-breadcrumb-item>
+  <klik-breadcrumb-item>
     Web Design
-    <sl-dropdown slot="suffix">
-      <sl-button slot="trigger" size="small" circle>
-        <sl-icon label="More options" name="three-dots"></sl-icon>
-      </sl-button>
-      <sl-menu>
-        <sl-menu-item checked>Web Design</sl-menu-item>
-        <sl-menu-item>Web Development</sl-menu-item>
-        <sl-menu-item>Marketing</sl-menu-item>
-      </sl-menu>
-    </sl-dropdown>    
-  </sl-breadcrumb-item>
-</sl-breadcrumb>
+    <klik-dropdown slot="suffix">
+      <klik-button slot="trigger" size="small" circle>
+        <klik-icon label="More options" name="three-dots"></klik-icon>
+      </klik-button>
+      <klik-menu>
+        <klik-menu-item checked>Web Design</klik-menu-item>
+        <klik-menu-item>Web Development</klik-menu-item>
+        <klik-menu-item>Marketing</klik-menu-item>
+      </klik-menu>
+    </klik-dropdown>    
+  </klik-breadcrumb-item>
+</klik-breadcrumb>
 ```
 
 ```jsx react
@@ -263,4 +263,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-breadcrumb]
+[component-metadata:klik-breadcrumb]

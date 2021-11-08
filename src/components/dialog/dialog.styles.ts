@@ -6,9 +6,9 @@ export default css`
 
   :host {
     --width: 31rem;
-    --header-spacing: var(--sl-spacing-large);
-    --body-spacing: var(--sl-spacing-large);
-    --footer-spacing: var(--sl-spacing-large);
+    --header-spacing: var(--klik-spacing-large);
+    --body-spacing: var(--klik-spacing-large);
+    --footer-spacing: var(--klik-spacing-large);
 
     display: contents;
   }
@@ -22,7 +22,7 @@ export default css`
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: var(--sl-z-index-dialog);
+    z-index: var(--klik-z-index-dialog);
   }
 
   .dialog__panel {
@@ -30,11 +30,11 @@ export default css`
     flex-direction: column;
     z-index: 2;
     width: var(--width);
-    max-width: calc(100% - var(--sl-spacing-2x-large));
-    max-height: calc(100% - var(--sl-spacing-2x-large));
-    background-color: rgb(var(--sl-panel-background-color));
-    border-radius: var(--sl-border-radius-medium);
-    box-shadow: var(--sl-shadow-x-large);
+    max-width: calc(100% - var(--klik-spacing-2x-large));
+    max-height: calc(100% - var(--klik-spacing-2x-large));
+    background-color: rgb(var(--klik-panel-background-color));
+    border-radius: var(--klik-border-radius-medium);
+    box-shadow: var(--klik-shadow-x-large);
   }
 
   .dialog__panel:focus {
@@ -61,8 +61,8 @@ export default css`
 
   .dialog__title {
     flex: 1 1 auto;
-    font-size: var(--sl-font-size-large);
-    line-height: var(--sl-line-height-dense);
+    font-size: var(--klik-font-size-large);
+    line-height: var(--klik-line-height-dense);
     padding: var(--header-spacing);
   }
 
@@ -70,7 +70,7 @@ export default css`
     flex: 0 0 auto;
     display: flex;
     align-items: center;
-    font-size: var(--sl-font-size-x-large);
+    font-size: var(--klik-font-size-x-large);
     padding: 0 var(--header-spacing);
   }
 
@@ -87,8 +87,8 @@ export default css`
     padding: var(--footer-spacing);
   }
 
-  .dialog__footer ::slotted(sl-button:not(:first-of-type)) {
-    margin-left: var(--sl-spacing-x-small);
+  .dialog__footer ::slotted(klik-button:not(:first-of-type)) {
+    margin-left: var(--klik-spacing-x-small);
   }
 
   .dialog:not(.dialog--has-footer) .dialog__footer {
@@ -101,6 +101,6 @@ export default css`
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgb(var(--sl-overlay-background-color) / var(--sl-overlay-opacity));
+    background-color: rgb(var(--klik-overlay-background-color) / var(--klik-overlay-opacity));
   }
 `;

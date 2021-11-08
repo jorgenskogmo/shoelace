@@ -4,41 +4,41 @@ import { sendKeys } from '@web/test-runner-commands';
 import '../../../dist/shoelace.js';
 import type SlCheckbox from './checkbox';
 
-describe('<sl-checkbox>', () => {
+describe('<klik-checkbox>', () => {
   it('should be disabled with the disabled attribute', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox disabled></sl-checkbox> `);
+    const el = await fixture<SlCheckbox>(html` <klik-checkbox disabled></klik-checkbox> `);
     const checkbox = el.shadowRoot?.querySelector('input');
 
     expect(checkbox.disabled).to.be.true;
   });
 
   it('should be valid by default', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox></sl-checkbox> `);
+    const el = await fixture<SlCheckbox>(html` <klik-checkbox></klik-checkbox> `);
 
     expect(el.invalid).to.be.false;
   });
 
-  it('should fire sl-change when clicked', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox></sl-checkbox> `);
+  it('should fire klik-change when clicked', async () => {
+    const el = await fixture<SlCheckbox>(html` <klik-checkbox></klik-checkbox> `);
     setTimeout(() => el.shadowRoot?.querySelector('input').click());
-    const event = await oneEvent(el, 'sl-change');
+    const event = await oneEvent(el, 'klik-change');
     expect(event.target).to.equal(el);
     expect(el.checked).to.be.true;
   });
 
-  it('should fire sl-change when toggled via keyboard', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox></sl-checkbox> `);
+  it('should fire klik-change when toggled via keyboard', async () => {
+    const el = await fixture<SlCheckbox>(html` <klik-checkbox></klik-checkbox> `);
     const input = el.shadowRoot?.querySelector('input');
     input.focus();
     setTimeout(() => sendKeys({ press: ' ' }));
-    const event = await oneEvent(el, 'sl-change');
+    const event = await oneEvent(el, 'klik-change');
     expect(event.target).to.equal(el);
     expect(el.checked).to.be.true;
   });
 
-  it('should not fire sl-change when checked is set by javascript', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox></sl-checkbox> `);
-    el.addEventListener('sl-change', () => expect.fail('event fired'));
+  it('should not fire klik-change when checked is set by javascript', async () => {
+    const el = await fixture<SlCheckbox>(html` <klik-checkbox></klik-checkbox> `);
+    el.addEventListener('klik-change', () => expect.fail('event fired'));
     el.checked = true;
     await el.updateComplete;
     el.checked = false;

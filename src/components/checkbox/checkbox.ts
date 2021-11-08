@@ -15,9 +15,9 @@ let id = 0;
  *
  * @slot - The checkbox's label.
  *
- * @event sl-blur - Emitted when the control loses focus.
- * @event sl-change - Emitted when the control's checked state changes.
- * @event sl-focus - Emitted when the control gains focus.
+ * @event klik-blur - Emitted when the control loses focus.
+ * @event klik-change - Emitted when the control's checked state changes.
+ * @event klik-focus - Emitted when the control gains focus.
  *
  * @csspart base - The component's base wrapper.
  * @csspart control - The checkbox control.
@@ -25,7 +25,7 @@ let id = 0;
  * @csspart indeterminate-icon - The container that wraps the indeterminate icon.
  * @csspart label - The checkbox label.
  */
-@customElement('sl-checkbox')
+@customElement('klik-checkbox')
 export default class SlCheckbox extends LitElement {
   static styles = styles;
 
@@ -90,12 +90,12 @@ export default class SlCheckbox extends LitElement {
   handleClick() {
     this.checked = !this.checked;
     this.indeterminate = false;
-    emit(this, 'sl-change');
+    emit(this, 'klik-change');
   }
 
   handleBlur() {
     this.hasFocus = false;
-    emit(this, 'sl-blur');
+    emit(this, 'klik-blur');
   }
 
   @watch('disabled')
@@ -109,7 +109,7 @@ export default class SlCheckbox extends LitElement {
 
   handleFocus() {
     this.hasFocus = true;
-    emit(this, 'sl-focus');
+    emit(this, 'klik-focus');
   }
 
   @watch('checked', { waitUntilFirstUpdate: true })
@@ -193,6 +193,6 @@ export default class SlCheckbox extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-checkbox': SlCheckbox;
+    'klik-checkbox': SlCheckbox;
   }
 }

@@ -1,11 +1,11 @@
 # Range
 
-[component-header:sl-range]
+[component-header:klik-range]
 
 Ranges allow the user to select a single value within a given range using a slider.
 
 ```html preview
-<sl-range></sl-range>
+<klik-range></klik-range>
 ```
 
 ```jsx react
@@ -16,7 +16,7 @@ const App = () => (
 );
 ```
 
-?> This component doesn't work with standard forms. Use [`<sl-form>`](/components/form) instead.
+?> This component doesn't work with standard forms. Use [`<klik-form>`](/components/form) instead.
 
 ## Examples
 
@@ -25,7 +25,7 @@ const App = () => (
 Use the `min` and `max` attributes to set the range's minimum and maximum values, respectively. The `step` attribute determines the value's interval when increasing and decreasing.
 
 ```html preview
-<sl-range min="0" max="10" step="1"></sl-range>
+<klik-range min="0" max="10" step="1"></klik-range>
 ```
 
 ```jsx react
@@ -41,7 +41,7 @@ const App = () => (
 Use the `disabled` attribute to disable a slider.
 
 ```html preview
-<sl-range disabled></sl-range>
+<klik-range disabled></klik-range>
 ```
 
 
@@ -58,7 +58,7 @@ const App = () => (
 By default, the tooltip is shown on top. Set `tooltip` to `bottom` to show it below the slider.
 
 ```html preview
-<sl-range tooltip="bottom"></sl-range>
+<klik-range tooltip="bottom"></klik-range>
 ```
 
 ```jsx react
@@ -74,7 +74,7 @@ const App = () => (
 To disable the tooltip, set `tooltip` to `none`.
 
 ```html preview
-<sl-range tooltip="none"></sl-range>
+<klik-range tooltip="none"></klik-range>
 ```
 
 ```jsx react
@@ -90,10 +90,10 @@ const App = () => (
 You can customize the active and inactive portions of the track using the `--track-color-active` and `--track-color-inactive` custom properties.
 
 ```html preview
-<sl-range style="
-  --track-color-active: rgb(var(--sl-color-primary-600));
-  --track-color-inactive: rgb(var(--sl-color-primary-200));
-"></sl-range>
+<klik-range style="
+  --track-color-active: rgb(var(--klik-color-primary-600));
+  --track-color-inactive: rgb(var(--klik-color-primary-200));
+"></klik-range>
 ```
 
 ```jsx react
@@ -102,8 +102,8 @@ import { SlRange } from '@shoelace-style/shoelace/dist/react';
 const App = () => (
   <SlRange 
     style={{
-      '--track-color-active': 'rgb(var(--sl-color-primary-600))',
-      '--track-color-inactive': 'rgb(var(--sl-color-primary-200))'
+      '--track-color-active': 'rgb(var(--klik-color-primary-600))',
+      '--track-color-inactive': 'rgb(var(--klik-color-primary-200))'
     }}
   />
 );
@@ -114,7 +114,7 @@ const App = () => (
 You can change the tooltip's content by setting the `tooltipFormatter` property to a function that accepts the range's value as an argument.
 
 ```html preview
-<sl-range min="0" max="100" step="1" class="range-with-custom-formatter"></sl-range>
+<klik-range min="0" max="100" step="1" class="range-with-custom-formatter"></klik-range>
 
 <script>
   const range = document.querySelector('.range-with-custom-formatter');
@@ -140,7 +140,7 @@ const App = () => (
 Use the `label` attribute to give the range an accessible label. For labels that contain HTML, use the `label` slot instead.
 
 ```html preview
-<sl-range label="Volume" min="0" max="100"></sl-input>
+<klik-range label="Volume" min="0" max="100"></klik-input>
 ```
 
 ```jsx react
@@ -156,12 +156,12 @@ const App = () => (
 Add descriptive help text to a range with the `help-text` attribute. For help texts that contain HTML, use the `help-text` slot instead.
 
 ```html preview
-<sl-range 
+<klik-range 
   label="Volume" 
   help-text="Controls the volume of the current song."
   min="0"
   max="100"
-></sl-input>
+></klik-input>
 ```
 
 ```jsx react
@@ -177,4 +177,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-range]
+[component-metadata:klik-range]

@@ -24,12 +24,12 @@ const hasEyeDropper = 'EyeDropper' in window;
  * @since 2.0
  * @status stable
  *
- * @dependency sl-button
- * @dependency sl-button-group
- * @dependency sl-dropdown
- * @dependency sl-input
+ * @dependency klik-button
+ * @dependency klik-button-group
+ * @dependency klik-dropdown
+ * @dependency klik-input
  *
- * @event sl-change Emitted when the color picker's value changes.
+ * @event klik-change Emitted when the color picker's value changes.
  *
  * @csspart base - The component's base wrapper
  * @csspart trigger - The color picker's dropdown trigger.
@@ -53,7 +53,7 @@ const hasEyeDropper = 'EyeDropper' in window;
  * @cssproperty --slider-handle-size - The diameter of the slider's handle.
  * @cssproperty --swatch-size - The size of each predefined color swatch.
  */
-@customElement('sl-color-picker')
+@customElement('klik-color-picker')
 export default class SlColorPicker extends LitElement {
   static styles = styles;
 
@@ -182,7 +182,7 @@ export default class SlColorPicker extends LitElement {
     if (!this.inline && this.input.invalid) {
       return new Promise<void>(resolve => {
         this.dropdown.addEventListener(
-          'sl-after-show',
+          'klik-after-show',
           () => {
             this.input.reportValidity();
             resolve();
@@ -618,7 +618,7 @@ export default class SlColorPicker extends LitElement {
     }
 
     if (this.value !== this.lastValueEmitted) {
-      emit(this, 'sl-change');
+      emit(this, 'klik-change');
       this.lastValueEmitted = this.value;
     }
   }
@@ -739,7 +739,7 @@ export default class SlColorPicker extends LitElement {
         </div>
 
         <div class="color-picker__user-input">
-          <sl-input
+          <klik-input
             part="input"
             type="text"
             name=${this.name}
@@ -750,29 +750,29 @@ export default class SlColorPicker extends LitElement {
             .value=${live(this.inputValue)}
             ?disabled=${this.disabled}
             @keydown=${this.handleInputKeyDown}
-            @sl-change=${this.handleInputChange}
-          ></sl-input>
+            @klik-change=${this.handleInputChange}
+          ></klik-input>
 
-          <sl-button-group>
+          <klik-button-group>
             ${!this.noFormatToggle
               ? html`
-                  <sl-button
+                  <klik-button
                     aria-label="Change format"
                     exportparts="base:format-button"
                     @click=${this.handleFormatToggle}
                   >
                     ${this.setLetterCase(this.format)}
-                  </sl-button>
+                  </klik-button>
                 `
               : ''}
             ${hasEyeDropper
               ? html`
-                  <sl-button exportparts="base:eye-dropper-button" @click=${this.handleEyeDropper}>
-                    <sl-icon library="system" name="eyedropper" label="Select a color from the screen"></sl-icon>
-                  </sl-button>
+                  <klik-button exportparts="base:eye-dropper-button" @click=${this.handleEyeDropper}>
+                    <klik-icon library="system" name="eyedropper" label="Select a color from the screen"></klik-icon>
+                  </klik-button>
                 `
               : ''}
-          </sl-button-group>
+          </klik-button-group>
         </div>
 
         ${this.swatches
@@ -807,13 +807,13 @@ export default class SlColorPicker extends LitElement {
 
     // Render as a dropdown
     return html`
-      <sl-dropdown
+      <klik-dropdown
         class="color-dropdown"
         aria-disabled=${this.disabled ? 'true' : 'false'}
         .containing-element=${this}
         ?disabled=${this.disabled}
         ?hoist=${this.hoist}
-        @sl-after-hide=${this.handleAfterHide}
+        @klik-after-hide=${this.handleAfterHide}
       >
         <button
           part="trigger"
@@ -832,13 +832,13 @@ export default class SlColorPicker extends LitElement {
           type="button"
         ></button>
         ${colorPicker}
-      </sl-dropdown>
+      </klik-dropdown>
     `;
   }
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-color-picker': SlColorPicker;
+    'klik-color-picker': SlColorPicker;
   }
 }

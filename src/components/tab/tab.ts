@@ -12,16 +12,16 @@ let id = 0;
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon-button
+ * @dependency klik-icon-button
  *
  * @slot - The tab's label.
  *
- * @event sl-close - Emitted when the tab is closable and the close button is activated.
+ * @event klik-close - Emitted when the tab is closable and the close button is activated.
  *
  * @csspart base - The component's base wrapper.
  * @csspart close-button - The close button, which is the icon button's base wrapper.
  */
-@customElement('sl-tab')
+@customElement('klik-tab')
 export default class SlTab extends LitElement {
   static styles = styles;
 
@@ -52,7 +52,7 @@ export default class SlTab extends LitElement {
   }
 
   handleCloseClick() {
-    emit(this, 'sl-close');
+    emit(this, 'klik-close');
   }
 
   render() {
@@ -76,7 +76,7 @@ export default class SlTab extends LitElement {
         <slot></slot>
         ${this.closable
           ? html`
-              <sl-icon-button
+              <klik-icon-button
                 name="x"
                 library="system"
                 exportparts="base:close-button"
@@ -84,7 +84,7 @@ export default class SlTab extends LitElement {
                 @click=${this.handleCloseClick}
                 tabindex="-1"
                 aria-hidden="true"
-              ></sl-icon-button>
+              ></klik-icon-button>
             `
           : ''}
       </div>
@@ -94,6 +94,6 @@ export default class SlTab extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-tab': SlTab;
+    'klik-tab': SlTab;
   }
 }

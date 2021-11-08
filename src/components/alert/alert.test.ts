@@ -4,29 +4,29 @@ import sinon from 'sinon';
 import '../../../dist/shoelace.js';
 import type SlAlert from './alert';
 
-describe('<sl-alert>', () => {
+describe('<klik-alert>', () => {
   it('should be visible with the open attribute', async () => {
-    const el = await fixture<SlAlert>(html` <sl-alert open>I am an alert</sl-alert> `);
+    const el = await fixture<SlAlert>(html` <klik-alert open>I am an alert</klik-alert> `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
 
     expect(base.hidden).to.be.false;
   });
 
   it('should not be visible without the open attribute', async () => {
-    const el = await fixture<SlAlert>(html` <sl-alert>I am an alert</sl-alert> `);
+    const el = await fixture<SlAlert>(html` <klik-alert>I am an alert</klik-alert> `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
 
     expect(base.hidden).to.be.true;
   });
 
-  it('should emit sl-show and sl-after-show when calling show()', async () => {
-    const el = await fixture<SlAlert>(html` <sl-alert>I am an alert</sl-alert> `);
+  it('should emit klik-show and klik-after-show when calling show()', async () => {
+    const el = await fixture<SlAlert>(html` <klik-alert>I am an alert</klik-alert> `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
 
-    el.addEventListener('sl-show', showHandler);
-    el.addEventListener('sl-after-show', afterShowHandler);
+    el.addEventListener('klik-show', showHandler);
+    el.addEventListener('klik-after-show', afterShowHandler);
     el.show();
 
     await waitUntil(() => showHandler.calledOnce);
@@ -37,14 +37,14 @@ describe('<sl-alert>', () => {
     expect(base.hidden).to.be.false;
   });
 
-  it('should emit sl-hide and sl-after-hide when calling hide()', async () => {
-    const el = await fixture<SlAlert>(html` <sl-alert open>I am an alert</sl-alert> `);
+  it('should emit klik-hide and klik-after-hide when calling hide()', async () => {
+    const el = await fixture<SlAlert>(html` <klik-alert open>I am an alert</klik-alert> `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
 
-    el.addEventListener('sl-hide', hideHandler);
-    el.addEventListener('sl-after-hide', afterHideHandler);
+    el.addEventListener('klik-hide', hideHandler);
+    el.addEventListener('klik-after-hide', afterHideHandler);
     el.hide();
 
     await waitUntil(() => hideHandler.calledOnce);
@@ -55,14 +55,14 @@ describe('<sl-alert>', () => {
     expect(base.hidden).to.be.true;
   });
 
-  it('should emit sl-show and sl-after-show when setting open = true', async () => {
-    const el = await fixture<SlAlert>(html` <sl-alert>I am an alert</sl-alert> `);
+  it('should emit klik-show and klik-after-show when setting open = true', async () => {
+    const el = await fixture<SlAlert>(html` <klik-alert>I am an alert</klik-alert> `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
 
-    el.addEventListener('sl-show', showHandler);
-    el.addEventListener('sl-after-show', afterShowHandler);
+    el.addEventListener('klik-show', showHandler);
+    el.addEventListener('klik-after-show', afterShowHandler);
     el.open = true;
 
     await waitUntil(() => showHandler.calledOnce);
@@ -73,14 +73,14 @@ describe('<sl-alert>', () => {
     expect(base.hidden).to.be.false;
   });
 
-  it('should emit sl-hide and sl-after-hide when setting open = false', async () => {
-    const el = await fixture<SlAlert>(html` <sl-alert open>I am an alert</sl-alert> `);
+  it('should emit klik-hide and klik-after-hide when setting open = false', async () => {
+    const el = await fixture<SlAlert>(html` <klik-alert open>I am an alert</klik-alert> `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
 
-    el.addEventListener('sl-hide', hideHandler);
-    el.addEventListener('sl-after-hide', afterHideHandler);
+    el.addEventListener('klik-hide', hideHandler);
+    el.addEventListener('klik-after-hide', afterHideHandler);
     el.open = false;
 
     await waitUntil(() => hideHandler.calledOnce);

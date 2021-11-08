@@ -15,22 +15,22 @@ export default css`
     align-items: center;
     background: none;
     border: none;
-    border-radius: var(--sl-border-radius-medium);
+    border-radius: var(--klik-border-radius-medium);
     font-size: inherit;
-    color: rgb(var(--sl-color-neutral-600));
-    padding: var(--sl-spacing-x-small);
+    color: rgb(var(--klik-color-neutral-600));
+    padding: var(--klik-spacing-x-small);
     cursor: pointer;
-    transition: var(--sl-transition-medium) color;
+    transition: var(--klik-transition-medium) color;
     -webkit-appearance: none;
   }
 
   .icon-button:hover:not(.icon-button--disabled),
   .icon-button:focus:not(.icon-button--disabled) {
-    color: rgb(var(--sl-color-primary-600));
+    color: rgb(var(--klik-color-primary-600));
   }
 
   .icon-button:active:not(.icon-button--disabled) {
-    color: rgb(var(--sl-color-primary-700));
+    color: rgb(var(--klik-color-primary-700));
   }
 
   .icon-button:focus {
@@ -43,6 +43,6 @@ export default css`
   }
 
   .icon-button${focusVisibleSelector} {
-    box-shadow: var(--sl-focus-ring);
+    box-shadow: var(--klik-focus-ring);
   }
 `;

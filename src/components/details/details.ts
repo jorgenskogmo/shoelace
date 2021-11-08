@@ -16,15 +16,15 @@ let id = 0;
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon
+ * @dependency klik-icon
  *
  * @slot - The details' content.
  * @slot summary - The details' summary. Alternatively, you can use the summary prop.
  *
- * @event sl-show - Emitted when the details opens.
- * @event sl-after-show - Emitted after the details opens and all animations are complete.
- * @event sl-hide - Emitted when the details closes.
- * @event sl-after-hide - Emitted after the details closes and all animations are complete.
+ * @event klik-show - Emitted when the details opens.
+ * @event klik-after-show - Emitted after the details opens and all animations are complete.
+ * @event klik-hide - Emitted when the details closes.
+ * @event klik-after-hide - Emitted after the details closes and all animations are complete.
  *
  * @csspart base - The component's base wrapper.
  * @csspart header - The summary header.
@@ -35,7 +35,7 @@ let id = 0;
  * @animation details.show - The animation to use when showing details. You can use `height: auto` with this animation.
  * @animation details.hide - The animation to use when hiding details. You can use `height: auto` with this animation.
  */
-@customElement('sl-details')
+@customElement('klik-details')
 export default class SlDetails extends LitElement {
   static styles = styles;
 
@@ -66,7 +66,7 @@ export default class SlDetails extends LitElement {
     }
 
     this.open = true;
-    return waitForEvent(this, 'sl-after-show');
+    return waitForEvent(this, 'klik-after-show');
   }
 
   /** Hides the details */
@@ -76,7 +76,7 @@ export default class SlDetails extends LitElement {
     }
 
     this.open = false;
-    return waitForEvent(this, 'sl-after-hide');
+    return waitForEvent(this, 'klik-after-hide');
   }
 
   handleSummaryClick() {
@@ -107,7 +107,7 @@ export default class SlDetails extends LitElement {
   async handleOpenChange() {
     if (this.open) {
       // Show
-      emit(this, 'sl-show');
+      emit(this, 'klik-show');
 
       await stopAnimations(this);
       this.body.hidden = false;
@@ -116,10 +116,10 @@ export default class SlDetails extends LitElement {
       await animateTo(this.body, shimKeyframesHeightAuto(keyframes, this.body.scrollHeight), options);
       this.body.style.height = 'auto';
 
-      emit(this, 'sl-after-show');
+      emit(this, 'klik-after-show');
     } else {
       // Hide
-      emit(this, 'sl-hide');
+      emit(this, 'klik-hide');
 
       await stopAnimations(this);
 
@@ -128,7 +128,7 @@ export default class SlDetails extends LitElement {
       this.body.hidden = true;
       this.body.style.height = 'auto';
 
-      emit(this, 'sl-after-hide');
+      emit(this, 'klik-after-hide');
     }
   }
 
@@ -159,7 +159,7 @@ export default class SlDetails extends LitElement {
           </div>
 
           <span part="summary-icon" class="details__summary-icon">
-            <sl-icon name="chevron-right" library="system"></sl-icon>
+            <klik-icon name="chevron-right" library="system"></klik-icon>
           </span>
         </header>
 
@@ -197,6 +197,6 @@ setDefaultAnimation('details.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-details': SlDetails;
+    'klik-details': SlDetails;
   }
 }

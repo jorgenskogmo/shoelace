@@ -1,6 +1,6 @@
 # Format Date
 
-[component-header:sl-format-date]
+[component-header:klik-format-date]
 
 Formats a date/time using the specified locale and options.
 
@@ -8,7 +8,7 @@ Localization is handled by the browser's [`Intl.DateTimeFormat` API](https://dev
 
 ```html preview
 <!-- Shoelace 2 release date 🎉 -->
-<sl-format-date date="2020-07-15T09:17:00-04:00"></sl-format-date>
+<klik-format-date date="2020-07-15T09:17:00-04:00"></klik-format-date>
 ```
 
 ```jsx react
@@ -31,22 +31,22 @@ Formatting options are based on those found in the [`Intl.DateTimeFormat` API](h
 
 ```html preview
 <!-- Human-readable date -->
-<sl-format-date month="long" day="numeric" year="numeric"></sl-format-date><br>
+<klik-format-date month="long" day="numeric" year="numeric"></klik-format-date><br>
 
 <!-- Time -->
-<sl-format-date hour="numeric" minute="numeric"></sl-format-date><br>
+<klik-format-date hour="numeric" minute="numeric"></klik-format-date><br>
 
 <!-- Weekday -->
-<sl-format-date weekday="long"></sl-format-date><br>
+<klik-format-date weekday="long"></klik-format-date><br>
 
 <!-- Month -->
-<sl-format-date month="long"></sl-format-date><br>
+<klik-format-date month="long"></klik-format-date><br>
 
 <!-- Year -->
-<sl-format-date year="numeric"></sl-format-date><br>
+<klik-format-date year="numeric"></klik-format-date><br>
 
 <!-- No formatting options -->
-<sl-format-date></sl-format-date>
+<klik-format-date></klik-format-date>
 ```
 
 ```jsx react
@@ -80,8 +80,8 @@ const App = () => (
 By default, the browser will determine whether to use 12-hour or 24-hour time. To force one or the other, set the `hour-format` attribute to `12` or `24`.
 
 ```html preview
-<sl-format-date hour="numeric" minute="numeric" hour-format="12"></sl-format-date><br>
-<sl-format-date hour="numeric" minute="numeric" hour-format="24"></sl-format-date>
+<klik-format-date hour="numeric" minute="numeric" hour-format="12"></klik-format-date><br>
+<klik-format-date hour="numeric" minute="numeric" hour-format="24"></klik-format-date>
 ```
 
 ```jsx react
@@ -100,9 +100,9 @@ const App = () => (
 Use the `locale` attribute to set the date/time formatting locale.
 
 ```html preview
-English: <sl-format-date locale="en"></sl-format-date><br>
-French: <sl-format-date locale="fr"></sl-format-date><br>
-Russian: <sl-format-date locale="ru"></sl-format-date>
+English: <klik-format-date locale="en"></klik-format-date><br>
+French: <klik-format-date locale="fr"></klik-format-date><br>
+Russian: <klik-format-date locale="ru"></klik-format-date>
 ```
 
 ```jsx react
@@ -117,4 +117,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-format-date]
+[component-metadata:klik-format-date]

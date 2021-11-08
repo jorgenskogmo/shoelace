@@ -10,17 +10,17 @@ import '../icon-button/icon-button';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon-button
+ * @dependency klik-icon-button
  *
  * @slot - The tag's content.
  *
- * @event sl-remove - Emitted when the remove button is activated.
+ * @event klik-remove - Emitted when the remove button is activated.
  *
  * @csspart base - The component's base wrapper.
  * @csspart content - The tag content.
  * @csspart remove-button - The remove button.
  */
-@customElement('sl-tag')
+@customElement('klik-tag')
 export default class SlTag extends LitElement {
   static styles = styles;
 
@@ -37,7 +37,7 @@ export default class SlTag extends LitElement {
   @property({ type: Boolean }) removable = false;
 
   handleRemoveClick() {
-    emit(this, 'sl-remove');
+    emit(this, 'klik-remove');
   }
 
   render() {
@@ -71,13 +71,13 @@ export default class SlTag extends LitElement {
 
         ${this.removable
           ? html`
-              <sl-icon-button
+              <klik-icon-button
                 exportparts="base:remove-button"
                 name="x"
                 library="system"
                 class="tag__remove"
                 @click=${this.handleRemoveClick}
-              ></sl-icon-button>
+              ></klik-icon-button>
             `
           : ''}
       </span>
@@ -87,6 +87,6 @@ export default class SlTag extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-tag': SlTag;
+    'klik-tag': SlTag;
   }
 }

@@ -10,7 +10,7 @@ import '../icon/icon';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon
+ * @dependency klik-icon
  *
  * @slot - The menu item's label.
  * @slot prefix - Used to prepend an icon or similar element to the menu item.
@@ -22,7 +22,7 @@ import '../icon/icon';
  * @csspart label - The menu item label.
  * @csspart suffix - The suffix container.
  */
-@customElement('sl-menu-item')
+@customElement('klik-menu-item')
 export default class SlMenuItem extends LitElement {
   static styles = styles;
 
@@ -61,13 +61,13 @@ export default class SlMenuItem extends LitElement {
           'menu-item--disabled': this.disabled
         })}
       >
-        <sl-icon
+        <klik-icon
           part="checked-icon"
           class="menu-item__check"
           name="check"
           library="system"
           aria-hidden="true"
-        ></sl-icon>
+        ></klik-icon>
 
         <span part="prefix" class="menu-item__prefix">
           <slot name="prefix"></slot>
@@ -87,6 +87,6 @@ export default class SlMenuItem extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-menu-item': SlMenuItem;
+    'klik-menu-item': SlMenuItem;
   }
 }

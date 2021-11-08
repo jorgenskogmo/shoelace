@@ -5,9 +5,9 @@ export default css`
   ${componentStyles}
 
   :host {
-    --color: rgb(var(--sl-panel-border-color));
-    --width: var(--sl-panel-border-width);
-    --spacing: var(--sl-spacing-medium);
+    --color: rgb(var(--klik-panel-border-color));
+    --width: var(--klik-panel-border-width);
+    --spacing: var(--klik-spacing-medium);
   }
 
   :host(:not([vertical])) .menu-divider {

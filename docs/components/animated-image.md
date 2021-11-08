@@ -1,14 +1,14 @@
 # Animated Image
 
-[component-header:sl-animated-image]
+[component-header:klik-animated-image]
 
 A component for displaying animated GIFs and WEBPs that play and pause on interaction.
 
 ```html preview
-<sl-animated-image 
+<klik-animated-image 
   src="https://shoelace.style/assets/images/walk.gif" 
   alt="Animation of untied shoes walking on pavement"
-></sl-animated-image>
+></klik-animated-image>
 ```
 
 ```jsx react
@@ -31,10 +31,10 @@ const App = () => (
 Both GIF and WEBP images are supported.
 
 ```html preview
-<sl-animated-image 
+<klik-animated-image 
   src="https://shoelace.style/assets/images/tie.webp" 
   alt="Animation of a shoe being tied"
-></sl-animated-image>
+></klik-animated-image>
 ```
 
 ```jsx react
@@ -53,12 +53,12 @@ const App = () => (
 To set a custom size, apply a width and/or height to the host element.
 
 ```html preview
-<sl-animated-image 
+<klik-animated-image 
   src="https://shoelace.style/assets/images/walk.gif" 
   alt="Animation of untied shoes walking on pavement"
   style="width: 150px; height: 200px;"
 >
-</sl-animated-image>
+</klik-animated-image>
 ```
 
 ```jsx react
@@ -78,11 +78,11 @@ const App = () => (
 You can change the appearance and location of the control box by targeting the `control-box` part in your styles.
 
 ```html preview
-<sl-animated-image 
+<klik-animated-image 
   src="https://shoelace.style/assets/images/walk.gif" 
   alt="Animation of untied shoes walking on pavement"
   class="animated-image-custom-control-box"
-></sl-animated-image>
+></klik-animated-image>
 
 <style>
   .animated-image-custom-control-box::part(control-box) {
@@ -123,4 +123,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-animated-image]
+[component-metadata:klik-animated-image]

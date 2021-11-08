@@ -3,12 +3,12 @@ import { expect, fixture, html } from '@open-wc/testing';
 import '../../../dist/shoelace.js';
 import type SlBadge from './badge';
 
-describe('<sl-badge>', () => {
+describe('<klik-badge>', () => {
   let el: SlBadge;
 
   describe('when provided no parameters', async () => {
     before(async () => {
-      el = await fixture<SlBadge>(html` <sl-badge>Badge</sl-badge> `);
+      el = await fixture<SlBadge>(html` <klik-badge>Badge</klik-badge> `);
     });
 
     it('should render a component that passes accessibility test, with a role of status on the base part.', async () => {
@@ -30,7 +30,7 @@ describe('<sl-badge>', () => {
 
   describe('when provided a pill parameter', async () => {
     before(async () => {
-      el = await fixture<SlBadge>(html` <sl-badge pill>Badge</sl-badge> `);
+      el = await fixture<SlBadge>(html` <klik-badge pill>Badge</klik-badge> `);
     });
 
     it('should render a component that passes accessibility test', async () => {
@@ -45,7 +45,7 @@ describe('<sl-badge>', () => {
 
   describe('when provided a pulse parameter', async () => {
     before(async () => {
-      el = await fixture<SlBadge>(html` <sl-badge pulse>Badge</sl-badge> `);
+      el = await fixture<SlBadge>(html` <klik-badge pulse>Badge</klik-badge> `);
     });
 
     it('should render a component that passes accessibility test', async () => {
@@ -61,7 +61,7 @@ describe('<sl-badge>', () => {
   ['primary', 'success', 'neutral', 'warning', 'danger'].forEach(type => {
     describe(`when passed a type attribute ${type}`, () => {
       before(async () => {
-        el = await fixture<SlBadge>(html`<sl-badge type="${type as any}">Badge</sl-badge>`);
+        el = await fixture<SlBadge>(html`<klik-badge type="${type as any}">Badge</klik-badge>`);
       });
 
       it('should render a component that passes accessibility test', async () => {

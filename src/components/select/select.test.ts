@@ -4,31 +4,31 @@ import sinon from 'sinon';
 import '../../../dist/shoelace.js';
 import type SlSelect from './select';
 
-describe('<sl-select>', () => {
-  it('should emit sl-change when the value changes', async () => {
+describe('<klik-select>', () => {
+  it('should emit klik-change when the value changes', async () => {
     const el = await fixture<SlSelect>(html`
-      <sl-select>
-        <sl-menu-item value="option-1">Option 1</sl-menu-item>
-        <sl-menu-item value="option-2">Option 2</sl-menu-item>
-        <sl-menu-item value="option-3">Option 3</sl-menu-item>
-      </sl-select>
+      <klik-select>
+        <klik-menu-item value="option-1">Option 1</klik-menu-item>
+        <klik-menu-item value="option-2">Option 2</klik-menu-item>
+        <klik-menu-item value="option-3">Option 3</klik-menu-item>
+      </klik-select>
     `);
     const changeHandler = sinon.spy();
 
-    el.addEventListener('sl-change', changeHandler);
+    el.addEventListener('klik-change', changeHandler);
     el.value = 'option-2';
     await waitUntil(() => changeHandler.calledOnce);
 
     expect(changeHandler).to.have.been.calledOnce;
   });
 
-  it('should  open the menu when any letter key is pressed with sl-select is on focus', async () => {
+  it('should  open the menu when any letter key is pressed with klik-select is on focus', async () => {
     const el = (await fixture(html`
-      <sl-select>
-        <sl-menu-item value="option-1">Option 1</sl-menu-item>
-        <sl-menu-item value="option-2">Option 2</sl-menu-item>
-        <sl-menu-item value="option-3">Option 3</sl-menu-item>
-      </sl-select>
+      <klik-select>
+        <klik-menu-item value="option-1">Option 1</klik-menu-item>
+        <klik-menu-item value="option-2">Option 2</klik-menu-item>
+        <klik-menu-item value="option-3">Option 3</klik-menu-item>
+      </klik-select>
     `)) as SlSelect;
     const control = el.shadowRoot.querySelector('.select__control') as HTMLSelectElement;
     control.focus();
@@ -38,13 +38,13 @@ describe('<sl-select>', () => {
     expect(control.getAttribute('aria-expanded')).to.equal('true');
   });
 
-  it('should not open the menu when ctrl + R is pressed with sl-select is on focus', async () => {
+  it('should not open the menu when ctrl + R is pressed with klik-select is on focus', async () => {
     const el = (await fixture(html`
-      <sl-select>
-        <sl-menu-item value="option-1">Option 1</sl-menu-item>
-        <sl-menu-item value="option-2">Option 2</sl-menu-item>
-        <sl-menu-item value="option-3">Option 3</sl-menu-item>
-      </sl-select>
+      <klik-select>
+        <klik-menu-item value="option-1">Option 1</klik-menu-item>
+        <klik-menu-item value="option-2">Option 2</klik-menu-item>
+        <klik-menu-item value="option-3">Option 3</klik-menu-item>
+      </klik-select>
     `)) as SlSelect;
     const control = el.shadowRoot.querySelector('.select__control') as HTMLSelectElement;
     control.focus();

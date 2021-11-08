@@ -17,7 +17,7 @@ import styles from './progress-ring.styles';
  * @cssproperty --track-color - The color of the track.
  * @cssproperty --indicator-color - The indicator color.
  */
-@customElement('sl-progress-ring')
+@customElement('klik-progress-ring')
 export default class SlProgressRing extends LitElement {
   static styles = styles;
 
@@ -75,6 +75,6 @@ export default class SlProgressRing extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-progress-ring': SlProgressRing;
+    'klik-progress-ring': SlProgressRing;
   }
 }

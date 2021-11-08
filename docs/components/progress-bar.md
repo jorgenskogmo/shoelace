@@ -1,11 +1,11 @@
 # Progress Bar
 
-[component-header:sl-progress-bar]
+[component-header:klik-progress-bar]
 
 Progress bars are used to show the status of an ongoing operation.
 
 ```html preview
-<sl-progress-bar value="50"></sl-progress-bar>
+<klik-progress-bar value="50"></klik-progress-bar>
 ```
 
 ```jsx react
@@ -23,7 +23,7 @@ const App = () => (
 Use the `--height` custom property to set the progress bar's height.
 
 ```html preview
-<sl-progress-bar value="50" style="--height: 6px;"></sl-progress-bar>
+<klik-progress-bar value="50" style="--height: 6px;"></klik-progress-bar>
 ```
 
 ```jsx react
@@ -42,7 +42,7 @@ const App = () => (
 Use the `label` attribute to label the progress bar and tell assistive devices how to announce it.
 
 ```html preview
-<sl-progress-bar value="50" label="Upload progress"></sl-progress-bar>
+<klik-progress-bar value="50" label="Upload progress"></klik-progress-bar>
 ```
 
 ```jsx react
@@ -61,12 +61,12 @@ const App = () => (
 Use the default slot to show a value.
 
 ```html preview
-<sl-progress-bar value="50" class="progress-bar-values">50%</sl-progress-bar>
+<klik-progress-bar value="50" class="progress-bar-values">50%</klik-progress-bar>
 
 <br>
 
-<sl-button circle><sl-icon name="dash"></sl-icon></sl-button>
-<sl-button circle><sl-icon name="plus"></sl-icon></sl-button>
+<klik-button circle><klik-icon name="dash"></klik-icon></klik-button>
+<klik-button circle><klik-icon name="plus"></klik-icon></klik-button>
 
 <script>
   const progressBar = document.querySelector('.progress-bar-values');
@@ -130,7 +130,7 @@ const App = () => {
 The `indeterminate` attribute can be used to inform the user that the operation is pending, but its status cannot currently be determined. In this state, `value` is ignored and the label, if present, will not be shown.
 
 ```html preview
-<sl-progress-bar indeterminate></sl-progress-bar>
+<klik-progress-bar indeterminate></klik-progress-bar>
 ```
 
 ```jsx react
@@ -141,4 +141,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-progress-bar]
+[component-metadata:klik-progress-bar]

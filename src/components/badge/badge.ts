@@ -11,7 +11,7 @@ import styles from './badge.styles';
  *
  * @csspart base - The base wrapper
  */
-@customElement('sl-badge')
+@customElement('klik-badge')
 export default class SlBadge extends LitElement {
   static styles = styles;
 
@@ -48,6 +48,6 @@ export default class SlBadge extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-badge': SlBadge;
+    'klik-badge': SlBadge;
   }
 }

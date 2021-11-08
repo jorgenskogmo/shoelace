@@ -20,12 +20,12 @@ let id = 0;
  * @status stable
  *
  * @slot - The dropdown's content.
- * @slot trigger - The dropdown's trigger, usually a `<sl-button>` element.
+ * @slot trigger - The dropdown's trigger, usually a `<klik-button>` element.
  *
- * @event sl-show - Emitted when the dropdown opens.
- * @event sl-after-show - Emitted after the dropdown opens and all animations are complete.
- * @event sl-hide - Emitted when the dropdown closes.
- * @event sl-after-hide - Emitted after the dropdown closes and all animations are complete.
+ * @event klik-show - Emitted when the dropdown opens.
+ * @event klik-after-show - Emitted after the dropdown opens and all animations are complete.
+ * @event klik-hide - Emitted when the dropdown closes.
+ * @event klik-after-hide - Emitted after the dropdown closes and all animations are complete.
  *
  * @csspart base - The component's base wrapper.
  * @csspart trigger - The container that wraps the trigger.
@@ -34,7 +34,7 @@ let id = 0;
  * @animation dropdown.show - The animation to use when showing the dropdown.
  * @animation dropdown.hide - The animation to use when hiding the dropdown.
  */
-@customElement('sl-dropdown')
+@customElement('klik-dropdown')
 export default class SlDropdown extends LitElement {
   static styles = styles;
 
@@ -144,7 +144,7 @@ export default class SlDropdown extends LitElement {
 
   getMenu() {
     const slot = this.panel.querySelector('slot')!;
-    return slot.assignedElements({ flatten: true }).filter(el => el.tagName.toLowerCase() === 'sl-menu')[0] as SlMenu;
+    return slot.assignedElements({ flatten: true }).filter(el => el.tagName.toLowerCase() === 'klik-menu')[0] as SlMenu;
   }
 
   handleDocumentKeyDown(event: KeyboardEvent) {
@@ -158,7 +158,7 @@ export default class SlDropdown extends LitElement {
     // Handle tabbing
     if (event.key === 'Tab') {
       // Tabbing within an open menu should close the dropdown and refocus the trigger
-      if (this.open && document.activeElement?.tagName.toLowerCase() === 'sl-menu-item') {
+      if (this.open && document.activeElement?.tagName.toLowerCase() === 'klik-menu-item') {
         event.preventDefault();
         this.hide();
         this.focusOnTrigger();
@@ -201,7 +201,7 @@ export default class SlDropdown extends LitElement {
     const target = event.target as HTMLElement;
 
     // Hide the dropdown when a menu item is selected
-    if (!this.stayOpenOnSelect && target.tagName.toLowerCase() === 'sl-menu') {
+    if (!this.stayOpenOnSelect && target.tagName.toLowerCase() === 'klik-menu') {
       this.hide();
       this.focusOnTrigger();
     }
@@ -240,7 +240,7 @@ export default class SlDropdown extends LitElement {
 
   handleTriggerKeyDown(event: KeyboardEvent) {
     const menu = this.getMenu();
-    const menuItems = menu ? ([...menu.querySelectorAll('sl-menu-item')] as SlMenuItem[]) : [];
+    const menuItems = menu ? ([...menu.querySelectorAll('klik-menu-item')] as SlMenuItem[]) : [];
     const firstMenuItem = menuItems[0];
     const lastMenuItem = menuItems[menuItems.length - 1];
 
@@ -310,7 +310,7 @@ export default class SlDropdown extends LitElement {
   // that gets slotted in) so screen readers will understand them. The accessible trigger could be the slotted element,
   // a child of the slotted element, or an element in the slotted element's shadow root.
   //
-  // For example, the accessible trigger of an <sl-button> is a <button> located inside its shadow root.
+  // For example, the accessible trigger of an <klik-button> is a <button> located inside its shadow root.
   //
   // To determine this, we assume the first tabbable element in the trigger slot is the "accessible trigger."
   //
@@ -334,7 +334,7 @@ export default class SlDropdown extends LitElement {
     }
 
     this.open = true;
-    return waitForEvent(this, 'sl-after-show');
+    return waitForEvent(this, 'klik-after-show');
   }
 
   /** Hides the dropdown panel */
@@ -344,7 +344,7 @@ export default class SlDropdown extends LitElement {
     }
 
     this.open = false;
-    return waitForEvent(this, 'sl-after-hide');
+    return waitForEvent(this, 'klik-after-hide');
   }
 
   /**
@@ -369,9 +369,9 @@ export default class SlDropdown extends LitElement {
 
     if (this.open) {
       // Show
-      emit(this, 'sl-show');
-      this.panel.addEventListener('sl-activate', this.handleMenuItemActivate);
-      this.panel.addEventListener('sl-select', this.handlePanelSelect);
+      emit(this, 'klik-show');
+      this.panel.addEventListener('klik-activate', this.handleMenuItemActivate);
+      this.panel.addEventListener('klik-select', this.handlePanelSelect);
       document.addEventListener('keydown', this.handleDocumentKeyDown);
       document.addEventListener('mousedown', this.handleDocumentMouseDown);
 
@@ -381,12 +381,12 @@ export default class SlDropdown extends LitElement {
       const { keyframes, options } = getAnimation(this, 'dropdown.show');
       await animateTo(this.panel, keyframes, options);
 
-      emit(this, 'sl-after-show');
+      emit(this, 'klik-after-show');
     } else {
       // Hide
-      emit(this, 'sl-hide');
-      this.panel.removeEventListener('sl-activate', this.handleMenuItemActivate);
-      this.panel.removeEventListener('sl-select', this.handlePanelSelect);
+      emit(this, 'klik-hide');
+      this.panel.removeEventListener('klik-activate', this.handleMenuItemActivate);
+      this.panel.removeEventListener('klik-select', this.handlePanelSelect);
       document.removeEventListener('keydown', this.handleDocumentKeyDown);
       document.removeEventListener('mousedown', this.handleDocumentMouseDown);
 
@@ -395,7 +395,7 @@ export default class SlDropdown extends LitElement {
       await animateTo(this.panel, keyframes, options);
       this.panel.hidden = true;
 
-      emit(this, 'sl-after-hide');
+      emit(this, 'klik-after-hide');
     }
   }
 
@@ -455,6 +455,6 @@ setDefaultAnimation('dropdown.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-dropdown': SlDropdown;
+    'klik-dropdown': SlDropdown;
   }
 }

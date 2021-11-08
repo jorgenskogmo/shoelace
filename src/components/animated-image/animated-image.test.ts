@@ -4,9 +4,9 @@ import { expect, fixture, html, waitUntil } from '@open-wc/testing';
 import '../../../dist/shoelace.js';
 import type SlAnimatedImage from './animated-image';
 
-describe('<sl-animated-image>', () => {
+describe('<klik-animated-image>', () => {
   it('should render a component', async () => {
-    const el = await fixture(html` <sl-animated-image></sl-animated-image> `);
+    const el = await fixture(html` <klik-animated-image></klik-animated-image> `);
 
     expect(el).to.exist;
   });

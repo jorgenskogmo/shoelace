@@ -1,6 +1,6 @@
 # Skeleton
 
-[component-header:sl-skeleton]
+[component-header:klik-skeleton]
 
 Skeletons are used to show where content will eventually be drawn.
 
@@ -11,13 +11,13 @@ Skeletons try not to be opinionated, as there are endless possibilities for desi
 ```html preview
 <div class="skeleton-overview">
   <header>
-    <sl-skeleton></sl-skeleton>
-    <sl-skeleton></sl-skeleton>
+    <klik-skeleton></klik-skeleton>
+    <klik-skeleton></klik-skeleton>
   </header>
 
-  <sl-skeleton></sl-skeleton>
-  <sl-skeleton></sl-skeleton>
-  <sl-skeleton></sl-skeleton>
+  <klik-skeleton></klik-skeleton>
+  <klik-skeleton></klik-skeleton>
+  <klik-skeleton></klik-skeleton>
 </div>
 
 <style>
@@ -27,16 +27,16 @@ Skeletons try not to be opinionated, as there are endless possibilities for desi
     margin-bottom: 1rem;
   }
 
-  .skeleton-overview header sl-skeleton:last-child {
+  .skeleton-overview header klik-skeleton:last-child {
     flex: 0 0 auto;
     width: 30%;
   }
 
-  .skeleton-overview sl-skeleton {
+  .skeleton-overview klik-skeleton {
     margin-bottom: 1rem;
   }
 
-  .skeleton-overview sl-skeleton:nth-child(1) {
+  .skeleton-overview klik-skeleton:nth-child(1) {
     float: left;
     width: 3rem;
     height: 3rem;
@@ -44,11 +44,11 @@ Skeletons try not to be opinionated, as there are endless possibilities for desi
     vertical-align: middle;
   }
 
-  .skeleton-overview sl-skeleton:nth-child(3) {
+  .skeleton-overview klik-skeleton:nth-child(3) {
     width: 95%;
   }
 
-  .skeleton-overview sl-skeleton:nth-child(4) {
+  .skeleton-overview klik-skeleton:nth-child(4) {
     width: 80%;
   }
 </style>
@@ -64,16 +64,16 @@ const css = `
     margin-bottom: 1rem;
   }
 
-  .skeleton-overview header sl-skeleton:last-child {
+  .skeleton-overview header klik-skeleton:last-child {
     flex: 0 0 auto;
     width: 30%;
   }
 
-  .skeleton-overview sl-skeleton {
+  .skeleton-overview klik-skeleton {
     margin-bottom: 1rem;
   }
 
-  .skeleton-overview sl-skeleton:nth-child(1) {
+  .skeleton-overview klik-skeleton:nth-child(1) {
     float: left;
     width: 3rem;
     height: 3rem;
@@ -81,11 +81,11 @@ const css = `
     vertical-align: middle;
   }
 
-  .skeleton-overview sl-skeleton:nth-child(3) {
+  .skeleton-overview klik-skeleton:nth-child(3) {
     width: 95%;
   }
 
-  .skeleton-overview sl-skeleton:nth-child(4) {
+  .skeleton-overview klik-skeleton:nth-child(4) {
     width: 80%;
   }
 `;
@@ -116,22 +116,22 @@ There are two built-in effects, `sheen` and `pulse`. Effects are intentionally s
 
 ```html preview
 <div class="skeleton-effects">
-  <sl-skeleton effect="none"></sl-skeleton>
+  <klik-skeleton effect="none"></klik-skeleton>
   None
 
-  <sl-skeleton effect="sheen"></sl-skeleton>
+  <klik-skeleton effect="sheen"></klik-skeleton>
   Sheen
 
-  <sl-skeleton effect="pulse"></sl-skeleton>
+  <klik-skeleton effect="pulse"></klik-skeleton>
   Pulse
 </div>
 
 <style>
   .skeleton-effects {
-    font-size: var(--sl-font-size-small);
+    font-size: var(--klik-font-size-small);
   }
 
-  .skeleton-effects sl-skeleton:not(:first-child) {
+  .skeleton-effects klik-skeleton:not(:first-child) {
     margin-top: 1rem;
   }
 </style>
@@ -142,10 +142,10 @@ import { SlSkeleton } from '@shoelace-style/shoelace/dist/react';
 
 const css = `
   .skeleton-effects {
-    font-size: var(--sl-font-size-small);
+    font-size: var(--klik-font-size-small);
   }
 
-  .skeleton-effects sl-skeleton:not(:first-child) {
+  .skeleton-effects klik-skeleton:not(:first-child) {
     margin-top: 1rem;
   }
 `;
@@ -174,27 +174,27 @@ Use multiple skeletons and some clever styles to simulate paragraphs.
 
 ```html preview
 <div class="skeleton-paragraphs">
-  <sl-skeleton></sl-skeleton>
-  <sl-skeleton></sl-skeleton>
-  <sl-skeleton></sl-skeleton>
-  <sl-skeleton></sl-skeleton>
-  <sl-skeleton></sl-skeleton>
+  <klik-skeleton></klik-skeleton>
+  <klik-skeleton></klik-skeleton>
+  <klik-skeleton></klik-skeleton>
+  <klik-skeleton></klik-skeleton>
+  <klik-skeleton></klik-skeleton>
 </div>
 
 <style>
-  .skeleton-paragraphs sl-skeleton {
+  .skeleton-paragraphs klik-skeleton {
     margin-bottom: 1rem;
   }
 
-  .skeleton-paragraphs sl-skeleton:nth-child(2) {
+  .skeleton-paragraphs klik-skeleton:nth-child(2) {
     width: 95%;
   }
 
-  .skeleton-paragraphs sl-skeleton:nth-child(4) {
+  .skeleton-paragraphs klik-skeleton:nth-child(4) {
     width: 90%;
   }
 
-  .skeleton-paragraphs sl-skeleton:last-child {
+  .skeleton-paragraphs klik-skeleton:last-child {
     width: 50%;
   }
 </style>
@@ -204,19 +204,19 @@ Use multiple skeletons and some clever styles to simulate paragraphs.
 import { SlSkeleton } from '@shoelace-style/shoelace/dist/react';
 
 const css = `
-  .skeleton-paragraphs sl-skeleton {
+  .skeleton-paragraphs klik-skeleton {
     margin-bottom: 1rem;
   }
 
-  .skeleton-paragraphs sl-skeleton:nth-child(2) {
+  .skeleton-paragraphs klik-skeleton:nth-child(2) {
     width: 95%;
   }
 
-  .skeleton-paragraphs sl-skeleton:nth-child(4) {
+  .skeleton-paragraphs klik-skeleton:nth-child(4) {
     width: 90%;
   }
 
-  .skeleton-paragraphs sl-skeleton:last-child {
+  .skeleton-paragraphs klik-skeleton:last-child {
     width: 50%;
   }
 `;
@@ -242,25 +242,25 @@ Set a matching width and height to make a circle, square, or rounded avatar skel
 
 ```html preview
 <div class="skeleton-avatars">
-  <sl-skeleton></sl-skeleton>
-  <sl-skeleton></sl-skeleton>
-  <sl-skeleton></sl-skeleton>
+  <klik-skeleton></klik-skeleton>
+  <klik-skeleton></klik-skeleton>
+  <klik-skeleton></klik-skeleton>
 </div>
 
 <style>
-  .skeleton-avatars sl-skeleton {
+  .skeleton-avatars klik-skeleton {
     display: inline-block;
     width: 3rem;
     height: 3rem;
     margin-right: .5rem;
   }
 
-  .skeleton-avatars sl-skeleton:nth-child(1) {
+  .skeleton-avatars klik-skeleton:nth-child(1) {
     --border-radius: 0;
   }
   
-  .skeleton-avatars sl-skeleton:nth-child(2) {
-    --border-radius: var(--sl-border-radius-medium);
+  .skeleton-avatars klik-skeleton:nth-child(2) {
+    --border-radius: var(--klik-border-radius-medium);
   }
 </style>
 ```
@@ -269,19 +269,19 @@ Set a matching width and height to make a circle, square, or rounded avatar skel
 import { SlSkeleton } from '@shoelace-style/shoelace/dist/react';
 
 const css = `
-  .skeleton-avatars sl-skeleton {
+  .skeleton-avatars klik-skeleton {
     display: inline-block;
     width: 3rem;
     height: 3rem;
     margin-right: .5rem;
   }
 
-  .skeleton-avatars sl-skeleton:nth-child(1) {
+  .skeleton-avatars klik-skeleton:nth-child(1) {
     --border-radius: 0;
   }
   
-  .skeleton-avatars sl-skeleton:nth-child(2) {
-    --border-radius: var(--sl-border-radius-medium);
+  .skeleton-avatars klik-skeleton:nth-child(2) {
+    --border-radius: var(--klik-border-radius-medium);
   }
 `;
 
@@ -304,26 +304,26 @@ Use the `--border-radius` custom property to make circles, squares, and rectangl
 
 ```html preview
 <div class="skeleton-shapes">
-  <sl-skeleton class="square"></sl-skeleton>
-  <sl-skeleton class="circle"></sl-skeleton>
-  <sl-skeleton class="triangle"></sl-skeleton>
-  <sl-skeleton class="cross"></sl-skeleton>
-  <sl-skeleton class="comment"></sl-skeleton>
+  <klik-skeleton class="square"></klik-skeleton>
+  <klik-skeleton class="circle"></klik-skeleton>
+  <klik-skeleton class="triangle"></klik-skeleton>
+  <klik-skeleton class="cross"></klik-skeleton>
+  <klik-skeleton class="comment"></klik-skeleton>
 </div>
 
 <style>
-  .skeleton-shapes sl-skeleton {
+  .skeleton-shapes klik-skeleton {
     display: inline-flex;
     width: 50px;
     height: 50px;
   }
 
   .skeleton-shapes .square::part(indicator) {
-    --border-radius: var(--sl-border-radius-medium);
+    --border-radius: var(--klik-border-radius-medium);
   }
 
   .skeleton-shapes .circle::part(indicator) {
-    --border-radius: var(--sl-border-radius-circle);
+    --border-radius: var(--klik-border-radius-circle);
   }
 
   .skeleton-shapes .triangle::part(indicator) {
@@ -341,7 +341,7 @@ Use the `--border-radius` custom property to make circles, squares, and rectangl
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
   }
 
-  .skeleton-shapes sl-skeleton:not(:last-child) {
+  .skeleton-shapes klik-skeleton:not(:last-child) {
     margin-right: .5rem;
   }
 </style>
@@ -351,18 +351,18 @@ Use the `--border-radius` custom property to make circles, squares, and rectangl
 import { SlSkeleton } from '@shoelace-style/shoelace/dist/react';
 
 const css = `
-  .skeleton-shapes sl-skeleton {
+  .skeleton-shapes klik-skeleton {
     display: inline-flex;
     width: 50px;
     height: 50px;
   }
 
   .skeleton-shapes .square::part(indicator) {
-    --border-radius: var(--sl-border-radius-medium);
+    --border-radius: var(--klik-border-radius-medium);
   }
 
   .skeleton-shapes .circle::part(indicator) {
-    --border-radius: var(--sl-border-radius-circle);
+    --border-radius: var(--klik-border-radius-circle);
   }
 
   .skeleton-shapes .triangle::part(indicator) {
@@ -380,7 +380,7 @@ const css = `
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
   }
 
-  .skeleton-shapes sl-skeleton:not(:last-child) {
+  .skeleton-shapes klik-skeleton:not(:last-child) {
     margin-right: .5rem;
   }
 `;
@@ -405,26 +405,26 @@ const App = () => (
 Set the `--color` and `--sheen-color` custom properties to adjust the skeleton's color.
 
 ```html preview
-<sl-skeleton effect="sheen" style="--color: tomato; --sheen-color: #ffb094;"></sl-skeleton>
+<klik-skeleton effect="sheen" style="--color: tomato; --sheen-color: #ffb094;"></klik-skeleton>
 ```
 
 ```jsx react
 import { SlSkeleton } from '@shoelace-style/shoelace/dist/react';
 
 const css = `
-  .skeleton-avatars sl-skeleton {
+  .skeleton-avatars klik-skeleton {
     display: inline-block;
     width: 3rem;
     height: 3rem;
     margin-right: .5rem;
   }
 
-  .skeleton-avatars sl-skeleton:nth-child(1) {
+  .skeleton-avatars klik-skeleton:nth-child(1) {
     --border-radius: 0;
   }
   
-  .skeleton-avatars sl-skeleton:nth-child(2) {
-    --border-radius: var(--sl-border-radius-medium);
+  .skeleton-avatars klik-skeleton:nth-child(2) {
+    --border-radius: var(--klik-border-radius-medium);
   }
 `;
 
@@ -436,4 +436,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-skeleton]
+[component-metadata:klik-skeleton]

@@ -1,15 +1,15 @@
 # Button Group
 
-[component-header:sl-button-group]
+[component-header:klik-button-group]
 
 Button groups can be used to group related buttons into sections.
 
 ```html preview
-<sl-button-group>
-  <sl-button>Left</sl-button>
-  <sl-button>Center</sl-button>
-  <sl-button>Right</sl-button>
-</sl-button-group>
+<klik-button-group>
+  <klik-button>Left</klik-button>
+  <klik-button>Center</klik-button>
+  <klik-button>Right</klik-button>
+</klik-button-group>
 ```
 
 ```jsx react
@@ -31,27 +31,27 @@ const App = () => (
 All button sizes are supported, but avoid mixing sizes within the same button group.
 
 ```html preview
-<sl-button-group>
-  <sl-button size="small">Left</sl-button>
-  <sl-button size="small">Center</sl-button>
-  <sl-button size="small">Right</sl-button>
-</sl-button-group>
+<klik-button-group>
+  <klik-button size="small">Left</klik-button>
+  <klik-button size="small">Center</klik-button>
+  <klik-button size="small">Right</klik-button>
+</klik-button-group>
 
 <br><br>
 
-<sl-button-group>
-  <sl-button size="medium">Left</sl-button>
-  <sl-button size="medium">Center</sl-button>
-  <sl-button size="medium">Right</sl-button>
-</sl-button-group>
+<klik-button-group>
+  <klik-button size="medium">Left</klik-button>
+  <klik-button size="medium">Center</klik-button>
+  <klik-button size="medium">Right</klik-button>
+</klik-button-group>
 
 <br><br>
 
-<sl-button-group>
-  <sl-button size="large">Left</sl-button>
-  <sl-button size="large">Center</sl-button>
-  <sl-button size="large">Right</sl-button>
-</sl-button-group>
+<klik-button-group>
+  <klik-button size="large">Left</klik-button>
+  <klik-button size="large">Center</klik-button>
+  <klik-button size="large">Right</klik-button>
+</klik-button-group>
 ```
 
 ```jsx react
@@ -89,43 +89,43 @@ const App = () => (
 Theme buttons are supported through the button's `type` attribute.
 
 ```html preview
-<sl-button-group>
-  <sl-button type="primary">Left</sl-button>
-  <sl-button type="primary">Center</sl-button>
-  <sl-button type="primary">Right</sl-button>
-</sl-button-group>
+<klik-button-group>
+  <klik-button type="primary">Left</klik-button>
+  <klik-button type="primary">Center</klik-button>
+  <klik-button type="primary">Right</klik-button>
+</klik-button-group>
 
 <br><br>
 
-<sl-button-group>
-  <sl-button type="success">Left</sl-button>
-  <sl-button type="success">Center</sl-button>
-  <sl-button type="success">Right</sl-button>
-</sl-button-group>
+<klik-button-group>
+  <klik-button type="success">Left</klik-button>
+  <klik-button type="success">Center</klik-button>
+  <klik-button type="success">Right</klik-button>
+</klik-button-group>
 
 <br><br>
 
-<sl-button-group>
-  <sl-button type="neutral">Left</sl-button>
-  <sl-button type="neutral">Center</sl-button>
-  <sl-button type="neutral">Right</sl-button>
-</sl-button-group>
+<klik-button-group>
+  <klik-button type="neutral">Left</klik-button>
+  <klik-button type="neutral">Center</klik-button>
+  <klik-button type="neutral">Right</klik-button>
+</klik-button-group>
 
 <br><br>
 
-<sl-button-group>
-  <sl-button type="warning">Left</sl-button>
-  <sl-button type="warning">Center</sl-button>
-  <sl-button type="warning">Right</sl-button>
-</sl-button-group>
+<klik-button-group>
+  <klik-button type="warning">Left</klik-button>
+  <klik-button type="warning">Center</klik-button>
+  <klik-button type="warning">Right</klik-button>
+</klik-button-group>
 
 <br><br>
 
-<sl-button-group>
-  <sl-button type="danger">Left</sl-button>
-  <sl-button type="danger">Center</sl-button>
-  <sl-button type="danger">Right</sl-button>
-</sl-button-group>
+<klik-button-group>
+  <klik-button type="danger">Left</klik-button>
+  <klik-button type="danger">Center</klik-button>
+  <klik-button type="danger">Right</klik-button>
+</klik-button-group>
 ```
 
 ```jsx react
@@ -179,27 +179,27 @@ const App = () => (
 Pill buttons are supported through the button's `pill` attribute.
 
 ```html preview
-<sl-button-group>
-  <sl-button size="small" pill>Left</sl-button>
-  <sl-button size="small" pill>Center</sl-button>
-  <sl-button size="small" pill>Right</sl-button>
-</sl-button-group>
+<klik-button-group>
+  <klik-button size="small" pill>Left</klik-button>
+  <klik-button size="small" pill>Center</klik-button>
+  <klik-button size="small" pill>Right</klik-button>
+</klik-button-group>
 
 <br><br>
 
-<sl-button-group>
-  <sl-button size="medium" pill>Left</sl-button>
-  <sl-button size="medium" pill>Center</sl-button>
-  <sl-button size="medium" pill>Right</sl-button>
-</sl-button-group>
+<klik-button-group>
+  <klik-button size="medium" pill>Left</klik-button>
+  <klik-button size="medium" pill>Center</klik-button>
+  <klik-button size="medium" pill>Right</klik-button>
+</klik-button-group>
 
 <br><br>
 
-<sl-button-group>
-  <sl-button size="large" pill>Left</sl-button>
-  <sl-button size="large" pill>Center</sl-button>
-  <sl-button size="large" pill>Right</sl-button>
-</sl-button-group>
+<klik-button-group>
+  <klik-button size="large" pill>Left</klik-button>
+  <klik-button size="large" pill>Center</klik-button>
+  <klik-button size="large" pill>Right</klik-button>
+</klik-button-group>
 ```
 
 ```jsx react
@@ -234,21 +234,21 @@ const App = () => (
 
 ### Dropdowns in Button Groups
 
-Dropdowns can be placed inside button groups as long as the trigger is an `<sl-button>` element.
+Dropdowns can be placed inside button groups as long as the trigger is an `<klik-button>` element.
 
 ```html preview
-<sl-button-group> 
-  <sl-button>Button</sl-button>
-  <sl-button>Button</sl-button>
-  <sl-dropdown>
-    <sl-button slot="trigger" caret>Dropdown</sl-button>
-    <sl-menu>
-      <sl-menu-item>Item 1</sl-menu-item>
-      <sl-menu-item>Item 2</sl-menu-item>
-      <sl-menu-item>Item 3</sl-menu-item>
-    </sl-menu>
-  </sl-dropdown>
-</sl-button-group>
+<klik-button-group> 
+  <klik-button>Button</klik-button>
+  <klik-button>Button</klik-button>
+  <klik-dropdown>
+    <klik-button slot="trigger" caret>Dropdown</klik-button>
+    <klik-menu>
+      <klik-menu-item>Item 1</klik-menu-item>
+      <klik-menu-item>Item 2</klik-menu-item>
+      <klik-menu-item>Item 3</klik-menu-item>
+    </klik-menu>
+  </klik-dropdown>
+</klik-button-group>
 ```
 
 ```jsx react
@@ -281,17 +281,17 @@ const App = () => (
 Create a split button using a button and a dropdown.
 
 ```html preview
-<sl-button-group> 
-  <sl-button type="primary">Save</sl-button>
-  <sl-dropdown placement="bottom-end">
-    <sl-button slot="trigger" type="primary" caret></sl-button>
-    <sl-menu>
-      <sl-menu-item>Save</sl-menu-item>
-      <sl-menu-item>Save as&hellip;</sl-menu-item>
-      <sl-menu-item>Save all</sl-menu-item>
-    </sl-menu>
-  </sl-dropdown>
-</sl-button-group>
+<klik-button-group> 
+  <klik-button type="primary">Save</klik-button>
+  <klik-dropdown placement="bottom-end">
+    <klik-button slot="trigger" type="primary" caret></klik-button>
+    <klik-menu>
+      <klik-menu-item>Save</klik-menu-item>
+      <klik-menu-item>Save as&hellip;</klik-menu-item>
+      <klik-menu-item>Save all</klik-menu-item>
+    </klik-menu>
+  </klik-dropdown>
+</klik-button-group>
 ```
 
 ```jsx react
@@ -323,19 +323,19 @@ const App = () => (
 Buttons can be wrapped in tooltips to provide more detail when the user interacts with them.
 
 ```html preview
-<sl-button-group>
-  <sl-tooltip content="I'm on the left">
-    <sl-button>Left</sl-button>
-  </sl-tooltip>
+<klik-button-group>
+  <klik-tooltip content="I'm on the left">
+    <klik-button>Left</klik-button>
+  </klik-tooltip>
 
-  <sl-tooltip content="I'm in the middle">
-    <sl-button>Center</sl-button>
-  </sl-tooltip>
+  <klik-tooltip content="I'm in the middle">
+    <klik-button>Center</klik-button>
+  </klik-tooltip>
 
-  <sl-tooltip content="I'm on the right">
-    <sl-button>Right</sl-button>
-  </sl-tooltip>
-</sl-button-group>
+  <klik-tooltip content="I'm on the right">
+    <klik-button>Right</klik-button>
+  </klik-tooltip>
+</klik-button-group>
 ```
 
 ```jsx react
@@ -370,43 +370,43 @@ Create interactive toolbars with button groups.
 
 ```html preview
 <div class="button-group-toolbar">
-  <sl-button-group label="History">
-    <sl-tooltip content="Undo">
-      <sl-button><sl-icon name="arrow-counterclockwise"></sl-icon></sl-button>
-    </sl-tooltip>
-    <sl-tooltip content="Redo">
-      <sl-button><sl-icon name="arrow-clockwise"></sl-icon></sl-button>
-    </sl-tooltip>
-  </sl-button-group>
+  <klik-button-group label="History">
+    <klik-tooltip content="Undo">
+      <klik-button><klik-icon name="arrow-counterclockwise"></klik-icon></klik-button>
+    </klik-tooltip>
+    <klik-tooltip content="Redo">
+      <klik-button><klik-icon name="arrow-clockwise"></klik-icon></klik-button>
+    </klik-tooltip>
+  </klik-button-group>
 
-  <sl-button-group label="Formatting">
-    <sl-tooltip content="Bold">
-      <sl-button><sl-icon name="type-bold"></sl-icon></sl-button>
-    </sl-tooltip>
-    <sl-tooltip content="Italic">
-      <sl-button><sl-icon name="type-italic"></sl-icon></sl-button>
-    </sl-tooltip>
-    <sl-tooltip content="Underline">
-      <sl-button><sl-icon name="type-underline"></sl-icon></sl-button>
-    </sl-tooltip>
-  </sl-button-group>
+  <klik-button-group label="Formatting">
+    <klik-tooltip content="Bold">
+      <klik-button><klik-icon name="type-bold"></klik-icon></klik-button>
+    </klik-tooltip>
+    <klik-tooltip content="Italic">
+      <klik-button><klik-icon name="type-italic"></klik-icon></klik-button>
+    </klik-tooltip>
+    <klik-tooltip content="Underline">
+      <klik-button><klik-icon name="type-underline"></klik-icon></klik-button>
+    </klik-tooltip>
+  </klik-button-group>
 
-  <sl-button-group label="Alignment">
-    <sl-tooltip content="Align Left">
-      <sl-button><sl-icon name="justify-left"></sl-icon></sl-button>
-    </sl-tooltip>
-    <sl-tooltip content="Align Center">
-      <sl-button><sl-icon name="justify"></sl-icon></sl-button>
-    </sl-tooltip>
-    <sl-tooltip content="Align Right">
-      <sl-button><sl-icon name="justify-right"></sl-icon></sl-button>
-    </sl-tooltip>
-  </sl-button-group>
+  <klik-button-group label="Alignment">
+    <klik-tooltip content="Align Left">
+      <klik-button><klik-icon name="justify-left"></klik-icon></klik-button>
+    </klik-tooltip>
+    <klik-tooltip content="Align Center">
+      <klik-button><klik-icon name="justify"></klik-icon></klik-button>
+    </klik-tooltip>
+    <klik-tooltip content="Align Right">
+      <klik-button><klik-icon name="justify-right"></klik-icon></klik-button>
+    </klik-tooltip>
+  </klik-button-group>
 </div>
 
 <style>
-  .button-group-toolbar sl-button-group:not(:last-of-type) {
-    margin-right: var(--sl-spacing-x-small);
+  .button-group-toolbar klik-button-group:not(:last-of-type) {
+    margin-right: var(--klik-spacing-x-small);
   }
 </style>
 ```
@@ -420,8 +420,8 @@ import {
 } from '@shoelace-style/shoelace/dist/react';
 
 const css = `
-  .button-group-toolbar sl-button-group:not(:last-of-type) {
-    margin-right: var(--sl-spacing-x-small);
+  .button-group-toolbar klik-button-group:not(:last-of-type) {
+    margin-right: var(--klik-spacing-x-small);
   }
 `;
 
@@ -467,4 +467,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-button-group]
+[component-metadata:klik-button-group]

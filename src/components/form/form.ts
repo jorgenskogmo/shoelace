@@ -25,14 +25,14 @@ interface FormControl {
  *
  * @slot - The form's content.
  *
- * @event {{ formData: FormData, formControls: [] }} sl-submit - Emitted when the form is submitted. This event will not
+ * @event {{ formData: FormData, formControls: [] }} klik-submit - Emitted when the form is submitted. This event will not
  *   be emitted if any form control inside of it is in an invalid state, unless the form has the `novalidate` attribute.
  *   Note that there is never a need to prevent this event, since it doen't send a GET or POST request like native
  *   forms. To "prevent" submission, use a conditional around the XHR request you use to submit the form's data with.
  *
  * @csspart base - The component's base wrapper.
  */
-@customElement('sl-form')
+@customElement('klik-form')
 export default class SlForm extends LitElement {
   static styles = styles;
 
@@ -111,7 +111,7 @@ export default class SlForm extends LitElement {
         }
       },
       {
-        tag: 'sl-button',
+        tag: 'klik-button',
         serialize: (el: SlButton, formData) => (el.name && !el.disabled ? formData.append(el.name, el.value) : null),
         click: event => {
           const target = event.target as SlButton;
@@ -121,17 +121,17 @@ export default class SlForm extends LitElement {
         }
       },
       {
-        tag: 'sl-checkbox',
+        tag: 'klik-checkbox',
         serialize: (el: SlCheckbox, formData) =>
           el.name && el.checked && !el.disabled ? formData.append(el.name, el.value) : null
       },
       {
-        tag: 'sl-color-picker',
+        tag: 'klik-color-picker',
         serialize: (el: SlColorPicker, formData) =>
           el.name && !el.disabled ? formData.append(el.name, el.value) : null
       },
       {
-        tag: 'sl-input',
+        tag: 'klik-input',
         serialize: (el: SlInput, formData) => (el.name && !el.disabled ? formData.append(el.name, el.value) : null),
         keyDown: event => {
           if (event.key === 'Enter' && !event.defaultPrevented) {
@@ -140,12 +140,12 @@ export default class SlForm extends LitElement {
         }
       },
       {
-        tag: 'sl-radio',
+        tag: 'klik-radio',
         serialize: (el: SlRadio, formData) =>
           el.name && el.checked && !el.disabled ? formData.append(el.name, el.value) : null
       },
       {
-        tag: 'sl-range',
+        tag: 'klik-range',
         serialize: (el: SlRange, formData) => {
           if (el.name && !el.disabled) {
             formData.append(el.name, el.value + '');
@@ -153,7 +153,7 @@ export default class SlForm extends LitElement {
         }
       },
       {
-        tag: 'sl-select',
+        tag: 'klik-select',
         serialize: (el: SlSelect, formData) => {
           if (el.name && !el.disabled) {
             if (el.multiple) {
@@ -170,12 +170,12 @@ export default class SlForm extends LitElement {
         }
       },
       {
-        tag: 'sl-switch',
+        tag: 'klik-switch',
         serialize: (el: SlSwitch, formData) =>
           el.name && el.checked && !el.disabled ? formData.append(el.name, el.value) : null
       },
       {
-        tag: 'sl-textarea',
+        tag: 'klik-textarea',
         serialize: (el: SlTextarea, formData) => (el.name && !el.disabled ? formData.append(el.name, el.value) : null)
       },
       {
@@ -210,7 +210,7 @@ export default class SlForm extends LitElement {
   }
 
   /**
-   * Submits the form. If all controls are valid, the `sl-submit` event will be emitted and the promise will resolve
+   * Submits the form. If all controls are valid, the `klik-submit` event will be emitted and the promise will resolve
    * with `true`. If any form control is invalid, the promise will resolve with `false` and no event will be emitted.
    */
   submit() {
@@ -228,7 +228,7 @@ export default class SlForm extends LitElement {
       }
     }
 
-    emit(this, 'sl-submit', { detail: { formData, formControls } });
+    emit(this, 'klik-submit', { detail: { formData, formControls } });
 
     return true;
   }
@@ -278,6 +278,6 @@ export default class SlForm extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-form': SlForm;
+    'klik-form': SlForm;
   }
 }

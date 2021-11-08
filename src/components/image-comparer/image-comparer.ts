@@ -12,13 +12,13 @@ import '../icon/icon';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon
+ * @dependency klik-icon
  *
  * @slot before - The before image, an `<img>` or `<svg>` element.
  * @slot after - The after image, an `<img>` or `<svg>` element.
  * @slot handle-icon - The icon used inside the handle.
  *
- * @event sl-change - Emitted when the position changes.
+ * @event klik-change - Emitted when the position changes.
  *
  * @csspart base - The component's base wrapper.
  * @csspart before - The container that holds the "before" image.
@@ -29,7 +29,7 @@ import '../icon/icon';
  * @cssproperty --divider-width - The width of the dividing line.
  * @cssproperty --handle-size - The size of the compare handle.
  */
-@customElement('sl-image-comparer')
+@customElement('klik-image-comparer')
 export default class SlImageComparer extends LitElement {
   static styles = styles;
 
@@ -96,7 +96,7 @@ export default class SlImageComparer extends LitElement {
 
   @watch('position', { waitUntilFirstUpdate: true })
   handlePositionChange() {
-    emit(this, 'sl-change');
+    emit(this, 'klik-change');
   }
 
   render() {
@@ -133,7 +133,7 @@ export default class SlImageComparer extends LitElement {
             tabindex="0"
           >
             <slot name="handle-icon">
-              <sl-icon class="image-comparer__handle-icon" name="grip-vertical" library="system"></sl-icon>
+              <klik-icon class="image-comparer__handle-icon" name="grip-vertical" library="system"></klik-icon>
             </slot>
           </div>
         </div>
@@ -144,6 +144,6 @@ export default class SlImageComparer extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-image-comparer': SlImageComparer;
+    'klik-image-comparer': SlImageComparer;
   }
 }

@@ -10,21 +10,21 @@ import styles from './alert.styles';
 
 import '../icon-button/icon-button';
 
-const toastStack = Object.assign(document.createElement('div'), { className: 'sl-toast-stack' });
+const toastStack = Object.assign(document.createElement('div'), { className: 'klik-toast-stack' });
 
 /**
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon-button
+ * @dependency klik-icon-button
  *
  * @slot - The alert's content.
  * @slot icon - An icon to show in the alert.
  *
- * @event sl-show - Emitted when the alert opens.
- * @event sl-after-show - Emitted after the alert opens and all animations are complete.
- * @event sl-hide - Emitted when the alert closes.
- * @event sl-after-hide - Emitted after the alert closes and all animations are complete.
+ * @event klik-show - Emitted when the alert opens.
+ * @event klik-after-show - Emitted after the alert opens and all animations are complete.
+ * @event klik-hide - Emitted when the alert closes.
+ * @event klik-after-hide - Emitted after the alert closes and all animations are complete.
  *
  * @csspart base - The component's base wrapper.
  * @csspart icon - The container that wraps the alert icon.
@@ -37,7 +37,7 @@ const toastStack = Object.assign(document.createElement('div'), { className: 'sl
  * @animation alert.hide - The animation to use when hiding the alert.
  */
 
-@customElement('sl-alert')
+@customElement('klik-alert')
 export default class SlAlert extends LitElement {
   static styles = styles;
 
@@ -71,7 +71,7 @@ export default class SlAlert extends LitElement {
     }
 
     this.open = true;
-    return waitForEvent(this, 'sl-after-show');
+    return waitForEvent(this, 'klik-after-show');
   }
 
   /** Hides the alert */
@@ -81,7 +81,7 @@ export default class SlAlert extends LitElement {
     }
 
     this.open = false;
-    return waitForEvent(this, 'sl-after-hide');
+    return waitForEvent(this, 'klik-after-hide');
   }
 
   /**
@@ -104,13 +104,13 @@ export default class SlAlert extends LitElement {
       });
 
       this.addEventListener(
-        'sl-after-hide',
+        'klik-after-hide',
         () => {
           toastStack.removeChild(this);
           resolve();
 
           // Remove the toast stack from the DOM when there are no more alerts
-          if (!toastStack.querySelector('sl-alert')) {
+          if (!toastStack.querySelector('klik-alert')) {
             toastStack.remove();
           }
         },
@@ -138,7 +138,7 @@ export default class SlAlert extends LitElement {
   async handleOpenChange() {
     if (this.open) {
       // Show
-      emit(this, 'sl-show');
+      emit(this, 'klik-show');
 
       if (this.duration < Infinity) {
         this.restartAutoHide();
@@ -149,10 +149,10 @@ export default class SlAlert extends LitElement {
       const { keyframes, options } = getAnimation(this, 'alert.show');
       await animateTo(this.base, keyframes, options);
 
-      emit(this, 'sl-after-show');
+      emit(this, 'klik-after-show');
     } else {
       // Hide
-      emit(this, 'sl-hide');
+      emit(this, 'klik-hide');
 
       clearTimeout(this.autoHideTimeout);
 
@@ -161,7 +161,7 @@ export default class SlAlert extends LitElement {
       await animateTo(this.base, keyframes, options);
       this.base.hidden = true;
 
-      emit(this, 'sl-after-hide');
+      emit(this, 'klik-after-hide');
     }
   }
 
@@ -201,12 +201,12 @@ export default class SlAlert extends LitElement {
         ${this.closable
           ? html`
               <span class="alert__close">
-                <sl-icon-button
+                <klik-icon-button
                   exportparts="base:close-button"
                   name="x"
                   library="system"
                   @click=${this.handleCloseClick}
-                ></sl-icon-button>
+                ></klik-icon-button>
               </span>
             `
           : ''}
@@ -233,6 +233,6 @@ setDefaultAnimation('alert.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-alert': SlAlert;
+    'klik-alert': SlAlert;
   }
 }

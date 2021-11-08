@@ -29,13 +29,13 @@
             } else if (isAttributeDifferent) {
               attributeInfo = `
                 <br>
-                <sl-tooltip content="This attribute is different than the property">
+                <klik-tooltip content="This attribute is different than the property">
                   <small>
                     <code class="nowrap">
                       ${escapeHtml(prop.attribute)}
                     </code>
                   </small>
-                </sl-tooltip>`;
+                </klik-tooltip>`;
             }
 
             return `
@@ -48,7 +48,7 @@
                   ${escapeHtml(prop.description)}
                 </td>
                 <td style="text-align: center;">${
-                  prop.reflects ? '<sl-icon label="yes" name="check"></sl-icon>' : ''
+                  prop.reflects ? '<klik-icon label="yes" name="check"></klik-icon>' : ''
                 }</td>
                 <td>${prop.type?.text ? `<code>${escapeHtml(prop.type?.text || '')}</code>` : '-'}</td>
                 <td>${prop.default ? `<code>${escapeHtml(prop.default)}</code>` : '-'}</td>
@@ -309,21 +309,21 @@
       target.appendChild(version);
 
       // Store version for reuse
-      sessionStorage.setItem('sl-version', metadata.package.version);
+      sessionStorage.setItem('klik-version', metadata.package.version);
 
       // Add repo buttons
       const buttons = document.createElement('div');
       buttons.classList.add('sidebar-buttons');
       buttons.innerHTML = `
-        <sl-button size="small" class="repo-button repo-button--sponsor" href="https://github.com/sponsors/claviska" target="_blank">
-          <sl-icon name="heart"></sl-icon> Sponsor
-        </sl-button>
-        <sl-button size="small" class="repo-button repo-button--github" href="https://github.com/shoelace-style/shoelace/stargazers" target="_blank">
-          <sl-icon name="github"></sl-icon> <span class="github-star-count">Star</span>
-        </sl-button>
-        <sl-button size="small" class="repo-button repo-button--twitter" href="https://twitter.com/shoelace_style" target="_blank">
-          <sl-icon name="twitter"></sl-icon> Follow
-        </sl-button>
+        <klik-button size="small" class="repo-button repo-button--sponsor" href="https://github.com/sponsors/claviska" target="_blank">
+          <klik-icon name="heart"></klik-icon> Sponsor
+        </klik-button>
+        <klik-button size="small" class="repo-button repo-button--github" href="https://github.com/shoelace-style/shoelace/stargazers" target="_blank">
+          <klik-icon name="github"></klik-icon> <span class="github-star-count">Star</span>
+        </klik-button>
+        <klik-button size="small" class="repo-button repo-button--twitter" href="https://twitter.com/shoelace_style" target="_blank">
+          <klik-icon name="twitter"></klik-icon> Follow
+        </klik-button>
       `;
       target.appendChild(buttons);
     });
@@ -357,13 +357,13 @@
             </div>
 
             <div class="component-header__info">
-              <sl-badge type="neutral" pill>
+              <klik-badge type="neutral" pill>
                 Since ${component.since || '?'}
-              </sl-badge>
+              </klik-badge>
 
-              <sl-badge type="${badgeType}" pill style="text-transform: capitalize;">
+              <klik-badge type="${badgeType}" pill style="text-transform: capitalize;">
                 ${component.status}
-              </sl-badge>
+              </klik-badge>
             </div>
           </div>
         `;
@@ -399,33 +399,33 @@
           result += `
             ## Importing
 
-            <sl-tab-group>
-            <sl-tab slot="nav" panel="cdn">CDN</sl-tab>
-            <sl-tab slot="nav" panel="bundler">Bundler</sl-tab>
-            <sl-tab slot="nav" panel="react">React</sl-tab>
+            <klik-tab-group>
+            <klik-tab slot="nav" panel="cdn">CDN</klik-tab>
+            <klik-tab slot="nav" panel="bundler">Bundler</klik-tab>
+            <klik-tab slot="nav" panel="react">React</klik-tab>
 
-            <sl-tab-panel name="cdn">\n
+            <klik-tab-panel name="cdn">\n
             To cherry pick this component from [the CDN](https://www.jsdelivr.com/package/npm/@shoelace-style/shoelace):
 
             \`\`\`js
             import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@${metadata.package.version}/${component.path}';
             \`\`\`
-            </sl-tab-panel>
+            </klik-tab-panel>
 
-            <sl-tab-panel name="bundler">\n
+            <klik-tab-panel name="bundler">\n
             To import this component using [a bundler](/getting-started/installation#bundling):
             \`\`\`js
             import '@shoelace-style/shoelace/${component.path}';
             \`\`\`
-            </sl-tab-panel>
+            </klik-tab-panel>
 
-            <sl-tab-panel name="react">\n
+            <klik-tab-panel name="react">\n
             To import this component as a [React component](/frameworks/react):
             \`\`\`js
             import { ${component.name} } from '@shoelace-style/shoelace/dist/react';
             \`\`\`
-            </sl-tab-panel>
-            </sl-tab-group>
+            </klik-tab-panel>
+            </klik-tab-group>
           `;
         }
 

@@ -1,11 +1,11 @@
 # Rating
 
-[component-header:sl-rating]
+[component-header:klik-rating]
 
 Ratings give users a way to quickly view and provide feedback.
 
 ```html preview
-<sl-rating></sl-rating>
+<klik-rating></klik-rating>
 ```
 
 ```jsx react
@@ -23,7 +23,7 @@ const App = () => (
 Ratings are 0-5 by default. To change the maximum possible value, use the `max` attribute.
 
 ```html preview
-<sl-rating max="3"></sl-rating>
+<klik-rating max="3"></klik-rating>
 ```
 
 ```jsx react
@@ -39,7 +39,7 @@ const App = () => (
 Use the `precision` attribute to let users select fractional ratings.
 
 ```html preview
-<sl-rating precision="0.5" value="2.5"></sl-rating>
+<klik-rating precision="0.5" value="2.5"></klik-rating>
 ```
 
 ```jsx react
@@ -55,7 +55,7 @@ const App = () => (
 Set the `--symbol-size` custom property to adjust the size.
 
 ```html preview
-<sl-rating style="--symbol-size: 2rem;"></sl-rating>
+<klik-rating style="--symbol-size: 2rem;"></klik-rating>
 ```
 
 ```jsx react
@@ -71,7 +71,7 @@ const App = () => (
 Use the `readonly` attribute to display a rating that users can't change.
 
 ```html preview
-<sl-rating readonly value="3"></sl-rating>
+<klik-rating readonly value="3"></klik-rating>
 ```
 
 ```jsx react
@@ -87,7 +87,7 @@ const App = () => (
 Use the `disable` attribute to disable the rating.
 
 ```html preview
-<sl-rating disabled value="3"></sl-rating>
+<klik-rating disabled value="3"></klik-rating>
 ```
 
 ```jsx react
@@ -101,11 +101,11 @@ const App = () => (
 ### Custom Icons
 
 ```html preview
-<sl-rating class="rating-hearts" style="--symbol-color-active: #ff4136;"></sl-rating>
+<klik-rating class="rating-hearts" style="--symbol-color-active: #ff4136;"></klik-rating>
 
 <script>
   const rating = document.querySelector('.rating-hearts');
-  rating.getSymbol = () => '<sl-icon name="heart-fill"></sl-icon>'; 
+  rating.getSymbol = () => '<klik-icon name="heart-fill"></klik-icon>'; 
 </script>
 ```
 
@@ -115,7 +115,7 @@ import { SlRating } from '@shoelace-style/shoelace/dist/react';
 
 const App = () => (
   <SlRating 
-    getSymbol={() => '<sl-icon name="heart-fill"></sl-icon>'}
+    getSymbol={() => '<klik-icon name="heart-fill"></klik-icon>'}
     style={{ '--symbol-color-active': '#ff4136' }} 
   />
 );
@@ -124,14 +124,14 @@ const App = () => (
 ### Value-based Icons
 
 ```html preview
-<sl-rating class="rating-emojis"></sl-rating>
+<klik-rating class="rating-emojis"></klik-rating>
 
 <script>
   const rating = document.querySelector('.rating-emojis');
 
   rating.getSymbol = (value) => {
     const icons = ['emoji-angry', 'emoji-frown', 'emoji-expressionless', 'emoji-smile', 'emoji-laughing'];
-    return `<sl-icon name="${icons[value - 1]}"></sl-icon>`;
+    return `<klik-icon name="${icons[value - 1]}"></klik-icon>`;
   };
 </script>
 ```
@@ -142,7 +142,7 @@ import { SlRating } from '@shoelace-style/shoelace/dist/react';
 
 function getSymbol(value) {
   const icons = ['emoji-angry', 'emoji-frown', 'emoji-expressionless', 'emoji-smile', 'emoji-laughing'];
-  return `<sl-icon name="${icons[value - 1]}"></sl-icon>`;
+  return `<klik-icon name="${icons[value - 1]}"></klik-icon>`;
 }
 
 const App = () => (
@@ -150,4 +150,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-rating]
+[component-metadata:klik-rating]

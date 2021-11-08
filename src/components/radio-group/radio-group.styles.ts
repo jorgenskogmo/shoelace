@@ -9,23 +9,23 @@ export default css`
   }
 
   .radio-group {
-    border: solid var(--sl-panel-border-width) rgb(var(--sl-panel-border-color));
-    border-radius: var(--sl-border-radius-medium);
-    padding: var(--sl-spacing-large);
-    padding-top: var(--sl-spacing-x-small);
+    border: solid var(--klik-panel-border-width) rgb(var(--klik-panel-border-color));
+    border-radius: var(--klik-border-radius-medium);
+    padding: var(--klik-spacing-large);
+    padding-top: var(--klik-spacing-x-small);
   }
 
   .radio-group .radio-group__label {
-    font-family: var(--sl-input-font-family);
-    font-size: var(--sl-input-font-size-medium);
-    font-weight: var(--sl-input-font-weight);
-    color: rgb(var(--sl-input-color));
-    padding: 0 var(--sl-spacing-2x-small);
+    font-family: var(--klik-input-font-family);
+    font-size: var(--klik-input-font-size-medium);
+    font-weight: var(--klik-input-font-weight);
+    color: rgb(var(--klik-input-color));
+    padding: 0 var(--klik-spacing-2x-small);
   }
 
-  ::slotted(sl-radio:not(:last-of-type)) {
+  ::slotted(klik-radio:not(:last-of-type)) {
     display: block;
-    margin-bottom: var(--sl-spacing-2x-small);
+    margin-bottom: var(--klik-spacing-2x-small);
   }
 
   .radio-group:not(.radio-group--has-fieldset) {

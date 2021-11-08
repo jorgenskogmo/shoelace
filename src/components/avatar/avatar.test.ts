@@ -3,12 +3,12 @@ import { expect, fixture, html } from '@open-wc/testing';
 import '../../../dist/shoelace.js';
 import type SlAvatar from './avatar';
 
-describe('<sl-avatar>', () => {
+describe('<klik-avatar>', () => {
   let el: SlAvatar;
 
   describe('when provided no parameters', async () => {
     before(async () => {
-      el = await fixture<SlAvatar>(html` <sl-avatar></sl-avatar> `);
+      el = await fixture<SlAvatar>(html` <klik-avatar></klik-avatar> `);
     });
 
     it('passes accessibility test', async () => {
@@ -27,13 +27,13 @@ describe('<sl-avatar>', () => {
       'https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80';
     const alt = 'Gray tabby kitten looking down';
     before(async () => {
-      el = await fixture<SlAvatar>(html`<sl-avatar image="${image}" alt="${alt}"></sl-avatar>`);
+      el = await fixture<SlAvatar>(html`<klik-avatar image="${image}" alt="${alt}"></klik-avatar>`);
     });
 
     it('passes accessibility test', async () => {
       /**
        * The image element itself is ancillary, because it's parent container contains the
-       * aria-label which dictates what "sl-avatar" is. This also implies that alt text will
+       * aria-label which dictates what "klik-avatar" is. This also implies that alt text will
        * resolve to "" when not provided and ignored by readers. This is why we use alt="" on
        * the image element to pass accessibility.
        * https://html.spec.whatwg.org/multipage/images.html#ancillary-images
@@ -56,7 +56,7 @@ describe('<sl-avatar>', () => {
     describe('when an error occurs when attempting to load the image', async () => {
       before(async () => {
         el = await fixture<SlAvatar>(
-          html`<sl-avatar image="data:text/plain;not-an-image-url" alt="${alt}"></sl-avatar>`
+          html`<klik-avatar image="data:text/plain;not-an-image-url" alt="${alt}"></klik-avatar>`
         );
       });
 
@@ -71,7 +71,7 @@ describe('<sl-avatar>', () => {
   describe('when provided initials parameter', async () => {
     const initials = 'SL';
     before(async () => {
-      el = await fixture<SlAvatar>(html`<sl-avatar initials="${initials}"></sl-avatar>`);
+      el = await fixture<SlAvatar>(html`<klik-avatar initials="${initials}"></klik-avatar>`);
     });
 
     it('passes accessibility test', async () => {
@@ -88,7 +88,7 @@ describe('<sl-avatar>', () => {
   ['square', 'rounded', 'circle'].forEach(shape => {
     describe(`when passed a shape attribute ${shape}`, () => {
       before(async () => {
-        el = await fixture<SlAvatar>(html`<sl-avatar shape="${shape}"></sl-avatar>`);
+        el = await fixture<SlAvatar>(html`<klik-avatar shape="${shape}"></klik-avatar>`);
       });
 
       it('passes accessibility test', async () => {
@@ -106,7 +106,7 @@ describe('<sl-avatar>', () => {
 
   describe('when passed a <span>, on slot "icon"', async () => {
     before(async () => {
-      el = await fixture<SlAvatar>(html`<sl-avatar><span slot="icon">random content</span></sl-avatar>`);
+      el = await fixture<SlAvatar>(html`<klik-avatar><span slot="icon">random content</span></klik-avatar>`);
     });
 
     it('passes accessibility test', async () => {

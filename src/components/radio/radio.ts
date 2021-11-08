@@ -15,16 +15,16 @@ let id = 0;
  *
  * @slot - The radio's label.
  *
- * @event sl-blur - Emitted when the control loses focus.
- * @event sl-change - Emitted when the control's checked state changes.
- * @event sl-focus - Emitted when the control gains focus.
+ * @event klik-blur - Emitted when the control loses focus.
+ * @event klik-change - Emitted when the control's checked state changes.
+ * @event klik-focus - Emitted when the control gains focus.
  *
  * @csspart base - The component's base wrapper.
  * @csspart control - The radio control.
  * @csspart checked-icon - The container the wraps the checked icon.
  * @csspart label - The radio label.
  */
-@customElement('sl-radio')
+@customElement('klik-radio')
 export default class SlRadio extends LitElement {
   static styles = styles;
 
@@ -80,14 +80,14 @@ export default class SlRadio extends LitElement {
   }
 
   getAllRadios() {
-    const radioGroup = this.closest('sl-radio-group');
+    const radioGroup = this.closest('klik-radio-group');
 
     // Radios must be part of a radio group
     if (!radioGroup) {
       return [this];
     }
 
-    return [...radioGroup.querySelectorAll('sl-radio')].filter((radio: this) => radio.name === this.name) as this[];
+    return [...radioGroup.querySelectorAll('klik-radio')].filter((radio: this) => radio.name === this.name) as this[];
   }
 
   getSiblingRadios() {
@@ -96,7 +96,7 @@ export default class SlRadio extends LitElement {
 
   handleBlur() {
     this.hasFocus = false;
-    emit(this, 'sl-blur');
+    emit(this, 'klik-blur');
   }
 
   @watch('checked', { waitUntilFirstUpdate: true })
@@ -108,7 +108,7 @@ export default class SlRadio extends LitElement {
 
   handleClick() {
     this.checked = true;
-    emit(this, 'sl-change');
+    emit(this, 'klik-change');
   }
 
   @watch('disabled')
@@ -122,7 +122,7 @@ export default class SlRadio extends LitElement {
 
   handleFocus() {
     this.hasFocus = true;
-    emit(this, 'sl-focus');
+    emit(this, 'klik-focus');
   }
 
   handleKeyDown(event: KeyboardEvent) {
@@ -136,7 +136,7 @@ export default class SlRadio extends LitElement {
       this.getAllRadios().map(radio => (radio.checked = false));
       radios[index].focus();
       radios[index].checked = true;
-      emit(radios[index], 'sl-change');
+      emit(radios[index], 'klik-change');
 
       event.preventDefault();
     }
@@ -193,6 +193,6 @@ export default class SlRadio extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-radio': SlRadio;
+    'klik-radio': SlRadio;
   }
 }

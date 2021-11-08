@@ -1,11 +1,11 @@
 # Progress Ring
 
-[component-header:sl-progress-ring]
+[component-header:klik-progress-ring]
 
 Progress rings are used to show the progress of a determinate operation in a circular fashion.
 
 ```html preview
-<sl-progress-ring value="25"></sl-progress-ring>
+<klik-progress-ring value="25"></klik-progress-ring>
 ```
 
 ```jsx react
@@ -23,7 +23,7 @@ const App = () => (
 Use the `--size` custom property to set the diameter of the progress ring.
 
 ```html preview
-<sl-progress-ring value="50" style="--size: 200px;"></sl-progress-ring>
+<klik-progress-ring value="50" style="--size: 200px;"></klik-progress-ring>
 ```
 
 ```jsx react
@@ -42,7 +42,7 @@ const App = () => (
 Use the `--track-width` custom property to set the width of the progress ring's track.
 
 ```html preview
-<sl-progress-ring value="50" style="--track-width: 10px;"></sl-progress-ring>
+<klik-progress-ring value="50" style="--track-width: 10px;"></klik-progress-ring>
 ```
 
 ```jsx react
@@ -61,13 +61,13 @@ const App = () => (
 To change the color, use the `--track-color` and `--indicator-color` custom properties.
 
 ```html preview
-<sl-progress-ring 
+<klik-progress-ring 
   value="50" 
   style="
     --track-color: pink; 
     --indicator-color: deeppink;
   "
-></sl-progress-ring>
+></klik-progress-ring>
 ```
 
 ```jsx react
@@ -89,7 +89,7 @@ const App = () => (
 Use the `label` attribute to label the progress ring and tell assistive devices how to announce it.
 
 ```html preview
-<sl-progress-ring value="50" label="Upload progress"></sl-progress-ring>
+<klik-progress-ring value="50" label="Upload progress"></klik-progress-ring>
 ```
 
 ```jsx react
@@ -108,12 +108,12 @@ const App = () => (
 Use the default slot to show a label inside the progress ring.
 
 ```html preview
-<sl-progress-ring value="50" class="progress-ring-values" style="margin-bottom: .5rem;">50%</sl-progress-ring>
+<klik-progress-ring value="50" class="progress-ring-values" style="margin-bottom: .5rem;">50%</klik-progress-ring>
 
 <br>
 
-<sl-button circle><sl-icon name="dash"></sl-icon></sl-button>
-<sl-button circle><sl-icon name="plus"></sl-icon></sl-button>
+<klik-button circle><klik-icon name="dash"></klik-icon></klik-button>
+<klik-button circle><klik-icon name="plus"></klik-icon></klik-button>
 
 <script>
   const progressRing = document.querySelector('.progress-ring-values');
@@ -175,4 +175,4 @@ const App = () => {
 };
 ```
 
-[component-metadata:sl-progress-ring]
+[component-metadata:klik-progress-ring]

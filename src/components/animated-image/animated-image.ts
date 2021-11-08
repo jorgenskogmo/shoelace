@@ -10,10 +10,10 @@ import '../icon/icon';
  * @since 2.0
  * @status experimental
  *
- * @dependency sl-icon
+ * @dependency klik-icon
  *
- * @event sl-load - Emitted when the image loads successfully.
- * @event sl-error - Emitted when the image fails to load.
+ * @event klik-load - Emitted when the image loads successfully.
+ * @event klik-error - Emitted when the image fails to load.
  *
  * @part - control-box - The container that surrounds the pause/play icons and provides their background.
  * @part - play-icon - The icon to use for the play button.
@@ -22,7 +22,7 @@ import '../icon/icon';
  * @cssproperty --control-box-size - The size of the icon box.
  * @cssproperty --icon-size - The size of the play/pause icons.
  */
-@customElement('sl-animated-image')
+@customElement('klik-animated-image')
 export default class SlAnimatedImage extends LitElement {
   static styles = styles;
 
@@ -53,13 +53,13 @@ export default class SlAnimatedImage extends LitElement {
     this.frozenFrame = canvas.toDataURL('image/gif');
 
     if (!this.isLoaded) {
-      emit(this, 'sl-load');
+      emit(this, 'klik-load');
       this.isLoaded = true;
     }
   }
 
   handleError() {
-    emit(this, 'sl-error');
+    emit(this, 'klik-error');
   }
 
   @watch('play')
@@ -103,8 +103,8 @@ export default class SlAnimatedImage extends LitElement {
 
               <div part="control-box" class="animated-image__control-box">
                 ${this.play
-                  ? html`<sl-icon part="pause-icon" name="pause-fill" library="system"></sl-icon>`
-                  : html`<sl-icon part="play-icon" name="play-fill" library="system"></sl-icon>`}
+                  ? html`<klik-icon part="pause-icon" name="pause-fill" library="system"></klik-icon>`
+                  : html`<klik-icon part="play-icon" name="play-fill" library="system"></klik-icon>`}
               </div>
             `
           : ''}
@@ -115,6 +115,6 @@ export default class SlAnimatedImage extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-animated-image': SlAnimatedImage;
+    'klik-animated-image': SlAnimatedImage;
   }
 }

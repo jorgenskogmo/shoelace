@@ -13,7 +13,7 @@ import styles from './divider.styles';
  * @cssproperty --spacing - The spacing between the divider and neighboring elements.
  * @cssproperty --width - The width of the divider.
  */
-@customElement('sl-divider')
+@customElement('klik-divider')
 export default class SlDivider extends LitElement {
   static styles = styles;
 
@@ -36,6 +36,6 @@ export default class SlDivider extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-divider': SlDivider;
+    'klik-divider': SlDivider;
   }
 }

@@ -1,21 +1,21 @@
 # Dialog
 
-[component-header:sl-dialog]
+[component-header:klik-dialog]
 
 Dialogs, sometimes called "modals", appear above the page and require the user's immediate attention.
 
 ```html preview
-<sl-dialog label="Dialog" class="dialog-overview">
+<klik-dialog label="Dialog" class="dialog-overview">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  <sl-button slot="footer" type="primary">Close</sl-button>
-</sl-dialog>
+  <klik-button slot="footer" type="primary">Close</klik-button>
+</klik-dialog>
 
-<sl-button>Open Dialog</sl-button>
+<klik-button>Open Dialog</klik-button>
 
 <script>
   const dialog = document.querySelector('.dialog-overview');
   const openButton = dialog.nextElementSibling;
-  const closeButton = dialog.querySelector('sl-button[slot="footer"]');
+  const closeButton = dialog.querySelector('klik-button[slot="footer"]');
 
   openButton.addEventListener('click', () => dialog.show());
   closeButton.addEventListener('click', () => dialog.hide());
@@ -57,17 +57,17 @@ const App = () => {
 Use the `--width` custom property to set the dialog's width.
 
 ```html preview
-<sl-dialog label="Dialog" class="dialog-width" style="--width: 50vw;">
+<klik-dialog label="Dialog" class="dialog-width" style="--width: 50vw;">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  <sl-button slot="footer" type="primary">Close</sl-button>
-</sl-dialog>
+  <klik-button slot="footer" type="primary">Close</klik-button>
+</klik-dialog>
 
-<sl-button>Open Dialog</sl-button>
+<klik-button>Open Dialog</klik-button>
 
 <script>
   const dialog = document.querySelector('.dialog-width');
   const openButton = dialog.nextElementSibling;
-  const closeButton = dialog.querySelector('sl-button[slot="footer"]');
+  const closeButton = dialog.querySelector('klik-button[slot="footer"]');
 
   openButton.addEventListener('click', () => dialog.show());
   closeButton.addEventListener('click', () => dialog.hide());
@@ -106,19 +106,19 @@ const App = () => {
 By design, a dialog's height will never exceed that of the viewport. As such, dialogs will not scroll with the page ensuring the header and footer are always accessible to the user.
 
 ```html preview
-<sl-dialog label="Dialog" class="dialog-scrolling">
-  <div style="height: 150vh; border: dashed 2px rgb(var(--sl-color-neutral-200)); padding: 0 1rem;">
+<klik-dialog label="Dialog" class="dialog-scrolling">
+  <div style="height: 150vh; border: dashed 2px rgb(var(--klik-color-neutral-200)); padding: 0 1rem;">
     <p>Scroll down and give it a try! 👇</p>
   </div>
-  <sl-button slot="footer" type="primary">Close</sl-button>
-</sl-dialog>
+  <klik-button slot="footer" type="primary">Close</klik-button>
+</klik-dialog>
 
-<sl-button>Open Dialog</sl-button>
+<klik-button>Open Dialog</klik-button>
 
 <script>
   const dialog = document.querySelector('.dialog-scrolling');
   const openButton = dialog.nextElementSibling;
-  const closeButton = dialog.querySelector('sl-button[slot="footer"]');
+  const closeButton = dialog.querySelector('klik-button[slot="footer"]');
 
   openButton.addEventListener('click', () => dialog.show());
   closeButton.addEventListener('click', () => dialog.hide());
@@ -137,7 +137,7 @@ const App = () => {
       <SlDialog label="Dialog" open={open} onSlAfterHide={() => setOpen(false)}>
         <div style={{
           height: '150vh',
-          border: 'dashed 2px rgb(var(--sl-color-neutral-200))',
+          border: 'dashed 2px rgb(var(--klik-color-neutral-200))',
           padding: '0 1rem'
         }}>
           <p>Scroll down and give it a try! 👇</p>
@@ -158,25 +158,25 @@ const App = () => {
 
 By default, dialogs will close when the user clicks the close button, clicks the overlay, or presses the <kbd>Escape</kbd> key. In most cases, the default behavior is the best behavior in terms of UX. However, there are situations where this may be undesirable, such as when data loss will occur.
 
-To keep the dialog open in such cases, you can cancel the `sl-request-close` event. When canceled, the dialog will remain open and pulse briefly to draw the user's attention to it.
+To keep the dialog open in such cases, you can cancel the `klik-request-close` event. When canceled, the dialog will remain open and pulse briefly to draw the user's attention to it.
 
 ```html preview
-<sl-dialog label="Dialog" class="dialog-deny-close">
+<klik-dialog label="Dialog" class="dialog-deny-close">
   This dialog will not close unless you use the button below.
-  <sl-button slot="footer" type="primary">Save &amp; Close</sl-button>
-</sl-dialog>
+  <klik-button slot="footer" type="primary">Save &amp; Close</klik-button>
+</klik-dialog>
 
-<sl-button>Open Dialog</sl-button>
+<klik-button>Open Dialog</klik-button>
 
 <script>
   const dialog = document.querySelector('.dialog-deny-close');
   const openButton = dialog.nextElementSibling;
-  const saveButton = dialog.querySelector('sl-button[slot="footer"]');
+  const saveButton = dialog.querySelector('klik-button[slot="footer"]');
 
   openButton.addEventListener('click', () => dialog.show());
   saveButton.addEventListener('click', () => dialog.hide());
 
-  dialog.addEventListener('sl-request-close', event => event.preventDefault());
+  dialog.addEventListener('klik-request-close', event => event.preventDefault());
 </script>
 ```
 
@@ -209,26 +209,26 @@ const App = () => {
 
 ### Customizing Initial Focus
 
-By default, the dialog's panel will gain focus when opened. This allows the first tab press to focus on the first tabbable element within the dialog. To set focus on a different element, listen for and cancel the `sl-initial-focus` event.
+By default, the dialog's panel will gain focus when opened. This allows the first tab press to focus on the first tabbable element within the dialog. To set focus on a different element, listen for and cancel the `klik-initial-focus` event.
 
 ```html preview
-<sl-dialog label="Dialog" class="dialog-focus">
-  <sl-input placeholder="I will have focus when the dialog is opened"></sl-input>
-  <sl-button slot="footer" type="primary">Close</sl-button>
-</sl-dialog>
+<klik-dialog label="Dialog" class="dialog-focus">
+  <klik-input placeholder="I will have focus when the dialog is opened"></klik-input>
+  <klik-button slot="footer" type="primary">Close</klik-button>
+</klik-dialog>
 
-<sl-button>Open Dialog</sl-button>
+<klik-button>Open Dialog</klik-button>
 
 <script>
   const dialog = document.querySelector('.dialog-focus');
-  const input = dialog.querySelector('sl-input');
+  const input = dialog.querySelector('klik-input');
   const openButton = dialog.nextElementSibling;
-  const closeButton = dialog.querySelector('sl-button[slot="footer"]');
+  const closeButton = dialog.querySelector('klik-button[slot="footer"]');
 
   openButton.addEventListener('click', () => dialog.show());
   closeButton.addEventListener('click', () => dialog.hide());
 
-  dialog.addEventListener('sl-initial-focus', event => {
+  dialog.addEventListener('klik-initial-focus', event => {
     event.preventDefault();
     input.focus({ preventScroll: true });
   });
@@ -272,4 +272,4 @@ const App = () => {
 };
 ```
 
-[component-metadata:sl-dialog]
+[component-metadata:klik-dialog]

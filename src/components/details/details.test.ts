@@ -4,14 +4,14 @@ import sinon from 'sinon';
 import '../../../dist/shoelace.js';
 import type SlDetails from './details';
 
-describe('<sl-details>', () => {
+describe('<klik-details>', () => {
   it('should be visible with the open attribute', async () => {
     const el = await fixture<SlDetails>(html`
-      <sl-details open>
+      <klik-details open>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat.
-      </sl-details>
+      </klik-details>
     `);
     const body = el.shadowRoot?.querySelector('.details__body') as HTMLElement;
 
@@ -20,31 +20,31 @@ describe('<sl-details>', () => {
 
   it('should not be visible without the open attribute', async () => {
     const el = await fixture<SlDetails>(html`
-      <sl-details>
+      <klik-details>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat.
-      </sl-details>
+      </klik-details>
     `);
     const body = el.shadowRoot?.querySelector('.details__body') as HTMLElement;
 
     expect(body.hidden).to.be.true;
   });
 
-  it('should emit sl-show and sl-after-show when calling show()', async () => {
+  it('should emit klik-show and klik-after-show when calling show()', async () => {
     const el = await fixture<SlDetails>(html`
-      <sl-details>
+      <klik-details>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat.
-      </sl-details>
+      </klik-details>
     `);
     const body = el.shadowRoot?.querySelector('.details__body') as HTMLElement;
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
 
-    el.addEventListener('sl-show', showHandler);
-    el.addEventListener('sl-after-show', afterShowHandler);
+    el.addEventListener('klik-show', showHandler);
+    el.addEventListener('klik-after-show', afterShowHandler);
     el.show();
 
     await waitUntil(() => showHandler.calledOnce);
@@ -55,20 +55,20 @@ describe('<sl-details>', () => {
     expect(body.hidden).to.be.false;
   });
 
-  it('should emit sl-hide and sl-after-hide when calling hide()', async () => {
+  it('should emit klik-hide and klik-after-hide when calling hide()', async () => {
     const el = await fixture<SlDetails>(html`
-      <sl-details open>
+      <klik-details open>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat.
-      </sl-details>
+      </klik-details>
     `);
     const body = el.shadowRoot?.querySelector('.details__body') as HTMLElement;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
 
-    el.addEventListener('sl-hide', hideHandler);
-    el.addEventListener('sl-after-hide', afterHideHandler);
+    el.addEventListener('klik-hide', hideHandler);
+    el.addEventListener('klik-after-hide', afterHideHandler);
     el.hide();
 
     await waitUntil(() => hideHandler.calledOnce);
@@ -79,20 +79,20 @@ describe('<sl-details>', () => {
     expect(body.hidden).to.be.true;
   });
 
-  it('should emit sl-show and sl-after-show when setting open = true', async () => {
+  it('should emit klik-show and klik-after-show when setting open = true', async () => {
     const el = await fixture<SlDetails>(html`
-      <sl-details>
+      <klik-details>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat.
-      </sl-details>
+      </klik-details>
     `);
     const body = el.shadowRoot?.querySelector('.details__body') as HTMLElement;
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
 
-    el.addEventListener('sl-show', showHandler);
-    el.addEventListener('sl-after-show', afterShowHandler);
+    el.addEventListener('klik-show', showHandler);
+    el.addEventListener('klik-after-show', afterShowHandler);
     el.open = true;
 
     await waitUntil(() => showHandler.calledOnce);
@@ -103,20 +103,20 @@ describe('<sl-details>', () => {
     expect(body.hidden).to.be.false;
   });
 
-  it('should emit sl-hide and sl-after-hide when setting open = false', async () => {
+  it('should emit klik-hide and klik-after-hide when setting open = false', async () => {
     const el = await fixture<SlDetails>(html`
-      <sl-details open>
+      <klik-details open>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat.
-      </sl-details>
+      </klik-details>
     `);
     const body = el.shadowRoot?.querySelector('.details__body') as HTMLElement;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
 
-    el.addEventListener('sl-hide', hideHandler);
-    el.addEventListener('sl-after-hide', afterHideHandler);
+    el.addEventListener('klik-hide', hideHandler);
+    el.addEventListener('klik-after-hide', afterHideHandler);
     el.open = false;
 
     await waitUntil(() => hideHandler.calledOnce);
@@ -130,16 +130,16 @@ describe('<sl-details>', () => {
   it('should be the correct size after opening more than one instance', async () => {
     const el = await fixture<SlDetails>(html`
       <div>
-        <sl-details>
+        <klik-details>
           <div style="height: 200px;"></div>
-        </sl-details>
-        <sl-details>
+        </klik-details>
+        <klik-details>
           <div style="height: 400px;"></div>
-        </sl-details>
+        </klik-details>
       </div>
     `);
-    const first = el.querySelectorAll('sl-details')[0];
-    const second = el.querySelectorAll('sl-details')[1];
+    const first = el.querySelectorAll('klik-details')[0];
+    const second = el.querySelectorAll('klik-details')[1];
     const firstBody = first.shadowRoot?.querySelector('.details__body');
     const secondBody = second.shadowRoot?.querySelector('.details__body');
 

@@ -1,17 +1,17 @@
 # Animation
 
-[component-header:sl-animation]
+[component-header:klik-animation]
 
 Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
 
-To animate an element, wrap it in `<sl-animation>` and set an animation `name`. The animation not start until you add the `play` attribute. Refer to the [properties table](#properties) for a list of all animation options.
+To animate an element, wrap it in `<klik-animation>` and set an animation `name`. The animation not start until you add the `play` attribute. Refer to the [properties table](#properties) for a list of all animation options.
 
 ```html preview
 <div class="animation-overview">
-  <sl-animation name="bounce" duration="2000" play><div class="box"></div></sl-animation>
-  <sl-animation name="jello" duration="2000" play><div class="box"></div></sl-animation>
-  <sl-animation name="heartBeat" duration="2000" play><div class="box"></div></sl-animation>
-  <sl-animation name="flip" duration="2000" play><div class="box"></div></sl-animation>
+  <klik-animation name="bounce" duration="2000" play><div class="box"></div></klik-animation>
+  <klik-animation name="jello" duration="2000" play><div class="box"></div></klik-animation>
+  <klik-animation name="heartBeat" duration="2000" play><div class="box"></div></klik-animation>
+  <klik-animation name="flip" duration="2000" play><div class="box"></div></klik-animation>
 </div>
 
 <style>
@@ -19,13 +19,13 @@ To animate an element, wrap it in `<sl-animation>` and set an animation `name`. 
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: rgb(var(--sl-color-primary-600));
+    background-color: rgb(var(--klik-color-primary-600));
     margin: 1.5rem;
   }
 </style>
 ```
 
-?> The animation will only be applied to the first child element found in `<sl-animation>`.
+?> The animation will only be applied to the first child element found in `<klik-animation>`.
 
 ## Examples
 
@@ -35,14 +35,14 @@ This example demonstrates all of the baked-in animations and easings. Animations
 
 ```html preview
 <div class="animation-sandbox">
-  <sl-animation name="bounce" easing="ease-in-out" duration="2000" play>
+  <klik-animation name="bounce" easing="ease-in-out" duration="2000" play>
     <div class="box"></div>
-  </sl-animation>
+  </klik-animation>
 
   <div class="controls">
-    <sl-select label="Animation" value="bounce"></sl-select>
-    <sl-select label="Easing" value="linear"></sl-select>
-    <sl-range min="0" max="2" step=".5" value="1"></sl-range>
+    <klik-select label="Animation" value="bounce"></klik-select>
+    <klik-select label="Easing" value="linear"></klik-select>
+    <klik-range min="0" max="2" step=".5" value="1"></klik-range>
   </div>
 </div>
 
@@ -50,15 +50,15 @@ This example demonstrates all of the baked-in animations and easings. Animations
   import { getAnimationNames, getEasingNames } from '/dist/utilities/animation.js';
 
   const container = document.querySelector('.animation-sandbox');
-  const animation = container.querySelector('sl-animation');
-  const animationName = container.querySelector('.controls sl-select:nth-child(1)');
-  const easingName = container.querySelector('.controls sl-select:nth-child(2)');
-  const playbackRate = container.querySelector('sl-range');
+  const animation = container.querySelector('klik-animation');
+  const animationName = container.querySelector('.controls klik-select:nth-child(1)');
+  const easingName = container.querySelector('.controls klik-select:nth-child(2)');
+  const playbackRate = container.querySelector('klik-range');
   const animations = getAnimationNames();
   const easings = getEasingNames();
 
   animations.map(name => {
-    const menuItem = Object.assign(document.createElement('sl-menu-item'), {
+    const menuItem = Object.assign(document.createElement('klik-menu-item'), {
       textContent: name,
       value: name
     });
@@ -66,16 +66,16 @@ This example demonstrates all of the baked-in animations and easings. Animations
   });
   
   easings.map(name => {
-    const menuItem = Object.assign(document.createElement('sl-menu-item'), {
+    const menuItem = Object.assign(document.createElement('klik-menu-item'), {
       textContent: name,
       value: name
     });
     easingName.appendChild(menuItem);
   });
 
-  animationName.addEventListener('sl-change', () => animation.name = animationName.value);
-  easingName.addEventListener('sl-change', () => animation.easing = easingName.value);
-  playbackRate.addEventListener('sl-change', () => animation.playbackRate = playbackRate.value);
+  animationName.addEventListener('klik-change', () => animation.name = animationName.value);
+  easingName.addEventListener('klik-change', () => animation.easing = easingName.value);
+  playbackRate.addEventListener('klik-change', () => animation.playbackRate = playbackRate.value);
   playbackRate.tooltipFormatter = val => `Playback Rate = ${val}`;
 </script>
 
@@ -83,7 +83,7 @@ This example demonstrates all of the baked-in animations and easings. Animations
   .animation-sandbox .box {
     width: 100px;
     height: 100px;
-    background-color: rgb(var(--sl-color-primary-600));
+    background-color: rgb(var(--klik-color-primary-600));
   }
 
   .animation-sandbox .controls {
@@ -91,7 +91,7 @@ This example demonstrates all of the baked-in animations and easings. Animations
     margin-top: 2rem;
   }
 
-  .animation-sandbox .controls sl-select {
+  .animation-sandbox .controls klik-select {
     margin-bottom: 1rem;
   }
 </style>
@@ -103,12 +103,12 @@ Use an [Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/
 
 ```html preview
 <div class="animation-scroll">
-  <sl-animation name="jackInTheBox" duration="2000" iterations="1"><div class="box"></div></sl-animation>
+  <klik-animation name="jackInTheBox" duration="2000" iterations="1"><div class="box"></div></klik-animation>
 </div>
 
 <script>
   const container = document.querySelector('.animation-scroll');
-  const animation = container.querySelector('sl-animation');
+  const animation = container.querySelector('klik-animation');
   const box = animation.querySelector('.box');
 
   // Watch for the box to enter and exit the viewport. Note that we're observing the box, not the animation element!
@@ -129,7 +129,7 @@ Use an [Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: rgb(var(--sl-color-primary-600));
+    background-color: rgb(var(--klik-color-primary-600));
   }  
 </style>
 ```
@@ -140,13 +140,13 @@ Supply your own [keyframe formats](https://developer.mozilla.org/en-US/docs/Web/
 
 ```html preview
 <div class="animation-keyframes">
-  <sl-animation easing="ease-in-out" duration="2000" play>
+  <klik-animation easing="ease-in-out" duration="2000" play>
     <div class="box"></div>
-  </sl-animation>
+  </klik-animation>
 </div>
 
 <script>
-  const animation = document.querySelector('.animation-keyframes sl-animation');
+  const animation = document.querySelector('.animation-keyframes klik-animation');
   animation.keyframes = [
     {
       offset: 0,
@@ -169,7 +169,7 @@ Supply your own [keyframe formats](https://developer.mozilla.org/en-US/docs/Web/
   .animation-keyframes .box {
     width: 100px;
     height: 100px;
-    background-color: rgb(var(--sl-color-primary-600));
+    background-color: rgb(var(--klik-color-primary-600));
   }
 </style>
 ```
@@ -180,15 +180,15 @@ Animations won't play until you apply the `play` attribute. You can omit it init
 
 ```html preview
 <div class="animation-form">
-  <sl-animation name="rubberBand" duration="1000" iterations="1">
-    <sl-button type="primary">Click me</sl-button>
-  </sl-animation>
+  <klik-animation name="rubberBand" duration="1000" iterations="1">
+    <klik-button type="primary">Click me</klik-button>
+  </klik-animation>
 </div>
 
 <script>
   const container = document.querySelector('.animation-form');
-  const animation = container.querySelector('sl-animation');
-  const button = container.querySelector('sl-button');
+  const animation = container.querySelector('klik-animation');
+  const button = container.querySelector('klik-button');
 
   button.addEventListener('click', () => {
     animation.play = true;
@@ -196,4 +196,4 @@ Animations won't play until you apply the `play` attribute. You can omit it init
 </script>
 ```
 
-[component-metadata:sl-animation]
+[component-metadata:klik-animation]

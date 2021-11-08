@@ -12,11 +12,11 @@ import styles from './menu.styles';
  *
  * @slot - The menu's content, including menu items, menu labels, and dividers.
  *
- * @event {{ item: SlMenuItem }} sl-select - Emitted when a menu item is selected.
+ * @event {{ item: SlMenuItem }} klik-select - Emitted when a menu item is selected.
  *
  * @csspart base - The component's base wrapper.
  */
-@customElement('sl-menu')
+@customElement('klik-menu')
 export default class SlMenu extends LitElement {
   static styles = styles;
 
@@ -74,7 +74,7 @@ export default class SlMenu extends LitElement {
 
     // Restore focus in browsers that don't support :focus-visible when using the keyboard
     if (!hasFocusVisible) {
-      items.map(item => item.classList.remove('sl-focus-invisible'));
+      items.map(item => item.classList.remove('klik-focus-invisible'));
     }
 
     for (const item of items) {
@@ -92,10 +92,10 @@ export default class SlMenu extends LitElement {
 
   handleClick(event: MouseEvent) {
     const target = event.target as HTMLElement;
-    const item = target.closest('sl-menu-item') as SlMenuItem;
+    const item = target.closest('klik-menu-item') as SlMenuItem;
 
     if (item && !item.disabled) {
-      emit(this, 'sl-select', { detail: { item } });
+      emit(this, 'klik-select', { detail: { item } });
     }
   }
 
@@ -103,7 +103,7 @@ export default class SlMenu extends LitElement {
     // Restore focus in browsers that don't support :focus-visible when using the keyboard
     if (!hasFocusVisible) {
       const items = this.getAllItems();
-      items.map(item => item.classList.remove('sl-focus-invisible'));
+      items.map(item => item.classList.remove('klik-focus-invisible'));
     }
   }
 
@@ -164,7 +164,7 @@ export default class SlMenu extends LitElement {
 
       // Hide focus in browsers that don't support :focus-visible when using the mouse
       if (!hasFocusVisible) {
-        target.classList.add('sl-focus-invisible');
+        target.classList.add('klik-focus-invisible');
       }
     }
   }
@@ -197,6 +197,6 @@ export default class SlMenu extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-menu': SlMenu;
+    'klik-menu': SlMenu;
   }
 }

@@ -18,19 +18,19 @@ export default css`
 
   .dropdown__positioner {
     position: absolute;
-    z-index: var(--sl-z-index-dropdown);
+    z-index: var(--klik-z-index-dropdown);
   }
 
   .dropdown__panel {
     max-height: 75vh;
-    font-family: var(--sl-font-sans);
-    font-size: var(--sl-font-size-medium);
-    font-weight: var(--sl-font-weight-normal);
+    font-family: var(--klik-font-sans);
+    font-size: var(--klik-font-size-medium);
+    font-weight: var(--klik-font-weight-normal);
     color: var(--color);
-    background-color: rgb(var(--sl-panel-background-color));
-    border: solid var(--sl-panel-border-width) rgb(var(--sl-panel-border-color));
-    border-radius: var(--sl-border-radius-medium);
-    box-shadow: var(--sl-shadow-large);
+    background-color: rgb(var(--klik-panel-background-color));
+    border: solid var(--klik-panel-border-width) rgb(var(--klik-panel-border-color));
+    border-radius: var(--klik-border-radius-medium);
+    box-shadow: var(--klik-shadow-large);
     overflow: auto;
     overscroll-behavior: none;
     pointer-events: none;

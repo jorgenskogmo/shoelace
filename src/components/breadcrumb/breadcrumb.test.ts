@@ -3,18 +3,18 @@ import { expect, fixture, html } from '@open-wc/testing';
 import '../../../dist/shoelace.js';
 import type SlBreadcrumb from './breadcrumb';
 
-describe('<sl-breadcrumb>', () => {
+describe('<klik-breadcrumb>', () => {
   let el: SlBreadcrumb;
 
   describe('when provided a standard list of el-breadcrumb-item children and no parameters', async () => {
     before(async () => {
       el = await fixture<SlBreadcrumb>(html`
-        <sl-breadcrumb>
-          <sl-breadcrumb-item>Catalog</sl-breadcrumb-item>
-          <sl-breadcrumb-item>Clothing</sl-breadcrumb-item>
-          <sl-breadcrumb-item>Women's</sl-breadcrumb-item>
-          <sl-breadcrumb-item>Shirts &amp; Tops</sl-breadcrumb-item>
-        </sl-breadcrumb>
+        <klik-breadcrumb>
+          <klik-breadcrumb-item>Catalog</klik-breadcrumb-item>
+          <klik-breadcrumb-item>Clothing</klik-breadcrumb-item>
+          <klik-breadcrumb-item>Women's</klik-breadcrumb-item>
+          <klik-breadcrumb-item>Shirts &amp; Tops</klik-breadcrumb-item>
+        </klik-breadcrumb>
       `);
     });
 
@@ -22,12 +22,12 @@ describe('<sl-breadcrumb>', () => {
       await expect(el).to.be.accessible();
     });
 
-    it('should render sl-icon as separator', async () => {
-      expect(el.querySelectorAll('sl-icon').length).to.eq(4);
+    it('should render klik-icon as separator', async () => {
+      expect(el.querySelectorAll('klik-icon').length).to.eq(4);
     });
 
     it('should attach aria-current "page" on the last breadcrumb item.', async () => {
-      const breadcrumbItems = el.querySelectorAll('sl-breadcrumb-item');
+      const breadcrumbItems = el.querySelectorAll('klik-breadcrumb-item');
       const lastNode = breadcrumbItems[3];
       expect(lastNode).attribute('aria-current', 'page');
     });
@@ -36,12 +36,12 @@ describe('<sl-breadcrumb>', () => {
   describe('when provided a standard list of el-breadcrumb-item children and an element in the slot "seperator" to support Custom Separators', async () => {
     before(async () => {
       el = await fixture<SlBreadcrumb>(html`
-        <sl-breadcrumb>
+        <klik-breadcrumb>
           <span class="replacement-separator" slot="separator">/</span>
-          <sl-breadcrumb-item>First</sl-breadcrumb-item>
-          <sl-breadcrumb-item>Second</sl-breadcrumb-item>
-          <sl-breadcrumb-item>Third</sl-breadcrumb-item>
-        </sl-breadcrumb>
+          <klik-breadcrumb-item>First</klik-breadcrumb-item>
+          <klik-breadcrumb-item>Second</klik-breadcrumb-item>
+          <klik-breadcrumb-item>Third</klik-breadcrumb-item>
+        </klik-breadcrumb>
       `);
     });
 
@@ -56,24 +56,24 @@ describe('<sl-breadcrumb>', () => {
       expect(childNodes.length).to.eq(1);
     });
 
-    it('should replace the sl-icon separator with the provided separator', async () => {
+    it('should replace the klik-icon separator with the provided separator', async () => {
       expect(el.querySelectorAll('.replacement-separator').length).to.eq(4);
-      expect(el.querySelectorAll('sl-icon').length).to.eq(0);
+      expect(el.querySelectorAll('klik-icon').length).to.eq(0);
     });
   });
 
   describe('when provided a standard list of el-breadcrumb-item children and an element in the slot "prefix" to support prefix icons', async () => {
     before(async () => {
       el = await fixture<SlBreadcrumb>(html`
-        <sl-breadcrumb>
-          <sl-breadcrumb-item>
+        <klik-breadcrumb>
+          <klik-breadcrumb-item>
             <span class="prefix-example" slot="prefix">/</span>
             Home
-          </sl-breadcrumb-item>
-          <sl-breadcrumb-item>First</sl-breadcrumb-item>
-          <sl-breadcrumb-item>Second</sl-breadcrumb-item>
-          <sl-breadcrumb-item>Third</sl-breadcrumb-item>
-        </sl-breadcrumb>
+          </klik-breadcrumb-item>
+          <klik-breadcrumb-item>First</klik-breadcrumb-item>
+          <klik-breadcrumb-item>Second</klik-breadcrumb-item>
+          <klik-breadcrumb-item>Third</klik-breadcrumb-item>
+        </klik-breadcrumb>
       `);
     });
 
@@ -85,15 +85,15 @@ describe('<sl-breadcrumb>', () => {
   describe('when provided a standard list of el-breadcrumb-item children and an element in the slot "suffix" to support suffix icons', async () => {
     before(async () => {
       el = await fixture<SlBreadcrumb>(html`
-        <sl-breadcrumb>
-          <sl-breadcrumb-item>First</sl-breadcrumb-item>
-          <sl-breadcrumb-item>Second</sl-breadcrumb-item>
-          <sl-breadcrumb-item>Third</sl-breadcrumb-item>
-          <sl-breadcrumb-item>
+        <klik-breadcrumb>
+          <klik-breadcrumb-item>First</klik-breadcrumb-item>
+          <klik-breadcrumb-item>Second</klik-breadcrumb-item>
+          <klik-breadcrumb-item>Third</klik-breadcrumb-item>
+          <klik-breadcrumb-item>
             <span class="prefix-example" slot="suffix">/</span>
             Security
-          </sl-breadcrumb-item>
-        </sl-breadcrumb>
+          </klik-breadcrumb-item>
+        </klik-breadcrumb>
       `);
     });
 

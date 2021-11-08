@@ -18,10 +18,10 @@ let id = 0;
  * @slot label - The textarea's label. Alternatively, you can use the label prop.
  * @slot help-text - Help text that describes how to use the input.
  *
- * @event sl-change - Emitted when the control's value changes.
- * @event sl-input - Emitted when the control receives input.
- * @event sl-focus - Emitted when the control gains focus.
- * @event sl-blur - Emitted when the control loses focus.
+ * @event klik-change - Emitted when the control's value changes.
+ * @event klik-input - Emitted when the control receives input.
+ * @event klik-focus - Emitted when the control gains focus.
+ * @event klik-blur - Emitted when the control loses focus.
  *
  * @csspart base - The component's base wrapper.
  * @csspart form-control - The form control that wraps the label, textarea, and help text.
@@ -29,7 +29,7 @@ let id = 0;
  * @csspart textarea - The textarea control.
  * @csspart help-text - The textarea help text.
  */
-@customElement('sl-textarea')
+@customElement('klik-textarea')
 export default class SlTextarea extends LitElement {
   static styles = styles;
 
@@ -197,14 +197,14 @@ export default class SlTextarea extends LitElement {
 
     if (this.value !== this.input.value) {
       this.value = this.input.value;
-      emit(this, 'sl-input');
+      emit(this, 'klik-input');
     }
 
     if (this.value !== this.input.value) {
       this.value = this.input.value;
       this.setTextareaHeight();
-      emit(this, 'sl-input');
-      emit(this, 'sl-change');
+      emit(this, 'klik-input');
+      emit(this, 'klik-change');
     }
   }
 
@@ -221,13 +221,13 @@ export default class SlTextarea extends LitElement {
 
   handleBlur() {
     this.hasFocus = false;
-    emit(this, 'sl-blur');
+    emit(this, 'klik-blur');
   }
 
   handleChange() {
     this.value = this.input.value;
     this.setTextareaHeight();
-    emit(this, 'sl-change');
+    emit(this, 'klik-change');
   }
 
   @watch('disabled')
@@ -241,13 +241,13 @@ export default class SlTextarea extends LitElement {
 
   handleFocus() {
     this.hasFocus = true;
-    emit(this, 'sl-focus');
+    emit(this, 'klik-focus');
   }
 
   handleInput() {
     this.value = this.input.value;
     this.setTextareaHeight();
-    emit(this, 'sl-input');
+    emit(this, 'klik-input');
   }
 
   @watch('rows')
@@ -352,6 +352,6 @@ export default class SlTextarea extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-textarea': SlTextarea;
+    'klik-textarea': SlTextarea;
   }
 }

@@ -17,10 +17,10 @@ let id = 0;
  * @slot - The tooltip's target element. Only the first element will be used as the target.
  * @slot content - The tooltip's content. Alternatively, you can use the content prop.
  *
- * @event sl-show - Emitted when the tooltip begins to show.
- * @event sl-after-show - Emitted after the tooltip has shown and all animations are complete.
- * @event sl-hide - Emitted when the tooltip begins to hide.
- * @event sl-after-hide - Emitted after the tooltip has hidden and all animations are complete.
+ * @event klik-show - Emitted when the tooltip begins to show.
+ * @event klik-after-show - Emitted after the tooltip has shown and all animations are complete.
+ * @event klik-hide - Emitted when the tooltip begins to hide.
+ * @event klik-after-hide - Emitted after the tooltip has hidden and all animations are complete.
  *
  * @csspart base - The component's base wrapper.
  *
@@ -31,7 +31,7 @@ let id = 0;
  * @animation tooltip.show - The animation to use when showing the tooltip.
  * @animation tooltip.hide - The animation to use when hiding the tooltip.
  */
-@customElement('sl-tooltip')
+@customElement('klik-tooltip')
 export default class SlTooltip extends LitElement {
   static styles = styles;
 
@@ -136,7 +136,7 @@ export default class SlTooltip extends LitElement {
     }
 
     this.open = true;
-    return waitForEvent(this, 'sl-after-show');
+    return waitForEvent(this, 'klik-after-show');
   }
 
   /** Hides the tooltip */
@@ -146,7 +146,7 @@ export default class SlTooltip extends LitElement {
     }
 
     this.open = false;
-    return waitForEvent(this, 'sl-after-hide');
+    return waitForEvent(this, 'klik-after-hide');
   }
 
   getTarget() {
@@ -212,7 +212,7 @@ export default class SlTooltip extends LitElement {
 
     if (this.open) {
       // Show
-      emit(this, 'sl-show');
+      emit(this, 'klik-show');
 
       await stopAnimations(this.tooltip);
 
@@ -243,10 +243,10 @@ export default class SlTooltip extends LitElement {
       const { keyframes, options } = getAnimation(this, 'tooltip.show');
       await animateTo(this.tooltip, keyframes, options);
 
-      emit(this, 'sl-after-show');
+      emit(this, 'klik-after-show');
     } else {
       // Hide
-      emit(this, 'sl-hide');
+      emit(this, 'klik-hide');
 
       await stopAnimations(this.tooltip);
       const { keyframes, options } = getAnimation(this, 'tooltip.hide');
@@ -257,7 +257,7 @@ export default class SlTooltip extends LitElement {
         this.popover.destroy();
       }
 
-      emit(this, 'sl-after-hide');
+      emit(this, 'klik-after-hide');
     }
   }
 
@@ -356,6 +356,6 @@ setDefaultAnimation('tooltip.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-tooltip': SlTooltip;
+    'klik-tooltip': SlTooltip;
   }
 }

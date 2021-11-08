@@ -17,70 +17,70 @@ export default css`
     justify-content: start;
     position: relative;
     width: 100%;
-    font-family: var(--sl-input-font-family);
-    font-weight: var(--sl-input-font-weight);
-    letter-spacing: var(--sl-input-letter-spacing);
+    font-family: var(--klik-input-font-family);
+    font-weight: var(--klik-input-font-weight);
+    letter-spacing: var(--klik-input-letter-spacing);
     vertical-align: middle;
     overflow: hidden;
     cursor: text;
-    transition: var(--sl-transition-fast) color, var(--sl-transition-fast) border, var(--sl-transition-fast) box-shadow,
-      var(--sl-transition-fast) background-color;
+    transition: var(--klik-transition-fast) color, var(--klik-transition-fast) border,
+      var(--klik-transition-fast) box-shadow, var(--klik-transition-fast) background-color;
   }
 
   /* Standard inputs */
   .input--standard {
-    background-color: rgb(var(--sl-input-background-color));
-    border: solid var(--sl-input-border-width) rgb(var(--sl-input-border-color));
+    background-color: rgb(var(--klik-input-background-color));
+    border: solid var(--klik-input-border-width) rgb(var(--klik-input-border-color));
   }
 
   .input--standard:hover:not(.input--disabled) {
-    background-color: rgb(var(--sl-input-background-color-hover));
-    border-color: rgb(var(--sl-input-border-color-hover));
+    background-color: rgb(var(--klik-input-background-color-hover));
+    border-color: rgb(var(--klik-input-border-color-hover));
   }
 
   .input--standard.input--focused:not(.input--disabled) {
-    background-color: rgb(var(--sl-input-background-color-focus));
-    border-color: rgb(var(--sl-input-border-color-focus));
-    box-shadow: var(--sl-focus-ring);
+    background-color: rgb(var(--klik-input-background-color-focus));
+    border-color: rgb(var(--klik-input-border-color-focus));
+    box-shadow: var(--klik-focus-ring);
   }
 
   .input--standard.input--focused:not(.input--disabled) .input__control {
-    color: rgb(var(--sl-input-color-focus));
+    color: rgb(var(--klik-input-color-focus));
   }
 
   .input--standard.input--disabled {
-    background-color: rgb(var(--sl-input-background-color-disabled));
-    border-color: rgb(var(--sl-input-border-color-disabled));
+    background-color: rgb(var(--klik-input-background-color-disabled));
+    border-color: rgb(var(--klik-input-border-color-disabled));
     opacity: 0.5;
     cursor: not-allowed;
   }
 
   .input--standard.input--disabled .input__control {
-    color: rgb(var(--sl-input-color-disabled));
+    color: rgb(var(--klik-input-color-disabled));
   }
 
   .input--standard.input--disabled .input__control::placeholder {
-    color: rgb(var(--sl-input-placeholder-color-disabled));
+    color: rgb(var(--klik-input-placeholder-color-disabled));
   }
 
   /* Filled inputs */
   .input--filled {
     border: none;
-    background-color: rgb(var(--sl-input-filled-background-color));
-    color: rgb(var(--sl-input-color));
+    background-color: rgb(var(--klik-input-filled-background-color));
+    color: rgb(var(--klik-input-color));
   }
 
   .input--filled:hover:not(.input--disabled) {
-    background-color: rgb(var(--sl-input-filled-background-color-hover));
+    background-color: rgb(var(--klik-input-filled-background-color-hover));
   }
 
   .input--filled.input--focused:not(.input--disabled) {
-    background-color: rgb(var(--sl-input-filled-background-color-focus));
-    box-shadow: var(--sl-focus-ring);
+    background-color: rgb(var(--klik-input-filled-background-color-focus));
+    box-shadow: var(--klik-focus-ring);
   }
 
   .input--filled.input--disabled {
-    background-color: rgb(var(--sl-input-filled-background-color-disabled));
+    background-color: rgb(var(--klik-input-filled-background-color-disabled));
     opacity: 0.5;
     cursor: not-allowed;
   }
@@ -92,7 +92,7 @@ export default css`
     font-weight: inherit;
     min-width: 0;
     height: 100%;
-    color: rgb(var(--sl-input-color));
+    color: rgb(var(--klik-input-color));
     border: none;
     background: none;
     box-shadow: none;
@@ -113,17 +113,17 @@ export default css`
   .input__control:-webkit-autofill:hover,
   .input__control:-webkit-autofill:focus,
   .input__control:-webkit-autofill:active {
-    box-shadow: 0 0 0 var(--sl-input-height-large) rgb(var(--sl-input-background-color-hover)) inset !important;
-    -webkit-text-fill-color: rgb(var(--sl-color-primary-500));
+    box-shadow: 0 0 0 var(--klik-input-height-large) rgb(var(--klik-input-background-color-hover)) inset !important;
+    -webkit-text-fill-color: rgb(var(--klik-color-primary-500));
   }
 
   .input__control::placeholder {
-    color: rgb(var(--sl-input-placeholder-color));
+    color: rgb(var(--klik-input-placeholder-color));
     user-select: none;
   }
 
   .input:hover:not(.input--disabled) .input__control {
-    color: rgb(var(--sl-input-color-hover));
+    color: rgb(var(--klik-input-color-hover));
   }
 
   .input__control:focus {
@@ -138,9 +138,9 @@ export default css`
     cursor: default;
   }
 
-  .input__prefix ::slotted(sl-icon),
-  .input__suffix ::slotted(sl-icon) {
-    color: rgb(var(--sl-input-icon-color));
+  .input__prefix ::slotted(klik-icon),
+  .input__suffix ::slotted(klik-icon) {
+    color: rgb(var(--klik-input-icon-color));
   }
 
   /*
@@ -148,75 +148,75 @@ export default css`
    */
 
   .input--small {
-    border-radius: var(--sl-input-border-radius-small);
-    font-size: var(--sl-input-font-size-small);
-    height: var(--sl-input-height-small);
+    border-radius: var(--klik-input-border-radius-small);
+    font-size: var(--klik-input-font-size-small);
+    height: var(--klik-input-height-small);
   }
 
   .input--small .input__control {
-    height: calc(var(--sl-input-height-small) - var(--sl-input-border-width) * 2);
-    margin: 0 var(--sl-input-spacing-small);
+    height: calc(var(--klik-input-height-small) - var(--klik-input-border-width) * 2);
+    margin: 0 var(--klik-input-spacing-small);
   }
 
   .input--small .input__clear,
   .input--small .input__password-toggle {
-    margin-right: var(--sl-input-spacing-small);
+    margin-right: var(--klik-input-spacing-small);
   }
 
   .input--small .input__prefix ::slotted(*) {
-    margin-left: var(--sl-input-spacing-small);
+    margin-left: var(--klik-input-spacing-small);
   }
 
   .input--small .input__suffix ::slotted(*) {
-    margin-right: var(--sl-input-spacing-small);
+    margin-right: var(--klik-input-spacing-small);
   }
 
   .input--medium {
-    border-radius: var(--sl-input-border-radius-medium);
-    font-size: var(--sl-input-font-size-medium);
-    height: var(--sl-input-height-medium);
+    border-radius: var(--klik-input-border-radius-medium);
+    font-size: var(--klik-input-font-size-medium);
+    height: var(--klik-input-height-medium);
   }
 
   .input--medium .input__control {
-    height: calc(var(--sl-input-height-medium) - var(--sl-input-border-width) * 2);
-    margin: 0 var(--sl-input-spacing-medium);
+    height: calc(var(--klik-input-height-medium) - var(--klik-input-border-width) * 2);
+    margin: 0 var(--klik-input-spacing-medium);
   }
 
   .input--medium .input__clear,
   .input--medium .input__password-toggle {
-    margin-right: var(--sl-input-spacing-medium);
+    margin-right: var(--klik-input-spacing-medium);
   }
 
   .input--medium .input__prefix ::slotted(*) {
-    margin-left: var(--sl-input-spacing-medium);
+    margin-left: var(--klik-input-spacing-medium);
   }
 
   .input--medium .input__suffix ::slotted(*) {
-    margin-right: var(--sl-input-spacing-medium);
+    margin-right: var(--klik-input-spacing-medium);
   }
 
   .input--large {
-    border-radius: var(--sl-input-border-radius-large);
-    font-size: var(--sl-input-font-size-large);
-    height: var(--sl-input-height-large);
+    border-radius: var(--klik-input-border-radius-large);
+    font-size: var(--klik-input-font-size-large);
+    height: var(--klik-input-height-large);
   }
 
   .input--large .input__control {
-    height: calc(var(--sl-input-height-large) - var(--sl-input-border-width) * 2);
-    margin: 0 var(--sl-input-spacing-large);
+    height: calc(var(--klik-input-height-large) - var(--klik-input-border-width) * 2);
+    margin: 0 var(--klik-input-spacing-large);
   }
 
   .input--large .input__clear,
   .input--large .input__password-toggle {
-    margin-right: var(--sl-input-spacing-large);
+    margin-right: var(--klik-input-spacing-large);
   }
 
   .input--large .input__prefix ::slotted(*) {
-    margin-left: var(--sl-input-spacing-large);
+    margin-left: var(--klik-input-spacing-large);
   }
 
   .input--large .input__suffix ::slotted(*) {
-    margin-right: var(--sl-input-spacing-large);
+    margin-right: var(--klik-input-spacing-large);
   }
 
   /*
@@ -224,15 +224,15 @@ export default css`
    */
 
   .input--pill.input--small {
-    border-radius: var(--sl-input-height-small);
+    border-radius: var(--klik-input-height-small);
   }
 
   .input--pill.input--medium {
-    border-radius: var(--sl-input-height-medium);
+    border-radius: var(--klik-input-height-medium);
   }
 
   .input--pill.input--large {
-    border-radius: var(--sl-input-height-large);
+    border-radius: var(--klik-input-height-large);
   }
 
   /*
@@ -244,17 +244,17 @@ export default css`
     display: inline-flex;
     align-items: center;
     font-size: inherit;
-    color: rgb(var(--sl-input-icon-color));
+    color: rgb(var(--klik-input-icon-color));
     border: none;
     background: none;
     padding: 0;
-    transition: var(--sl-transition-fast) color;
+    transition: var(--klik-transition-fast) color;
     cursor: pointer;
   }
 
   .input__clear:hover,
   .input__password-toggle:hover {
-    color: rgb(var(--sl-input-icon-color-hover));
+    color: rgb(var(--klik-input-icon-color-hover));
   }
 
   .input__clear:focus,

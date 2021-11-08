@@ -4,17 +4,17 @@ import sinon from 'sinon';
 import '../../../dist/shoelace.js';
 import type SlDropdown from './dropdown';
 
-describe('<sl-dropdown>', () => {
+describe('<klik-dropdown>', () => {
   it('should be visible with the open attribute', async () => {
     const el = await fixture<SlDropdown>(html`
-      <sl-dropdown open>
-        <sl-button slot="trigger" caret>Toggle</sl-button>
-        <sl-menu>
-          <sl-menu-item>Item 1</sl-menu-item>
-          <sl-menu-item>Item 2</sl-menu-item>
-          <sl-menu-item>Item 3</sl-menu-item>
-        </sl-menu>
-      </sl-dropdown>
+      <klik-dropdown open>
+        <klik-button slot="trigger" caret>Toggle</klik-button>
+        <klik-menu>
+          <klik-menu-item>Item 1</klik-menu-item>
+          <klik-menu-item>Item 2</klik-menu-item>
+          <klik-menu-item>Item 3</klik-menu-item>
+        </klik-menu>
+      </klik-dropdown>
     `);
     const panel = el.shadowRoot?.querySelector('[part="panel"]') as HTMLElement;
 
@@ -23,37 +23,37 @@ describe('<sl-dropdown>', () => {
 
   it('should not be visible without the open attribute', async () => {
     const el = await fixture<SlDropdown>(html`
-      <sl-dropdown>
-        <sl-button slot="trigger" caret>Toggle</sl-button>
-        <sl-menu>
-          <sl-menu-item>Item 1</sl-menu-item>
-          <sl-menu-item>Item 2</sl-menu-item>
-          <sl-menu-item>Item 3</sl-menu-item>
-        </sl-menu>
-      </sl-dropdown>
+      <klik-dropdown>
+        <klik-button slot="trigger" caret>Toggle</klik-button>
+        <klik-menu>
+          <klik-menu-item>Item 1</klik-menu-item>
+          <klik-menu-item>Item 2</klik-menu-item>
+          <klik-menu-item>Item 3</klik-menu-item>
+        </klik-menu>
+      </klik-dropdown>
     `);
     const panel = el.shadowRoot?.querySelector('[part="panel"]') as HTMLElement;
 
     expect(panel.hidden).to.be.true;
   });
 
-  it('should emit sl-show and sl-after-show when calling show()', async () => {
+  it('should emit klik-show and klik-after-show when calling show()', async () => {
     const el = await fixture<SlDropdown>(html`
-      <sl-dropdown>
-        <sl-button slot="trigger" caret>Toggle</sl-button>
-        <sl-menu>
-          <sl-menu-item>Item 1</sl-menu-item>
-          <sl-menu-item>Item 2</sl-menu-item>
-          <sl-menu-item>Item 3</sl-menu-item>
-        </sl-menu>
-      </sl-dropdown>
+      <klik-dropdown>
+        <klik-button slot="trigger" caret>Toggle</klik-button>
+        <klik-menu>
+          <klik-menu-item>Item 1</klik-menu-item>
+          <klik-menu-item>Item 2</klik-menu-item>
+          <klik-menu-item>Item 3</klik-menu-item>
+        </klik-menu>
+      </klik-dropdown>
     `);
     const panel = el.shadowRoot?.querySelector('[part="panel"]') as HTMLElement;
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
 
-    el.addEventListener('sl-show', showHandler);
-    el.addEventListener('sl-after-show', afterShowHandler);
+    el.addEventListener('klik-show', showHandler);
+    el.addEventListener('klik-after-show', afterShowHandler);
     el.show();
 
     await waitUntil(() => showHandler.calledOnce);
@@ -64,23 +64,23 @@ describe('<sl-dropdown>', () => {
     expect(panel.hidden).to.be.false;
   });
 
-  it('should emit sl-hide and sl-after-hide when calling hide()', async () => {
+  it('should emit klik-hide and klik-after-hide when calling hide()', async () => {
     const el = await fixture<SlDropdown>(html`
-      <sl-dropdown open>
-        <sl-button slot="trigger" caret>Toggle</sl-button>
-        <sl-menu>
-          <sl-menu-item>Item 1</sl-menu-item>
-          <sl-menu-item>Item 2</sl-menu-item>
-          <sl-menu-item>Item 3</sl-menu-item>
-        </sl-menu>
-      </sl-dropdown>
+      <klik-dropdown open>
+        <klik-button slot="trigger" caret>Toggle</klik-button>
+        <klik-menu>
+          <klik-menu-item>Item 1</klik-menu-item>
+          <klik-menu-item>Item 2</klik-menu-item>
+          <klik-menu-item>Item 3</klik-menu-item>
+        </klik-menu>
+      </klik-dropdown>
     `);
     const panel = el.shadowRoot?.querySelector('[part="panel"]') as HTMLElement;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
 
-    el.addEventListener('sl-hide', hideHandler);
-    el.addEventListener('sl-after-hide', afterHideHandler);
+    el.addEventListener('klik-hide', hideHandler);
+    el.addEventListener('klik-after-hide', afterHideHandler);
     el.hide();
 
     await waitUntil(() => hideHandler.calledOnce);
@@ -91,23 +91,23 @@ describe('<sl-dropdown>', () => {
     expect(panel.hidden).to.be.true;
   });
 
-  it('should emit sl-show and sl-after-show when setting open = true', async () => {
+  it('should emit klik-show and klik-after-show when setting open = true', async () => {
     const el = await fixture<SlDropdown>(html`
-      <sl-dropdown>
-        <sl-button slot="trigger" caret>Toggle</sl-button>
-        <sl-menu>
-          <sl-menu-item>Item 1</sl-menu-item>
-          <sl-menu-item>Item 2</sl-menu-item>
-          <sl-menu-item>Item 3</sl-menu-item>
-        </sl-menu>
-      </sl-dropdown>
+      <klik-dropdown>
+        <klik-button slot="trigger" caret>Toggle</klik-button>
+        <klik-menu>
+          <klik-menu-item>Item 1</klik-menu-item>
+          <klik-menu-item>Item 2</klik-menu-item>
+          <klik-menu-item>Item 3</klik-menu-item>
+        </klik-menu>
+      </klik-dropdown>
     `);
     const panel = el.shadowRoot?.querySelector('[part="panel"]') as HTMLElement;
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
 
-    el.addEventListener('sl-show', showHandler);
-    el.addEventListener('sl-after-show', afterShowHandler);
+    el.addEventListener('klik-show', showHandler);
+    el.addEventListener('klik-after-show', afterShowHandler);
     el.open = true;
 
     await waitUntil(() => showHandler.calledOnce);
@@ -118,23 +118,23 @@ describe('<sl-dropdown>', () => {
     expect(panel.hidden).to.be.false;
   });
 
-  it('should emit sl-hide and sl-after-hide when setting open = false', async () => {
+  it('should emit klik-hide and klik-after-hide when setting open = false', async () => {
     const el = await fixture<SlDropdown>(html`
-      <sl-dropdown open>
-        <sl-button slot="trigger" caret>Toggle</sl-button>
-        <sl-menu>
-          <sl-menu-item>Item 1</sl-menu-item>
-          <sl-menu-item>Item 2</sl-menu-item>
-          <sl-menu-item>Item 3</sl-menu-item>
-        </sl-menu>
-      </sl-dropdown>
+      <klik-dropdown open>
+        <klik-button slot="trigger" caret>Toggle</klik-button>
+        <klik-menu>
+          <klik-menu-item>Item 1</klik-menu-item>
+          <klik-menu-item>Item 2</klik-menu-item>
+          <klik-menu-item>Item 3</klik-menu-item>
+        </klik-menu>
+      </klik-dropdown>
     `);
     const panel = el.shadowRoot?.querySelector('[part="panel"]') as HTMLElement;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
 
-    el.addEventListener('sl-hide', hideHandler);
-    el.addEventListener('sl-after-hide', afterHideHandler);
+    el.addEventListener('klik-hide', hideHandler);
+    el.addEventListener('klik-after-hide', afterHideHandler);
     el.open = false;
 
     await waitUntil(() => hideHandler.calledOnce);

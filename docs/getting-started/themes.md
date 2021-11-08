@@ -8,13 +8,13 @@ For developers, built-in themes are also available as JavaScript modules that ex
 
 ## Theme Basics
 
-All themes are scoped to classes using the `sl-theme-{name}` convention, where `{name}` is a lowercase, hyphen-delimited value representing the name of the theme. The included light and dark themes use `sl-theme-light` and `sl-theme-dark`, respectively. A custom theme called "Purple Power", for example, would use the `sl-theme-purple-power` class. 
+All themes are scoped to classes using the `klik-theme-{name}` convention, where `{name}` is a lowercase, hyphen-delimited value representing the name of the theme. The included light and dark themes use `klik-theme-light` and `klik-theme-dark`, respectively. A custom theme called "Purple Power", for example, would use the `klik-theme-purple-power` class. 
 
 Every selector must be scoped to the theme's class to ensure interoperability with other themes. You should also scope them to `:host` so they can be imported and applied to custom element shadow roots.
 
 ```css
 :host,
-.sl-theme-purple-power {
+.klik-theme-purple-power {
   /* ... */
 }
 ```
@@ -24,7 +24,7 @@ Every selector must be scoped to the theme's class to ensure interoperability wi
 To activate a theme, import it and apply the theme's class to the `<html>` element. This example imports and activates the dark theme, or "dark mode."
 
 ```html
-<html class="sl-theme-dark">
+<html class="klik-theme-dark">
   <head>
     <link rel="stylesheet" href="path/to/shoelace/dist/themes/dark.css">
   </head>
@@ -49,7 +49,7 @@ You can activate themes on various containers throughout the page. This example 
   </head>
 
   <body>
-    <nav class="sl-theme-dark">
+    <nav class="klik-theme-dark">
       <!-- dark-themed sidebar -->
     </nav>
     
@@ -71,7 +71,7 @@ If you're customizing the light theme, you should scope your styles to the follo
 ```css
 :root, 
 :host, 
-.sl-theme-light {
+.klik-theme-light {
   /* your custom styles here */
 }
 ```
@@ -80,7 +80,7 @@ If you're customizing the dark theme, you should scope your styles to the follow
 
 ```css
 :host,
-.sl-theme-dark {
+.klik-theme-dark {
   /* your custom styles here */
 }
 ```
@@ -97,7 +97,7 @@ Start by changing the selector to match your theme's name. Assuming your new the
 
 ```css
 :host,
-.sl-theme-purple-power {
+.klik-theme-purple-power {
   /* your custom styles here */
 }
 ```
@@ -118,10 +118,10 @@ To install the dark theme, add the following to the `<head>` section of your pag
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/dist/themes/dark.css">
 ```
 
-To activate the theme, apply the `sl-theme-dark` class to the `<html>` element.
+To activate the theme, apply the `klik-theme-dark` class to the `<html>` element.
 
 ```html
-<html class="sl-theme-dark">
+<html class="klik-theme-dark">
   ...
 </html>
 ```

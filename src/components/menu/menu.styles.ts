@@ -9,10 +9,10 @@ export default css`
   }
 
   .menu {
-    padding: var(--sl-spacing-x-small) 0;
+    padding: var(--klik-spacing-x-small) 0;
   }
 
-  ::slotted(sl-divider) {
-    --spacing: var(--sl-spacing-x-small);
+  ::slotted(klik-divider) {
+    --spacing: var(--klik-spacing-x-small);
   }
 `;

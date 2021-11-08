@@ -12,10 +12,10 @@ import '../spinner/spinner';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-spinner
+ * @dependency klik-spinner
  *
- * @event sl-blur - Emitted when the button loses focus.
- * @event sl-focus - Emitted when the button gains focus.
+ * @event klik-blur - Emitted when the button loses focus.
+ * @event klik-focus - Emitted when the button gains focus.
  *
  * @slot - The button's label.
  * @slot prefix - Used to prepend an icon or similar element to the button.
@@ -27,7 +27,7 @@ import '../spinner/spinner';
  * @csspart suffix - The suffix container.
  * @csspart caret - The button's caret.
  */
-@customElement('sl-button')
+@customElement('klik-button')
 export default class SlButton extends LitElement {
   static styles = styles;
 
@@ -109,12 +109,12 @@ export default class SlButton extends LitElement {
 
   handleBlur() {
     this.hasFocus = false;
-    emit(this, 'sl-blur');
+    emit(this, 'klik-blur');
   }
 
   handleFocus() {
     this.hasFocus = true;
-    emit(this, 'sl-focus');
+    emit(this, 'klik-focus');
   }
 
   handleClick(event: MouseEvent) {
@@ -153,7 +153,7 @@ export default class SlButton extends LitElement {
             </span>
           `
         : ''}
-      ${this.loading ? html`<sl-spinner></sl-spinner>` : ''}
+      ${this.loading ? html`<klik-spinner></klik-spinner>` : ''}
     `;
 
     return isLink
@@ -241,6 +241,6 @@ export default class SlButton extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-button': SlButton;
+    'klik-button': SlButton;
   }
 }

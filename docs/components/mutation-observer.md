@@ -1,24 +1,24 @@
 # Mutation Observer
 
-[component-header:sl-mutation-observer]
+[component-header:klik-mutation-observer]
 
 The Mutation Observer component offers a thin, declarative interface to the [`MutationObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver).
 
-The mutation observer will report changes to the content it wraps through the `sl-mutation` event. When emitted, a collection of [MutationRecord](https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord) objects will be attached to `event.detail` that contains information about how it changed.
+The mutation observer will report changes to the content it wraps through the `klik-mutation` event. When emitted, a collection of [MutationRecord](https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord) objects will be attached to `event.detail` that contains information about how it changed.
 
 ```html preview
 <div class="mutation-overview">
-  <sl-mutation-observer attr="type">
-    <sl-button type="primary">Click to mutate</sl-button>
-  </sl-mutation-observer>
+  <klik-mutation-observer attr="type">
+    <klik-button type="primary">Click to mutate</klik-button>
+  </klik-mutation-observer>
 
   <br>
   👆 Click the button and watch the console
 
   <script>
     const container = document.querySelector('.mutation-overview');
-    const mutationObserver = container.querySelector('sl-mutation-observer');
-    const button = container.querySelector('sl-button');
+    const mutationObserver = container.querySelector('klik-mutation-observer');
+    const button = container.querySelector('klik-button');
     const types = ['primary', 'success', 'neutral', 'warning', 'danger']; 
     let clicks = 0;
 
@@ -29,13 +29,13 @@ The mutation observer will report changes to the content it wraps through the `s
     });
 
     // Log mutations
-    mutationObserver.addEventListener('sl-mutation', event => {
+    mutationObserver.addEventListener('klik-mutation', event => {
       console.log(event.detail);
     });
   </script>
 
   <style>
-    .mutation-overview sl-button {
+    .mutation-overview klik-button {
       margin-bottom: 1rem;
     }
   </style>
@@ -49,7 +49,7 @@ import { SlButton, SlMutationObserver } from '@shoelace-style/shoelace/dist/reac
 const css = `
   .resize-observer-overview div {
     display: flex; 
-    border: solid 2px rgb(var(--sl-input-border-color)); 
+    border: solid 2px rgb(var(--klik-input-border-color)); 
     align-items: center; 
     justify-content: center;
     text-align: center;
@@ -93,31 +93,31 @@ Use the `child-list` attribute to watch for new child elements that are added or
 
 ```html preview
 <div class="mutation-child-list">
-  <sl-mutation-observer child-list>
+  <klik-mutation-observer child-list>
     <div class="buttons">
-      <sl-button type="primary">Add button</sl-button>
+      <klik-button type="primary">Add button</klik-button>
     </div>
-  </sl-mutation-observer>
+  </klik-mutation-observer>
 
   👆 Add and remove buttons and watch the console
 
   <script>
     const container = document.querySelector('.mutation-child-list');
-    const mutationObserver = container.querySelector('sl-mutation-observer');
+    const mutationObserver = container.querySelector('klik-mutation-observer');
     const buttons = container.querySelector('.buttons');
-    const button = container.querySelector('sl-button[type="primary"]');
+    const button = container.querySelector('klik-button[type="primary"]');
     let i = 0;
 
     // Add a button
     button.addEventListener('click', () => {
-      const button = document.createElement('sl-button');
+      const button = document.createElement('klik-button');
       button.textContent = ++i;
       buttons.append(button);
     });
 
     // Remove a button
     buttons.addEventListener('click', event => {
-      const target = event.target.closest('sl-button:not([type="primary"])');
+      const target = event.target.closest('klik-button:not([type="primary"])');
       event.stopPropagation();
 
       if (target) {
@@ -126,7 +126,7 @@ Use the `child-list` attribute to watch for new child elements that are added or
     });
 
     // Log mutations
-    mutationObserver.addEventListener('sl-mutation', event => {
+    mutationObserver.addEventListener('klik-mutation', event => {
       console.log(event.detail);
     });
   </script>
@@ -193,4 +193,4 @@ const App = () => {
 };
 ```
 
-[component-metadata:sl-mutation-observer]
+[component-metadata:klik-mutation-observer]

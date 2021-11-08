@@ -14,7 +14,7 @@ import styles from './radio-group.styles';
  * @csspart base - The component's base wrapper.
  * @csspart label - The radio group label.
  */
-@customElement('sl-radio-group')
+@customElement('klik-radio-group')
 export default class SlRadioGroup extends LitElement {
   static styles = styles;
 
@@ -30,7 +30,7 @@ export default class SlRadioGroup extends LitElement {
     // When tabbing into the fieldset, make sure it lands on the checked radio
     requestAnimationFrame(() => {
       const checkedRadio = [...this.defaultSlot.assignedElements({ flatten: true })].find(
-        el => el.tagName.toLowerCase() === 'sl-radio' && (el as SlRadio).checked
+        el => el.tagName.toLowerCase() === 'klik-radio' && (el as SlRadio).checked
       ) as SlRadio;
 
       if (checkedRadio) {
@@ -61,6 +61,6 @@ export default class SlRadioGroup extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-radio-group': SlRadioGroup;
+    'klik-radio-group': SlRadioGroup;
   }
 }

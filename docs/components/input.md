@@ -1,11 +1,11 @@
 # Input
 
-[component-header:sl-input]
+[component-header:klik-input]
 
 Inputs collect data from the user.
 
 ```html preview
-<sl-input></sl-input>
+<klik-input></klik-input>
 ```
 
 ```jsx react
@@ -16,7 +16,7 @@ const App = () => (
 );
 ```
 
-?> This component doesn't work with standard forms. Use [`<sl-form>`](/components/form) instead.
+?> This component doesn't work with standard forms. Use [`<klik-form>`](/components/form) instead.
 
 ?> Please refer to the section on [form control validation](/components/form?id=form-control-validation) to learn how to do client-side validation.
 
@@ -27,7 +27,7 @@ const App = () => (
 Use the `placeholder` attribute to add a placeholder.
 
 ```html preview
-<sl-input placeholder="Type something"></sl-input>
+<klik-input placeholder="Type something"></klik-input>
 ```
 
 ```jsx react
@@ -43,7 +43,7 @@ const App = () => (
 Add the `clearable` attribute to add a clear button when the input has content.
 
 ```html preview
-<sl-input placeholder="Clearable" clearable></sl-input>
+<klik-input placeholder="Clearable" clearable></klik-input>
 ```
 
 ```jsx react
@@ -59,11 +59,11 @@ const App = () => (
 Add the `toggle-password` attribute to add a toggle button that will show the password when activated.
 
 ```html preview
-<sl-input type="password" placeholder="Password Toggle" size="small" toggle-password></sl-input>
+<klik-input type="password" placeholder="Password Toggle" size="small" toggle-password></klik-input>
 <br>
-<sl-input type="password" placeholder="Password Toggle" size="medium" toggle-password></sl-input>
+<klik-input type="password" placeholder="Password Toggle" size="medium" toggle-password></klik-input>
 <br>
-<sl-input type="password" placeholder="Password Toggle" size="large" toggle-password></sl-input>
+<klik-input type="password" placeholder="Password Toggle" size="large" toggle-password></klik-input>
 ```
 
 ```jsx react
@@ -85,7 +85,7 @@ const App = () => (
 Add the `filled` attribute to draw a filled input.
 
 ```html preview
-<sl-input placeholder="Type something" filled></sl-input>
+<klik-input placeholder="Type something" filled></klik-input>
 ```
 
 ```jsx react
@@ -101,11 +101,11 @@ const App = () => (
 Use the `pill` attribute to give inputs rounded edges.
 
 ```html preview
-<sl-input placeholder="Small" size="small" pill></sl-input>
+<klik-input placeholder="Small" size="small" pill></klik-input>
 <br>
-<sl-input placeholder="Medium" size="medium" pill></sl-input>
+<klik-input placeholder="Medium" size="medium" pill></klik-input>
 <br>
-<sl-input placeholder="Large" size="large" pill></sl-input>
+<klik-input placeholder="Large" size="large" pill></klik-input>
 ```
 
 ```jsx react
@@ -127,11 +127,11 @@ const App = () => (
 The `type` attribute controls the type of input the browser renders.
 
 ```html preview
-<sl-input type="email" Placeholder="Email"></sl-input>
+<klik-input type="email" Placeholder="Email"></klik-input>
 <br>
-<sl-input type="number" Placeholder="Number"></sl-input>
+<klik-input type="number" Placeholder="Number"></klik-input>
 <br>
-<sl-input type="date" Placeholder="Date"></sl-input>
+<klik-input type="date" Placeholder="Date"></klik-input>
 ```
 
 ```jsx react
@@ -153,11 +153,11 @@ const App = () => (
 Use the `disabled` attribute to disable an input.
 
 ```html preview
-<sl-input placeholder="Disabled" size="small" disabled></sl-input>
+<klik-input placeholder="Disabled" size="small" disabled></klik-input>
 <br>
-<sl-input placeholder="Disabled" size="medium" disabled></sl-input>
+<klik-input placeholder="Disabled" size="medium" disabled></klik-input>
 <br>
-<sl-input placeholder="Disabled" size="large" disabled></sl-input>
+<klik-input placeholder="Disabled" size="large" disabled></klik-input>
 ```
 
 ```jsx react
@@ -179,11 +179,11 @@ const App = () => (
 Use the `size` attribute to change an input's size.
 
 ```html preview
-<sl-input placeholder="Small" size="small"></sl-input>
+<klik-input placeholder="Small" size="small"></klik-input>
 <br>
-<sl-input placeholder="Medium" size="medium"></sl-input>
+<klik-input placeholder="Medium" size="medium"></klik-input>
 <br>
-<sl-input placeholder="Large" size="large"></sl-input>
+<klik-input placeholder="Large" size="large"></klik-input>
 ```
 
 ```jsx react
@@ -205,20 +205,20 @@ const App = () => (
 Use the `prefix` and `suffix` slots to add icons.
 
 ```html preview
-<sl-input placeholder="Small" size="small">
-  <sl-icon name="house" slot="prefix"></sl-icon>
-  <sl-icon name="chat" slot="suffix"></sl-icon>
-</sl-input>
+<klik-input placeholder="Small" size="small">
+  <klik-icon name="house" slot="prefix"></klik-icon>
+  <klik-icon name="chat" slot="suffix"></klik-icon>
+</klik-input>
 <br>
-<sl-input placeholder="Medium" size="medium">
-  <sl-icon name="house" slot="prefix"></sl-icon>
-  <sl-icon name="chat" slot="suffix"></sl-icon>
-</sl-input>
+<klik-input placeholder="Medium" size="medium">
+  <klik-icon name="house" slot="prefix"></klik-icon>
+  <klik-icon name="chat" slot="suffix"></klik-icon>
+</klik-input>
 <br>
-<sl-input placeholder="Large" size="large">
-  <sl-icon name="house" slot="prefix"></sl-icon>
-  <sl-icon name="chat" slot="suffix"></sl-icon>
-</sl-input>
+<klik-input placeholder="Large" size="large">
+  <klik-icon name="house" slot="prefix"></klik-icon>
+  <klik-icon name="chat" slot="suffix"></klik-icon>
+</klik-input>
 ```
 
 ```jsx react
@@ -249,7 +249,7 @@ const App = () => (
 Use the `label` attribute to give the input an accessible label. For labels that contain HTML, use the `label` slot instead.
 
 ```html preview
-<sl-input label="What is your name?"></sl-input>
+<klik-input label="What is your name?"></klik-input>
 ```
 
 ```jsx react
@@ -265,10 +265,10 @@ const App = () => (
 Add descriptive help text to an input with the `help-text` attribute. For help texts that contain HTML, use the `help-text` slot instead.
 
 ```html preview
-<sl-input 
+<klik-input 
   label="Nickname" 
   help-text="What would you like people to call you?"
-></sl-input>
+></klik-input>
 ```
 
 ```jsx react
@@ -282,4 +282,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-input]
+[component-metadata:klik-input]

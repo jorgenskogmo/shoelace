@@ -17,7 +17,7 @@ let id = 0;
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon
+ * @dependency klik-icon
  *
  * @slot label - The input's label. Alternatively, you can use the label prop.
  * @slot prefix - Used to prepend an icon or similar element to the input.
@@ -27,11 +27,11 @@ let id = 0;
  * @slot hide-password-icon - An icon to use in lieu of the default hide password icon.
  * @slot help-text - Help text that describes how to use the input. Alternatively, you can use the help-text prop.
  *
- * @event sl-change - Emitted when the control's value changes.
- * @event sl-clear - Emitted when the clear button is activated.
- * @event sl-input - Emitted when the control receives input.
- * @event sl-focus - Emitted when the control gains focus.
- * @event sl-blur - Emitted when the control loses focus.
+ * @event klik-change - Emitted when the control's value changes.
+ * @event klik-clear - Emitted when the clear button is activated.
+ * @event klik-input - Emitted when the control receives input.
+ * @event klik-focus - Emitted when the control gains focus.
+ * @event klik-blur - Emitted when the control loses focus.
  *
  * @csspart base - The component's base wrapper.
  * @csspart form-control - The form control that wraps the label, input, and help-text.
@@ -43,7 +43,7 @@ let id = 0;
  * @csspart suffix - The input suffix container.
  * @csspart help-text - The input help text.
  */
-@customElement('sl-input')
+@customElement('klik-input')
 export default class SlInput extends LitElement {
   static styles = styles;
 
@@ -193,8 +193,8 @@ export default class SlInput extends LitElement {
 
     if (this.value !== this.input.value) {
       this.value = this.input.value;
-      emit(this, 'sl-input');
-      emit(this, 'sl-change');
+      emit(this, 'klik-input');
+      emit(this, 'klik-change');
     }
   }
 
@@ -211,19 +211,19 @@ export default class SlInput extends LitElement {
 
   handleBlur() {
     this.hasFocus = false;
-    emit(this, 'sl-blur');
+    emit(this, 'klik-blur');
   }
 
   handleChange() {
     this.value = this.input.value;
-    emit(this, 'sl-change');
+    emit(this, 'klik-change');
   }
 
   handleClearClick(event: MouseEvent) {
     this.value = '';
-    emit(this, 'sl-clear');
-    emit(this, 'sl-input');
-    emit(this, 'sl-change');
+    emit(this, 'klik-clear');
+    emit(this, 'klik-input');
+    emit(this, 'klik-change');
     this.input.focus();
 
     event.stopPropagation();
@@ -240,12 +240,12 @@ export default class SlInput extends LitElement {
 
   handleFocus() {
     this.hasFocus = true;
-    emit(this, 'sl-focus');
+    emit(this, 'klik-focus');
   }
 
   handleInput() {
     this.value = this.input.value;
-    emit(this, 'sl-input');
+    emit(this, 'klik-input');
   }
 
   handleInvalid() {
@@ -359,7 +359,7 @@ export default class SlInput extends LitElement {
                   tabindex="-1"
                 >
                   <slot name="clear-icon">
-                    <sl-icon name="x-circle-fill" library="system"></sl-icon>
+                    <klik-icon name="x-circle-fill" library="system"></klik-icon>
                   </slot>
                 </button>
               `
@@ -376,12 +376,12 @@ export default class SlInput extends LitElement {
                   ${this.isPasswordVisible
                     ? html`
                         <slot name="show-password-icon">
-                          <sl-icon name="eye-slash" library="system"></sl-icon>
+                          <klik-icon name="eye-slash" library="system"></klik-icon>
                         </slot>
                       `
                     : html`
                         <slot name="hide-password-icon">
-                          <sl-icon name="eye" library="system"></sl-icon>
+                          <klik-icon name="eye" library="system"></klik-icon>
                         </slot>
                       `}
                 </button>
@@ -399,6 +399,6 @@ export default class SlInput extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-input': SlInput;
+    'klik-input': SlInput;
   }
 }

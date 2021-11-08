@@ -4,27 +4,27 @@ import sinon from 'sinon';
 import '../../../dist/shoelace.js';
 import type SlInclude from './include';
 
-describe('<sl-include>', () => {
-  it('should load content and emit sl-load', async () => {
+describe('<klik-include>', () => {
+  it('should load content and emit klik-load', async () => {
     const el = await fixture<SlInclude>(
-      html` <sl-include src="https://jsonplaceholder.typicode.com/posts/1"></sl-include> `
+      html` <klik-include src="https://jsonplaceholder.typicode.com/posts/1"></klik-include> `
     );
     const loadHandler = sinon.spy();
 
-    el.addEventListener('sl-load', loadHandler);
+    el.addEventListener('klik-load', loadHandler);
     await waitUntil(() => loadHandler.calledOnce);
 
     expect(el.innerHTML).to.contain('"id": 1');
     expect(loadHandler).to.have.been.calledOnce;
   });
 
-  it('should emit sl-error when content cannot be loaded', async () => {
+  it('should emit klik-error when content cannot be loaded', async () => {
     const el = await fixture<SlInclude>(
-      html` <sl-include src="https://jsonplaceholder.typicode.com/not-found"></sl-include> `
+      html` <klik-include src="https://jsonplaceholder.typicode.com/not-found"></klik-include> `
     );
     const loadHandler = sinon.spy();
 
-    el.addEventListener('sl-error', loadHandler);
+    el.addEventListener('klik-error', loadHandler);
     await waitUntil(() => loadHandler.calledOnce);
 
     expect(loadHandler).to.have.been.calledOnce;

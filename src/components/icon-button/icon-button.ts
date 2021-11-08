@@ -10,11 +10,11 @@ import '../icon/icon';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon
+ * @dependency klik-icon
  *
  * @csspart base - The component's base wrapper.
  */
-@customElement('sl-icon-button')
+@customElement('klik-icon-button')
 export default class SlIconButton extends LitElement {
   static styles = styles;
 
@@ -51,12 +51,12 @@ export default class SlIconButton extends LitElement {
     const isLink = this.href ? true : false;
 
     const interior = html`
-      <sl-icon
+      <klik-icon
         name=${ifDefined(this.name)}
         library=${ifDefined(this.library)}
         src=${ifDefined(this.src)}
         aria-hidden="true"
-      ></sl-icon>
+      ></klik-icon>
     `;
 
     return isLink
@@ -95,6 +95,6 @@ export default class SlIconButton extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-icon-button': SlIconButton;
+    'klik-icon-button': SlIconButton;
   }
 }

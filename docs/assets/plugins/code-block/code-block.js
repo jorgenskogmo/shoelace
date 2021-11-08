@@ -11,7 +11,7 @@
   }
 
   function convertModuleLinks(html) {
-    const version = sessionStorage.getItem('sl-version');
+    const version = sessionStorage.getItem('klik-version');
 
     html = html
       .replace(/@shoelace-style\/shoelace/g, `https://cdn.skypack.dev/@shoelace-style/shoelace@${version}`)
@@ -134,7 +134,7 @@
               <div class="code-block__preview">
                 ${code.textContent}
                 <div class="code-block__resizer">
-                  <sl-icon name="grip-vertical"></sl-icon>
+                  <klik-icon name="grip-vertical"></klik-icon>
                 </div>
               </div>
 
@@ -279,7 +279,7 @@
   // Open in CodePen
   document.addEventListener('click', event => {
     const button = event.target.closest('button');
-    const version = sessionStorage.getItem('sl-version');
+    const version = sessionStorage.getItem('klik-version');
 
     if (button?.classList.contains('code-block__button--codepen')) {
       const codeBlock = button.closest('.code-block');

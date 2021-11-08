@@ -13,7 +13,7 @@ import styles from './spinner.styles';
  * @cssproperty --indicator-color - The color of the indicator.
  * @cssproperty --speed - The time it takes for the spinner to complete one animation cycle.
  */
-@customElement('sl-spinner')
+@customElement('klik-spinner')
 export default class SlSpinner extends LitElement {
   static styles = styles;
 
@@ -29,6 +29,6 @@ export default class SlSpinner extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-spinner': SlSpinner;
+    'klik-spinner': SlSpinner;
   }
 }

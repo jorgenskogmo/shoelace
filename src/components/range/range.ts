@@ -18,9 +18,9 @@ let id = 0;
  * @slot label - The input's label. Alternatively, you can use the label prop.
  * @slot help-text - Help text that describes how to use the input. Alternatively, you can use the help-text prop.
  *
- * @event sl-change - Emitted when the control's value changes.
- * @event sl-blur - Emitted when the control loses focus.
- * @event sl-focus - Emitted when the control gains focus.
+ * @event klik-change - Emitted when the control's value changes.
+ * @event klik-blur - Emitted when the control loses focus.
+ * @event klik-focus - Emitted when the control gains focus.
  *
  * @csspart base - The component's base wrapper.
  * @csspart input - The native range input.
@@ -32,7 +32,7 @@ let id = 0;
  * @cssproperty --track-color-inactive - The of the portion of the track that represents the remaining value.
  * @cssproperty --track-height - The height of the track.
  */
-@customElement('sl-range')
+@customElement('klik-range')
 export default class SlRange extends LitElement {
   static styles = styles;
 
@@ -127,7 +127,7 @@ export default class SlRange extends LitElement {
 
   handleInput() {
     this.value = Number(this.input.value);
-    emit(this, 'sl-change');
+    emit(this, 'klik-change');
 
     this.syncRange();
   }
@@ -135,7 +135,7 @@ export default class SlRange extends LitElement {
   handleBlur() {
     this.hasFocus = false;
     this.hasTooltip = false;
-    emit(this, 'sl-blur');
+    emit(this, 'klik-blur');
   }
 
   @watch('value', { waitUntilFirstUpdate: true })
@@ -161,7 +161,7 @@ export default class SlRange extends LitElement {
   handleFocus() {
     this.hasFocus = true;
     this.hasTooltip = true;
-    emit(this, 'sl-focus');
+    emit(this, 'klik-focus');
   }
 
   @watch('label')
@@ -271,6 +271,6 @@ export default class SlRange extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-range': SlRange;
+    'klik-range': SlRange;
   }
 }

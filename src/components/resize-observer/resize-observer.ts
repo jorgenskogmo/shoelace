@@ -10,9 +10,9 @@ import styles from './resize-observer.styles';
  *
  * @slot - One or more elements to watch for resizing.
  *
- * @event {{ entries: ResizeObserverEntry[] }} sl-resize - Emitted when the element is resized.
+ * @event {{ entries: ResizeObserverEntry[] }} klik-resize - Emitted when the element is resized.
  */
-@customElement('sl-resize-observer')
+@customElement('klik-resize-observer')
 export default class SlResizeObserver extends LitElement {
   static styles = styles;
 
@@ -25,7 +25,7 @@ export default class SlResizeObserver extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     this.resizeObserver = new ResizeObserver((entries: ResizeObserverEntry[]) => {
-      emit(this, 'sl-resize', { detail: { entries } });
+      emit(this, 'klik-resize', { detail: { entries } });
     });
 
     if (!this.disabled) {
@@ -82,6 +82,6 @@ export default class SlResizeObserver extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-resize-observer': SlResizeObserver;
+    'klik-resize-observer': SlResizeObserver;
   }
 }

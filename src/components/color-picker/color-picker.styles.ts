@@ -18,17 +18,17 @@ export default css`
 
   .color-picker {
     width: var(--grid-width);
-    font-family: var(--sl-font-sans);
-    font-size: var(--sl-font-size-medium);
-    font-weight: var(--sl-font-weight-normal);
+    font-family: var(--klik-font-sans);
+    font-size: var(--klik-font-size-medium);
+    font-weight: var(--klik-font-weight-normal);
     color: var(--color);
-    background-color: rgb(var(--sl-panel-background-color));
-    border-radius: var(--sl-border-radius-medium);
+    background-color: rgb(var(--klik-panel-background-color));
+    border-radius: var(--klik-border-radius-medium);
     user-select: none;
   }
 
   .color-picker--inline {
-    border: solid var(--sl-panel-border-width) rgb(var(--sl-panel-border-color));
+    border: solid var(--klik-panel-border-width) rgb(var(--klik-panel-border-color));
   }
 
   .color-picker__grid {
@@ -42,8 +42,8 @@ export default css`
         hsl(0, 0%, 0%) 100%
       ),
       linear-gradient(to right, hsl(0, 0%, 50%) 0%, hsla(0, 0%, 50%, 0) 100%);
-    border-top-left-radius: var(--sl-border-radius-medium);
-    border-top-right-radius: var(--sl-border-radius-medium);
+    border-top-left-radius: var(--klik-border-radius-medium);
+    border-top-right-radius: var(--klik-border-radius-medium);
     cursor: crosshair;
   }
 
@@ -60,11 +60,11 @@ export default css`
 
   .color-picker__grid-handle${focusVisibleSelector} {
     outline: none;
-    box-shadow: 0 0 0 1px rgb(var(--sl-color-primary-500)), var(--sl-focus-ring);
+    box-shadow: 0 0 0 1px rgb(var(--klik-color-primary-500)), var(--klik-focus-ring);
   }
 
   .color-picker__controls {
-    padding: var(--sl-spacing-small);
+    padding: var(--klik-spacing-small);
     display: flex;
     align-items: center;
   }
@@ -76,12 +76,12 @@ export default css`
   .color-picker__slider {
     position: relative;
     height: var(--slider-height);
-    border-radius: var(--sl-border-radius-pill);
+    border-radius: var(--klik-border-radius-pill);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
   }
 
   .color-picker__slider:not(:last-of-type) {
-    margin-bottom: var(--sl-spacing-small);
+    margin-bottom: var(--klik-spacing-small);
   }
 
   .color-picker__slider-handle {
@@ -97,7 +97,7 @@ export default css`
 
   .color-picker__slider-handle${focusVisibleSelector} {
     outline: none;
-    box-shadow: 0 0 0 1px rgb(var(--sl-color-primary-500)), var(--sl-focus-ring);
+    box-shadow: 0 0 0 1px rgb(var(--klik-color-primary-500)), var(--klik-focus-ring);
   }
 
   .color-picker__hue {
@@ -131,9 +131,9 @@ export default css`
     width: 3.25rem;
     height: 2.25rem;
     border: none;
-    border-radius: var(--sl-input-border-radius-medium);
+    border-radius: var(--klik-input-border-radius-medium);
     background: none;
-    margin-left: var(--sl-spacing-small);
+    margin-left: var(--klik-spacing-small);
     cursor: copy;
   }
 
@@ -152,7 +152,7 @@ export default css`
   }
 
   .color-picker__preview${focusVisibleSelector} {
-    box-shadow: var(--sl-focus-ring);
+    box-shadow: var(--klik-focus-ring);
     outline: none;
   }
 
@@ -171,7 +171,7 @@ export default css`
 
   @keyframes pulse {
     0% {
-      box-shadow: 0 0 0 0 rgb(var(--sl-focus-ring-color));
+      box-shadow: 0 0 0 0 rgb(var(--klik-focus-ring-color));
     }
     70% {
       box-shadow: 0 0 0 0.5rem transparent;
@@ -183,19 +183,19 @@ export default css`
 
   .color-picker__user-input {
     display: flex;
-    padding: 0 var(--sl-spacing-small) var(--sl-spacing-small) var(--sl-spacing-small);
+    padding: 0 var(--klik-spacing-small) var(--klik-spacing-small) var(--klik-spacing-small);
   }
 
-  .color-picker__user-input sl-input {
+  .color-picker__user-input klik-input {
     min-width: 0; /* fix input width in Safari */
     flex: 1 1 auto;
   }
 
-  .color-picker__user-input sl-button-group {
-    margin-left: var(--sl-spacing-small);
+  .color-picker__user-input klik-button-group {
+    margin-left: var(--klik-spacing-small);
   }
 
-  .color-picker__user-input sl-button {
+  .color-picker__user-input klik-button {
     min-width: 3.25rem;
     max-width: 3.25rem;
     font-size: 1rem;
@@ -206,15 +206,15 @@ export default css`
     grid-template-columns: repeat(8, 1fr);
     grid-gap: 0.5rem;
     justify-items: center;
-    border-top: solid 1px rgb(var(--sl-color-neutral-200));
-    padding: var(--sl-spacing-small);
+    border-top: solid 1px rgb(var(--klik-color-neutral-200));
+    padding: var(--klik-spacing-small);
   }
 
   .color-picker__swatch {
     position: relative;
     width: var(--swatch-size);
     height: var(--swatch-size);
-    border-radius: var(--sl-border-radius-small);
+    border-radius: var(--klik-border-radius-small);
   }
 
   .color-picker__swatch .color-picker__swatch-color {
@@ -230,14 +230,14 @@ export default css`
 
   .color-picker__swatch${focusVisibleSelector} {
     outline: none;
-    box-shadow: var(--sl-focus-ring);
+    box-shadow: var(--klik-focus-ring);
   }
 
   .color-picker__transparent-bg {
-    background-image: linear-gradient(45deg, rgb(var(--sl-color-neutral-300)) 25%, transparent 25%),
-      linear-gradient(45deg, transparent 75%, rgb(var(--sl-color-neutral-300)) 75%),
-      linear-gradient(45deg, transparent 75%, rgb(var(--sl-color-neutral-300)) 75%),
-      linear-gradient(45deg, rgb(var(--sl-color-neutral-300)) 25%, transparent 25%);
+    background-image: linear-gradient(45deg, rgb(var(--klik-color-neutral-300)) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgb(var(--klik-color-neutral-300)) 75%),
+      linear-gradient(45deg, transparent 75%, rgb(var(--klik-color-neutral-300)) 75%),
+      linear-gradient(45deg, rgb(var(--klik-color-neutral-300)) 25%, transparent 25%);
     background-size: 10px 10px;
     background-position: 0 0, 0 0, -5px -5px, 5px 5px;
   }
@@ -272,25 +272,25 @@ export default css`
     background-color: transparent;
     border: none;
     cursor: pointer;
-    transition: var(--sl-transition-fast) box-shadow;
+    transition: var(--klik-transition-fast) box-shadow;
   }
 
   .color-dropdown__trigger.color-dropdown__trigger--small {
-    width: var(--sl-input-height-small);
-    height: var(--sl-input-height-small);
-    border-radius: var(--sl-border-radius-circle);
+    width: var(--klik-input-height-small);
+    height: var(--klik-input-height-small);
+    border-radius: var(--klik-border-radius-circle);
   }
 
   .color-dropdown__trigger.color-dropdown__trigger--medium {
-    width: var(--sl-input-height-medium);
-    height: var(--sl-input-height-medium);
-    border-radius: var(--sl-border-radius-circle);
+    width: var(--klik-input-height-medium);
+    height: var(--klik-input-height-medium);
+    border-radius: var(--klik-border-radius-circle);
   }
 
   .color-dropdown__trigger.color-dropdown__trigger--large {
-    width: var(--sl-input-height-large);
-    height: var(--sl-input-height-large);
-    border-radius: var(--sl-border-radius-circle);
+    width: var(--klik-input-height-large);
+    height: var(--klik-input-height-large);
+    border-radius: var(--klik-border-radius-circle);
   }
 
   .color-dropdown__trigger:before {
@@ -302,7 +302,7 @@ export default css`
     height: 100%;
     border-radius: inherit;
     background-color: currentColor;
-    box-shadow: inset 0 0 0 1px rgb(var(--sl-color-neutral-1000) / 25%);
+    box-shadow: inset 0 0 0 1px rgb(var(--klik-color-neutral-1000) / 25%);
     transition: inherit;
   }
 
@@ -311,12 +311,12 @@ export default css`
   }
 
   .color-dropdown__trigger${focusVisibleSelector}:not(.color-dropdown__trigger--disabled) {
-    box-shadow: var(--sl-focus-ring);
+    box-shadow: var(--klik-focus-ring);
     outline: none;
   }
 
   .color-dropdown__trigger${focusVisibleSelector}:not(.color-dropdown__trigger--disabled):before {
-    box-shadow: inset 0 0 0 1px rgb(var(--sl-color-primary-500));
+    box-shadow: inset 0 0 0 1px rgb(var(--klik-color-primary-500));
   }
 
   .color-dropdown__trigger.color-dropdown__trigger--disabled {

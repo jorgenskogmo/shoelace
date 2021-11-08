@@ -28,33 +28,33 @@ export default css`
    */
 
   .tag--primary {
-    background-color: rgb(var(--sl-color-primary-50));
-    border-color: rgb(var(--sl-color-primary-200));
-    color: rgb(var(--sl-color-primary-800));
+    background-color: rgb(var(--klik-color-primary-50));
+    border-color: rgb(var(--klik-color-primary-200));
+    color: rgb(var(--klik-color-primary-800));
   }
 
   .tag--success {
-    background-color: rgb(var(--sl-color-success-50));
-    border-color: rgb(var(--sl-color-success-200));
-    color: rgb(var(--sl-color-success-800));
+    background-color: rgb(var(--klik-color-success-50));
+    border-color: rgb(var(--klik-color-success-200));
+    color: rgb(var(--klik-color-success-800));
   }
 
   .tag--neutral {
-    background-color: rgb(var(--sl-color-neutral-50));
-    border-color: rgb(var(--sl-color-neutral-200));
-    color: rgb(var(--sl-color-neutral-800));
+    background-color: rgb(var(--klik-color-neutral-50));
+    border-color: rgb(var(--klik-color-neutral-200));
+    color: rgb(var(--klik-color-neutral-800));
   }
 
   .tag--warning {
-    background-color: rgb(var(--sl-color-warning-50));
-    border-color: rgb(var(--sl-color-warning-200));
-    color: rgb(var(--sl-color-warning-800));
+    background-color: rgb(var(--klik-color-warning-50));
+    border-color: rgb(var(--klik-color-warning-200));
+    color: rgb(var(--klik-color-warning-800));
   }
 
   .tag--danger {
-    background-color: rgb(var(--sl-color-danger-50));
-    border-color: rgb(var(--sl-color-danger-200));
-    color: rgb(var(--sl-color-danger-800));
+    background-color: rgb(var(--klik-color-danger-50));
+    border-color: rgb(var(--klik-color-danger-200));
+    color: rgb(var(--klik-color-danger-800));
   }
 
   /*
@@ -62,42 +62,42 @@ export default css`
    */
 
   .tag--small {
-    font-size: var(--sl-button-font-size-small);
-    height: calc(var(--sl-input-height-small) * 0.8);
-    line-height: calc(var(--sl-input-height-small) - var(--sl-input-border-width) * 2);
-    border-radius: var(--sl-input-border-radius-small);
-    padding: 0 var(--sl-spacing-x-small);
+    font-size: var(--klik-button-font-size-small);
+    height: calc(var(--klik-input-height-small) * 0.8);
+    line-height: calc(var(--klik-input-height-small) - var(--klik-input-border-width) * 2);
+    border-radius: var(--klik-input-border-radius-small);
+    padding: 0 var(--klik-spacing-x-small);
   }
 
   .tag--small .tag__remove {
-    margin-left: var(--sl-spacing-2x-small);
-    margin-right: calc(-1 * var(--sl-spacing-3x-small));
+    margin-left: var(--klik-spacing-2x-small);
+    margin-right: calc(-1 * var(--klik-spacing-3x-small));
   }
 
   .tag--medium {
-    font-size: var(--sl-button-font-size-medium);
-    height: calc(var(--sl-input-height-medium) * 0.8);
-    line-height: calc(var(--sl-input-height-medium) - var(--sl-input-border-width) * 2);
-    border-radius: var(--sl-input-border-radius-medium);
-    padding: 0 var(--sl-spacing-small);
+    font-size: var(--klik-button-font-size-medium);
+    height: calc(var(--klik-input-height-medium) * 0.8);
+    line-height: calc(var(--klik-input-height-medium) - var(--klik-input-border-width) * 2);
+    border-radius: var(--klik-input-border-radius-medium);
+    padding: 0 var(--klik-spacing-small);
   }
 
   .tag__remove {
-    margin-left: var(--sl-spacing-2x-small);
-    margin-right: calc(-1 * var(--sl-spacing-2x-small));
+    margin-left: var(--klik-spacing-2x-small);
+    margin-right: calc(-1 * var(--klik-spacing-2x-small));
   }
 
   .tag--large {
-    font-size: var(--sl-button-font-size-large);
-    height: calc(var(--sl-input-height-large) * 0.8);
-    line-height: calc(var(--sl-input-height-large) - var(--sl-input-border-width) * 2);
-    border-radius: var(--sl-input-border-radius-large);
-    padding: 0 var(--sl-spacing-medium);
+    font-size: var(--klik-button-font-size-large);
+    height: calc(var(--klik-input-height-large) * 0.8);
+    line-height: calc(var(--klik-input-height-large) - var(--klik-input-border-width) * 2);
+    border-radius: var(--klik-input-border-radius-large);
+    padding: 0 var(--klik-spacing-medium);
   }
 
   .tag__remove {
-    margin-left: var(--sl-spacing-2x-small);
-    margin-right: calc(-1 * var(--sl-spacing-x-small));
+    margin-left: var(--klik-spacing-2x-small);
+    margin-right: calc(-1 * var(--klik-spacing-x-small));
   }
 
   /*
@@ -105,6 +105,6 @@ export default css`
    */
 
   .tag--pill {
-    border-radius: var(--sl-border-radius-pill);
+    border-radius: var(--klik-border-radius-pill);
   }
 `;

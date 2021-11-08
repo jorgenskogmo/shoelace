@@ -20,7 +20,7 @@ import styles from './progress-bar.styles';
  * @cssproperty --indicator-color - The indicator color.
  * @cssproperty --label-color - The label color.
  */
-@customElement('sl-progress-bar')
+@customElement('klik-progress-bar')
 export default class SlProgressBar extends LitElement {
   static styles = styles;
 
@@ -64,6 +64,6 @@ export default class SlProgressBar extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-progress-bar': SlProgressBar;
+    'klik-progress-bar': SlProgressBar;
   }
 }

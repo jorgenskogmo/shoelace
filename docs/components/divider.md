@@ -1,11 +1,11 @@
 # Divider
 
-[component-header:sl-divider]
+[component-header:klik-divider]
 
 Dividers are used to visually separate or group elements.
 
 ```html preview
-<sl-divider></sl-divider>
+<klik-divider></klik-divider>
 ```
 
 ```jsx react
@@ -22,7 +22,7 @@ const App = () => (
 Use the `--width` custom property to change the width of the divider.
 
 ```html preview
-<sl-divider style="--width: 4px;"></sl-divider>
+<klik-divider style="--width: 4px;"></klik-divider>
 ```
 
 ```jsx react
@@ -38,7 +38,7 @@ const App = () => (
 Use the `--color` custom property to change the color of the divider.
 
 ```html preview
-<sl-divider style="--color: tomato;"></sl-divider>
+<klik-divider style="--color: tomato;"></klik-divider>
 ```
 
 ```jsx react
@@ -56,7 +56,7 @@ Use the `--spacing` custom property to change the amount of space between the di
 ```html preview
 <div style="text-align: center;">
   Above
-  <sl-divider style="--spacing: 2rem;"></sl-divider>
+  <klik-divider style="--spacing: 2rem;"></klik-divider>
   Below
 </div>
 ```
@@ -80,9 +80,9 @@ Add the `vertical` attribute to draw the divider in a vertical orientation. The 
 ```html preview
 <div style="display: flex; align-items: center; height: 2rem;">
   First
-  <sl-divider vertical></sl-divider>
+  <klik-divider vertical></klik-divider>
   Middle
-  <sl-divider vertical></sl-divider>
+  <klik-divider vertical></klik-divider>
   Last
 </div>
 ```
@@ -112,15 +112,15 @@ const App = () => (
 Use dividers in [menus](/components/menu) to visually group menu items.
 
 ```html preview
-<sl-menu style="max-width: 200px; border: solid 1px rgb(var(--sl-panel-border-color)); border-radius: var(--sl-border-radius-medium);">
-  <sl-menu-item value="1">Option 1</sl-menu-item>
-  <sl-menu-item value="2">Option 2</sl-menu-item>
-  <sl-menu-item value="3">Option 3</sl-menu-item>
-  <sl-divider></sl-divider>
-  <sl-menu-item value="4">Option 4</sl-menu-item>
-  <sl-menu-item value="5">Option 5</sl-menu-item>
-  <sl-menu-item value="6">Option 6</sl-menu-item>
-</sl-menu>
+<klik-menu style="max-width: 200px; border: solid 1px rgb(var(--klik-panel-border-color)); border-radius: var(--klik-border-radius-medium);">
+  <klik-menu-item value="1">Option 1</klik-menu-item>
+  <klik-menu-item value="2">Option 2</klik-menu-item>
+  <klik-menu-item value="3">Option 3</klik-menu-item>
+  <klik-divider></klik-divider>
+  <klik-menu-item value="4">Option 4</klik-menu-item>
+  <klik-menu-item value="5">Option 5</klik-menu-item>
+  <klik-menu-item value="6">Option 6</klik-menu-item>
+</klik-menu>
 ```
 
 ```jsx react
@@ -134,14 +134,14 @@ const App = () => (
   <SlMenu 
     style={{
       maxWidth: '200px',
-      border: 'solid 1px rgb(var(--sl-panel-border-color))',
-      borderRadius: 'var(--sl-border-radius-medium)'
+      border: 'solid 1px rgb(var(--klik-panel-border-color))',
+      borderRadius: 'var(--klik-border-radius-medium)'
     }}
   >
     <SlMenuItem value="1">Option 1</SlMenuItem>
     <SlMenuItem value="2">Option 2</SlMenuItem>
     <SlMenuItem value="3">Option 3</SlMenuItem>
-    <sl-divider />
+    <klik-divider />
     <SlMenuItem value="4">Option 4</SlMenuItem>
     <SlMenuItem value="5">Option 5</SlMenuItem>
     <SlMenuItem value="6">Option 6</SlMenuItem>
@@ -149,4 +149,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-divider]
+[component-metadata:klik-divider]

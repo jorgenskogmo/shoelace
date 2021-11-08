@@ -92,10 +92,10 @@ After the initial build, a browser will open automatically to a local version of
 
 ### Creating New Components
 
-To scaffold a new component, run the following command, replacing `sl-tag-name` with the desired tag name.
+To scaffold a new component, run the following command, replacing `klik-tag-name` with the desired tag name.
 
 ```bash
-npm run create sl-tag-name
+npm run create klik-tag-name
 ```
 
 This will generate a source file, a stylesheet, and a docs page for you. When you start the dev server, you'll find the new component in the "Components" section of the sidebar.
@@ -169,11 +169,11 @@ Please do not make any changes to `prettier.config.cjs` without consulting the m
 
 Components should be composable, meaning you can easily reuse them with and within other components. This reduces the overall size of the library, expedites feature development, and maintains a consistent user experience.
 
-The `<sl-select>` component, for example, makes use of the dropdown, input, menu, and menu item components. Because it's offloading most of its functionality and styles to lower-level components, the select component remains lightweight and its appearance is consistent with other form controls and menus.
+The `<klik-select>` component, for example, makes use of the dropdown, input, menu, and menu item components. Because it's offloading most of its functionality and styles to lower-level components, the select component remains lightweight and its appearance is consistent with other form controls and menus.
 
 ### Component Stucture
 
-All components have a host element, which is a reference to the `<sl-*>` element itself. Make sure to always set the host element's `display` property to the appropriate value depending on your needs, as the default is `inline` per the custom element spec.
+All components have a host element, which is a reference to the `<klik-*>` element itself. Make sure to always set the host element's `display` property to the appropriate value depending on your needs, as the default is `inline` per the custom element spec.
 
 ```css
 :host {
@@ -205,7 +205,7 @@ See the source of card, dialog, or drawer for examples.
 
 ### Custom Events
 
-Components must only emit custom events, and all custom events must start with `sl-` as a namespace. For compatibility with frameworks that utilize DOM templates, custom events must have lowercase, kebab-style names. For example, use `sl-change` instead of `slChange`.
+Components must only emit custom events, and all custom events must start with `klik-` as a namespace. For compatibility with frameworks that utilize DOM templates, custom events must have lowercase, kebab-style names. For example, use `klik-change` instead of `slChange`.
 
 This convention avoids the problem of browsers lowercasing attributes, causing some frameworks to be unable to listen to them. This problem isn't specific to one framework, but [Vue's documentation](https://vuejs.org/v2/guide/components-custom-events.html#Event-Names) provides a good explanation of the problem.
 
@@ -215,19 +215,19 @@ To expose custom properties as part of a component's API, scope them to the `:ho
 
 ```css
 :host {
-  --color: rgb(var(--sl-color-primary-500));
-  --background-color: rgb(var(--sl-color-neutral-100));
+  --color: rgb(var(--klik-color-primary-500));
+  --background-color: rgb(var(--klik-color-neutral-100));
 }
 ```
 
-Then use the following syntax for comments so they appear in the generated docs. Do not use the `--sl-` prefix, as that is reserved for design tokens that live in the global scope.
+Then use the following syntax for comments so they appear in the generated docs. Do not use the `--klik-` prefix, as that is reserved for design tokens that live in the global scope.
 
 ```js
 /**
  * @cssproperty --color: The component's text color.
  * @cssproperty --background-color: The component's background color. 
  */
-@customElement('sl-example')
+@customElement('klik-example')
 export default class SlExample {
   // ...
 }
@@ -255,7 +255,7 @@ All design tokens that implement a color value must do so in the following `R G 
 
 ```css
 :root {
-  --sl-color-sky-500: 14 165 233;
+  --klik-color-sky-500: 14 165 233;
 }
 ```
 
@@ -263,8 +263,8 @@ This format requires the consumer to use the `rgb()` function in their styleshee
 
 ```css
 .example {
-  color: rgb(var(--sl-color-sky-500));
-  background-color: rgb(var(--sl-color-sky-500) / 5%); /* 5% opacity */
+  color: rgb(var(--klik-color-sky-500));
+  background-color: rgb(var(--klik-color-sky-500) / 5%); /* 5% opacity */
 }
 ```
 
@@ -276,4 +276,4 @@ Form controls should support validation through the following conventions:
 - All form controls must have a `setCustomValidity()` method so the user can set a custom validation message
 - All form controls must have a `reportValidity()` method that report their validity during form submission
 - All form controls should mirror their native validation attributes such as `required`, `pattern`, `minlength`, `maxlength`, etc. when possible
-- All form controls must be serialized by `<sl-form>`
+- All form controls must be serialized by `<klik-form>`

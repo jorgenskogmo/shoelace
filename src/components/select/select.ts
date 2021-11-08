@@ -25,11 +25,11 @@ let id = 0;
  * @since 2.0
  * @status stable
  *
- * @dependency sl-dropdown
- * @dependency sl-icon
- * @dependency sl-icon-button
- * @dependency sl-menu
- * @dependency sl-tag
+ * @dependency klik-dropdown
+ * @dependency klik-icon
+ * @dependency klik-icon-button
+ * @dependency klik-menu
+ * @dependency klik-tag
  *
  * @slot - The select's options in the form of menu items.
  * @slot prefix - Used to prepend an icon or similar element to the select.
@@ -37,10 +37,10 @@ let id = 0;
  * @slot label - The select's label. Alternatively, you can use the label prop.
  * @slot help-text - Help text that describes how to use the select.
  *
- * @event sl-clear - Emitted when the clear button is activated.
- * @event sl-change - Emitted when the control's value changes.
- * @event sl-focus - Emitted when the control gains focus.
- * @event sl-blur - Emitted when the control loses focus.
+ * @event klik-clear - Emitted when the clear button is activated.
+ * @event klik-change - Emitted when the control's value changes.
+ * @event klik-focus - Emitted when the control gains focus.
+ * @event klik-blur - Emitted when the control loses focus.
  *
  * @csspart base - The component's base wrapper.
  * @csspart clear-button - The clear button.
@@ -51,11 +51,11 @@ let id = 0;
  * @csspart prefix - The select's prefix.
  * @csspart label - The select's label.
  * @csspart suffix - The select's suffix.
- * @csspart menu - The select menu, an <sl-menu> element.
- * @csspart tag - The multiselect option, an <sl-tag> element.
+ * @csspart menu - The select menu, an <klik-menu> element.
+ * @csspart tag - The multiselect option, an <klik-tag> element.
  * @csspart tags - The container in which multiselect options are rendered.
  */
-@customElement('sl-select')
+@customElement('klik-select')
 export default class SlSelect extends LitElement {
   static styles = styles;
 
@@ -166,7 +166,7 @@ export default class SlSelect extends LitElement {
   }
 
   getItems() {
-    return [...this.querySelectorAll('sl-menu-item')] as SlMenuItem[];
+    return [...this.querySelectorAll('klik-menu-item')] as SlMenuItem[];
   }
 
   getValueAsArray() {
@@ -182,14 +182,14 @@ export default class SlSelect extends LitElement {
     // Don't blur if the control is open. We'll move focus back once it closes.
     if (!this.isOpen) {
       this.hasFocus = false;
-      emit(this, 'sl-blur');
+      emit(this, 'klik-blur');
     }
   }
 
   handleClearClick(event: MouseEvent) {
     event.stopPropagation();
     this.value = this.multiple ? [] : '';
-    emit(this, 'sl-clear');
+    emit(this, 'klik-clear');
     this.syncItemsFromValue();
   }
 
@@ -209,7 +209,7 @@ export default class SlSelect extends LitElement {
   handleFocus() {
     if (!this.hasFocus) {
       this.hasFocus = true;
-      emit(this, 'sl-focus');
+      emit(this, 'klik-focus');
     }
   }
 
@@ -220,7 +220,7 @@ export default class SlSelect extends LitElement {
     const lastItem = items[items.length - 1];
 
     // Ignore key presses on tags
-    if (target.tagName.toLowerCase() === 'sl-tag') {
+    if (target.tagName.toLowerCase() === 'klik-tag') {
       return;
     }
 
@@ -321,7 +321,7 @@ export default class SlSelect extends LitElement {
     const values: string[] = [];
     items.map(item => {
       if (values.includes(item.value)) {
-        console.error(`Duplicate value found in <sl-select> menu item: '${item.value}'`, item);
+        console.error(`Duplicate value found in <klik-select> menu item: '${item.value}'`, item);
       }
 
       values.push(item.value);
@@ -351,7 +351,7 @@ export default class SlSelect extends LitElement {
     this.syncItemsFromValue();
     await this.updateComplete;
     this.invalid = !this.input.checkValidity();
-    emit(this, 'sl-change');
+    emit(this, 'klik-change');
   }
 
   resizeMenu() {
@@ -377,7 +377,7 @@ export default class SlSelect extends LitElement {
       this.displayLabel = checkedItems[0] ? this.getItemLabel(checkedItems[0]) : '';
       this.displayTags = checkedItems.map((item: SlMenuItem) => {
         return html`
-          <sl-tag
+          <klik-tag
             exportparts="base:tag"
             type="neutral"
             size=${this.size}
@@ -385,7 +385,7 @@ export default class SlSelect extends LitElement {
             removable
             @click=${this.handleTagInteraction}
             @keydown=${this.handleTagInteraction}
-            @sl-remove=${(event: CustomEvent) => {
+            @klik-remove=${(event: CustomEvent) => {
               event.stopPropagation();
               if (!this.disabled) {
                 item.checked = false;
@@ -394,7 +394,7 @@ export default class SlSelect extends LitElement {
             }}
           >
             ${this.getItemLabel(item)}
-          </sl-tag>
+          </klik-tag>
         `;
       });
 
@@ -403,7 +403,7 @@ export default class SlSelect extends LitElement {
         this.displayLabel = '';
         this.displayTags = this.displayTags.slice(0, this.maxTagsVisible);
         this.displayTags.push(html`
-          <sl-tag exportparts="base:tag" type="neutral" size=${this.size}> +${total - this.maxTagsVisible} </sl-tag>
+          <klik-tag exportparts="base:tag" type="neutral" size=${this.size}> +${total - this.maxTagsVisible} </klik-tag>
         `);
       }
     } else {
@@ -442,7 +442,7 @@ export default class SlSelect extends LitElement {
         onLabelClick: () => this.handleLabelClick()
       },
       html`
-        <sl-dropdown
+        <klik-dropdown
           part="base"
           .hoist=${this.hoist}
           .stayOpenOnSelect=${this.multiple}
@@ -466,8 +466,8 @@ export default class SlSelect extends LitElement {
             'select--pill': this.pill,
             'select--invalid': this.invalid
           })}
-          @sl-show=${this.handleMenuShow}
-          @sl-hide=${this.handleMenuHide}
+          @klik-show=${this.handleMenuShow}
+          @klik-hide=${this.handleMenuHide}
         >
           <div
             part="control"
@@ -504,14 +504,14 @@ export default class SlSelect extends LitElement {
 
             ${this.clearable && hasSelection
               ? html`
-                  <sl-icon-button
+                  <klik-icon-button
                     exportparts="base:clear-button"
                     class="select__clear"
                     name="x-circle-fill"
                     library="system"
                     @click=${this.handleClearClick}
                     tabindex="-1"
-                  ></sl-icon-button>
+                  ></klik-icon-button>
                 `
               : ''}
 
@@ -520,7 +520,7 @@ export default class SlSelect extends LitElement {
             </span>
 
             <span part="icon" class="select__icon" aria-hidden="true">
-              <sl-icon name="chevron-down" library="system"></sl-icon>
+              <klik-icon name="chevron-down" library="system"></klik-icon>
             </span>
 
             <!-- The hidden input tricks the browser's built-in validation so it works as expected. We use an input
@@ -534,10 +534,10 @@ export default class SlSelect extends LitElement {
             />
           </div>
 
-          <sl-menu part="menu" class="select__menu" @sl-select=${this.handleMenuSelect}>
+          <klik-menu part="menu" class="select__menu" @klik-select=${this.handleMenuSelect}>
             <slot @slotchange=${this.handleSlotChange}></slot>
-          </sl-menu>
-        </sl-dropdown>
+          </klik-menu>
+        </klik-dropdown>
       `
     );
   }
@@ -545,6 +545,6 @@ export default class SlSelect extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-select': SlSelect;
+    'klik-select': SlSelect;
   }
 }

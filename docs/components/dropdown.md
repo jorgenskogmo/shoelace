@@ -1,6 +1,6 @@
 # Dropdown
 
-[component-header:sl-dropdown]
+[component-header:klik-dropdown]
 
 Dropdowns expose additional content that "drops down" in a panel.
 
@@ -9,26 +9,26 @@ Dropdowns consist of a trigger and a panel. By default, activating the trigger w
 Dropdowns are designed to work well with [menus](/components/menu) to provide a list of options the user can select from. However, dropdowns can also be used in lower-level applications (e.g. [color picker](/components/color-picker) and [select](/components/select)). The API gives you complete control over showing, hiding, and positioning the panel.
 
 ```html preview
-<sl-dropdown>
-  <sl-button slot="trigger" caret>Dropdown</sl-button>
-  <sl-menu>
-    <sl-menu-item>Dropdown Item 1</sl-menu-item>
-    <sl-menu-item>Dropdown Item 2</sl-menu-item>
-    <sl-menu-item>Dropdown Item 3</sl-menu-item>
-    <sl-divider></sl-divider>
-    <sl-menu-item checked>Checked</sl-menu-item>
-    <sl-menu-item disabled>Disabled</sl-menu-item>
-    <sl-divider></sl-divider>
-    <sl-menu-item>
+<klik-dropdown>
+  <klik-button slot="trigger" caret>Dropdown</klik-button>
+  <klik-menu>
+    <klik-menu-item>Dropdown Item 1</klik-menu-item>
+    <klik-menu-item>Dropdown Item 2</klik-menu-item>
+    <klik-menu-item>Dropdown Item 3</klik-menu-item>
+    <klik-divider></klik-divider>
+    <klik-menu-item checked>Checked</klik-menu-item>
+    <klik-menu-item disabled>Disabled</klik-menu-item>
+    <klik-divider></klik-divider>
+    <klik-menu-item>
       Prefix
-      <sl-icon slot="prefix" name="gift"></sl-icon>
-    </sl-menu-item>
-    <sl-menu-item>
+      <klik-icon slot="prefix" name="gift"></klik-icon>
+    </klik-menu-item>
+    <klik-menu-item>
       Suffix Icon
-      <sl-icon slot="suffix" name="heart"></sl-icon>
-    </sl-menu-item>
-  </sl-menu>
-</sl-dropdown>
+      <klik-icon slot="suffix" name="heart"></klik-icon>
+    </klik-menu-item>
+  </klik-menu>
+</klik-dropdown>
 ```
 
 ```jsx react
@@ -69,25 +69,25 @@ const App = () => (
 
 ### Getting the Selected Item
 
-When dropdowns are used with [menus](/components/menu), you can listen for the `sl-select` event to determine which menu item was selected. The menu item element will be exposed in `event.detail.item`. You can set `value` props to make it easier to identify commands.
+When dropdowns are used with [menus](/components/menu), you can listen for the `klik-select` event to determine which menu item was selected. The menu item element will be exposed in `event.detail.item`. You can set `value` props to make it easier to identify commands.
 
 ```html preview
 <div class="dropdown-selection">
-  <sl-dropdown>
-    <sl-button slot="trigger" caret>Edit</sl-button>
-    <sl-menu>
-      <sl-menu-item value="cut">Cut</sl-menu-item>
-      <sl-menu-item value="copy">Copy</sl-menu-item>
-      <sl-menu-item value="paste">Paste</sl-menu-item>
-    </sl-menu>
-  </sl-dropdown>
+  <klik-dropdown>
+    <klik-button slot="trigger" caret>Edit</klik-button>
+    <klik-menu>
+      <klik-menu-item value="cut">Cut</klik-menu-item>
+      <klik-menu-item value="copy">Copy</klik-menu-item>
+      <klik-menu-item value="paste">Paste</klik-menu-item>
+    </klik-menu>
+  </klik-dropdown>
 </div>
 
 <script>
   const container = document.querySelector('.dropdown-selection');
-  const dropdown = container.querySelector('sl-dropdown');
+  const dropdown = container.querySelector('klik-dropdown');
 
-  dropdown.addEventListener('sl-select', event => {
+  dropdown.addEventListener('klik-select', event => {
     const selectedItem = event.detail.item;
     console.log(selectedItem.value);
   });
@@ -125,21 +125,21 @@ Alternatively, you can listen for the `click` event on individual menu items. No
 
 ```html preview
 <div class="dropdown-selection-alt">
-  <sl-dropdown>
-    <sl-button slot="trigger" caret>Edit</sl-button>
-    <sl-menu>
-      <sl-menu-item value="cut">Cut</sl-menu-item>
-      <sl-menu-item value="copy">Copy</sl-menu-item>
-      <sl-menu-item value="paste">Paste</sl-menu-item>
-    </sl-menu>
-  </sl-dropdown>
+  <klik-dropdown>
+    <klik-button slot="trigger" caret>Edit</klik-button>
+    <klik-menu>
+      <klik-menu-item value="cut">Cut</klik-menu-item>
+      <klik-menu-item value="copy">Copy</klik-menu-item>
+      <klik-menu-item value="paste">Paste</klik-menu-item>
+    </klik-menu>
+  </klik-dropdown>
 </div>
 
 <script>
   const container = document.querySelector('.dropdown-selection-alt');
-  const cut = container.querySelector('sl-menu-item[value="cut"]');
-  const copy = container.querySelector('sl-menu-item[value="copy"]');
-  const paste = container.querySelector('sl-menu-item[value="paste"]');
+  const cut = container.querySelector('klik-menu-item[value="cut"]');
+  const copy = container.querySelector('klik-menu-item[value="copy"]');
+  const paste = container.querySelector('klik-menu-item[value="paste"]');
 
   cut.addEventListener('click', () => console.log('cut'));
   copy.addEventListener('click', () => console.log('copy'));
@@ -186,17 +186,17 @@ const App = () => {
 The preferred placement of the dropdown can be set with the `placement` attribute. Note that the actual position may vary to ensure the panel remains in the viewport.
 
 ```html preview
-<sl-dropdown placement="top-start">
-  <sl-button slot="trigger" caret>Edit</sl-button>
-  <sl-menu>
-    <sl-menu-item>Cut</sl-menu-item>
-    <sl-menu-item>Copy</sl-menu-item>
-    <sl-menu-item>Paste</sl-menu-item>
-    <sl-divider></sl-divider>
-    <sl-menu-item>Find</sl-menu-item>
-    <sl-menu-item>Replace</sl-menu-item>
-  </sl-menu>
-</sl-dropdown>
+<klik-dropdown placement="top-start">
+  <klik-button slot="trigger" caret>Edit</klik-button>
+  <klik-menu>
+    <klik-menu-item>Cut</klik-menu-item>
+    <klik-menu-item>Copy</klik-menu-item>
+    <klik-menu-item>Paste</klik-menu-item>
+    <klik-divider></klik-divider>
+    <klik-menu-item>Find</klik-menu-item>
+    <klik-menu-item>Replace</klik-menu-item>
+  </klik-menu>
+</klik-dropdown>
 ```
 
 ```jsx react
@@ -228,17 +228,17 @@ const App = () => (
 The distance from the panel to the trigger can be customized using the `distance` attribute. This value is specified in pixels.
 
 ```html preview
-<sl-dropdown distance="30">
-  <sl-button slot="trigger" caret>Edit</sl-button>
-  <sl-menu>
-    <sl-menu-item>Cut</sl-menu-item>
-    <sl-menu-item>Copy</sl-menu-item>
-    <sl-menu-item>Paste</sl-menu-item>
-    <sl-divider></sl-divider>
-    <sl-menu-item>Find</sl-menu-item>
-    <sl-menu-item>Replace</sl-menu-item>
-  </sl-menu>
-</sl-dropdown>
+<klik-dropdown distance="30">
+  <klik-button slot="trigger" caret>Edit</klik-button>
+  <klik-menu>
+    <klik-menu-item>Cut</klik-menu-item>
+    <klik-menu-item>Copy</klik-menu-item>
+    <klik-menu-item>Paste</klik-menu-item>
+    <klik-divider></klik-divider>
+    <klik-menu-item>Find</klik-menu-item>
+    <klik-menu-item>Replace</klik-menu-item>
+  </klik-menu>
+</klik-dropdown>
 ```
 
 ```jsx react
@@ -270,17 +270,17 @@ const App = () => (
 The offset of the panel along the trigger can be customized using the `skidding` attribute. This value is specified in pixels.
 
 ```html preview
-<sl-dropdown skidding="30">
-  <sl-button slot="trigger" caret>Edit</sl-button>
-  <sl-menu>
-    <sl-menu-item>Cut</sl-menu-item>
-    <sl-menu-item>Copy</sl-menu-item>
-    <sl-menu-item>Paste</sl-menu-item>
-    <sl-divider></sl-divider>
-    <sl-menu-item>Find</sl-menu-item>
-    <sl-menu-item>Replace</sl-menu-item>
-  </sl-menu>
-</sl-dropdown>
+<klik-dropdown skidding="30">
+  <klik-button slot="trigger" caret>Edit</klik-button>
+  <klik-menu>
+    <klik-menu-item>Cut</klik-menu-item>
+    <klik-menu-item>Copy</klik-menu-item>
+    <klik-menu-item>Paste</klik-menu-item>
+    <klik-divider></klik-divider>
+    <klik-menu-item>Find</klik-menu-item>
+    <klik-menu-item>Replace</klik-menu-item>
+  </klik-menu>
+</klik-dropdown>
 ```
 
 ```jsx react
@@ -313,29 +313,29 @@ Dropdown panels will be clipped if they're inside a container that has `overflow
 
 ```html preview
 <div class="dropdown-hoist">
-  <sl-dropdown>
-    <sl-button slot="trigger" caret>No Hoist</sl-button>
-    <sl-menu>
-      <sl-menu-item>Item 1</sl-menu-item>
-      <sl-menu-item>Item 2</sl-menu-item>
-      <sl-menu-item>Item 3</sl-menu-item>
-    </sl-menu>
-  </sl-dropdown>
+  <klik-dropdown>
+    <klik-button slot="trigger" caret>No Hoist</klik-button>
+    <klik-menu>
+      <klik-menu-item>Item 1</klik-menu-item>
+      <klik-menu-item>Item 2</klik-menu-item>
+      <klik-menu-item>Item 3</klik-menu-item>
+    </klik-menu>
+  </klik-dropdown>
 
-  <sl-dropdown hoist>
-    <sl-button slot="trigger" caret>Hoist</sl-button>
-    <sl-menu>
-      <sl-menu-item>Item 1</sl-menu-item>
-      <sl-menu-item>Item 2</sl-menu-item>
-      <sl-menu-item>Item 3</sl-menu-item>
-    </sl-menu>
-  </sl-dropdown>
+  <klik-dropdown hoist>
+    <klik-button slot="trigger" caret>Hoist</klik-button>
+    <klik-menu>
+      <klik-menu-item>Item 1</klik-menu-item>
+      <klik-menu-item>Item 2</klik-menu-item>
+      <klik-menu-item>Item 3</klik-menu-item>
+    </klik-menu>
+  </klik-dropdown>
 </div>
 
 <style>
   .dropdown-hoist {
-    border: solid 2px rgb(var(--sl-panel-border-color));
-    padding: var(--sl-spacing-medium);
+    border: solid 2px rgb(var(--klik-panel-border-color));
+    padding: var(--klik-spacing-medium);
     overflow: hidden;
   }
 </style>
@@ -353,8 +353,8 @@ import {
 
 const css = `
   .dropdown-hoist {
-    border: solid 2px rgb(var(--sl-panel-border-color));
-    padding: var(--sl-spacing-medium);
+    border: solid 2px rgb(var(--klik-panel-border-color));
+    padding: var(--klik-spacing-medium);
     overflow: hidden;
   }
 `;
@@ -386,4 +386,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-dropdown]
+[component-metadata:klik-dropdown]

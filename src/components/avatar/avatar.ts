@@ -9,7 +9,7 @@ import '../icon/icon';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon
+ * @dependency klik-icon
  *
  * @slot icon - The default icon to use when no image or initials are present.
  *
@@ -20,7 +20,7 @@ import '../icon/icon';
  *
  * @cssproperty --size - The size of the avatar.
  */
-@customElement('sl-avatar')
+@customElement('klik-avatar')
 export default class SlAvatar extends LitElement {
   static styles = styles;
 
@@ -55,7 +55,7 @@ export default class SlAvatar extends LitElement {
           : html`
               <div part="icon" class="avatar__icon">
                 <slot name="icon">
-                  <sl-icon name="person-fill" library="system"></sl-icon>
+                  <klik-icon name="person-fill" library="system"></klik-icon>
                 </slot>
               </div>
             `}
@@ -77,6 +77,6 @@ export default class SlAvatar extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-avatar': SlAvatar;
+    'klik-avatar': SlAvatar;
   }
 }

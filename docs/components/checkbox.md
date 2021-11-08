@@ -1,11 +1,11 @@
 # Checkbox
 
-[component-header:sl-checkbox]
+[component-header:klik-checkbox]
 
 Checkboxes allow the user to toggle an option on or off.
 
 ```html preview
-<sl-checkbox>Checkbox</sl-checkbox>
+<klik-checkbox>Checkbox</klik-checkbox>
 ```
 
 ```jsx react
@@ -16,7 +16,7 @@ const App = () => (
 );
 ```
 
-?> This component doesn't work with standard forms. Use [`<sl-form>`](/components/form) instead.
+?> This component doesn't work with standard forms. Use [`<klik-form>`](/components/form) instead.
 
 ## Examples
 
@@ -25,7 +25,7 @@ const App = () => (
 Use the `checked` attribute to activate the checkbox.
 
 ```html preview
-<sl-checkbox checked>Checked</sl-checkbox>
+<klik-checkbox checked>Checked</klik-checkbox>
 ```
 
 ```jsx react
@@ -41,7 +41,7 @@ const App = () => (
 Use the `indeterminate` attribute to make the checkbox indeterminate.
 
 ```html preview
-<sl-checkbox indeterminate>Indeterminate</sl-checkbox>
+<klik-checkbox indeterminate>Indeterminate</klik-checkbox>
 ```
 
 ```jsx react
@@ -57,7 +57,7 @@ const App = () => (
 Use the `disabled` attribute to disable the checkbox.
 
 ```html preview
-<sl-checkbox disabled>Disabled</sl-checkbox>
+<klik-checkbox disabled>Disabled</klik-checkbox>
 ```
 
 ```jsx react
@@ -68,4 +68,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-checkbox]
+[component-metadata:klik-checkbox]

@@ -3,13 +3,13 @@ import { expect, fixture, html } from '@open-wc/testing';
 import '../../../dist/shoelace.js';
 import type SlCard from './card';
 
-describe('<sl-card>', () => {
+describe('<klik-card>', () => {
   let el: SlCard;
 
   describe('when provided no parameters', async () => {
     before(async () => {
       el = await fixture<SlCard>(
-        html` <sl-card>This is just a basic card. No image, no header, and no footer. Just your content.</sl-card> `
+        html` <klik-card>This is just a basic card. No image, no header, and no footer. Just your content.</klik-card> `
       );
     });
 
@@ -30,10 +30,10 @@ describe('<sl-card>', () => {
   describe('when provided an element in the slot "header" to render a header', async () => {
     before(async () => {
       el = await fixture<SlCard>(
-        html`<sl-card>
+        html`<klik-card>
           <div slot="header">Header Title</div>
           This card has a header. You can put all sorts of things in it!
-        </sl-card>`
+        </klik-card>`
       );
     });
 
@@ -66,11 +66,11 @@ describe('<sl-card>', () => {
   describe('when provided an element in the slot "footer" to render a footer', async () => {
     before(async () => {
       el = await fixture<SlCard>(
-        html`<sl-card>
+        html`<klik-card>
           This card has a footer. You can put all sorts of things in it!
 
           <div slot="footer">Footer Content</div>
-        </sl-card>`
+        </klik-card>`
       );
     });
 
@@ -103,14 +103,14 @@ describe('<sl-card>', () => {
   describe('when provided an element in the slot "image" to render a image', async () => {
     before(async () => {
       el = await fixture<SlCard>(
-        html`<sl-card>
+        html`<klik-card>
           <img
             slot="image"
             src="https://images.unsplash.com/photo-1547191783-94d5f8f6d8b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80"
             alt="A kitten walks towards camera on top of pallet."
           />
           This is a kitten, but not just any kitten. This kitten likes walking along pallets.
-        </sl-card>`
+        </klik-card>`
       );
     });
 

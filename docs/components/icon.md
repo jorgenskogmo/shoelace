@@ -1,6 +1,6 @@
 # Icon
 
-[component-header:sl-icon]
+[component-header:klik-icon]
 
 Icons are symbols that can be used to represent various options within an application.
 
@@ -9,19 +9,19 @@ Shoelace comes bundled with over 1,300 icons courtesy of the [Bootstrap Icons](h
 Click or tap on an icon below to copy its name and use it like this.
 
 ```html
-<sl-icon name="icon-name-here"></sl-icon>
+<klik-icon name="icon-name-here"></klik-icon>
 ```
 
 <div class="icon-search">
   <div class="icon-search-controls">
-    <sl-input placeholder="Search Icons" clearable>
-      <sl-icon slot="prefix" name="search"></sl-icon>
-    </sl-input>
-    <sl-select value="outline">
-      <sl-menu-item value="outline">Outlined</sl-menu-item>
-      <sl-menu-item value="fill">Filled</sl-menu-item>
-      <sl-menu-item value="all">All icons</sl-menu-item>
-    </sl-select>
+    <klik-input placeholder="Search Icons" clearable>
+      <klik-icon slot="prefix" name="search"></klik-icon>
+    </klik-input>
+    <klik-select value="outline">
+      <klik-menu-item value="outline">Outlined</klik-menu-item>
+      <klik-menu-item value="fill">Filled</klik-menu-item>
+      <klik-menu-item value="all">All icons</klik-menu-item>
+    </klik-select>
   </div>
   <div class="icon-list"></div>
   <input type="text" class="icon-copy-input">
@@ -35,22 +35,22 @@ Icons are sized relative to the current font size. To change their size, set the
 
 ```html preview
 <div style="font-size: 32px;">
-  <sl-icon name="exclamation-triangle"></sl-icon>
-  <sl-icon name="archive"></sl-icon>
-  <sl-icon name="battery-charging"></sl-icon>
-  <sl-icon name="bell"></sl-icon>
-  <sl-icon name="clock"></sl-icon>
-  <sl-icon name="cloud"></sl-icon>
-  <sl-icon name="download"></sl-icon>
-  <sl-icon name="file-earmark"></sl-icon>
-  <sl-icon name="flag"></sl-icon>
-  <sl-icon name="heart"></sl-icon>
-  <sl-icon name="image"></sl-icon>
-  <sl-icon name="lightning"></sl-icon>
-  <sl-icon name="mic"></sl-icon>
-  <sl-icon name="search"></sl-icon>
-  <sl-icon name="star"></sl-icon>
-  <sl-icon name="trash"></sl-icon>
+  <klik-icon name="exclamation-triangle"></klik-icon>
+  <klik-icon name="archive"></klik-icon>
+  <klik-icon name="battery-charging"></klik-icon>
+  <klik-icon name="bell"></klik-icon>
+  <klik-icon name="clock"></klik-icon>
+  <klik-icon name="cloud"></klik-icon>
+  <klik-icon name="download"></klik-icon>
+  <klik-icon name="file-earmark"></klik-icon>
+  <klik-icon name="flag"></klik-icon>
+  <klik-icon name="heart"></klik-icon>
+  <klik-icon name="image"></klik-icon>
+  <klik-icon name="lightning"></klik-icon>
+  <klik-icon name="mic"></klik-icon>
+  <klik-icon name="search"></klik-icon>
+  <klik-icon name="star"></klik-icon>
+  <klik-icon name="trash"></klik-icon>
 </div>
 ```
 
@@ -84,7 +84,7 @@ const App = () => (
 Custom icons can be loaded individually with the `src` attribute. Only SVGs on a local or CORS-enabled endpoint are supported. If you're using more than one custom icon, it might make sense to register a [custom icon library](#icon-libraries).
 
 ```html preview
-<sl-icon src="https://shoelace.style/assets/images/shoe.svg" style="font-size: 8rem;"></sl-icon>
+<klik-icon src="https://shoelace.style/assets/images/shoe.svg" style="font-size: 8rem;"></klik-icon>
 ```
 
 
@@ -98,7 +98,7 @@ const App = () => (
 
 ## Icon Libraries
 
-You can register additional icons to use with the `<sl-icon>` component through icon libraries. Icon files can exist locally or on a CORS-enabled endpoint (e.g. a CDN). There is no limit to how many icon libraries you can register and there is no cost associated with registering them, as individual icons are only requested when they're used.
+You can register additional icons to use with the `<klik-icon>` component through icon libraries. Icon files can exist locally or on a CORS-enabled endpoint (e.g. a CDN). There is no limit to how many icon libraries you can register and there is no cost associated with registering them, as individual icons are only requested when they're used.
 
 Shoelace ships with two built-in icon libraries, `default` and `system`. The [default icon library](#customizing-the-default-library) contains all of the icons in the Bootstrap Icons project. The [system icon library](#customizing-the-system-library) contains only a small subset of icons that are used internally by Shoelace components.
 
@@ -119,11 +119,11 @@ Here's an example that registers an icon library located in the `/assets/icons` 
 </script>
 ```
 
-To display an icon, set the `library` and `name` attributes of an `<sl-icon>` element.
+To display an icon, set the `library` and `name` attributes of an `<klik-icon>` element.
 
 ```html
 <!-- This will show the icon located at /assets/icons/smile.svg -->
-<sl-icon library="my-icons" name="smile"></sl-icon>
+<klik-icon library="my-icons" name="smile"></klik-icon>
 ```
 
 If an icon is used before registration occurs, it will be empty initially but shown when registered.
@@ -152,26 +152,26 @@ Icons in this library are licensed under the [Creative Commons 4.0 License](http
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="boxicons" name="bx-bot"></sl-icon>
-  <sl-icon library="boxicons" name="bx-cookie"></sl-icon>
-  <sl-icon library="boxicons" name="bx-joystick"></sl-icon>
-  <sl-icon library="boxicons" name="bx-save"></sl-icon>
-  <sl-icon library="boxicons" name="bx-server"></sl-icon>
-  <sl-icon library="boxicons" name="bx-wine"></sl-icon>
+  <klik-icon library="boxicons" name="bx-bot"></klik-icon>
+  <klik-icon library="boxicons" name="bx-cookie"></klik-icon>
+  <klik-icon library="boxicons" name="bx-joystick"></klik-icon>
+  <klik-icon library="boxicons" name="bx-save"></klik-icon>
+  <klik-icon library="boxicons" name="bx-server"></klik-icon>
+  <klik-icon library="boxicons" name="bx-wine"></klik-icon>
   <br>
-  <sl-icon library="boxicons" name="bxs-bot"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-cookie"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-joystick"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-save"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-server"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-wine"></sl-icon>
+  <klik-icon library="boxicons" name="bxs-bot"></klik-icon>
+  <klik-icon library="boxicons" name="bxs-cookie"></klik-icon>
+  <klik-icon library="boxicons" name="bxs-joystick"></klik-icon>
+  <klik-icon library="boxicons" name="bxs-save"></klik-icon>
+  <klik-icon library="boxicons" name="bxs-server"></klik-icon>
+  <klik-icon library="boxicons" name="bxs-wine"></klik-icon>
   <br>
-  <sl-icon library="boxicons" name="bxl-apple"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-chrome"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-edge"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-firefox"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-opera"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-microsoft"></sl-icon>
+  <klik-icon library="boxicons" name="bxl-apple"></klik-icon>
+  <klik-icon library="boxicons" name="bxl-chrome"></klik-icon>
+  <klik-icon library="boxicons" name="bxl-edge"></klik-icon>
+  <klik-icon library="boxicons" name="bxl-firefox"></klik-icon>
+  <klik-icon library="boxicons" name="bxl-opera"></klik-icon>
+  <klik-icon library="boxicons" name="bxl-microsoft"></klik-icon>
 </div>
 ```
 
@@ -183,12 +183,12 @@ Icons in this library are licensed under the [MIT License](https://github.com/fe
 
 ```html preview
 <div style="font-size: 24px;">
-  <sl-icon library="feather" name="feather"></sl-icon>
-  <sl-icon library="feather" name="pie-chart"></sl-icon>
-  <sl-icon library="feather" name="settings"></sl-icon>
-  <sl-icon library="feather" name="map-pin"></sl-icon>
-  <sl-icon library="feather" name="printer"></sl-icon>
-  <sl-icon library="feather" name="shopping-cart"></sl-icon>
+  <klik-icon library="feather" name="feather"></klik-icon>
+  <klik-icon library="feather" name="pie-chart"></klik-icon>
+  <klik-icon library="feather" name="settings"></klik-icon>
+  <klik-icon library="feather" name="map-pin"></klik-icon>
+  <klik-icon library="feather" name="printer"></klik-icon>
+  <klik-icon library="feather" name="shopping-cart"></klik-icon>
 </div>
 
 <script type="module">
@@ -223,26 +223,26 @@ Icons in this library are licensed under the [Font Awesome Free License](https:/
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="fa" name="far-bell"></sl-icon>
-  <sl-icon library="fa" name="far-comment"></sl-icon>
-  <sl-icon library="fa" name="far-hand-point-right"></sl-icon>
-  <sl-icon library="fa" name="far-hdd"></sl-icon>
-  <sl-icon library="fa" name="far-heart"></sl-icon>
-  <sl-icon library="fa" name="far-star"></sl-icon>
+  <klik-icon library="fa" name="far-bell"></klik-icon>
+  <klik-icon library="fa" name="far-comment"></klik-icon>
+  <klik-icon library="fa" name="far-hand-point-right"></klik-icon>
+  <klik-icon library="fa" name="far-hdd"></klik-icon>
+  <klik-icon library="fa" name="far-heart"></klik-icon>
+  <klik-icon library="fa" name="far-star"></klik-icon>
   <br>
-  <sl-icon library="fa" name="fas-archive"></sl-icon>
-  <sl-icon library="fa" name="fas-book"></sl-icon>
-  <sl-icon library="fa" name="fas-chess-knight"></sl-icon>
-  <sl-icon library="fa" name="fas-dice"></sl-icon>
-  <sl-icon library="fa" name="fas-pizza-slice"></sl-icon>
-  <sl-icon library="fa" name="fas-scroll"></sl-icon>
+  <klik-icon library="fa" name="fas-archive"></klik-icon>
+  <klik-icon library="fa" name="fas-book"></klik-icon>
+  <klik-icon library="fa" name="fas-chess-knight"></klik-icon>
+  <klik-icon library="fa" name="fas-dice"></klik-icon>
+  <klik-icon library="fa" name="fas-pizza-slice"></klik-icon>
+  <klik-icon library="fa" name="fas-scroll"></klik-icon>
   <br>
-  <sl-icon library="fa" name="fab-apple"></sl-icon>
-  <sl-icon library="fa" name="fab-chrome"></sl-icon>
-  <sl-icon library="fa" name="fab-edge"></sl-icon>
-  <sl-icon library="fa" name="fab-firefox"></sl-icon>
-  <sl-icon library="fa" name="fab-opera"></sl-icon>
-  <sl-icon library="fa" name="fab-microsoft"></sl-icon>    
+  <klik-icon library="fa" name="fab-apple"></klik-icon>
+  <klik-icon library="fa" name="fab-chrome"></klik-icon>
+  <klik-icon library="fa" name="fab-edge"></klik-icon>
+  <klik-icon library="fa" name="fab-firefox"></klik-icon>
+  <klik-icon library="fa" name="fab-opera"></klik-icon>
+  <klik-icon library="fa" name="fab-microsoft"></klik-icon>    
 </div>
 ```
 
@@ -262,12 +262,12 @@ Icons in this library are licensed under the [MIT License](https://github.com/ta
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="heroicons" name="chat"></sl-icon>
-  <sl-icon library="heroicons" name="cloud"></sl-icon>
-  <sl-icon library="heroicons" name="cog"></sl-icon>
-  <sl-icon library="heroicons" name="document-text"></sl-icon>
-  <sl-icon library="heroicons" name="gift"></sl-icon>
-  <sl-icon library="heroicons" name="volume-up"></sl-icon>
+  <klik-icon library="heroicons" name="chat"></klik-icon>
+  <klik-icon library="heroicons" name="cloud"></klik-icon>
+  <klik-icon library="heroicons" name="cog"></klik-icon>
+  <klik-icon library="heroicons" name="document-text"></klik-icon>
+  <klik-icon library="heroicons" name="gift"></klik-icon>
+  <klik-icon library="heroicons" name="volume-up"></klik-icon>
 </div>
 ```
 
@@ -287,12 +287,12 @@ Icons in this library are licensed under the [MIT License](https://github.com/lu
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="iconoir" name="check-circled-outline"></sl-icon>
-  <sl-icon library="iconoir" name="drawer"></sl-icon>
-  <sl-icon library="iconoir" name="keyframes"></sl-icon>
-  <sl-icon library="iconoir" name="headset-help"></sl-icon>
-  <sl-icon library="iconoir" name="color-picker"></sl-icon>
-  <sl-icon library="iconoir" name="wifi"></sl-icon>
+  <klik-icon library="iconoir" name="check-circled-outline"></klik-icon>
+  <klik-icon library="iconoir" name="drawer"></klik-icon>
+  <klik-icon library="iconoir" name="keyframes"></klik-icon>
+  <klik-icon library="iconoir" name="headset-help"></klik-icon>
+  <klik-icon library="iconoir" name="color-picker"></klik-icon>
+  <klik-icon library="iconoir" name="wifi"></klik-icon>
 </div>
 ```
 
@@ -318,26 +318,26 @@ Icons in this library are licensed under the [MIT License](https://github.com/io
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="ionicons" name="alarm"></sl-icon>
-  <sl-icon library="ionicons" name="american-football"></sl-icon>
-  <sl-icon library="ionicons" name="bug"></sl-icon>
-  <sl-icon library="ionicons" name="chatbubble"></sl-icon>
-  <sl-icon library="ionicons" name="settings"></sl-icon>
-  <sl-icon library="ionicons" name="warning"></sl-icon>
+  <klik-icon library="ionicons" name="alarm"></klik-icon>
+  <klik-icon library="ionicons" name="american-football"></klik-icon>
+  <klik-icon library="ionicons" name="bug"></klik-icon>
+  <klik-icon library="ionicons" name="chatbubble"></klik-icon>
+  <klik-icon library="ionicons" name="settings"></klik-icon>
+  <klik-icon library="ionicons" name="warning"></klik-icon>
   <br>
-  <sl-icon library="ionicons" name="alarm-outline"></sl-icon>
-  <sl-icon library="ionicons" name="american-football-outline"></sl-icon>
-  <sl-icon library="ionicons" name="bug-outline"></sl-icon>
-  <sl-icon library="ionicons" name="chatbubble-outline"></sl-icon>
-  <sl-icon library="ionicons" name="settings-outline"></sl-icon>
-  <sl-icon library="ionicons" name="warning-outline"></sl-icon>
+  <klik-icon library="ionicons" name="alarm-outline"></klik-icon>
+  <klik-icon library="ionicons" name="american-football-outline"></klik-icon>
+  <klik-icon library="ionicons" name="bug-outline"></klik-icon>
+  <klik-icon library="ionicons" name="chatbubble-outline"></klik-icon>
+  <klik-icon library="ionicons" name="settings-outline"></klik-icon>
+  <klik-icon library="ionicons" name="warning-outline"></klik-icon>
   <br>
-  <sl-icon library="ionicons" name="alarm-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="american-football-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="bug-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="chatbubble-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="settings-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="warning-sharp"></sl-icon>
+  <klik-icon library="ionicons" name="alarm-sharp"></klik-icon>
+  <klik-icon library="ionicons" name="american-football-sharp"></klik-icon>
+  <klik-icon library="ionicons" name="bug-sharp"></klik-icon>
+  <klik-icon library="ionicons" name="chatbubble-sharp"></klik-icon>
+  <klik-icon library="ionicons" name="settings-sharp"></klik-icon>
+  <klik-icon library="ionicons" name="warning-sharp"></klik-icon>
 </div>
 ```
 
@@ -358,19 +358,19 @@ Icons in this library are licensed under the [MIT License](https://github.com/mi
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="jam" name="calendar"></sl-icon>
-  <sl-icon library="jam" name="camera"></sl-icon>
-  <sl-icon library="jam" name="filter"></sl-icon>
-  <sl-icon library="jam" name="leaf"></sl-icon>
-  <sl-icon library="jam" name="picture"></sl-icon>
-  <sl-icon library="jam" name="set-square"></sl-icon>
+  <klik-icon library="jam" name="calendar"></klik-icon>
+  <klik-icon library="jam" name="camera"></klik-icon>
+  <klik-icon library="jam" name="filter"></klik-icon>
+  <klik-icon library="jam" name="leaf"></klik-icon>
+  <klik-icon library="jam" name="picture"></klik-icon>
+  <klik-icon library="jam" name="set-square"></klik-icon>
   <br>
-  <sl-icon library="jam" name="calendar-f"></sl-icon>
-  <sl-icon library="jam" name="camera-f"></sl-icon>
-  <sl-icon library="jam" name="filter-f"></sl-icon>
-  <sl-icon library="jam" name="leaf-f"></sl-icon>
-  <sl-icon library="jam" name="picture-f"></sl-icon>
-  <sl-icon library="jam" name="set-square-f"></sl-icon>
+  <klik-icon library="jam" name="calendar-f"></klik-icon>
+  <klik-icon library="jam" name="camera-f"></klik-icon>
+  <klik-icon library="jam" name="filter-f"></klik-icon>
+  <klik-icon library="jam" name="leaf-f"></klik-icon>
+  <klik-icon library="jam" name="picture-f"></klik-icon>
+  <klik-icon library="jam" name="set-square-f"></klik-icon>
 </div>
 ```
 
@@ -394,26 +394,26 @@ Icons in this library are licensed under the [Apache 2.0 License](https://github
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="material" name="notifications"></sl-icon>
-  <sl-icon library="material" name="email"></sl-icon>
-  <sl-icon library="material" name="delete"></sl-icon>
-  <sl-icon library="material" name="volume_up"></sl-icon>
-  <sl-icon library="material" name="settings"></sl-icon>
-  <sl-icon library="material" name="shopping_basket"></sl-icon>
+  <klik-icon library="material" name="notifications"></klik-icon>
+  <klik-icon library="material" name="email"></klik-icon>
+  <klik-icon library="material" name="delete"></klik-icon>
+  <klik-icon library="material" name="volume_up"></klik-icon>
+  <klik-icon library="material" name="settings"></klik-icon>
+  <klik-icon library="material" name="shopping_basket"></klik-icon>
   <br>
-  <sl-icon library="material" name="notifications_round"></sl-icon>
-  <sl-icon library="material" name="email_round"></sl-icon>
-  <sl-icon library="material" name="delete_round"></sl-icon>
-  <sl-icon library="material" name="volume_up_round"></sl-icon>
-  <sl-icon library="material" name="settings_round"></sl-icon>
-  <sl-icon library="material" name="shopping_basket_round"></sl-icon>
+  <klik-icon library="material" name="notifications_round"></klik-icon>
+  <klik-icon library="material" name="email_round"></klik-icon>
+  <klik-icon library="material" name="delete_round"></klik-icon>
+  <klik-icon library="material" name="volume_up_round"></klik-icon>
+  <klik-icon library="material" name="settings_round"></klik-icon>
+  <klik-icon library="material" name="shopping_basket_round"></klik-icon>
   <br>
-  <sl-icon library="material" name="notifications_sharp"></sl-icon>
-  <sl-icon library="material" name="email_sharp"></sl-icon>
-  <sl-icon library="material" name="delete_sharp"></sl-icon>
-  <sl-icon library="material" name="volume_up_sharp"></sl-icon>
-  <sl-icon library="material" name="settings_sharp"></sl-icon>
-  <sl-icon library="material" name="shopping_basket_sharp"></sl-icon>
+  <klik-icon library="material" name="notifications_sharp"></klik-icon>
+  <klik-icon library="material" name="email_sharp"></klik-icon>
+  <klik-icon library="material" name="delete_sharp"></klik-icon>
+  <klik-icon library="material" name="volume_up_sharp"></klik-icon>
+  <klik-icon library="material" name="settings_sharp"></klik-icon>
+  <klik-icon library="material" name="shopping_basket_sharp"></klik-icon>
 </div>
 ```
 
@@ -438,19 +438,19 @@ Icons in this library are licensed under the [Apache 2.0 License](https://github
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="remixicon" name="business/cloud-line"></sl-icon>
-  <sl-icon library="remixicon" name="design/brush-line"></sl-icon>
-  <sl-icon library="remixicon" name="business/pie-chart-line"></sl-icon>
-  <sl-icon library="remixicon" name="development/bug-line"></sl-icon>
-  <sl-icon library="remixicon" name="media/image-line"></sl-icon>
-  <sl-icon library="remixicon" name="system/alert-line"></sl-icon>
+  <klik-icon library="remixicon" name="business/cloud-line"></klik-icon>
+  <klik-icon library="remixicon" name="design/brush-line"></klik-icon>
+  <klik-icon library="remixicon" name="business/pie-chart-line"></klik-icon>
+  <klik-icon library="remixicon" name="development/bug-line"></klik-icon>
+  <klik-icon library="remixicon" name="media/image-line"></klik-icon>
+  <klik-icon library="remixicon" name="system/alert-line"></klik-icon>
   <br>
-  <sl-icon library="remixicon" name="business/cloud-fill"></sl-icon>
-  <sl-icon library="remixicon" name="design/brush-fill"></sl-icon>
-  <sl-icon library="remixicon" name="business/pie-chart-fill"></sl-icon>
-  <sl-icon library="remixicon" name="development/bug-fill"></sl-icon>
-  <sl-icon library="remixicon" name="media/image-fill"></sl-icon>
-  <sl-icon library="remixicon" name="system/alert-fill"></sl-icon>  
+  <klik-icon library="remixicon" name="business/cloud-fill"></klik-icon>
+  <klik-icon library="remixicon" name="design/brush-fill"></klik-icon>
+  <klik-icon library="remixicon" name="business/pie-chart-fill"></klik-icon>
+  <klik-icon library="remixicon" name="development/bug-fill"></klik-icon>
+  <klik-icon library="remixicon" name="media/image-fill"></klik-icon>
+  <klik-icon library="remixicon" name="system/alert-fill"></klik-icon>  
 </div>
 ```
 
@@ -474,25 +474,25 @@ Icons in this library are licensed under the [Apache 2.0 License](https://github
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="unicons" name="clock"></sl-icon>
-  <sl-icon library="unicons" name="graph-bar"></sl-icon>
-  <sl-icon library="unicons" name="padlock"></sl-icon>
-  <sl-icon library="unicons" name="polygon"></sl-icon>
-  <sl-icon library="unicons" name="rocket"></sl-icon>
-  <sl-icon library="unicons" name="star"></sl-icon>
+  <klik-icon library="unicons" name="clock"></klik-icon>
+  <klik-icon library="unicons" name="graph-bar"></klik-icon>
+  <klik-icon library="unicons" name="padlock"></klik-icon>
+  <klik-icon library="unicons" name="polygon"></klik-icon>
+  <klik-icon library="unicons" name="rocket"></klik-icon>
+  <klik-icon library="unicons" name="star"></klik-icon>
   <br>
-  <sl-icon library="unicons" name="clock-s"></sl-icon>
-  <sl-icon library="unicons" name="graph-bar-s"></sl-icon>
-  <sl-icon library="unicons" name="padlock-s"></sl-icon>
-  <sl-icon library="unicons" name="polygon-s"></sl-icon>
-  <sl-icon library="unicons" name="rocket-s"></sl-icon>  
-  <sl-icon library="unicons" name="star-s"></sl-icon>
+  <klik-icon library="unicons" name="clock-s"></klik-icon>
+  <klik-icon library="unicons" name="graph-bar-s"></klik-icon>
+  <klik-icon library="unicons" name="padlock-s"></klik-icon>
+  <klik-icon library="unicons" name="polygon-s"></klik-icon>
+  <klik-icon library="unicons" name="rocket-s"></klik-icon>  
+  <klik-icon library="unicons" name="star-s"></klik-icon>
 </div>
 ```
 
 ### Customizing the Default Library
 
-The default icon library contains over 1,300 icons courtesy of the [Bootstrap Icons](https://icons.getbootstrap.com/) project. These are the icons that display when you use `<sl-icon>` without the `library` attribute. If you prefer to have these icons resolve elsewhere or to a different icon library, register an icon library using the `default` name and a custom resolver.
+The default icon library contains over 1,300 icons courtesy of the [Bootstrap Icons](https://icons.getbootstrap.com/) project. These are the icons that display when you use `<klik-icon>` without the `library` attribute. If you prefer to have these icons resolve elsewhere or to a different icon library, register an icon library using the `default` name and a custom resolver.
 
 This example will load the same set of icons from the jsDelivr CDN instead of your local assets folder.
 
@@ -528,8 +528,8 @@ If you want to change the icons Shoelace uses internally, you can register an ic
     .then(res => res.json())  
     .then(icons => {
       const container = document.querySelector('.icon-search');
-      const input = container.querySelector('sl-input');
-      const select = container.querySelector('sl-select');
+      const input = container.querySelector('klik-input');
+      const select = container.querySelector('klik-select');
       const copyInput = container.querySelector('.icon-copy-input');
       const loader = container.querySelector('.icon-loader');
       const list = container.querySelector('.icon-list');
@@ -548,7 +548,7 @@ If you want to change the icons Shoelace uses internally, you can register an ic
           </svg>      
         `;
 
-        const tooltip = document.createElement('sl-tooltip');
+        const tooltip = document.createElement('klik-tooltip');
         tooltip.content = i.name;
         
         tooltip.appendChild(item);
@@ -564,7 +564,7 @@ If you want to change the icons Shoelace uses internally, you can register an ic
       });
 
       // Filter as the user types
-      input.addEventListener('sl-input', () => {
+      input.addEventListener('klik-input', () => {
         clearTimeout(inputTimeout);
         inputTimeout = setTimeout(() => {
           [...list.querySelectorAll('.icon-list-item')].map(item => {
@@ -580,21 +580,21 @@ If you want to change the icons Shoelace uses internally, you can register an ic
       });
 
       // Sort by type and remember preference
-      const iconType = localStorage.getItem('sl-icon:type') || 'outline';
+      const iconType = localStorage.getItem('klik-icon:type') || 'outline';
       select.value = iconType;
       list.setAttribute('data-type', select.value);
-      select.addEventListener('sl-change', () => {
+      select.addEventListener('klik-change', () => {
         list.setAttribute('data-type', select.value);
-        localStorage.setItem('sl-icon:type', select.value);
+        localStorage.setItem('klik-icon:type', select.value);
       });
     });
 </script>
 
 <style>
   .icon-search {
-    border: solid 1px rgb(var(--sl-panel-border-color));
-    border-radius: var(--sl-border-radius-medium);
-    padding: var(--sl-spacing-medium);
+    border: solid 1px rgb(var(--klik-panel-border-color));
+    border-radius: var(--klik-border-radius-medium);
+    padding: var(--klik-spacing-medium);
   }
 
   .icon-search [hidden] {
@@ -605,11 +605,11 @@ If you want to change the icons Shoelace uses internally, you can register an ic
     display: flex;
   }
 
-  .icon-search-controls sl-input {
+  .icon-search-controls klik-input {
     flex: 1 1 auto;
   }
 
-  .icon-search-controls sl-select {
+  .icon-search-controls klik-select {
     width: 10rem;
     flex: 0 0 auto;
     margin-left: 1rem;
@@ -638,18 +638,18 @@ If you want to change the icons Shoelace uses internally, you can register an ic
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--sl-border-radius-medium);
+    border-radius: var(--klik-border-radius-medium);
     font-size: 24px;
     width: 2em;
     height: 2em;
     margin: 0 auto;
     cursor: copy;
-    transition: var(--sl-transition-medium) all;
+    transition: var(--klik-transition-medium) all;
   }
 
   .icon-list-item:hover {
-    background-color: rgb(var(--sl-color-primary-50));
-    color: rgb(var(--sl-color-primary-600));
+    background-color: rgb(var(--klik-color-primary-50));
+    color: rgb(var(--klik-color-primary-600));
   }
 
   .icon-list[data-type="outline"] .icon-list-item[data-name$="-fill"] {
@@ -679,7 +679,7 @@ If you want to change the icons Shoelace uses internally, you can register an ic
       display: block;
     }
 
-    .icon-search-controls sl-select {
+    .icon-search-controls klik-select {
       width: auto;
       margin: 1rem 0 0 0;
     }
@@ -692,4 +692,4 @@ If you want to change the icons Shoelace uses internally, you can register an ic
   }
 </style>
 
-[component-metadata:sl-icon]
+[component-metadata:klik-icon]

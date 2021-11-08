@@ -1,18 +1,18 @@
 # Breadcrumb Item
 
-[component-header:sl-breadcrumb-item]
+[component-header:klik-breadcrumb-item]
 
 Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item>
-    <sl-icon slot="prefix" name="house"></sl-icon>
+<klik-breadcrumb>
+  <klik-breadcrumb-item>
+    <klik-icon slot="prefix" name="house"></klik-icon>
     Home
-  </sl-breadcrumb-item>
-  <sl-breadcrumb-item>Clothing</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Shirts</sl-breadcrumb-item>
-</sl-breadcrumb>
+  </klik-breadcrumb-item>
+  <klik-breadcrumb-item>Clothing</klik-breadcrumb-item>
+  <klik-breadcrumb-item>Shirts</klik-breadcrumb-item>
+</klik-breadcrumb>
 ```
 
 ```jsx react
@@ -32,4 +32,4 @@ const App = () => (
 
 ?> Additional demonstrations can be found in the [breadcrumb examples](/components/breadcrumb).
 
-[component-metadata:sl-breadcrumb-item]
+[component-metadata:klik-breadcrumb-item]

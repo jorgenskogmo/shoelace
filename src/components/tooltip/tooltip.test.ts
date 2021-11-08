@@ -4,12 +4,12 @@ import sinon from 'sinon';
 import '../../../dist/shoelace.js';
 import type SlTooltip from './tooltip';
 
-describe('<sl-tooltip>', () => {
+describe('<klik-tooltip>', () => {
   it('should be visible with the open attribute', async () => {
     const el = await fixture<SlTooltip>(html`
-      <sl-tooltip content="This is a tooltip" open>
-        <sl-button>Hover Me</sl-button>
-      </sl-tooltip>
+      <klik-tooltip content="This is a tooltip" open>
+        <klik-button>Hover Me</klik-button>
+      </klik-tooltip>
     `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
 
@@ -18,27 +18,27 @@ describe('<sl-tooltip>', () => {
 
   it('should not be visible without the open attribute', async () => {
     const el = await fixture<SlTooltip>(html`
-      <sl-tooltip content="This is a tooltip">
-        <sl-button>Hover Me</sl-button>
-      </sl-tooltip>
+      <klik-tooltip content="This is a tooltip">
+        <klik-button>Hover Me</klik-button>
+      </klik-tooltip>
     `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
 
     expect(base.hidden).to.be.true;
   });
 
-  it('should emit sl-show and sl-after-show when calling show()', async () => {
+  it('should emit klik-show and klik-after-show when calling show()', async () => {
     const el = await fixture<SlTooltip>(html`
-      <sl-tooltip content="This is a tooltip">
-        <sl-button>Hover Me</sl-button>
-      </sl-tooltip>
+      <klik-tooltip content="This is a tooltip">
+        <klik-button>Hover Me</klik-button>
+      </klik-tooltip>
     `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
 
-    el.addEventListener('sl-show', showHandler);
-    el.addEventListener('sl-after-show', afterShowHandler);
+    el.addEventListener('klik-show', showHandler);
+    el.addEventListener('klik-after-show', afterShowHandler);
     el.show();
 
     await waitUntil(() => showHandler.calledOnce);
@@ -49,18 +49,18 @@ describe('<sl-tooltip>', () => {
     expect(base.hidden).to.be.false;
   });
 
-  it('should emit sl-hide and sl-after-hide when calling hide()', async () => {
+  it('should emit klik-hide and klik-after-hide when calling hide()', async () => {
     const el = await fixture<SlTooltip>(html`
-      <sl-tooltip content="This is a tooltip" open>
-        <sl-button>Hover Me</sl-button>
-      </sl-tooltip>
+      <klik-tooltip content="This is a tooltip" open>
+        <klik-button>Hover Me</klik-button>
+      </klik-tooltip>
     `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
 
-    el.addEventListener('sl-hide', hideHandler);
-    el.addEventListener('sl-after-hide', afterHideHandler);
+    el.addEventListener('klik-hide', hideHandler);
+    el.addEventListener('klik-after-hide', afterHideHandler);
     el.hide();
 
     await waitUntil(() => hideHandler.calledOnce);
@@ -71,18 +71,18 @@ describe('<sl-tooltip>', () => {
     expect(base.hidden).to.be.true;
   });
 
-  it('should emit sl-show and sl-after-show when setting open = true', async () => {
+  it('should emit klik-show and klik-after-show when setting open = true', async () => {
     const el = await fixture<SlTooltip>(html`
-      <sl-tooltip content="This is a tooltip">
-        <sl-button>Hover Me</sl-button>
-      </sl-tooltip>
+      <klik-tooltip content="This is a tooltip">
+        <klik-button>Hover Me</klik-button>
+      </klik-tooltip>
     `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
 
-    el.addEventListener('sl-show', showHandler);
-    el.addEventListener('sl-after-show', afterShowHandler);
+    el.addEventListener('klik-show', showHandler);
+    el.addEventListener('klik-after-show', afterShowHandler);
     el.open = true;
 
     await waitUntil(() => showHandler.calledOnce);
@@ -93,18 +93,18 @@ describe('<sl-tooltip>', () => {
     expect(base.hidden).to.be.false;
   });
 
-  it('should emit sl-hide and sl-after-hide when setting open = false', async () => {
+  it('should emit klik-hide and klik-after-hide when setting open = false', async () => {
     const el = await fixture<SlTooltip>(html`
-      <sl-tooltip content="This is a tooltip" open>
-        <sl-button>Hover Me</sl-button>
-      </sl-tooltip>
+      <klik-tooltip content="This is a tooltip" open>
+        <klik-button>Hover Me</klik-button>
+      </klik-tooltip>
     `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
 
-    el.addEventListener('sl-hide', hideHandler);
-    el.addEventListener('sl-after-hide', afterHideHandler);
+    el.addEventListener('klik-hide', hideHandler);
+    el.addEventListener('klik-after-hide', afterHideHandler);
     el.open = false;
 
     await waitUntil(() => hideHandler.calledOnce);

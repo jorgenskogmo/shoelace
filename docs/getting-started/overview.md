@@ -38,7 +38,7 @@ Add the following code to your page.
 Now you have access to all of Shoelace's components! Try adding a button:
 
 ```html
-<sl-button>Click me</sl-button>
+<klik-button>Click me</klik-button>
 ```
 
 This will load all of Shoelace's components, but you should probably only load the ones you're actually using. To learn how, or for other ways to install Shoelace, refer to the [installation instructions](getting-started/installation).
@@ -98,17 +98,17 @@ Designing, developing, and supporting this library requires a lot of time, effor
 
 👇 Your support is very much appreciated! 👇
 
-<sl-button class="repo-button repo-button--sponsor" href="https://github.com/sponsors/claviska" target="_blank">
-  <sl-icon name="heart"></sl-icon> Become a sponsor
-</sl-button>
+<klik-button class="repo-button repo-button--sponsor" href="https://github.com/sponsors/claviska" target="_blank">
+  <klik-icon name="heart"></klik-icon> Become a sponsor
+</klik-button>
 
-<sl-button class="repo-button repo-button--github" href="https://github.com/shoelace-style/shoelace/stargazers" target="_blank">
-  <sl-icon name="github"></sl-icon> <span class="github-star-count">Star</span>
-</sl-button>
+<klik-button class="repo-button repo-button--github" href="https://github.com/shoelace-style/shoelace/stargazers" target="_blank">
+  <klik-icon name="github"></klik-icon> <span class="github-star-count">Star</span>
+</klik-button>
 
-<sl-button class="repo-button repo-button--twitter" href="https://twitter.com/shoelace_style" target="_blank">
-  <sl-icon name="twitter"></sl-icon> Follow
-</sl-button>
+<klik-button class="repo-button repo-button--twitter" href="https://twitter.com/shoelace_style" target="_blank">
+  <klik-icon name="twitter"></klik-icon> Follow
+</klik-button>
 
 ## Attribution
 

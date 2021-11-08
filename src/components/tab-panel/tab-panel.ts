@@ -14,7 +14,7 @@ let id = 0;
  *
  * @cssproperty --padding - The tab panel's padding.
  */
-@customElement('sl-tab-panel')
+@customElement('klik-tab-panel')
 export default class SlTabPanel extends LitElement {
   static styles = styles;
 
@@ -50,6 +50,6 @@ export default class SlTabPanel extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-tab-panel': SlTabPanel;
+    'klik-tab-panel': SlTabPanel;
   }
 }

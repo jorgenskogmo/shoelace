@@ -26,13 +26,13 @@
         localStorage.setItem('theme', theme);
 
         // Update the UI
-        [...menu.querySelectorAll('sl-menu-item')].map(item => (item.checked = item.getAttribute('value') === theme));
+        [...menu.querySelectorAll('klik-menu-item')].map(item => (item.checked = item.getAttribute('value') === theme));
         menuIcon.name = isDark() ? 'moon' : 'sun';
 
         // Toggle the dark mode class without transitions
         document.body.appendChild(noTransitions);
         requestAnimationFrame(() => {
-          document.documentElement.classList.toggle('sl-theme-dark', isDark());
+          document.documentElement.classList.toggle('klik-theme-dark', isDark());
           requestAnimationFrame(() => document.body.removeChild(noTransitions));
         });
       }
@@ -40,26 +40,26 @@
       let theme = getTheme();
 
       // Generate the theme picker dropdown
-      const dropdown = document.createElement('sl-dropdown');
+      const dropdown = document.createElement('klik-dropdown');
       dropdown.classList.add('theme-picker');
       dropdown.innerHTML = `
-        <sl-button size="small" pill slot="trigger" caret>
-          <sl-icon name="sun" label="Select Theme"></sl-icon>
-        </sl-button>
-        <sl-menu>
-          <sl-menu-label>Toggle <kbd>\\</kbd></sl-menu-label>
-          <sl-menu-item value="light">Light</sl-menu-item>
-          <sl-menu-item value="dark">Dark</sl-menu-item>
-          <sl-divider></sl-divider>
-          <sl-menu-item value="auto">Auto</sl-menu-item>
-        </sl-menu>
+        <klik-button size="small" pill slot="trigger" caret>
+          <klik-icon name="sun" label="Select Theme"></klik-icon>
+        </klik-button>
+        <klik-menu>
+          <klik-menu-label>Toggle <kbd>\\</kbd></klik-menu-label>
+          <klik-menu-item value="light">Light</klik-menu-item>
+          <klik-menu-item value="dark">Dark</klik-menu-item>
+          <klik-divider></klik-divider>
+          <klik-menu-item value="auto">Auto</klik-menu-item>
+        </klik-menu>
       `;
       document.querySelector('.sidebar-toggle').insertAdjacentElement('afterend', dropdown);
 
       // Listen for selections
-      const menu = dropdown.querySelector('sl-menu');
-      const menuIcon = dropdown.querySelector('sl-icon');
-      menu.addEventListener('sl-select', event => setTheme(event.detail.item.value));
+      const menu = dropdown.querySelector('klik-menu');
+      const menuIcon = dropdown.querySelector('klik-icon');
+      menu.addEventListener('klik-select', event => setTheme(event.detail.item.value));
 
       // Update the theme when the preference changes
       window.matchMedia('(prefers-color-scheme: dark)').addListener(event => setTheme(theme));

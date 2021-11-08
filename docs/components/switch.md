@@ -1,11 +1,11 @@
 # Switch
 
-[component-header:sl-switch]
+[component-header:klik-switch]
 
 Switches allow the user to toggle an option on or off. 
 
 ```html preview
-<sl-switch>Switch</sl-switch>
+<klik-switch>Switch</klik-switch>
 ```
 
 ```jsx react
@@ -16,7 +16,7 @@ const App = () => (
 );
 ```
 
-?> This component doesn't work with standard forms. Use [`<sl-form>`](/components/form) instead.
+?> This component doesn't work with standard forms. Use [`<klik-form>`](/components/form) instead.
 
 ## Examples
 
@@ -25,7 +25,7 @@ const App = () => (
 Use the `checked` attribute to activate the switch.
 
 ```html preview
-<sl-switch checked>Checked</sl-switch>
+<klik-switch checked>Checked</klik-switch>
 ```
 
 ```jsx react
@@ -41,7 +41,7 @@ const App = () => (
 Use the `disabled` attribute to disable the switch.
 
 ```html preview
-<sl-switch disabled>Disabled</sl-switch>
+<klik-switch disabled>Disabled</klik-switch>
 ```
 
 ```jsx react
@@ -57,7 +57,7 @@ const App = () => (
 Use the available custom properties to make the switch a different size.
 
 ```html preview
-<sl-switch style="--width: 80px; --height: 32px; --thumb-size: 26px;"></sl-switch>
+<klik-switch style="--width: 80px; --height: 32px; --thumb-size: 26px;"></klik-switch>
 ```
 
 ```jsx react
@@ -74,4 +74,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-switch]
+[component-metadata:klik-switch]

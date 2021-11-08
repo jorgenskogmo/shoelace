@@ -13,12 +13,12 @@ const parser = new DOMParser();
  * @since 2.0
  * @status stable
  *
- * @event sl-load - Emitted when the icon has loaded.
- * @event {{ status: number }} sl-error - Emitted when the icon fails to load due to an error.
+ * @event klik-load - Emitted when the icon has loaded.
+ * @event {{ status: number }} klik-error - Emitted when the icon fails to load due to an error.
  *
  * @csspart base - The component's base wrapper.
  */
-@customElement('sl-icon')
+@customElement('klik-icon')
 export default class SlIcon extends LitElement {
   static styles = styles;
 
@@ -100,17 +100,17 @@ export default class SlIcon extends LitElement {
             }
 
             this.svg = svgEl.outerHTML;
-            emit(this, 'sl-load');
+            emit(this, 'klik-load');
           } else {
             this.svg = '';
-            emit(this, 'sl-error', { detail: { status: file.status } });
+            emit(this, 'klik-error', { detail: { status: file.status } });
           }
         } else {
           this.svg = '';
-          emit(this, 'sl-error', { detail: { status: file.status } });
+          emit(this, 'klik-error', { detail: { status: file.status } });
         }
       } catch {
-        emit(this, 'sl-error', { detail: { status: -1 } });
+        emit(this, 'klik-error', { detail: { status: -1 } });
       }
     } else if (this.svg) {
       // If we can't resolve a URL and an icon was previously set, remove it
@@ -129,6 +129,6 @@ export default class SlIcon extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-icon': SlIcon;
+    'klik-icon': SlIcon;
   }
 }

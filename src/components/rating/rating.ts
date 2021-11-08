@@ -14,9 +14,9 @@ import '../icon/icon';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon
+ * @dependency klik-icon
  *
- * @event sl-change - Emitted when the rating's value changes.
+ * @event klik-change - Emitted when the rating's value changes.
  *
  * @csspart base - The component's base wrapper.
  *
@@ -25,7 +25,7 @@ import '../icon/icon';
  * @cssproperty --symbol-size - The size of symbols.
  * @cssproperty --symbol-spacing - The spacing to use around symbols.
  */
-@customElement('sl-rating')
+@customElement('klik-rating')
 export default class SlRating extends LitElement {
   static styles = styles;
 
@@ -52,7 +52,7 @@ export default class SlRating extends LitElement {
   /** The name of the icon to display as the symbol. */
   // @ts-ignore
   @property() getSymbol: (value: number) => string = (value: number) =>
-    '<sl-icon name="star-fill" library="system"></sl-icon>';
+    '<klik-icon name="star-fill" library="system"></klik-icon>';
 
   /** Sets focus on the rating. */
   focus(options?: FocusOptions) {
@@ -157,7 +157,7 @@ export default class SlRating extends LitElement {
 
   @watch('value', { waitUntilFirstUpdate: true })
   handleValueChange() {
-    emit(this, 'sl-change');
+    emit(this, 'klik-change');
   }
 
   roundToPrecision(numberToRound: number, precision = 0.5) {
@@ -244,6 +244,6 @@ export default class SlRating extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-rating': SlRating;
+    'klik-rating': SlRating;
   }
 }

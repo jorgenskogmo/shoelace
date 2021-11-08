@@ -1,23 +1,23 @@
 # Menu Label
 
-[component-header:sl-menu-label]
+[component-header:klik-menu-label]
 
 Menu labels are used to describe a group of menu items.
 
 ```html preview
-<sl-menu
-  style="max-width: 200px; border: solid 1px rgb(var(--sl-panel-border-color)); border-radius: var(--sl-border-radius-medium);"
+<klik-menu
+  style="max-width: 200px; border: solid 1px rgb(var(--klik-panel-border-color)); border-radius: var(--klik-border-radius-medium);"
 >
-  <sl-menu-label>Fruits</sl-menu-label>
-  <sl-menu-item value="apple">Apple</sl-menu-item>
-  <sl-menu-item value="banana">Banana</sl-menu-item>
-  <sl-menu-item value="orange">Orange</sl-menu-item>
-  <sl-divider></sl-divider>
-  <sl-menu-label>Vegetables</sl-menu-label>
-  <sl-menu-item value="broccoli">Broccoli</sl-menu-item>
-  <sl-menu-item value="carrot">Carrot</sl-menu-item>
-  <sl-menu-item value="zucchini">Zucchini</sl-menu-item>
-</sl-menu>
+  <klik-menu-label>Fruits</klik-menu-label>
+  <klik-menu-item value="apple">Apple</klik-menu-item>
+  <klik-menu-item value="banana">Banana</klik-menu-item>
+  <klik-menu-item value="orange">Orange</klik-menu-item>
+  <klik-divider></klik-divider>
+  <klik-menu-label>Vegetables</klik-menu-label>
+  <klik-menu-item value="broccoli">Broccoli</klik-menu-item>
+  <klik-menu-item value="carrot">Carrot</klik-menu-item>
+  <klik-menu-item value="zucchini">Zucchini</klik-menu-item>
+</klik-menu>
 ```
 
 ```jsx react
@@ -32,8 +32,8 @@ const App = () => (
   <SlMenu 
     style={{
       maxWidth: '200px',
-      border: 'solid 1px rgb(var(--sl-panel-border-color))',
-      borderRadius: 'var(--sl-border-radius-medium)'
+      border: 'solid 1px rgb(var(--klik-panel-border-color))',
+      borderRadius: 'var(--klik-border-radius-medium)'
     }}
   >
     <SlMenuLabel>Fruits</SlMenuLabel>
@@ -49,4 +49,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-menu-label]
+[component-metadata:klik-menu-label]

@@ -6,10 +6,10 @@ export default css`
   ${componentStyles}
 
   :host {
-    --symbol-color: rgb(var(--sl-color-neutral-300));
-    --symbol-color-active: rgb(var(--sl-color-amber-500));
+    --symbol-color: rgb(var(--klik-color-neutral-300));
+    --symbol-color-active: rgb(var(--klik-color-amber-500));
     --symbol-size: 1.2rem;
-    --symbol-spacing: var(--sl-spacing-3x-small);
+    --symbol-spacing: var(--klik-spacing-3x-small);
 
     display: inline-flex;
   }
@@ -17,7 +17,7 @@ export default css`
   .rating {
     position: relative;
     display: inline-flex;
-    border-radius: var(--sl-border-radius-medium);
+    border-radius: var(--klik-border-radius-medium);
     vertical-align: middle;
   }
 
@@ -26,7 +26,7 @@ export default css`
   }
 
   .rating${focusVisibleSelector} {
-    box-shadow: var(--sl-focus-ring);
+    box-shadow: var(--klik-focus-ring);
   }
 
   .rating__symbols {
@@ -52,7 +52,7 @@ export default css`
   }
 
   .rating__symbol {
-    transition: var(--sl-transition-fast) transform;
+    transition: var(--klik-transition-fast) transform;
   }
 
   .rating__symbol--hover {

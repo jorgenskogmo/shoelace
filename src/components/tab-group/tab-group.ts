@@ -15,13 +15,13 @@ import '../icon-button/icon-button';
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon-button
+ * @dependency klik-icon-button
  *
  * @slot - Used for grouping tab panels in the tab group.
  * @slot nav - Used for grouping tabs in the tab group.
  *
- * @event {{ name: String }} sl-tab-show - Emitted when a tab is shown.
- * @event {{ name: String }} sl-tab-hide - Emitted when a tab is hidden.
+ * @event {{ name: String }} klik-tab-show - Emitted when a tab is shown.
+ * @event {{ name: String }} klik-tab-hide - Emitted when a tab is hidden.
  *
  * @csspart base - The component's base wrapper.
  * @csspart nav - The tab group navigation container.
@@ -33,7 +33,7 @@ import '../icon-button/icon-button';
  * @cssproperty --indicator-color - The color of the active tab indicator.
  * @cssproperty --track-color - The color of the indicator's track (i.e. the line that separates tabs from panels).
  */
-@customElement('sl-tab-group')
+@customElement('klik-tab-group')
 export default class SlTabGroup extends LitElement {
   static styles = styles;
 
@@ -119,14 +119,14 @@ export default class SlTabGroup extends LitElement {
 
     return [...slot.assignedElements()].filter((el: any) => {
       return includeDisabled
-        ? el.tagName.toLowerCase() === 'sl-tab'
-        : el.tagName.toLowerCase() === 'sl-tab' && !el.disabled;
+        ? el.tagName.toLowerCase() === 'klik-tab'
+        : el.tagName.toLowerCase() === 'klik-tab' && !el.disabled;
     }) as SlTab[];
   }
 
   getAllPanels() {
     const slot = this.body.querySelector('slot')!;
-    return [...slot.assignedElements()].filter((el: any) => el.tagName.toLowerCase() === 'sl-tab-panel') as [
+    return [...slot.assignedElements()].filter((el: any) => el.tagName.toLowerCase() === 'klik-tab-panel') as [
       SlTabPanel
     ];
   }
@@ -137,8 +137,8 @@ export default class SlTabGroup extends LitElement {
 
   handleClick(event: MouseEvent) {
     const target = event.target as HTMLElement;
-    const tab = target.closest('sl-tab') as SlTab;
-    const tabGroup = tab?.closest('sl-tab-group');
+    const tab = target.closest('klik-tab') as SlTab;
+    const tabGroup = tab?.closest('klik-tab-group');
 
     // Ensure the target tab is in this tab group
     if (tabGroup !== this) {
@@ -152,8 +152,8 @@ export default class SlTabGroup extends LitElement {
 
   handleKeyDown(event: KeyboardEvent) {
     const target = event.target as HTMLElement;
-    const tab = target.closest('sl-tab') as SlTab;
-    const tabGroup = tab?.closest('sl-tab-group');
+    const tab = target.closest('klik-tab') as SlTab;
+    const tabGroup = tab?.closest('klik-tab-group');
 
     // Ensure the target tab is in this tab group
     if (tabGroup !== this) {
@@ -172,7 +172,7 @@ export default class SlTabGroup extends LitElement {
     if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End'].includes(event.key)) {
       const activeEl = document.activeElement as any;
 
-      if (activeEl && activeEl.tagName.toLowerCase() === 'sl-tab') {
+      if (activeEl && activeEl.tagName.toLowerCase() === 'klik-tab') {
         let index = this.tabs.indexOf(activeEl);
 
         if (event.key === 'Home') {
@@ -257,10 +257,10 @@ export default class SlTabGroup extends LitElement {
       // Emit events
       if (options.emitEvents) {
         if (previousTab) {
-          emit(this, 'sl-tab-hide', { detail: { name: previousTab.panel } });
+          emit(this, 'klik-tab-hide', { detail: { name: previousTab.panel } });
         }
 
-        emit(this, 'sl-tab-show', { detail: { name: this.activeTab.panel } });
+        emit(this, 'klik-tab-show', { detail: { name: this.activeTab.panel } });
       }
     }
   }
@@ -357,13 +357,13 @@ export default class SlTabGroup extends LitElement {
         <div class="tab-group__nav-container" part="nav">
           ${this.hasScrollControls
             ? html`
-                <sl-icon-button
+                <klik-icon-button
                   class="tab-group__scroll-button tab-group__scroll-button--start"
                   exportparts="base:scroll-button"
                   name="chevron-left"
                   library="system"
                   @click=${this.handleScrollToStart}
-                ></sl-icon-button>
+                ></klik-icon-button>
               `
             : ''}
 
@@ -376,13 +376,13 @@ export default class SlTabGroup extends LitElement {
 
           ${this.hasScrollControls
             ? html`
-                <sl-icon-button
+                <klik-icon-button
                   class="tab-group__scroll-button tab-group__scroll-button--end"
                   exportparts="base:scroll-button"
                   name="chevron-right"
                   library="system"
                   @click=${this.handleScrollToEnd}
-                ></sl-icon-button>
+                ></klik-icon-button>
               `
             : ''}
         </div>
@@ -397,6 +397,6 @@ export default class SlTabGroup extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-tab-group': SlTabGroup;
+    'klik-tab-group': SlTabGroup;
   }
 }

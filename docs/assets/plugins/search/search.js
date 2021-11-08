@@ -10,17 +10,17 @@
       const searchBox = document.createElement('div');
       searchBox.classList.add('search-box');
       searchBox.innerHTML = `
-        <sl-input
+        <klik-input
           type="search"
           placeholder="Search"
           clearable
           pill
         >
-          <sl-icon slot="prefix" name="search"></sl-icon>
+          <klik-icon slot="prefix" name="search"></klik-icon>
           <kbd slot="suffix" title="Press / to search">/</kbd>
-        </sl-input>
+        </klik-input>
       `;
-      const searchBoxInput = searchBox.querySelector('sl-input');
+      const searchBoxInput = searchBox.querySelector('klik-input');
 
       appName.insertAdjacentElement('afterend', searchBox);
 
@@ -53,15 +53,15 @@
       <div class="site-search__overlay"></div>
       <div class="site-search__panel">
         <header class="site-search__header">
-          <sl-input
+          <klik-input
             class="site-search__input"
             type="search"
             placeholder="Search this site"
             size="large"
             clearable
           >
-            <sl-icon slot="prefix" name="search"></sl-icon>
-          </sl-input>
+            <klik-icon slot="prefix" name="search"></klik-icon>
+          </klik-input>
         </header>
         <div class="site-search__body">
           <ul class="site-search__results"></ul>
@@ -251,7 +251,7 @@
           a.href = $docsify.routerMode === 'hash' ? `/#/${page.url}` : `/${page.url}`;
           a.innerHTML = `
             <div class="site-search__result-icon">
-              <sl-icon name="${icon}" aria-hidden="true"></sl-icon>
+              <klik-icon name="${icon}" aria-hidden="true"></klik-icon>
             </div>
             <div class="site-search__result__details">
               <h3>${page.title}</h3>
@@ -281,7 +281,7 @@
       }
     });
 
-    input.addEventListener('sl-input', handleInput);
+    input.addEventListener('klik-input', handleInput);
 
     // Close when a result is selected
     results.addEventListener('click', event => {

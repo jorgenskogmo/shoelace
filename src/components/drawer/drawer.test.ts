@@ -4,10 +4,10 @@ import sinon from 'sinon';
 import '../../../dist/shoelace.js';
 import type SlDrawer from './drawer';
 
-describe('<sl-drawer>', () => {
+describe('<klik-drawer>', () => {
   it('should be visible with the open attribute', async () => {
     const el = await fixture<SlDrawer>(html`
-      <sl-drawer open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</sl-drawer>
+      <klik-drawer open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</klik-drawer>
     `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
 
@@ -16,23 +16,23 @@ describe('<sl-drawer>', () => {
 
   it('should not be visible without the open attribute', async () => {
     const el = await fixture<SlDrawer>(
-      html` <sl-drawer>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</sl-drawer> `
+      html` <klik-drawer>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</klik-drawer> `
     );
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
 
     expect(base.hidden).to.be.true;
   });
 
-  it('should emit sl-show and sl-after-show when calling show()', async () => {
+  it('should emit klik-show and klik-after-show when calling show()', async () => {
     const el = await fixture<SlDrawer>(html`
-      <sl-drawer>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</sl-drawer>
+      <klik-drawer>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</klik-drawer>
     `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
 
-    el.addEventListener('sl-show', showHandler);
-    el.addEventListener('sl-after-show', afterShowHandler);
+    el.addEventListener('klik-show', showHandler);
+    el.addEventListener('klik-after-show', afterShowHandler);
     el.show();
 
     await waitUntil(() => showHandler.calledOnce);
@@ -43,16 +43,16 @@ describe('<sl-drawer>', () => {
     expect(base.hidden).to.be.false;
   });
 
-  it('should emit sl-hide and sl-after-hide when calling hide()', async () => {
+  it('should emit klik-hide and klik-after-hide when calling hide()', async () => {
     const el = await fixture<SlDrawer>(html`
-      <sl-drawer open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</sl-drawer>
+      <klik-drawer open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</klik-drawer>
     `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
 
-    el.addEventListener('sl-hide', hideHandler);
-    el.addEventListener('sl-after-hide', afterHideHandler);
+    el.addEventListener('klik-hide', hideHandler);
+    el.addEventListener('klik-after-hide', afterHideHandler);
     el.hide();
 
     await waitUntil(() => hideHandler.calledOnce);
@@ -63,16 +63,16 @@ describe('<sl-drawer>', () => {
     expect(base.hidden).to.be.true;
   });
 
-  it('should emit sl-show and sl-after-show when setting open = true', async () => {
+  it('should emit klik-show and klik-after-show when setting open = true', async () => {
     const el = await fixture<SlDrawer>(html`
-      <sl-drawer>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</sl-drawer>
+      <klik-drawer>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</klik-drawer>
     `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
 
-    el.addEventListener('sl-show', showHandler);
-    el.addEventListener('sl-after-show', afterShowHandler);
+    el.addEventListener('klik-show', showHandler);
+    el.addEventListener('klik-after-show', afterShowHandler);
     el.open = true;
 
     await waitUntil(() => showHandler.calledOnce);
@@ -83,16 +83,16 @@ describe('<sl-drawer>', () => {
     expect(base.hidden).to.be.false;
   });
 
-  it('should emit sl-hide and sl-after-hide when setting open = false', async () => {
+  it('should emit klik-hide and klik-after-hide when setting open = false', async () => {
     const el = await fixture<SlDrawer>(html`
-      <sl-drawer open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</sl-drawer>
+      <klik-drawer open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</klik-drawer>
     `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
 
-    el.addEventListener('sl-hide', hideHandler);
-    el.addEventListener('sl-after-hide', afterHideHandler);
+    el.addEventListener('klik-hide', hideHandler);
+    el.addEventListener('klik-after-hide', afterHideHandler);
     el.open = false;
 
     await waitUntil(() => hideHandler.calledOnce);
@@ -103,27 +103,27 @@ describe('<sl-drawer>', () => {
     expect(base.hidden).to.be.true;
   });
 
-  it('should not close when sl-request-close is prevented', async () => {
+  it('should not close when klik-request-close is prevented', async () => {
     const el = await fixture<SlDrawer>(html`
-      <sl-drawer open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</sl-drawer>
+      <klik-drawer open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</klik-drawer>
     `);
     const overlay = el.shadowRoot?.querySelector('[part="overlay"]') as HTMLElement;
 
-    el.addEventListener('sl-request-close', event => event.preventDefault());
+    el.addEventListener('klik-request-close', event => event.preventDefault());
     overlay.click();
 
     expect(el.open).to.be.true;
   });
 
   it('should allow initial focus to be set', async () => {
-    const el = await fixture<SlDrawer>(html` <sl-drawer><input /></sl-drawer> `);
+    const el = await fixture<SlDrawer>(html` <klik-drawer><input /></klik-drawer> `);
     const input = el.querySelector('input');
     const initialFocusHandler = sinon.spy(event => {
       event.preventDefault();
       input.focus();
     });
 
-    el.addEventListener('sl-initial-focus', initialFocusHandler);
+    el.addEventListener('klik-initial-focus', initialFocusHandler);
     el.show();
 
     await waitUntil(() => initialFocusHandler.calledOnce);

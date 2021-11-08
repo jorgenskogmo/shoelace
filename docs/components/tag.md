@@ -1,15 +1,15 @@
 # Tag
 
-[component-header:sl-tag]
+[component-header:klik-tag]
 
 Tags are used as labels to organize things or to indicate a selection.
 
 ```html preview
-<sl-tag type="primary">Primary</sl-tag>
-<sl-tag type="success">Success</sl-tag>
-<sl-tag type="neutral">Neutral</sl-tag>
-<sl-tag type="warning">Warning</sl-tag>
-<sl-tag type="danger">Danger</sl-tag>
+<klik-tag type="primary">Primary</klik-tag>
+<klik-tag type="success">Success</klik-tag>
+<klik-tag type="neutral">Neutral</klik-tag>
+<klik-tag type="warning">Warning</klik-tag>
+<klik-tag type="danger">Danger</klik-tag>
 ```
 
 
@@ -34,9 +34,9 @@ const App = () => (
 Use the `size` attribute to change a tab's size.
 
 ```html preview
-<sl-tag size="small">Small</sl-tag>
-<sl-tag size="medium">Medium</sl-tag>
-<sl-tag size="large">Large</sl-tag>
+<klik-tag size="small">Small</klik-tag>
+<klik-tag size="medium">Medium</klik-tag>
+<klik-tag size="large">Large</klik-tag>
 ```
 
 ```jsx react
@@ -56,9 +56,9 @@ const App = () => (
 Use the `pill` attribute to give tabs rounded edges.
 
 ```html preview
-<sl-tag size="small" pill>Small</sl-tag>
-<sl-tag size="medium" pill>Medium</sl-tag>
-<sl-tag size="large" pill>Large</sl-tag>
+<klik-tag size="small" pill>Small</klik-tag>
+<klik-tag size="medium" pill>Medium</klik-tag>
+<klik-tag size="large" pill>Large</klik-tag>
 ```
 
 ```jsx react
@@ -79,15 +79,15 @@ Use the `removable` attribute to add a remove button to the tag.
 
 ```html preview
 <div class="tags-removable">
-  <sl-tag size="small" removable>Small</sl-tag>
-  <sl-tag size="medium" removable>Medium</sl-tag>
-  <sl-tag size="large" removable>Large</sl-tag>
+  <klik-tag size="small" removable>Small</klik-tag>
+  <klik-tag size="medium" removable>Medium</klik-tag>
+  <klik-tag size="large" removable>Large</klik-tag>
 </div>
 
 <script>
   const div = document.querySelector('.tags-removable');
 
-  div.addEventListener('sl-remove', event => {
+  div.addEventListener('klik-remove', event => {
     const tag = event.target;
     tag.style.opacity = '0';
     setTimeout(() => tag.style.opacity = '1', 2000);
@@ -95,8 +95,8 @@ Use the `removable` attribute to add a remove button to the tag.
 </script>
 
 <style>
-  .tags-removable sl-tag {
-    transition: var(--sl-transition-medium) opacity;
+  .tags-removable klik-tag {
+    transition: var(--klik-transition-medium) opacity;
   }
 </style>
 ```
@@ -105,8 +105,8 @@ Use the `removable` attribute to add a remove button to the tag.
 import { SlTag } from '@shoelace-style/shoelace/dist/react';
 
 const css = `
-  .tags-removable sl-tag {
-    transition: var(--sl-transition-medium) opacity;
+  .tags-removable klik-tag {
+    transition: var(--klik-transition-medium) opacity;
   }
 `;
 
@@ -139,4 +139,4 @@ const App = () => {
 };
 ```
 
-[component-metadata:sl-tag]
+[component-metadata:klik-tag]

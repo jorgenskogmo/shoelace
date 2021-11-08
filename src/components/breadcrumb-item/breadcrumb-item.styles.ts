@@ -12,11 +12,11 @@ export default css`
   .breadcrumb-item {
     display: inline-flex;
     align-items: center;
-    font-family: var(--sl-font-sans);
-    font-size: var(--sl-font-size-small);
-    font-weight: var(--sl-font-weight-semibold);
-    color: rgb(var(--sl-color-neutral-600));
-    line-height: var(--sl-line-height-normal);
+    font-family: var(--klik-font-sans);
+    font-size: var(--klik-font-size-small);
+    font-weight: var(--klik-font-weight-semibold);
+    color: rgb(var(--klik-color-neutral-600));
+    line-height: var(--klik-line-height-normal);
     white-space: nowrap;
   }
 
@@ -30,28 +30,28 @@ export default css`
     color: inherit;
     background: none;
     border: none;
-    border-radius: var(--sl-border-radius-medium);
+    border-radius: var(--klik-border-radius-medium);
     padding: 0;
     margin: 0;
     cursor: pointer;
-    transition: var(--sl-transition-fast) --color;
+    transition: var(--klik-transition-fast) --color;
   }
 
   :host(:not(:last-of-type)) .breadcrumb-item__label {
-    color: rgb(var(--sl-color-primary-600));
+    color: rgb(var(--klik-color-primary-600));
   }
 
   :host(:not(:last-of-type)) .breadcrumb-item__label:hover {
-    color: rgb(var(--sl-color-primary-500));
+    color: rgb(var(--klik-color-primary-500));
   }
 
   :host(:not(:last-of-type)) .breadcrumb-item__label:active {
-    color: rgb(var(--sl-color-primary-600));
+    color: rgb(var(--klik-color-primary-600));
   }
 
   .breadcrumb-item__label${focusVisibleSelector} {
     outline: none;
-    box-shadow: var(--sl-focus-ring);
+    box-shadow: var(--klik-focus-ring);
   }
 
   .breadcrumb-item__prefix,
@@ -64,12 +64,12 @@ export default css`
 
   .breadcrumb-item--has-prefix .breadcrumb-item__prefix {
     display: inline-flex;
-    margin-right: var(--sl-spacing-x-small);
+    margin-right: var(--klik-spacing-x-small);
   }
 
   .breadcrumb-item--has-suffix .breadcrumb-item__suffix {
     display: inline-flex;
-    margin-left: var(--sl-spacing-x-small);
+    margin-left: var(--klik-spacing-x-small);
   }
 
   :host(:last-of-type) .breadcrumb-item__separator {
@@ -79,7 +79,7 @@ export default css`
   .breadcrumb-item__separator {
     display: inline-flex;
     align-items: center;
-    margin: 0 var(--sl-spacing-x-small);
+    margin: 0 var(--klik-spacing-x-small);
     user-select: none;
   }
 `;

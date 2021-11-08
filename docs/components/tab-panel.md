@@ -1,21 +1,21 @@
 # Tab Panel
 
-[component-header:sl-tab-panel]
+[component-header:klik-tab-panel]
 
 Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.
 
 ```html preview
-<sl-tab-group>
-  <sl-tab slot="nav" panel="general">General</sl-tab>
-  <sl-tab slot="nav" panel="custom">Custom</sl-tab>
-  <sl-tab slot="nav" panel="advanced">Advanced</sl-tab>
-  <sl-tab slot="nav" panel="disabled" disabled>Disabled</sl-tab>
+<klik-tab-group>
+  <klik-tab slot="nav" panel="general">General</klik-tab>
+  <klik-tab slot="nav" panel="custom">Custom</klik-tab>
+  <klik-tab slot="nav" panel="advanced">Advanced</klik-tab>
+  <klik-tab slot="nav" panel="disabled" disabled>Disabled</klik-tab>
 
-  <sl-tab-panel name="general">This is the general tab panel.</sl-tab-panel>
-  <sl-tab-panel name="custom">This is the custom tab panel.</sl-tab-panel>
-  <sl-tab-panel name="advanced">This is the advanced tab panel.</sl-tab-panel>
-  <sl-tab-panel name="disabled">This is a disabled tab panel.</sl-tab-panel>
-</sl-tab-group>
+  <klik-tab-panel name="general">This is the general tab panel.</klik-tab-panel>
+  <klik-tab-panel name="custom">This is the custom tab panel.</klik-tab-panel>
+  <klik-tab-panel name="advanced">This is the advanced tab panel.</klik-tab-panel>
+  <klik-tab-panel name="disabled">This is a disabled tab panel.</klik-tab-panel>
+</klik-tab-group>
 ```
 
 ```jsx react
@@ -38,4 +38,4 @@ const App = () => (
 
 ?> Additional demonstrations can be found in the [tab group examples](/components/tab-group).
 
-[component-metadata:sl-tab-panel]
+[component-metadata:klik-tab-panel]

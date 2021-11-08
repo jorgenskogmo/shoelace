@@ -23,19 +23,19 @@ let id = 0;
  * @since 2.0
  * @status stable
  *
- * @dependency sl-icon-button
+ * @dependency klik-icon-button
  *
  * @slot - The dialog's content.
  * @slot label - The dialog's label. Alternatively, you can use the label prop.
  * @slot footer - The dialog's footer, usually one or more buttons representing various options.
  *
- * @event sl-show - Emitted when the dialog opens.
- * @event sl-after-show - Emitted after the dialog opens and all animations are complete.
- * @event sl-hide - Emitted when the dialog closes.
- * @event sl-after-hide - Emitted after the dialog closes and all animations are complete.
- * @event sl-initial-focus - Emitted when the dialog opens and the panel gains focus. Calling `event.preventDefault()`
+ * @event klik-show - Emitted when the dialog opens.
+ * @event klik-after-show - Emitted after the dialog opens and all animations are complete.
+ * @event klik-hide - Emitted when the dialog closes.
+ * @event klik-after-hide - Emitted after the dialog closes and all animations are complete.
+ * @event klik-initial-focus - Emitted when the dialog opens and the panel gains focus. Calling `event.preventDefault()`
  *   will prevent focus and allow you to set it on a different element in the dialog, such as an input or button.
- * @event sl-request-close - Emitted when the user attempts to close the dialog by clicking the close button, clicking the
+ * @event klik-request-close - Emitted when the user attempts to close the dialog by clicking the close button, clicking the
  *   overlay, or pressing the escape key. Calling `event.preventDefault()` will prevent the dialog from closing. Avoid
  *   using this unless closing the dialog will result in destructive behavior such as data loss.
  *
@@ -59,7 +59,7 @@ let id = 0;
  * @animation dialog.overlay.show - The animation to use when showing the dialog's overlay.
  * @animation dialog.overlay.hide - The animation to use when hiding the dialog's overlay.
  */
-@customElement('sl-dialog')
+@customElement('klik-dialog')
 export default class SlDialog extends LitElement {
   static styles = styles;
 
@@ -116,7 +116,7 @@ export default class SlDialog extends LitElement {
     }
 
     this.open = true;
-    return waitForEvent(this, 'sl-after-show');
+    return waitForEvent(this, 'klik-after-show');
   }
 
   /** Hides the dialog */
@@ -126,11 +126,11 @@ export default class SlDialog extends LitElement {
     }
 
     this.open = false;
-    return waitForEvent(this, 'sl-after-hide');
+    return waitForEvent(this, 'klik-after-hide');
   }
 
   private requestClose() {
-    const slRequestClose = emit(this, 'sl-request-close', { cancelable: true });
+    const slRequestClose = emit(this, 'klik-request-close', { cancelable: true });
     if (slRequestClose.defaultPrevented) {
       const animation = getAnimation(this, 'dialog.denyClose');
       animateTo(this.panel, animation.keyframes, animation.options);
@@ -151,7 +151,7 @@ export default class SlDialog extends LitElement {
   async handleOpenChange() {
     if (this.open) {
       // Show
-      emit(this, 'sl-show');
+      emit(this, 'klik-show');
       this.originalTrigger = document.activeElement as HTMLElement;
       this.modal.activate();
 
@@ -162,7 +162,7 @@ export default class SlDialog extends LitElement {
 
       // Browsers that support el.focus({ preventScroll }) can set initial focus immediately
       if (hasPreventScroll) {
-        const slInitialFocus = emit(this, 'sl-initial-focus', { cancelable: true });
+        const slInitialFocus = emit(this, 'klik-initial-focus', { cancelable: true });
         if (!slInitialFocus.defaultPrevented) {
           this.panel.focus({ preventScroll: true });
         }
@@ -178,16 +178,16 @@ export default class SlDialog extends LitElement {
       // Browsers that don't support el.focus({ preventScroll }) have to wait for the animation to finish before initial
       // focus to prevent scrolling issues. See: https://caniuse.com/mdn-api_htmlelement_focus_preventscroll_option
       if (!hasPreventScroll) {
-        const slInitialFocus = emit(this, 'sl-initial-focus', { cancelable: true });
+        const slInitialFocus = emit(this, 'klik-initial-focus', { cancelable: true });
         if (!slInitialFocus.defaultPrevented) {
           this.panel.focus({ preventScroll: true });
         }
       }
 
-      emit(this, 'sl-after-show');
+      emit(this, 'klik-after-show');
     } else {
       // Hide
-      emit(this, 'sl-hide');
+      emit(this, 'klik-hide');
       this.modal.deactivate();
 
       await Promise.all([stopAnimations(this.dialog), stopAnimations(this.overlay)]);
@@ -207,7 +207,7 @@ export default class SlDialog extends LitElement {
         setTimeout(() => trigger.focus());
       }
 
-      emit(this, 'sl-after-hide');
+      emit(this, 'klik-after-hide');
     }
   }
 
@@ -244,13 +244,13 @@ export default class SlDialog extends LitElement {
                   <span part="title" class="dialog__title" id=${`${this.componentId}-title`}>
                     <slot name="label"> ${this.label || String.fromCharCode(65279)} </slot>
                   </span>
-                  <sl-icon-button
+                  <klik-icon-button
                     exportparts="base:close-button"
                     class="dialog__close"
                     name="x"
                     library="system"
                     @click="${this.requestClose}"
-                  ></sl-icon-button>
+                  ></klik-icon-button>
                 </header>
               `
             : ''}
@@ -301,6 +301,6 @@ setDefaultAnimation('dialog.overlay.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-dialog': SlDialog;
+    'klik-dialog': SlDialog;
   }
 }

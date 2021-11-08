@@ -34,11 +34,11 @@ export default css`
     font-size: var(--icon-size);
     background: none;
     border: none;
-    background-color: rgb(var(--sl-color-neutral-1000) / 50%);
-    border-radius: var(--sl-border-radius-circle);
-    color: rgb(var(--sl-color-neutral-0));
+    background-color: rgb(var(--klik-color-neutral-1000) / 50%);
+    border-radius: var(--klik-border-radius-circle);
+    color: rgb(var(--klik-color-neutral-0));
     pointer-events: none;
-    transition: var(--sl-transition-fast) opacity;
+    transition: var(--klik-transition-fast) opacity;
   }
 
   :host([play]:hover) .animated-image__control-box {

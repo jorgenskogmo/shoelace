@@ -6,9 +6,9 @@ export default css`
 
   :host {
     --size: 25rem;
-    --header-spacing: var(--sl-spacing-large);
-    --body-spacing: var(--sl-spacing-large);
-    --footer-spacing: var(--sl-spacing-large);
+    --header-spacing: var(--klik-spacing-large);
+    --body-spacing: var(--klik-spacing-large);
+    --footer-spacing: var(--klik-spacing-large);
 
     display: contents;
   }
@@ -29,7 +29,7 @@ export default css`
 
   .drawer--fixed {
     position: fixed;
-    z-index: var(--sl-z-index-drawer);
+    z-index: var(--klik-z-index-drawer);
   }
 
   .drawer__panel {
@@ -39,9 +39,9 @@ export default css`
     z-index: 2;
     max-width: 100%;
     max-height: 100%;
-    background-color: rgb(var(--sl-panel-background-color));
-    box-shadow: var(--sl-shadow-x-large);
-    transition: var(--sl-transition-medium) transform;
+    background-color: rgb(var(--klik-panel-background-color));
+    box-shadow: var(--klik-shadow-x-large);
+    transition: var(--klik-transition-medium) transform;
     overflow: auto;
     pointer-events: all;
   }
@@ -92,8 +92,8 @@ export default css`
 
   .drawer__title {
     flex: 1 1 auto;
-    font-size: var(--sl-font-size-large);
-    line-height: var(--sl-line-height-dense);
+    font-size: var(--klik-font-size-large);
+    line-height: var(--klik-line-height-dense);
     padding: var(--header-spacing);
   }
 
@@ -101,7 +101,7 @@ export default css`
     flex: 0 0 auto;
     display: flex;
     align-items: center;
-    font-size: var(--sl-font-size-x-large);
+    font-size: var(--klik-font-size-x-large);
     padding: 0 var(--header-spacing);
   }
 
@@ -117,8 +117,8 @@ export default css`
     padding: var(--footer-spacing);
   }
 
-  .drawer__footer ::slotted(sl-button:not(:last-of-type)) {
-    margin-right: var(--sl-spacing-x-small);
+  .drawer__footer ::slotted(klik-button:not(:last-of-type)) {
+    margin-right: var(--klik-spacing-x-small);
   }
 
   .drawer:not(.drawer--has-footer) .drawer__footer {
@@ -132,7 +132,7 @@ export default css`
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgb(var(--sl-overlay-background-color) / var(--sl-overlay-opacity));
+    background-color: rgb(var(--klik-overlay-background-color) / var(--klik-overlay-opacity));
     pointer-events: all;
   }
 

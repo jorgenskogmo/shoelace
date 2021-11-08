@@ -1,6 +1,6 @@
 # Relative Time
 
-[component-header:sl-relative-time]
+[component-header:klik-relative-time]
 
 Outputs a localized time phrase relative to the current date and time.
 
@@ -8,7 +8,7 @@ Localization is handled by the browser's [`Intl.RelativeTimeFormat` API](https:/
 
 ```html preview
 <!-- Shoelace 2 release date 🎉 -->
-<sl-relative-time date="2020-07-15T09:17:00-04:00"></sl-relative-time>
+<klik-relative-time date="2020-07-15T09:17:00-04:00"></klik-relative-time>
 ```
 
 ```jsx react
@@ -33,12 +33,12 @@ Use the `sync` attribute to update the displayed value automatically as time pas
 
 ```html preview
 <div class="relative-time-sync">
-  <sl-relative-time sync></sl-relative-time>
+  <klik-relative-time sync></klik-relative-time>
 </div>
 
 <script>
   const container = document.querySelector('.relative-time-sync');
-  const relativeTime = container.querySelector('sl-relative-time');
+  const relativeTime = container.querySelector('klik-relative-time');
 
   relativeTime.date = new Date(new Date().getTime() - 60000);
 </script>
@@ -59,9 +59,9 @@ const App = () => (
 You can change how the time is displayed using the `format` attribute. Note that some locales may display the same values for `narrow` and `short` formats.
 
 ```html preview
-<sl-relative-time date="2020-07-15T09:17:00-04:00" format="narrow"></sl-relative-time><br>
-<sl-relative-time date="2020-07-15T09:17:00-04:00" format="short"></sl-relative-time><br>
-<sl-relative-time date="2020-07-15T09:17:00-04:00" format="long"></sl-relative-time>
+<klik-relative-time date="2020-07-15T09:17:00-04:00" format="narrow"></klik-relative-time><br>
+<klik-relative-time date="2020-07-15T09:17:00-04:00" format="short"></klik-relative-time><br>
+<klik-relative-time date="2020-07-15T09:17:00-04:00" format="long"></klik-relative-time>
 ```
 
 ```jsx react
@@ -81,11 +81,11 @@ const App = () => (
 Use the `locale` attribute to set the desired locale.
 
 ```html preview
-English: <sl-relative-time date="2020-07-15T09:17:00-04:00" locale="en-US"></sl-relative-time><br>
-Chinese: <sl-relative-time date="2020-07-15T09:17:00-04:00" locale="zh-CN"></sl-relative-time><br>
-German: <sl-relative-time date="2020-07-15T09:17:00-04:00" locale="de"></sl-relative-time><br>
-Greek: <sl-relative-time date="2020-07-15T09:17:00-04:00" locale="el"></sl-relative-time><br>
-Russian: <sl-relative-time date="2020-07-15T09:17:00-04:00" locale="ru"></sl-relative-time>
+English: <klik-relative-time date="2020-07-15T09:17:00-04:00" locale="en-US"></klik-relative-time><br>
+Chinese: <klik-relative-time date="2020-07-15T09:17:00-04:00" locale="zh-CN"></klik-relative-time><br>
+German: <klik-relative-time date="2020-07-15T09:17:00-04:00" locale="de"></klik-relative-time><br>
+Greek: <klik-relative-time date="2020-07-15T09:17:00-04:00" locale="el"></klik-relative-time><br>
+Russian: <klik-relative-time date="2020-07-15T09:17:00-04:00" locale="ru"></klik-relative-time>
 ```
 
 ```jsx react
@@ -102,4 +102,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-relative-time]
+[component-metadata:klik-relative-time]
