@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="klik-theme-dark">
+  <head>
+    <title>klik-shoelace minimal example</title>
+
+    <script type="module" src="../../dist/shoelace.js"></script>
+    <link rel="stylesheet" href="../../dist/themes/light.css" />
+    <link rel="stylesheet" href="../../dist/themes/dark.css" />
+    <link rel="stylesheet" href="../../dist/static/fonts/cera-pro.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <body>
+      <klik-button onclick="document.documentElement.style.setProperty('--klik-border-radius-medium', '2rem');"
+        >Click to change the border-radius token</klik-button
+      >
+
+      <br /><br />
+
+      <klik-button type="default" outline>Default</klik-button>
+      <klik-button type="primary" outline>Primary</klik-button>
+      <klik-button type="success" outline>Success</klik-button>
+      <klik-button type="neutral" outline>Neutral</klik-button>
+      <klik-button type="warning" outline>Warning</klik-button>
+      <klik-button type="danger" outline>Danger</klik-button>
+
+      <br /><br />
+
+      <klik-button type="default" size="small" circle><klik-icon name="gear"></klik-icon></klik-button>
+      <klik-button type="default" size="medium" circle><klik-icon name="gear"></klik-icon></klik-button>
+      <klik-button type="default" size="large" circle><klik-icon name="gear"></klik-icon></klik-button>
+
+      <br /><br />
+
+      <klik-button>
+        Requests
+        <klik-badge pill>30</klik-badge>
+      </klik-button>
+
+      <klik-button style="margin-left: 1rem">
+        Warnings
+        <klik-badge type="warning" pill>8</klik-badge>
+      </klik-button>
+
+      <klik-button style="margin-left: 1rem">
+        Errors
+        <klik-badge type="danger" pill>6</klik-badge>
+      </klik-button>
+
+      <br /><br />
+
+      <klik-button type="default">
+        <klik-icon slot="prefix" name="gear"></klik-icon>
+        Settings
+      </klik-button>
+
+      <klik-button type="default">
+        <klik-icon slot="suffix" name="arrow-counterclockwise"></klik-icon>
+        Refresh
+      </klik-button>
+
+      <klik-button type="default">
+        <klik-icon slot="prefix" name="link-45deg"></klik-icon>
+        <klik-icon slot="suffix" name="box-arrow-up-right"></klik-icon>
+        Open
+      </klik-button>
+
+      <br /><br />
+
+      <klik-rating precision="0.5" value="2.5"></klik-rating>
+
+      <br /><br />
+
+      <klik-button-group>
+        <klik-button>Left</klik-button>
+        <klik-button>Center</klik-button>
+        <klik-button>Right</klik-button>
+      </klik-button-group>
+
+      <br /><br />
+
+      <klik-details summary="Toggle Me">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+      </klik-details>
+
+      <br /><br />
+
+      <klik-select placeholder="Select a few" multiple clearable>
+        <klik-menu-item value="option-1">Option 1</klik-menu-item>
+        <klik-menu-item value="option-2">Option 2</klik-menu-item>
+        <klik-menu-item value="option-3">Option 3</klik-menu-item>
+        <klik-divider></klik-divider>
+        <klik-menu-item value="option-4">Option 4</klik-menu-item>
+        <klik-menu-item value="option-5">Option 5</klik-menu-item>
+        <klik-menu-item value="option-6">Option 6</klik-menu-item>
+      </klik-select>
+
+      <br /><br />
+
+      <klik-switch checked>Checked</klik-switch>
+
+      <br /><br />
+
+      <klik-range label="Volume" min="0" max="100"></klik-range>
+    </body>
+  </head>
+</html>

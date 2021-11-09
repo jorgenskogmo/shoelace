@@ -1,0 +1,9 @@
+* {
+  /* font-family: var(--klik-input-font-family); */
+  font-family: 'Cera Pro';
+  /* font-weight: 500; */
+}
+
+html.klik-theme-dark body {
+  background-color: #222;
+}
