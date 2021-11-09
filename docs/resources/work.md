@@ -11,7 +11,7 @@
 
 ## Tooling
 
-- [ ] storybook: the nice color tools
+- [ ] storybook: the nice color-checking tools
 - [ ] storybook: install, as its needed for regression testing anyway?
 - [ ] package, so we can import from `@lego/klik-ui/` and `@lego/klik-ui/react` (instead of `@lego/klik-ui/dist/react` etc)
 - [ ] add details to Parity table

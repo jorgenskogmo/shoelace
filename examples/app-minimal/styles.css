@@ -4,6 +4,11 @@
   /* font-weight: 500; */
 }
 
+:root {
+  --klik-font-sans: 'Cera Pro';
+  --klik-input-font-family: 'Cera Pro';
+}
+
 html.klik-theme-dark body {
   background-color: #222;
 }
