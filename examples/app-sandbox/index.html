@@ -23,17 +23,42 @@
 
         <br /><br />
 
-        <klik-button-group label="Formatting">
+        <klik-button-group class="sandbox-buttongroup" label="Formatting">
           <klik-tooltip content="Bold">
-            <klik-button><klik-icon name="type-bold"></klik-icon></klik-button>
+            <klik-button type="primary" onclick="selectTool(0, this)"
+              ><klik-icon name="type-bold"></klik-icon
+            ></klik-button>
           </klik-tooltip>
           <klik-tooltip content="Italic">
-            <klik-button><klik-icon name="type-italic"></klik-icon></klik-button>
+            <klik-button type="primary" onclick="selectTool(1, this)"
+              ><klik-icon name="type-italic"></klik-icon
+            ></klik-button>
           </klik-tooltip>
           <klik-tooltip content="Underline">
-            <klik-button><klik-icon name="type-underline"></klik-icon></klik-button>
+            <klik-button type="primary" onclick="selectTool(2, this)"
+              ><klik-icon name="type-underline"></klik-icon
+            ></klik-button>
           </klik-tooltip>
         </klik-button-group>
+        <script>
+          let selectedIndex = -1;
+          const selectTool = (i, el) => {
+            // console.log('selectTool', i, selectedIndex);
+            Array.from(document.querySelectorAll('.sandbox-buttongroup klik-button')).forEach((el, idx) => {
+              if (i === idx) {
+                el.classList.toggle('selected');
+              } else {
+                el.classList.remove('selected');
+              }
+            });
+          };
+        </script>
+        <style>
+          klik-button.selected::part(base) {
+            /* background-color: #ff1493; */
+            background-color: rgb(var(--klik-color-primary-800));
+          }
+        </style>
 
         <br /><br />
 
