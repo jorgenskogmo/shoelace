@@ -96,14 +96,18 @@ export default css`
 
   /* Primary */
   .button--standard.button--primary {
-    background-color: rgb(var(--klik-color-primary-600));
-    border-color: rgb(var(--klik-color-primary-600));
+    /* background-color: rgb(var(--klik-color-primary-600));
+    border-color: rgb(var(--klik-color-primary-600)); */
+    background-color: rgb(var(--klik-color-primary-500));
+    border-color: rgb(var(--klik-color-primary-500));
     color: rgb(var(--klik-color-neutral-0));
   }
 
   .button--standard.button--primary:hover:not(.button--disabled) {
-    background-color: rgb(var(--klik-color-primary-500));
-    border-color: rgb(var(--klik-color-primary-500));
+    /* background-color: rgb(var(--klik-color-primary-500));
+    border-color: rgb(var(--klik-color-primary-500)); */
+    background-color: rgb(var(--klik-color-primary-700));
+    border-color: rgb(var(--klik-color-primary-700));
     color: rgb(var(--klik-color-neutral-0));
   }
 

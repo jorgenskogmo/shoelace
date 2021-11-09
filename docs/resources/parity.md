@@ -53,7 +53,7 @@ The following table maps what's in our chakra and shoelace versions.
 | klik-ui-slider-range	        | -                 |        |       |
 | klik-ui-spinner 				      | spinner           |        |       |
 | klik-ui-spinner-inline 				| -                 |        |       |
-| klik-ui-split-button 				  | -                 |        | Button w/caret?  |					
+| klik-ui-split-button 				  | button-group      |        | Button w/caret?  |					
 | klik-ui-stack 				        | -                 |        | * + *          |
 | klik-ui-stepper 				      | -                 | ♔      |       |
 | klik-ui-switch 				        | switch            |        |       |

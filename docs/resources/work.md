@@ -34,5 +34,9 @@
 
 - [ ] obtain parity
 - [ ] ensure compatibility
-
 - [ ] we (probably) dont want to support style-props, but there's some nice ones here and there (maxW, breakpoints, spacing, direction etc)
+
+
+## Checkout
+
+- [ ] test Selected-state for buttons, button-groups
