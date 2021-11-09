@@ -2,7 +2,7 @@ import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { emit } from '../../internal/event';
 import { watch } from '../../internal/watch';
-import styles from './{{ tagWithoutPrefix tag }}.styles';
+import styles from './box.styles';
 
 /**
  * @since 2.0
@@ -19,8 +19,8 @@ import styles from './{{ tagWithoutPrefix tag }}.styles';
  *
  * @cssproperty --example - An example CSS custom property.
  */
-@customElement('{{ tag }}')
-export default class {{ properCase tag }} extends LitElement {
+@customElement('klik-box')
+export default class KlikBox extends LitElement {
   static styles = styles;
 
   /** An example property. */
@@ -39,6 +39,6 @@ export default class {{ properCase tag }} extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    '{{ tag }}': {{ properCase tag }};
+    'klik-box': KlikBox;
   }
 }

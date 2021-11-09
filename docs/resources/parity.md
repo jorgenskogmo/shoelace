@@ -5,12 +5,11 @@ The following table maps what's in our chakra and shoelace versions.
 
 | **klik/chakra**               | **klik/shoelace** | Parity | Notes |
 |:------------------------------|:------------------|:------:|:------|
-| klik-ui-accordion 				    | -                 |        |       |
-| klik-ui-aspect-ratio 			    | -                 |        |       |
+| klik-ui-accordion 				    | -                 | ♔      |       |
+| klik-ui-aspect-ratio 			    | responsive-media  |        |       |
 | klik-ui-avatar 				        | avatar            |        |       |
-| klik-ui-avatar-group 				  | -                 |        |       |
-| klik-ui-box 				          | -                 |        |       |
-| klik-ui-box2 				          | -                 |        |       |
+| klik-ui-avatar-group 				  | avatar            |        |       |
+| klik-ui-box 				          | -                 |        | its a div |
 | klik-ui-breadcrumb 				    | breadcrumb / breadcrumb-item | |   |					
 | klik-ui-button 				        | button            |					|      |
 | klik-ui-button-group 				  | button-group      |        |       |
@@ -20,11 +19,11 @@ The following table maps what's in our chakra and shoelace versions.
 | klik-ui-container 				    | -                 |        |       |					
 | klik-ui-datepicker 				    | -                 |        |       |
 | klik-ui-divider 				      | divider           |        |       |
-| klik-ui-drawer 				        | -                 |        |       |
+| klik-ui-drawer 				        | drawer            |        |       |
 | klik-ui-file-uploader 				| -                 |        |       |
 | klik-ui-flags 				        | -                 |        |       |
 | klik-ui-flags-svg 				    | -                 |        |       |
-| klik-ui-flex 				          | -                 |        |       |
+| klik-ui-flex 				          | -                 |        | its a flexbox      |
 | klik-ui-form-control 				  | form              |        |       |
 | klik-ui-grid 				          | -                 |        |       |
 | klik-ui-icon 				          | icon              |        |       |
@@ -43,7 +42,7 @@ The following table maps what's in our chakra and shoelace versions.
 | klik-ui-number-input 				  | -                 |        |       |
 | klik-ui-overlay 				      | -                 |        | part of dialog   |
 | klik-ui-pagination 				    | -                 |        |       |
-| klik-ui-popover 				      | -                 |        |       |				
+| klik-ui-popover 				      | -                 |        | part of tooltip?  |				
 | klik-ui-progress 				      | progress-bar, progress-ring |	|    |				
 | klik-ui-radio 				        | radio             |        |       |
 | klik-ui-radio-group 				  | radio-group       |        |       |
@@ -51,13 +50,14 @@ The following table maps what's in our chakra and shoelace versions.
 | klik-ui-select 				        | dropdown, select  |        |       |
 | klik-ui-skeleton 				      | skeleton          |        |       |
 | klik-ui-slider 				        | range             |        |       |
+| klik-ui-slider-range	        | -                 |        |       |
 | klik-ui-spinner 				      | spinner           |        |       |
 | klik-ui-spinner-inline 				| -                 |        |       |
 | klik-ui-split-button 				  | -                 |        | Button w/caret?  |					
-| klik-ui-stack 				        | -                 |        | Flexbox          |
-| klik-ui-stepper 				      | -                 |        |       |
+| klik-ui-stack 				        | -                 |        | * + *          |
+| klik-ui-stepper 				      | -                 | ♔      |       |
 | klik-ui-switch 				        | switch            |        |       |
-| klik-ui-table 				        | -                 |        |       |
+| klik-ui-table 				        | -                 | ♔      |       |
 | klik-ui-tabs 				          | tab, tab-group, tab-panel	| |      |			
 | klik-ui-tag 				          | tag, badge        |        |       |
 | klik-ui-text 				          | -                 |        |       |
@@ -73,7 +73,7 @@ The following table maps what's in our chakra and shoelace versions.
 |                               | card              |        |       |
 |                               | color-picker      |        |       |
 |                               | details           |        |       |
-|                               | drawer            |        |       |
+|                               |             |        |       |
 |                               | format-bytes      |        |       |
 |                               | format-date       |        |       |
 |                               | format-number     |        |       |

@@ -16,6 +16,7 @@
   - [Changelog](/resources/changelog)
   - [Parity](/resources/parity)
   - [Things todo](/resources/work)
+  - [Why](/resources/why)
 
 - Components
   - [Alert](/components/alert)
@@ -23,6 +24,7 @@
   - [Badge](/components/badge)
   - [Breadcrumb](/components/breadcrumb)
   - [Breadcrumb Item](/components/breadcrumb-item)
+  - [Box](/components/box)
   - [Button](/components/button)
   - [Button Group](/components/button-group)
   - [Card](/components/card)

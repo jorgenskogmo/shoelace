@@ -1,5 +1,5 @@
 module.exports = function (plop) {
-  plop.setHelper('tagWithoutPrefix', tag => tag.replace(/^sl-/, ''));
+  plop.setHelper('tagWithoutPrefix', tag => tag.replace(/^klik-/, ''));
 
   plop.setHelper('tagToTitle', tag => {
     const withoutPrefix = plop.getHelper('tagWithoutPrefix');
@@ -13,10 +13,10 @@ module.exports = function (plop) {
       {
         type: 'input',
         name: 'tag',
-        message: 'Tag name? (e.g. sl-button)',
+        message: 'Tag name? (e.g. klik-box)',
         validate: value => {
-          // Start with sl- and include only a-z + dashes
-          if (!/^sl-[a-z-+]+/.test(value)) {
+          // Start with klik- and include only a-z + dashes
+          if (!/^klik-[a-z-+]+/.test(value)) {
             return false;
           }
 
@@ -64,4 +64,6 @@ module.exports = function (plop) {
       }
     ]
   });
+
+  console.log('You might need to manually re-order the component list in /docs/_sidebar.md');
 };
