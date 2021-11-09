@@ -35,6 +35,7 @@ mkdirp.sync(outdir);
     execSync(`node scripts/make-react.js`, { stdio: 'inherit' });
     execSync(`node scripts/make-vscode-data.js --outdir "${outdir}"`, { stdio: 'inherit' });
     execSync(`node scripts/make-css.js --outdir "${outdir}"`, { stdio: 'inherit' });
+    execSync(`node scripts/copy-static.js --outdir "${outdir}"`, { stdio: 'inherit' });
     execSync(`node scripts/make-icons.js --outdir "${outdir}"`, { stdio: 'inherit' });
     if (types) execSync(`tsc --project . --outdir "${outdir}"`, { stdio: 'inherit' });
   } catch (err) {
