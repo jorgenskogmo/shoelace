@@ -4,10 +4,10 @@
 
 ## Plan
 
-- [ ] discuss wether we should remove or keep shoelace branding
-- [ ] understand wether we ship too many css-globals
+- [ ] discuss whether we should remove or keep shoelace branding
+- [ ] understand whether we ship too many css-globals
 - [ ] what happens with Box (a div) in HTML? Will all content/children end up in VDOM then??
-- [ ] contact cory
+- [x] contact Cory
 
 ## Tooling
 
@@ -27,7 +27,7 @@
 
 - [ ] klik icons
 - [ ] klik flags
-- [ ] klik fonts
+- [x] klik fonts
 
 
 ## Components

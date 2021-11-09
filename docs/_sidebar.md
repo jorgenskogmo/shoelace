@@ -15,7 +15,7 @@
   - [Contributing](/resources/contributing)
   - [Changelog](/resources/changelog)
   - [Parity](/resources/parity)
-  - [Things todo](/resources/work)
+  - [Work / Things todo](/resources/work)
   - [Why](/resources/why)
 
 - Components
