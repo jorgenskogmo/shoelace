@@ -7,10 +7,10 @@ import { watch } from '../../internal/watch';
 import { getLabelledBy, renderFormControl } from '../../internal/form-control';
 import { getTextContent } from '../../internal/slot';
 import { hasSlot } from '../../internal/slot';
-import type SlDropdown from '../dropdown/dropdown';
-import type SlIconButton from '../icon-button/icon-button';
-import type SlMenu from '../menu/menu';
-import type SlMenuItem from '../menu-item/menu-item';
+import type KlikDropdown from '../dropdown/dropdown';
+import type KlikIconButton from '../icon-button/icon-button';
+import type KlikMenu from '../menu/menu';
+import type KlikMenuItem from '../menu-item/menu-item';
 import styles from './select.styles';
 
 import '../dropdown/dropdown';
@@ -59,10 +59,10 @@ let id = 0;
 export default class KlikSelect extends LitElement {
   static styles = styles;
 
-  @query('.select') dropdown: SlDropdown;
-  @query('.select__control') control: SlDropdown;
+  @query('.select') dropdown: KlikDropdown;
+  @query('.select__control') control: KlikDropdown;
   @query('.select__hidden-select') input: HTMLInputElement;
-  @query('.select__menu') menu: SlMenu;
+  @query('.select__menu') menu: KlikMenu;
 
   private inputId = `select-${++id}`;
   private helpTextId = `select-help-text-${id}`;
@@ -160,13 +160,13 @@ export default class KlikSelect extends LitElement {
     this.invalid = !this.input.checkValidity();
   }
 
-  getItemLabel(item: SlMenuItem) {
+  getItemLabel(item: KlikMenuItem) {
     const slot = item.shadowRoot!.querySelector('slot:not([name])') as HTMLSlotElement;
     return getTextContent(slot);
   }
 
   getItems() {
-    return [...this.querySelectorAll('klik-menu-item')] as SlMenuItem[];
+    return [...this.querySelectorAll('klik-menu-item')] as KlikMenuItem[];
   }
 
   getValueAsArray() {
@@ -333,7 +333,7 @@ export default class KlikSelect extends LitElement {
   handleTagInteraction(event: KeyboardEvent | MouseEvent) {
     // Don't toggle the menu when a tag's clear button is activated
     const path = event.composedPath() as Array<EventTarget>;
-    const clearButton = path.find((el: SlIconButton) => {
+    const clearButton = path.find((el: KlikIconButton) => {
       if (el instanceof HTMLElement) {
         const element = el as HTMLElement;
         return element.classList.contains('tag__remove');
@@ -372,10 +372,10 @@ export default class KlikSelect extends LitElement {
 
     // Sync display label and tags
     if (this.multiple) {
-      const checkedItems = items.filter(item => value.includes(item.value)) as SlMenuItem[];
+      const checkedItems = items.filter(item => value.includes(item.value)) as KlikMenuItem[];
 
       this.displayLabel = checkedItems[0] ? this.getItemLabel(checkedItems[0]) : '';
-      this.displayTags = checkedItems.map((item: SlMenuItem) => {
+      this.displayTags = checkedItems.map((item: KlikMenuItem) => {
         return html`
           <klik-tag
             exportparts="base:tag"

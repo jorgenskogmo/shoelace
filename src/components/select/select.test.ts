@@ -29,7 +29,7 @@ describe('<klik-select>', () => {
         <klik-menu-item value="option-2">Option 2</klik-menu-item>
         <klik-menu-item value="option-3">Option 3</klik-menu-item>
       </klik-select>
-    `)) as SlSelect;
+    `)) as KlikSelect;
     const control = el.shadowRoot.querySelector('.select__control') as HTMLSelectElement;
     control.focus();
     const rKeyEvent = new KeyboardEvent('keydown', { key: 'r' });
@@ -45,7 +45,7 @@ describe('<klik-select>', () => {
         <klik-menu-item value="option-2">Option 2</klik-menu-item>
         <klik-menu-item value="option-3">Option 3</klik-menu-item>
       </klik-select>
-    `)) as SlSelect;
+    `)) as KlikSelect;
     const control = el.shadowRoot.querySelector('.select__control') as HTMLSelectElement;
     control.focus();
     const rKeyEvent = new KeyboardEvent('keydown', { key: 'r', ctrlKey: true });

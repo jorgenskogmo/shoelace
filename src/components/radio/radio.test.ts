@@ -44,8 +44,8 @@ describe('<klik-radio>', () => {
         <klik-radio id="radio-2"></klik-radio>
       </klik-radio-group>
     `);
-    const radio1: SlRadio = radioGroup.querySelector('klik-radio#radio-1');
-    const radio2: SlRadio = radioGroup.querySelector('klik-radio#radio-2');
+    const radio1: KlikRadio = radioGroup.querySelector('klik-radio#radio-1');
+    const radio2: KlikRadio = radioGroup.querySelector('klik-radio#radio-2');
     const input1 = radio1.shadowRoot?.querySelector('input');
     input1.focus();
     setTimeout(() => sendKeys({ press: 'ArrowRight' }));

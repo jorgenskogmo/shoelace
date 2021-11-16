@@ -1,7 +1,7 @@
 import defaultLibrary from './library.default';
 import systemLibrary from './library.system';
 import klikLibrary from './library.klik';
-import type SlIcon from '../icon/icon';
+import type KlikIcon from '../icon/icon';
 
 export type IconLibraryResolver = (name: string) => string;
 export type IconLibraryMutator = (svg: SVGElement) => void;
@@ -12,13 +12,13 @@ export interface IconLibrary {
 }
 
 let registry: IconLibrary[] = [defaultLibrary, systemLibrary, klikLibrary];
-let watchedIcons: SlIcon[] = [];
+let watchedIcons: KlikIcon[] = [];
 
-export function watchIcon(icon: SlIcon) {
+export function watchIcon(icon: KlikIcon) {
   watchedIcons.push(icon);
 }
 
-export function unwatchIcon(icon: SlIcon) {
+export function unwatchIcon(icon: KlikIcon) {
   watchedIcons = watchedIcons.filter(el => el !== icon);
 }
 

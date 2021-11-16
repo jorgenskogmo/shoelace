@@ -7,8 +7,8 @@ import { styleMap } from 'lit/directives/style-map.js';
 import { emit } from '../../internal/event';
 import { watch } from '../../internal/watch';
 import { clamp } from '../../internal/math';
-import type SlDropdown from '../dropdown/dropdown';
-import type SlInput from '../input/input';
+import type KlikDropdown from '../dropdown/dropdown';
+import type KlikInput from '../input/input';
 import color from 'color';
 import styles from './color-picker.styles';
 
@@ -57,9 +57,9 @@ const hasEyeDropper = 'EyeDropper' in window;
 export default class KlikColorPicker extends LitElement {
   static styles = styles;
 
-  @query('[part="input"]') input: SlInput;
+  @query('[part="input"]') input: KlikInput;
   @query('[part="preview"]') previewButton: HTMLButtonElement;
-  @query('.color-dropdown') dropdown: SlDropdown;
+  @query('.color-dropdown') dropdown: KlikDropdown;
 
   private isSafeValue = false;
   private lastValueEmitted: string;

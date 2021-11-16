@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 import styles from './breadcrumb.styles';
-import type SlBreadcrumbItem from '../breadcrumb-item/breadcrumb-item';
+import type KlikBreadcrumbItem from '../breadcrumb-item/breadcrumb-item';
 
 import '../icon/icon';
 
@@ -44,7 +44,7 @@ export default class KlikBreadcrumb extends LitElement {
   handleSlotChange() {
     const items = [...this.defaultSlot.assignedElements({ flatten: true })].filter(
       item => item.tagName.toLowerCase() === 'klik-breadcrumb-item'
-    ) as SlBreadcrumbItem[];
+    ) as KlikBreadcrumbItem[];
 
     items.map((item, index) => {
       // Append separators to each item if they don't already have one

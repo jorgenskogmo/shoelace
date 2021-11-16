@@ -9,8 +9,8 @@ import { waitForEvent } from '../../internal/event';
 import { scrollIntoView } from '../../internal/scroll';
 import { getTabbableBoundary } from '../../internal/tabbable';
 import { setDefaultAnimation, getAnimation } from '../../utilities/animation-registry';
-import type SlMenu from '../menu/menu';
-import type SlMenuItem from '../menu-item/menu-item';
+import type KlikMenu from '../menu/menu';
+import type KlikMenuItem from '../menu-item/menu-item';
 import styles from './dropdown.styles';
 
 let id = 0;
@@ -144,7 +144,9 @@ export default class KlikDropdown extends LitElement {
 
   getMenu() {
     const slot = this.panel.querySelector('slot')!;
-    return slot.assignedElements({ flatten: true }).filter(el => el.tagName.toLowerCase() === 'klik-menu')[0] as SlMenu;
+    return slot
+      .assignedElements({ flatten: true })
+      .filter(el => el.tagName.toLowerCase() === 'klik-menu')[0] as KlikMenu;
   }
 
   handleDocumentKeyDown(event: KeyboardEvent) {
@@ -193,7 +195,7 @@ export default class KlikDropdown extends LitElement {
   }
 
   handleMenuItemActivate(event: CustomEvent) {
-    const item = event.target as SlMenuItem;
+    const item = event.target as KlikMenuItem;
     scrollIntoView(item, this.panel);
   }
 
@@ -240,7 +242,7 @@ export default class KlikDropdown extends LitElement {
 
   handleTriggerKeyDown(event: KeyboardEvent) {
     const menu = this.getMenu();
-    const menuItems = menu ? ([...menu.querySelectorAll('klik-menu-item')] as SlMenuItem[]) : [];
+    const menuItems = menu ? ([...menu.querySelectorAll('klik-menu-item')] as KlikMenuItem[]) : [];
     const firstMenuItem = menuItems[0];
     const lastMenuItem = menuItems[menuItems.length - 1];
 

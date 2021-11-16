@@ -3,7 +3,7 @@ import { customElement, query } from 'lit/decorators.js';
 import { emit } from '../../internal/event';
 import { getTextContent } from '../../internal/slot';
 import { hasFocusVisible } from '../../internal/focus-visible';
-import type SlMenuItem from '../menu-item/menu-item';
+import type KlikMenuItem from '../menu-item/menu-item';
 import styles from './menu.styles';
 
 /**
@@ -12,7 +12,7 @@ import styles from './menu.styles';
  *
  * @slot - The menu's content, including menu items, menu labels, and dividers.
  *
- * @event {{ item: SlMenuItem }} klik-select - Emitted when a menu item is selected.
+ * @event {{ item: KlikMenuItem }} klik-select - Emitted when a menu item is selected.
  *
  * @csspart base - The component's base wrapper.
  */
@@ -32,12 +32,12 @@ export default class KlikMenu extends LitElement {
         return false;
       }
 
-      if (!options?.includeDisabled && (el as SlMenuItem).disabled) {
+      if (!options?.includeDisabled && (el as KlikMenuItem).disabled) {
         return false;
       }
 
       return true;
-    }) as SlMenuItem[];
+    }) as KlikMenuItem[];
   }
 
   /**
@@ -52,7 +52,7 @@ export default class KlikMenu extends LitElement {
    * @internal Sets the current menu item to the specified element. This sets `tabindex="0"` on the target element and
    * `tabindex="-1"` to all other items. This method must be called prior to setting focus on a menu item.
    */
-  setCurrentItem(item: SlMenuItem) {
+  setCurrentItem(item: KlikMenuItem) {
     const items = this.getAllItems({ includeDisabled: false });
     let activeItem = item.disabled ? items[0] : item;
 
@@ -92,7 +92,7 @@ export default class KlikMenu extends LitElement {
 
   handleClick(event: MouseEvent) {
     const target = event.target as HTMLElement;
-    const item = target.closest('klik-menu-item') as SlMenuItem;
+    const item = target.closest('klik-menu-item') as KlikMenuItem;
 
     if (item && !item.disabled) {
       emit(this, 'klik-select', { detail: { item } });
@@ -160,7 +160,7 @@ export default class KlikMenu extends LitElement {
     const target = event.target as HTMLElement;
 
     if (target.getAttribute('role') === 'menuitem') {
-      this.setCurrentItem(target as SlMenuItem);
+      this.setCurrentItem(target as KlikMenuItem);
 
       // Hide focus in browsers that don't support :focus-visible when using the mouse
       if (!hasFocusVisible) {

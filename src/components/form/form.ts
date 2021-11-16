@@ -1,15 +1,15 @@
 import { LitElement, html } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 import { emit } from '../../internal/event';
-import type SlButton from '../button/button';
-import type SlCheckbox from '../checkbox/checkbox';
-import type SlColorPicker from '../color-picker/color-picker';
-import type SlInput from '../input/input';
-import type SlRadio from '../radio/radio';
-import type SlRange from '../range/range';
-import type SlSelect from '../select/select';
-import type SlSwitch from '../switch/switch';
-import type SlTextarea from '../textarea/textarea';
+import type KlikButton from '../button/button';
+import type KlikCheckbox from '../checkbox/checkbox';
+import type KlikColorPicker from '../color-picker/color-picker';
+import type KlikInput from '../input/input';
+import type KlikRadio from '../radio/radio';
+import type KlikRange from '../range/range';
+import type KlikSelect from '../select/select';
+import type KlikSwitch from '../switch/switch';
+import type KlikTextarea from '../textarea/textarea';
 import styles from './form.styles';
 
 interface FormControl {
@@ -112,9 +112,9 @@ export default class KlikForm extends LitElement {
       },
       {
         tag: 'klik-button',
-        serialize: (el: SlButton, formData) => (el.name && !el.disabled ? formData.append(el.name, el.value) : null),
+        serialize: (el: KlikButton, formData) => (el.name && !el.disabled ? formData.append(el.name, el.value) : null),
         click: event => {
-          const target = event.target as SlButton;
+          const target = event.target as KlikButton;
           if (target.submit) {
             this.submit();
           }
@@ -122,17 +122,17 @@ export default class KlikForm extends LitElement {
       },
       {
         tag: 'klik-checkbox',
-        serialize: (el: SlCheckbox, formData) =>
+        serialize: (el: KlikCheckbox, formData) =>
           el.name && el.checked && !el.disabled ? formData.append(el.name, el.value) : null
       },
       {
         tag: 'klik-color-picker',
-        serialize: (el: SlColorPicker, formData) =>
+        serialize: (el: KlikColorPicker, formData) =>
           el.name && !el.disabled ? formData.append(el.name, el.value) : null
       },
       {
         tag: 'klik-input',
-        serialize: (el: SlInput, formData) => (el.name && !el.disabled ? formData.append(el.name, el.value) : null),
+        serialize: (el: KlikInput, formData) => (el.name && !el.disabled ? formData.append(el.name, el.value) : null),
         keyDown: event => {
           if (event.key === 'Enter' && !event.defaultPrevented) {
             this.submit();
@@ -141,12 +141,12 @@ export default class KlikForm extends LitElement {
       },
       {
         tag: 'klik-radio',
-        serialize: (el: SlRadio, formData) =>
+        serialize: (el: KlikRadio, formData) =>
           el.name && el.checked && !el.disabled ? formData.append(el.name, el.value) : null
       },
       {
         tag: 'klik-range',
-        serialize: (el: SlRange, formData) => {
+        serialize: (el: KlikRange, formData) => {
           if (el.name && !el.disabled) {
             formData.append(el.name, el.value + '');
           }
@@ -154,7 +154,7 @@ export default class KlikForm extends LitElement {
       },
       {
         tag: 'klik-select',
-        serialize: (el: SlSelect, formData) => {
+        serialize: (el: KlikSelect, formData) => {
           if (el.name && !el.disabled) {
             if (el.multiple) {
               const selectedOptions = [...el.value];
@@ -171,12 +171,12 @@ export default class KlikForm extends LitElement {
       },
       {
         tag: 'klik-switch',
-        serialize: (el: SlSwitch, formData) =>
+        serialize: (el: KlikSwitch, formData) =>
           el.name && el.checked && !el.disabled ? formData.append(el.name, el.value) : null
       },
       {
         tag: 'klik-textarea',
-        serialize: (el: SlTextarea, formData) => (el.name && !el.disabled ? formData.append(el.name, el.value) : null)
+        serialize: (el: KlikTextarea, formData) => (el.name && !el.disabled ? formData.append(el.name, el.value) : null)
       },
       {
         tag: 'textarea',

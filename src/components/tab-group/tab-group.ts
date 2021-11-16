@@ -5,8 +5,8 @@ import { emit } from '../../internal/event';
 import { watch } from '../../internal/watch';
 import { getOffset } from '../../internal/offset';
 import { scrollIntoView } from '../../internal/scroll';
-import type SlTab from '../tab/tab';
-import type SlTabPanel from '../tab-panel/tab-panel';
+import type KlikTab from '../tab/tab';
+import type KlikTabPanel from '../tab-panel/tab-panel';
 import styles from './tab-group.styles';
 
 import '../icon-button/icon-button';
@@ -42,11 +42,11 @@ export default class KlikTabGroup extends LitElement {
   @query('.tab-group__nav') nav: HTMLElement;
   @query('.tab-group__indicator') indicator: HTMLElement;
 
-  private activeTab: SlTab;
+  private activeTab: KlikTab;
   private mutationObserver: MutationObserver;
   private resizeObserver: ResizeObserver;
-  private tabs: SlTab[] = [];
-  private panels: SlTabPanel[] = [];
+  private tabs: KlikTab[] = [];
+  private panels: KlikTabPanel[] = [];
 
   @state() private hasScrollControls = false;
 
@@ -107,7 +107,7 @@ export default class KlikTabGroup extends LitElement {
 
   /** Shows the specified tab panel. */
   show(panel: string) {
-    const tab = this.tabs.find(el => el.panel === panel) as SlTab;
+    const tab = this.tabs.find(el => el.panel === panel) as KlikTab;
 
     if (tab) {
       this.setActiveTab(tab, { scrollBehavior: 'smooth' });
@@ -121,13 +121,13 @@ export default class KlikTabGroup extends LitElement {
       return includeDisabled
         ? el.tagName.toLowerCase() === 'klik-tab'
         : el.tagName.toLowerCase() === 'klik-tab' && !el.disabled;
-    }) as SlTab[];
+    }) as KlikTab[];
   }
 
   getAllPanels() {
     const slot = this.body.querySelector('slot')!;
     return [...slot.assignedElements()].filter((el: any) => el.tagName.toLowerCase() === 'klik-tab-panel') as [
-      SlTabPanel
+      KlikTabPanel
     ];
   }
 
@@ -137,7 +137,7 @@ export default class KlikTabGroup extends LitElement {
 
   handleClick(event: MouseEvent) {
     const target = event.target as HTMLElement;
-    const tab = target.closest('klik-tab') as SlTab;
+    const tab = target.closest('klik-tab') as KlikTab;
     const tabGroup = tab?.closest('klik-tab-group');
 
     // Ensure the target tab is in this tab group
@@ -152,7 +152,7 @@ export default class KlikTabGroup extends LitElement {
 
   handleKeyDown(event: KeyboardEvent) {
     const target = event.target as HTMLElement;
-    const tab = target.closest('klik-tab') as SlTab;
+    const tab = target.closest('klik-tab') as KlikTab;
     const tabGroup = tab?.closest('klik-tab-group');
 
     // Ensure the target tab is in this tab group
@@ -232,7 +232,7 @@ export default class KlikTabGroup extends LitElement {
     }
   }
 
-  setActiveTab(tab: SlTab, options?: { emitEvents?: boolean; scrollBehavior?: 'auto' | 'smooth' }) {
+  setActiveTab(tab: KlikTab, options?: { emitEvents?: boolean; scrollBehavior?: 'auto' | 'smooth' }) {
     options = Object.assign(
       {
         emitEvents: true,
@@ -268,7 +268,7 @@ export default class KlikTabGroup extends LitElement {
   setAriaLabels() {
     // Link each tab with its corresponding panel
     this.tabs.map(tab => {
-      const panel = this.panels.find(el => el.name === tab.panel) as SlTabPanel;
+      const panel = this.panels.find(el => el.name === tab.panel) as KlikTabPanel;
       if (panel) {
         tab.setAttribute('aria-controls', panel.getAttribute('id') as string);
         panel.setAttribute('aria-labelledby', tab.getAttribute('id') as string);

@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import type SlRadio from '../radio/radio';
+import type KlikRadio from '../radio/radio';
 import styles from './radio-group.styles';
 
 /**
@@ -30,8 +30,8 @@ export default class KlikRadioGroup extends LitElement {
     // When tabbing into the fieldset, make sure it lands on the checked radio
     requestAnimationFrame(() => {
       const checkedRadio = [...this.defaultSlot.assignedElements({ flatten: true })].find(
-        el => el.tagName.toLowerCase() === 'klik-radio' && (el as SlRadio).checked
-      ) as SlRadio;
+        el => el.tagName.toLowerCase() === 'klik-radio' && (el as KlikRadio).checked
+      ) as KlikRadio;
 
       if (checkedRadio) {
         checkedRadio.focus();
