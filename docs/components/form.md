@@ -75,7 +75,7 @@ import {
   SlInput,
   SlMenuItem, 
   SlSelect,
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 function handleSubmit(event) {
   const formData = event.detail.formData;
@@ -177,7 +177,7 @@ import {
   SlMenuItem, 
   SlSelect,
   SlTextarea
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => (
   <SlForm onSlSubmit={() => alert('All fields are valid!')}>
@@ -221,7 +221,7 @@ import {
   SlButton,
   SlForm, 
   SlInput
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => (
   <SlForm onSlSubmit={() => alert('All fields are valid!')}>
@@ -256,7 +256,7 @@ import {
   SlButton,
   SlForm, 
   SlInput
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => (
   <SlForm onSlSubmit={() => alert('All fields are valid!')}>
@@ -301,7 +301,7 @@ import {
   SlButton,
   SlForm, 
   SlInput
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => {
   const input = useRef(null);
@@ -359,7 +359,7 @@ The `invalid` attribute reflects the form control's validity, so you can style i
 ```
 
 ```jsx react
-import { SlInput } from '@shoelace-style/shoelace/dist/react';
+import { SlInput } from '@lego/klik/dist/react';
 
 const css = `
   .custom-input[invalid]:not([disabled])::part(label),

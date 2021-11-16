@@ -16,7 +16,7 @@ Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to repres
 ```
 
 ```jsx react
-import { SlBreadcrumb, SlBreadcrumbItem, SlIcon } from '@shoelace-style/shoelace/dist/react';
+import { SlBreadcrumb, SlBreadcrumbItem, SlIcon } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlBreadcrumb>

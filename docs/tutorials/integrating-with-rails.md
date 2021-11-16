@@ -23,8 +23,8 @@ yarn add @shoelace-style/shoelace copy-webpack-plugin
 The next step is to import Shoelace's default theme (stylesheet) in `app/javascript/stylesheets/application.scss`.
 
 ```css
-@import '~@shoelace-style/shoelace/dist/themes/light';
-@import '~@shoelace-style/shoelace/dist/themes/dark'; // Optional dark theme
+@import '~@lego/klik/dist/themes/light';
+@import '~@lego/klik/dist/themes/dark'; // Optional dark theme
 ```
 
 Fore more details about themes, please refer to [Theme Basics](/getting-started/themes?id=theme-basics).
@@ -65,7 +65,7 @@ environment.plugins.append(
       {
         from: path.resolve(
           __dirname,
-          '../../node_modules/@shoelace-style/shoelace/dist/assets'
+          '../../node_modules/@lego/klik/dist/assets'
         ),
         to: path.resolve(__dirname, '../../public/packs/js/assets')
       }

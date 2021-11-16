@@ -9,7 +9,7 @@ Dividers are used to visually separate or group elements.
 ```
 
 ```jsx react
-import { SlDivider } from '@shoelace-style/shoelace/dist/react';
+import { SlDivider } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlDivider />
@@ -26,7 +26,7 @@ Use the `--width` custom property to change the width of the divider.
 ```
 
 ```jsx react
-import { SlDivider } from '@shoelace-style/shoelace/dist/react';
+import { SlDivider } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlDivider style={{ '--width': '4px' }} />
@@ -42,7 +42,7 @@ Use the `--color` custom property to change the color of the divider.
 ```
 
 ```jsx react
-import { SlDivider } from '@shoelace-style/shoelace/dist/react';
+import { SlDivider } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlDivider style={{ '--color': 'tomato' }} />
@@ -62,7 +62,7 @@ Use the `--spacing` custom property to change the amount of space between the di
 ```
 
 ```jsx react
-import { SlDivider } from '@shoelace-style/shoelace/dist/react';
+import { SlDivider } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -88,7 +88,7 @@ Add the `vertical` attribute to draw the divider in a vertical orientation. The 
 ```
 
 ```jsx react
-import { SlDivider } from '@shoelace-style/shoelace/dist/react';
+import { SlDivider } from '@lego/klik/dist/react';
 
 const App = () => (
   <div 
@@ -128,7 +128,7 @@ import {
   SlDivider, 
   SlMenu, 
   SlMenuItem 
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => (
   <SlMenu 

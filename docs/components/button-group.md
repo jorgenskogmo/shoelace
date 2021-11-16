@@ -13,7 +13,7 @@ Button groups can be used to group related buttons into sections.
 ```
 
 ```jsx react
-import { SlButton, SlButtonGroup } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlButtonGroup } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlButtonGroup>
@@ -55,7 +55,7 @@ All button sizes are supported, but avoid mixing sizes within the same button gr
 ```
 
 ```jsx react
-import { SlButton, SlButtonGroup } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlButtonGroup } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -129,7 +129,7 @@ Theme buttons are supported through the button's `type` attribute.
 ```
 
 ```jsx react
-import { SlButton, SlButtonGroup } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlButtonGroup } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -203,7 +203,7 @@ Pill buttons are supported through the button's `pill` attribute.
 ```
 
 ```jsx react
-import { SlButton, SlButtonGroup } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlButtonGroup } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -258,7 +258,7 @@ import {
   SlDropdown,
   SlMenu,
   SlMenuItem,
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => (
   <SlButtonGroup> 
@@ -301,7 +301,7 @@ import {
   SlDropdown,
   SlMenu,
   SlMenuItem,
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => (
   <SlButtonGroup> 
@@ -343,7 +343,7 @@ import {
   SlButton, 
   SlButtonGroup,
   SlTooltip
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -417,7 +417,7 @@ import {
   SlButtonGroup,
   SlIcon,
   SlTooltip
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const css = `
   .button-group-toolbar klik-button-group:not(:last-of-type) {

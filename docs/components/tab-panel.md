@@ -19,7 +19,7 @@ Tab panels are used inside [tab groups](/components/tab-group) to display tabbed
 ```
 
 ```jsx react
-import { SlTab, SlTabGroup, SlTabPanel } from '@shoelace-style/shoelace/dist/react';
+import { SlTab, SlTabGroup, SlTabPanel } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlTabGroup>

@@ -55,7 +55,7 @@ Skeletons try not to be opinionated, as there are endless possibilities for desi
 ```
 
 ```jsx react
-import { SlSkeleton } from '@shoelace-style/shoelace/dist/react';
+import { SlSkeleton } from '@lego/klik/dist/react';
 
 const css = `
   .skeleton-overview header {
@@ -138,7 +138,7 @@ There are two built-in effects, `sheen` and `pulse`. Effects are intentionally s
 ```
 
 ```jsx react
-import { SlSkeleton } from '@shoelace-style/shoelace/dist/react';
+import { SlSkeleton } from '@lego/klik/dist/react';
 
 const css = `
   .skeleton-effects {
@@ -201,7 +201,7 @@ Use multiple skeletons and some clever styles to simulate paragraphs.
 ```
 
 ```jsx react
-import { SlSkeleton } from '@shoelace-style/shoelace/dist/react';
+import { SlSkeleton } from '@lego/klik/dist/react';
 
 const css = `
   .skeleton-paragraphs klik-skeleton {
@@ -266,7 +266,7 @@ Set a matching width and height to make a circle, square, or rounded avatar skel
 ```
 
 ```jsx react
-import { SlSkeleton } from '@shoelace-style/shoelace/dist/react';
+import { SlSkeleton } from '@lego/klik/dist/react';
 
 const css = `
   .skeleton-avatars klik-skeleton {
@@ -348,7 +348,7 @@ Use the `--border-radius` custom property to make circles, squares, and rectangl
 ```
 
 ```jsx react
-import { SlSkeleton } from '@shoelace-style/shoelace/dist/react';
+import { SlSkeleton } from '@lego/klik/dist/react';
 
 const css = `
   .skeleton-shapes klik-skeleton {
@@ -409,7 +409,7 @@ Set the `--color` and `--sheen-color` custom properties to adjust the skeleton's
 ```
 
 ```jsx react
-import { SlSkeleton } from '@shoelace-style/shoelace/dist/react';
+import { SlSkeleton } from '@lego/klik/dist/react';
 
 const css = `
   .skeleton-avatars klik-skeleton {

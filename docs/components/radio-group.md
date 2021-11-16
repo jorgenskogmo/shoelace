@@ -13,7 +13,7 @@ Radio Groups are used to group multiple radios so they function as a single cont
 ```
 
 ```jsx react
-import { SlRadio, SlRadioGroup } from '@shoelace-style/shoelace/dist/react';
+import { SlRadio, SlRadioGroup } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlRadioGroup label="Select an option">
@@ -39,7 +39,7 @@ You can show a fieldset and legend that wraps the radio group using the `fieldse
 ```
 
 ```jsx react
-import { SlRadio, SlRadioGroup } from '@shoelace-style/shoelace/dist/react';
+import { SlRadio, SlRadioGroup } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlRadioGroup label="Select an option" fieldset>

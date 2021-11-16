@@ -9,7 +9,7 @@ Badges are used to draw attention and display statuses or counts.
 ```
 
 ```jsx react
-import { SlBadge } from '@shoelace-style/shoelace/dist/react';
+import { SlBadge } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlBadge>Badge</SlBadge>
@@ -31,7 +31,7 @@ Set the `type` attribute to change the badge's type.
 ```
 
 ```jsx react
-import { SlBadge } from '@shoelace-style/shoelace/dist/react';
+import { SlBadge } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -57,7 +57,7 @@ Use the `pill` attribute to give badges rounded edges.
 ```
 
 ```jsx react
-import { SlBadge } from '@shoelace-style/shoelace/dist/react';
+import { SlBadge } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -91,7 +91,7 @@ Use the `pulse` attribute to draw attention to the badge with a subtle animation
 ```
 
 ```jsx react
-import { SlBadge } from '@shoelace-style/shoelace/dist/react';
+import { SlBadge } from '@lego/klik/dist/react';
 
 const css = `
   .badge-pulse klik-badge:not(:last-of-type) {
@@ -136,7 +136,7 @@ One of the most common use cases for badges is attaching them to buttons. To mak
 ```
 
 ```jsx react
-import { SlBadge, SlButton } from '@shoelace-style/shoelace/dist/react';
+import { SlBadge, SlButton } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -171,7 +171,7 @@ When including badges in menu items, use the `suffix` slot to make sure they're 
 ```
 
 ```jsx react
-import { SlBadge, SlButton, SlMenu, SlMenuItem, SlMenuLabel } from '@shoelace-style/shoelace/dist/react';
+import { SlBadge, SlButton, SlMenu, SlMenuItem, SlMenuLabel } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlMenu 

@@ -15,7 +15,7 @@ Radios are designed to be used with [radio groups](/components/radio-group). As 
 ```
 
 ```jsx react
-import { SlRadio, SlRadioGroup } from '@shoelace-style/shoelace/dist/react';
+import { SlRadio, SlRadioGroup } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlRadioGroup label="Select an option">
@@ -44,7 +44,7 @@ Use the `disabled` attribute to disable a radio.
 ```
 
 ```jsx react
-import { SlRadio, SlRadioGroup } from '@shoelace-style/shoelace/dist/react';
+import { SlRadio, SlRadioGroup } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlRadioGroup label="Select an option">

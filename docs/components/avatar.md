@@ -9,7 +9,7 @@ Avatars are used to represent a person or object.
 ```
 
 ```jsx react
-import { SlAvatar } from '@shoelace-style/shoelace/dist/react';
+import { SlAvatar } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlAvatar>Button</SlAvatar>
@@ -30,7 +30,7 @@ To use an image for the avatar, set the `image` and `alt` attributes. This will 
 ```
 
 ```jsx react
-import { SlAvatar } from '@shoelace-style/shoelace/dist/react';
+import { SlAvatar } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlAvatar
@@ -49,7 +49,7 @@ When you don't have an image to use, you can set the `initials` attribute to sho
 ```
 
 ```jsx react
-import { SlAvatar } from '@shoelace-style/shoelace/dist/react';
+import { SlAvatar } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlAvatar initials="SL" />
@@ -75,7 +75,7 @@ When no image or initials are set, an icon will be shown. The default avatar sho
 ```
 
 ```jsx react
-import { SlAvatar, SlIcon } from '@shoelace-style/shoelace/dist/react';
+import { SlAvatar, SlIcon } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -105,7 +105,7 @@ Avatars can be shaped using the `shape` attribute.
 ```
 
 ```jsx react
-import { SlAvatar, SlIcon } from '@shoelace-style/shoelace/dist/react';
+import { SlAvatar, SlIcon } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -140,7 +140,7 @@ You can group avatars with a few lines of CSS.
 ```
 
 ```jsx react
-import { SlAvatar, SlIcon } from '@shoelace-style/shoelace/dist/react';
+import { SlAvatar, SlIcon } from '@lego/klik/dist/react';
 
 const css = `
   .avatar-group klik-avatar:not(:first-of-type) {

@@ -9,7 +9,7 @@ Inputs collect data from the user.
 ```
 
 ```jsx react
-import { SlInput } from '@shoelace-style/shoelace/dist/react';
+import { SlInput } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlInput />
@@ -31,7 +31,7 @@ Use the `placeholder` attribute to add a placeholder.
 ```
 
 ```jsx react
-import { SlInput } from '@shoelace-style/shoelace/dist/react';
+import { SlInput } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlInput placeholder="Type something" />
@@ -47,7 +47,7 @@ Add the `clearable` attribute to add a clear button when the input has content.
 ```
 
 ```jsx react
-import { SlInput } from '@shoelace-style/shoelace/dist/react';
+import { SlInput } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlInput placeholder="Clearable" clearable />
@@ -67,7 +67,7 @@ Add the `toggle-password` attribute to add a toggle button that will show the pa
 ```
 
 ```jsx react
-import { SlInput } from '@shoelace-style/shoelace/dist/react';
+import { SlInput } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -89,7 +89,7 @@ Add the `filled` attribute to draw a filled input.
 ```
 
 ```jsx react
-import { SlInput } from '@shoelace-style/shoelace/dist/react';
+import { SlInput } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlInput placeholder="Type something" filled />
@@ -109,7 +109,7 @@ Use the `pill` attribute to give inputs rounded edges.
 ```
 
 ```jsx react
-import { SlInput } from '@shoelace-style/shoelace/dist/react';
+import { SlInput } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -135,7 +135,7 @@ The `type` attribute controls the type of input the browser renders.
 ```
 
 ```jsx react
-import { SlInput } from '@shoelace-style/shoelace/dist/react';
+import { SlInput } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -161,7 +161,7 @@ Use the `disabled` attribute to disable an input.
 ```
 
 ```jsx react
-import { SlInput } from '@shoelace-style/shoelace/dist/react';
+import { SlInput } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -187,7 +187,7 @@ Use the `size` attribute to change an input's size.
 ```
 
 ```jsx react
-import { SlInput } from '@shoelace-style/shoelace/dist/react';
+import { SlInput } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -222,7 +222,7 @@ Use the `prefix` and `suffix` slots to add icons.
 ```
 
 ```jsx react
-import { SlIcon, SlInput } from '@shoelace-style/shoelace/dist/react';
+import { SlIcon, SlInput } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -253,7 +253,7 @@ Use the `label` attribute to give the input an accessible label. For labels that
 ```
 
 ```jsx react
-import { SlIcon, SlInput } from '@shoelace-style/shoelace/dist/react';
+import { SlIcon, SlInput } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlInput label="What is your name?" />
@@ -272,7 +272,7 @@ Add descriptive help text to an input with the `help-text` attribute. For help t
 ```
 
 ```jsx react
-import { SlIcon, SlInput } from '@shoelace-style/shoelace/dist/react';
+import { SlIcon, SlInput } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlInput 

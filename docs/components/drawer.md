@@ -24,7 +24,7 @@ Drawers slide in from a container to expose additional options and information.
 
 ```jsx react
 import { useState } from 'react';
-import { SlButton, SlDrawer } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlDrawer } from '@lego/klik/dist/react';
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -70,7 +70,7 @@ By default, drawers slide in from the end. To make the drawer slide in from the 
 
 ```jsx react
 import { useState } from 'react';
-import { SlButton, SlDrawer } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlDrawer } from '@lego/klik/dist/react';
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -119,7 +119,7 @@ To make the drawer slide in from the top, set the `placement` attribute to `top`
 
 ```jsx react
 import { useState } from 'react';
-import { SlButton, SlDrawer } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlDrawer } from '@lego/klik/dist/react';
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -168,7 +168,7 @@ To make the drawer slide in from the bottom, set the `placement` attribute to `b
 
 ```jsx react
 import { useState } from 'react';
-import { SlButton, SlDrawer } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlDrawer } from '@lego/klik/dist/react';
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -223,7 +223,7 @@ By default, the drawer slides out of its [containing block](https://developer.mo
 
 ```jsx react
 import { useState } from 'react';
-import { SlButton, SlDrawer } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlDrawer } from '@lego/klik/dist/react';
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -285,7 +285,7 @@ Use the `--size` custom property to set the drawer's size. This will be applied 
 
 ```jsx react
 import { useState } from 'react';
-import { SlButton, SlDrawer } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlDrawer } from '@lego/klik/dist/react';
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -335,7 +335,7 @@ By design, a drawer's height will never exceed 100% of its container. As such, d
 
 ```jsx react
 import { useState } from 'react';
-import { SlButton, SlDrawer } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlDrawer } from '@lego/klik/dist/react';
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -392,7 +392,7 @@ To keep the drawer open in such cases, you can cancel the `klik-request-close` e
 
 ```jsx react
 import { useState } from 'react';
-import { SlButton, SlDrawer } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlDrawer } from '@lego/klik/dist/react';
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -451,7 +451,7 @@ import {
   SlButton, 
   SlDrawer, 
   SlInput 
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => {
   const input = useRef(null);

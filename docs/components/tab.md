@@ -12,7 +12,7 @@ Tabs are used inside [tab groups](/components/tab-group) to represent and activa
 ```
 
 ```jsx react
-import { SlTab } from '@shoelace-style/shoelace/dist/react';
+import { SlTab } from '@lego/klik/dist/react';
 
 const App = () => (
   <>

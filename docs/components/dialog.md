@@ -24,7 +24,7 @@ Dialogs, sometimes called "modals", appear above the page and require the user's
 
 ```jsx react
 import { useState } from 'react';
-import { SlButton, SlDialog } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlDialog } from '@lego/klik/dist/react';
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -76,7 +76,7 @@ Use the `--width` custom property to set the dialog's width.
 
 ```jsx react
 import { useState } from 'react';
-import { SlButton, SlDialog } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlDialog } from '@lego/klik/dist/react';
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -127,7 +127,7 @@ By design, a dialog's height will never exceed that of the viewport. As such, di
 
 ```jsx react
 import { useState } from 'react';
-import { SlButton, SlDialog } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlDialog } from '@lego/klik/dist/react';
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -182,7 +182,7 @@ To keep the dialog open in such cases, you can cancel the `klik-request-close` e
 
 ```jsx react
 import { useState } from 'react';
-import { SlButton, SlDialog } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlDialog } from '@lego/klik/dist/react';
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -241,7 +241,7 @@ import {
   SlButton, 
   SlDialog, 
   SlInput 
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => {
   const input = useRef(null);

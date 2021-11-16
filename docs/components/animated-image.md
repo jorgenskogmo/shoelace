@@ -12,7 +12,7 @@ A component for displaying animated GIFs and WEBPs that play and pause on intera
 ```
 
 ```jsx react
-import { SlAnimatedImage } from '@shoelace-style/shoelace/dist/react';
+import { SlAnimatedImage } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlAnimatedImage
@@ -38,7 +38,7 @@ Both GIF and WEBP images are supported.
 ```
 
 ```jsx react
-import { SlAnimatedImage } from '@shoelace-style/shoelace/dist/react';
+import { SlAnimatedImage } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlAnimatedImage
@@ -62,7 +62,7 @@ To set a custom size, apply a width and/or height to the host element.
 ```
 
 ```jsx react
-import { SlAnimatedImage } from '@shoelace-style/shoelace/dist/react';
+import { SlAnimatedImage } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlAnimatedImage
@@ -97,7 +97,7 @@ You can change the appearance and location of the control box by targeting the `
 ```
 
 ```jsx react
-import { SlAnimatedImage } from '@shoelace-style/shoelace/dist/react';
+import { SlAnimatedImage } from '@lego/klik/dist/react';
 
 const css = `
   .animated-image-custom-control-box::part(control-box) {

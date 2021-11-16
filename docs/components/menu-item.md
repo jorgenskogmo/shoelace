@@ -30,7 +30,7 @@ import {
   SlIcon,
   SlMenu,
   SlMenuItem
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => (
   <SlMenu 
@@ -77,7 +77,7 @@ Use the `checked` attribute to draw menu items in a checked state.
 import { 
   SlMenu,
   SlMenuItem
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => (
   <SlMenu 
@@ -110,7 +110,7 @@ Add the `disabled` attribute to disable the menu item so it cannot be selected.
 import { 
   SlMenu,
   SlMenuItem
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => (
   <SlMenu 
@@ -160,7 +160,7 @@ import {
   SlIcon,
   SlMenu,
   SlMenuItem
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => (
   <SlMenu 
@@ -221,7 +221,7 @@ The `value` attribute can be used to assign a hidden value, such as a unique ide
 import { 
   SlMenu,
   SlMenuItem
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => {
 

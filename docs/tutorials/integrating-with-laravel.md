@@ -26,7 +26,7 @@ npm install @shoelace-style/shoelace
 Import Shoelace's default theme (stylesheet) in `/resources/css/app.css`:
 
 ```css
-@import "/node_modules/@shoelace-style/shoelace/dist/themes/light.css";
+@import "/node_modules/@lego/klik/dist/themes/light.css";
 ```
 
 ### Import Your Shoelace Components
@@ -34,11 +34,11 @@ Import Shoelace's default theme (stylesheet) in `/resources/css/app.css`:
 Import each Shoelace component you plan to use in `/resources/js/boostrap.js`. Since [Laravel Mix](https://laravel.com/docs/8.x/mix) uses Webpack, use the full path to each component -- as outlined in the [Cherry Picking instructions](https://shoelace.style/getting-started/installation?id=cherry-picking). You can find the full import statement for a component in the *Importing* section of the component's documentation (use the *Bundler* import). Your imports should look similar to:
 
 ```js
-import "@shoelace-style/shoelace/dist/components/button/button.js";
-import "@shoelace-style/shoelace/dist/components/dialog/dialog.js";
-import "@shoelace-style/shoelace/dist/components/drawer/drawer.js";
-import "@shoelace-style/shoelace/dist/components/menu/menu.js";
-import "@shoelace-style/shoelace/dist/components/menu-item/menu-item.js";
+import "@lego/klik/dist/components/button/button.js";
+import "@lego/klik/dist/components/dialog/dialog.js";
+import "@lego/klik/dist/components/drawer/drawer.js";
+import "@lego/klik/dist/components/menu/menu.js";
+import "@lego/klik/dist/components/menu-item/menu-item.js";
 ```
 
 ### Set the Base Path
@@ -46,21 +46,21 @@ import "@shoelace-style/shoelace/dist/components/menu-item/menu-item.js";
 Add the base path to your Shoelace assets (icons, images, etc.) in `/resources/js/boostrap.js`. The path must point to the same folder where you copy assets to in the next step.
 
 ```js
-import { setBasePath } from "@shoelace-style/shoelace/dist/utilities/base-path.js";
+import { setBasePath } from "@lego/klik/dist/utilities/base-path.js";
 setBasePath("/");
 ```
 
 Here's an example `/resources/js/boostrap.js` file, after importing and setting the base path and components.
 
 ```js
-import { setBasePath } from "@shoelace-style/shoelace/dist/utilities/base-path.js";
+import { setBasePath } from "@lego/klik/dist/utilities/base-path.js";
 setBasePath("/assets");
 
-import "@shoelace-style/shoelace/dist/components/button/button.js";
-import "@shoelace-style/shoelace/dist/components/dialog/dialog.js";
-import "@shoelace-style/shoelace/dist/components/drawer/drawer.js";
-import "@shoelace-style/shoelace/dist/components/menu/menu.js";
-import "@shoelace-style/shoelace/dist/components/menu-item/menu-item.js";
+import "@lego/klik/dist/components/button/button.js";
+import "@lego/klik/dist/components/dialog/dialog.js";
+import "@lego/klik/dist/components/drawer/drawer.js";
+import "@lego/klik/dist/components/menu/menu.js";
+import "@lego/klik/dist/components/menu-item/menu-item.js";
 ```
 
 
@@ -72,7 +72,7 @@ Modify `webpack.mix.js` to add Shoelace's assets to Webpack's build process:
 ```js
 mix.js("resources/js/app.js", "public/js")
     .postCss("resources/css/app.css", "public/css", [])
-    .copy("node_modules/@shoelace-style/shoelace/dist/assets", "public/assets")
+    .copy("node_modules/@lego/klik/dist/assets", "public/assets")
 ```
 
 Consider [extracting vendor libraries](https://laravel.com/docs/8.x/mix#vendor-extraction) to a separate file. This splits frequently updated vendor libraries (like Shoelace) from your front-end application code -- for better long-term caching.
@@ -81,7 +81,7 @@ Here's an example `webpack.mix.js` file that compiles and splits your JS into `a
 ```js
 mix.js("resources/js/app.js", "public/js")
     .postCss("resources/css/app.css", "public/css", [])
-    .copy("node_modules/@shoelace-style/shoelace/dist/assets", "public/assets")
+    .copy("node_modules/@lego/klik/dist/assets", "public/assets")
     .extract(); // extracts libraries in node_modules to vendor.js
 ```
 

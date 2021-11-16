@@ -9,7 +9,7 @@ Color pickers allow the user to select a color.
 ```
 
 ```jsx react
-import { SlColorPicker } from '@shoelace-style/shoelace/dist/react';
+import { SlColorPicker } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlColorPicker />
@@ -27,7 +27,7 @@ Use the `opacity` attribute to enable the opacity slider. When this is enabled, 
 ```
 
 ```jsx react
-import { SlColorPicker } from '@shoelace-style/shoelace/dist/react';
+import { SlColorPicker } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlColorPicker opacity />
@@ -47,7 +47,7 @@ To prevent users from toggling the format themselves, add the `no-format-toggle`
 ```
 
 ```jsx react
-import { SlColorPicker } from '@shoelace-style/shoelace/dist/react';
+import { SlColorPicker } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -69,7 +69,7 @@ Use the `size` attribute to change the color picker's trigger size.
 ```
 
 ```jsx react
-import { SlColorPicker } from '@shoelace-style/shoelace/dist/react';
+import { SlColorPicker } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -89,7 +89,7 @@ The color picker can be rendered inline instead of in a dropdown using the `inli
 ```
 
 ```jsx react
-import { SlColorPicker } from '@shoelace-style/shoelace/dist/react';
+import { SlColorPicker } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlColorPicker inline />

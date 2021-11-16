@@ -39,7 +39,7 @@ import {
   SlIcon,
   SlMenu,
   SlMenuItem
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => (
   <SlDropdown>
@@ -100,7 +100,7 @@ import {
   SlDropdown,
   SlMenu,
   SlMenuItem
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => {
   function handleSelect(event) {
@@ -153,7 +153,7 @@ import {
   SlDropdown,
   SlMenu,
   SlMenuItem
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => {
   function handleCut() {
@@ -206,7 +206,7 @@ import {
   SlDropdown,
   SlMenu,
   SlMenuItem
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => (
   <SlDropdown placement="top-start">
@@ -248,7 +248,7 @@ import {
   SlDropdown,
   SlMenu,
   SlMenuItem
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => (
   <SlDropdown distance={30}>
@@ -290,7 +290,7 @@ import {
   SlDropdown,
   SlMenu,
   SlMenuItem
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => (
   <SlDropdown skidding={30}>
@@ -349,7 +349,7 @@ import {
   SlIcon,
   SlMenu,
   SlMenuItem
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const css = `
   .dropdown-hoist {

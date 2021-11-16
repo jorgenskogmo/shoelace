@@ -9,7 +9,7 @@ Switches allow the user to toggle an option on or off.
 ```
 
 ```jsx react
-import { SlSwitch } from '@shoelace-style/shoelace/dist/react';
+import { SlSwitch } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlSwitch>Switch</SlSwitch>
@@ -29,7 +29,7 @@ Use the `checked` attribute to activate the switch.
 ```
 
 ```jsx react
-import { SlSwitch } from '@shoelace-style/shoelace/dist/react';
+import { SlSwitch } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlSwitch checked>Checked</SlSwitch>
@@ -45,7 +45,7 @@ Use the `disabled` attribute to disable the switch.
 ```
 
 ```jsx react
-import { SlSwitch } from '@shoelace-style/shoelace/dist/react';
+import { SlSwitch } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlSwitch disabled>Disabled</SlSwitch>
@@ -61,7 +61,7 @@ Use the available custom properties to make the switch a different size.
 ```
 
 ```jsx react
-import { SlSwitch } from '@shoelace-style/shoelace/dist/react';
+import { SlSwitch } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlSwitch 

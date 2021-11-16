@@ -55,7 +55,7 @@ Icons are sized relative to the current font size. To change their size, set the
 ```
 
 ```jsx react
-import { SlIcon } from '@shoelace-style/shoelace/dist/react';
+import { SlIcon } from '@lego/klik/dist/react';
 
 const App = () => (
   <div style={{ fontSize: '32px' }}>
@@ -89,7 +89,7 @@ Custom icons can be loaded individually with the `src` attribute. Only SVGs on a
 
 
 ```jsx react
-import { SlIcon } from '@shoelace-style/shoelace/dist/react';
+import { SlIcon } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlIcon src="https://shoelace.style/assets/images/shoe.svg" style={{ fontSize: '8rem' }}></SlIcon>

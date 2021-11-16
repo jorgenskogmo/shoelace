@@ -12,7 +12,7 @@ Alerts are used to display important messages either inline or as toast notifica
 ```
 
 ```jsx react
-import { SlAlert, SlIcon } from '@shoelace-style/shoelace/dist/react';
+import { SlAlert, SlIcon } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlAlert open>
@@ -71,7 +71,7 @@ Set the `type` attribute to change the alert's type.
 ```
 
 ```jsx react
-import { SlAlert, SlIcon } from '@shoelace-style/shoelace/dist/react';
+import { SlAlert, SlIcon } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -136,7 +136,7 @@ Add the `closable` attribute to show a close button that will hide the alert.
 
 ```jsx react
 import { useState } from 'react';
-import { SlAlert, SlIcon } from '@shoelace-style/shoelace/dist/react';
+import { SlAlert, SlIcon } from '@lego/klik/dist/react';
 
 const App = () => {
   const [open, setOpen] = useState(true);
@@ -170,7 +170,7 @@ Icons are optional. Simply omit the `icon` slot if you don't want them.
 ```
 
 ```jsx react
-import { SlAlert } from '@shoelace-style/shoelace/dist/react';
+import { SlAlert } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlAlert type="primary" open>
@@ -214,7 +214,7 @@ import {
   SlAlert,
   SlButton,
   SlIcon
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const css = `
   .alert-duration klik-alert {
@@ -311,7 +311,7 @@ import {
   SlAlert,
   SlButton,
   SlIcon
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 function showToast(alert) {
   alert.toast();

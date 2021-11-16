@@ -26,7 +26,7 @@ import {
   SlMenu,
   SlMenuLabel,
   SlMenuItem
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => (
   <SlMenu 

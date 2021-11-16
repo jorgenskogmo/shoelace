@@ -27,7 +27,7 @@ import {
   SlButton, 
   SlFormatBytes, 
   SlInput 
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => {
   const [value, setValue] = useState(1000);
@@ -63,7 +63,7 @@ Set the `value` attribute to a number to get the value in bytes.
 
 
 ```jsx react
-import { SlFormatBytes } from '@shoelace-style/shoelace/dist/react';
+import { SlFormatBytes } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -87,7 +87,7 @@ To get the value in bits, set the `unit` attribute to `bits`.
 ```
 
 ```jsx react
-import { SlFormatBytes } from '@shoelace-style/shoelace/dist/react';
+import { SlFormatBytes } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -111,7 +111,7 @@ Use the `locale` attribute to set the number formatting locale.
 ```
 
 ```jsx react
-import { SlFormatBytes } from '@shoelace-style/shoelace/dist/react';
+import { SlFormatBytes } from '@lego/klik/dist/react';
 
 const App = () => (
   <>

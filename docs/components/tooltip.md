@@ -15,7 +15,7 @@ Tooltips use `display: contents` so they won't interfere with how elements are p
 ```
 
 ```jsx react
-import { SlButton, SlTooltip } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlTooltip } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlTooltip content="This is a tooltip">
@@ -123,7 +123,7 @@ Use the `placement` attribute to set the preferred placement of the tooltip.
 ```
 
 ```jsx react
-import { SlButton, SlTooltip } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlTooltip } from '@lego/klik/dist/react';
 
 const css = `
   .tooltip-placement-example {
@@ -233,7 +233,7 @@ Set the `trigger` attribute to `click` to toggle the tooltip on click instead of
 ```
 
 ```jsx react
-import { SlButton, SlTooltip } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlTooltip } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlTooltip content="Click again to dismiss" trigger="click">
@@ -263,7 +263,7 @@ Tooltips can be controller programmatically by setting the `trigger` attribute t
 
 ```jsx react
 import { useState } from 'react';
-import { SlAvatar, SlButton, SlTooltip } from '@shoelace-style/shoelace/dist/react';
+import { SlAvatar, SlButton, SlTooltip } from '@lego/klik/dist/react';
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -302,7 +302,7 @@ You can control the size of tooltip arrows by overriding the `--klik-tooltip-arr
 ```
 
 ```jsx react
-import { SlButton, SlTooltip } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlTooltip } from '@lego/klik/dist/react';
 
 const App = () => (
   <div style={{ '--klik-tooltip-arrow-size': '0' }}>
@@ -340,7 +340,7 @@ Use the `content` slot to create tooltips with HTML content. Tooltips are design
 ```
 
 ```jsx react
-import { SlButton, SlTooltip } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlTooltip } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlTooltip content="This is a tooltip">
@@ -379,7 +379,7 @@ Tooltips will be clipped if they're inside a container that has `overflow: auto|
 ```
 
 ```jsx react
-import { SlButton, SlTooltip } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlTooltip } from '@lego/klik/dist/react';
 
 const css = `
   .tooltip-hoist {

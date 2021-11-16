@@ -9,7 +9,7 @@ Progress bars are used to show the status of an ongoing operation.
 ```
 
 ```jsx react
-import { SlProgressBar } from '@shoelace-style/shoelace/dist/react';
+import { SlProgressBar } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlProgressBar value={50} />
@@ -27,7 +27,7 @@ Use the `--height` custom property to set the progress bar's height.
 ```
 
 ```jsx react
-import { SlProgressBar } from '@shoelace-style/shoelace/dist/react';
+import { SlProgressBar } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlProgressBar 
@@ -46,7 +46,7 @@ Use the `label` attribute to label the progress bar and tell assistive devices h
 ```
 
 ```jsx react
-import { SlProgressBar } from '@shoelace-style/shoelace/dist/react';
+import { SlProgressBar } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlProgressBar
@@ -93,7 +93,7 @@ import {
   SlButton,
   SlIcon,
   SlProgressBar
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => {
   const [value, setValue] = useState(50);
@@ -134,7 +134,7 @@ The `indeterminate` attribute can be used to inform the user that the operation 
 ```
 
 ```jsx react
-import { SlProgressBar } from '@shoelace-style/shoelace/dist/react';
+import { SlProgressBar } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlProgressBar indeterminate />

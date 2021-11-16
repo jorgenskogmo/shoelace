@@ -22,7 +22,7 @@ yarn add @shoelace-style/shoelace @shoelace-style/shoelace copy-webpack-plugin n
 The next step is to import Shoelace's default theme (stylesheet) in your `_app.js` file:
 
 ```css
-import '@shoelace-style/shoelace/dist/themes/light.css';
+import '@lego/klik/dist/themes/light.css';
 ```
 
 ### Defining Custom Elements
@@ -41,15 +41,15 @@ function CustomEls({ URL }) {
       return;
     }
     
-    const { setBasePath } = require("@shoelace-style/shoelace/dist/utilities/base-path");
+    const { setBasePath } = require("@lego/klik/dist/utilities/base-path");
 
     setBasePath(`${URL}/static/static`);
     
     // This imports all components
-    require("@shoelace-style/shoelace/dist/shoelace");
+    require("@lego/klik/dist/shoelace");
 
     // If you want to selectively import components, replace this line with your own definitions
-    // require("@shoelace-style/shoelace/dist/components/button/button");
+    // require("@lego/klik/dist/components/button/button");
 
     customEls.current = true;
   }, [URL, customEls]);
@@ -117,7 +117,7 @@ module.exports = withPlugins([withTM], {
       new CopyPlugin({
         patterns: [
           {
-            from: path.resolve(__dirname, 'node_modules/@shoelace-style/shoelace/dist/assets/icons'),
+            from: path.resolve(__dirname, 'node_modules/@lego/klik/dist/assets/icons'),
             to: path.resolve(__dirname, 'static/icons')
           }
         ]

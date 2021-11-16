@@ -9,7 +9,7 @@ Progress rings are used to show the progress of a determinate operation in a cir
 ```
 
 ```jsx react
-import { SlProgressRing } from '@shoelace-style/shoelace/dist/react';
+import { SlProgressRing } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlProgressRing value="25" />
@@ -27,7 +27,7 @@ Use the `--size` custom property to set the diameter of the progress ring.
 ```
 
 ```jsx react
-import { SlProgressRing } from '@shoelace-style/shoelace/dist/react';
+import { SlProgressRing } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlProgressRing 
@@ -46,7 +46,7 @@ Use the `--track-width` custom property to set the width of the progress ring's 
 ```
 
 ```jsx react
-import { SlProgressRing } from '@shoelace-style/shoelace/dist/react';
+import { SlProgressRing } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlProgressRing 
@@ -71,7 +71,7 @@ To change the color, use the `--track-color` and `--indicator-color` custom prop
 ```
 
 ```jsx react
-import { SlProgressRing } from '@shoelace-style/shoelace/dist/react';
+import { SlProgressRing } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlProgressRing 
@@ -93,7 +93,7 @@ Use the `label` attribute to label the progress ring and tell assistive devices 
 ```
 
 ```jsx react
-import { SlProgressRing } from '@shoelace-style/shoelace/dist/react';
+import { SlProgressRing } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlProgressRing 
@@ -140,7 +140,7 @@ import {
   SlButton,
   SlIcon,
   SlProgressRing
-} from '@shoelace-style/shoelace/dist/react';
+} from '@lego/klik/dist/react';
 
 const App = () => {
   const [value, setValue] = useState(50);

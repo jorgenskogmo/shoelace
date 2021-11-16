@@ -9,7 +9,7 @@ Checkboxes allow the user to toggle an option on or off.
 ```
 
 ```jsx react
-import { SlCheckbox } from '@shoelace-style/shoelace/dist/react';
+import { SlCheckbox } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlCheckbox>Checkbox</SlCheckbox>
@@ -29,7 +29,7 @@ Use the `checked` attribute to activate the checkbox.
 ```
 
 ```jsx react
-import { SlCheckbox } from '@shoelace-style/shoelace/dist/react';
+import { SlCheckbox } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlCheckbox checked>Checked</SlCheckbox>
@@ -45,7 +45,7 @@ Use the `indeterminate` attribute to make the checkbox indeterminate.
 ```
 
 ```jsx react
-import { SlCheckbox } from '@shoelace-style/shoelace/dist/react';
+import { SlCheckbox } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlCheckbox indeterminate>Indeterminate</SlCheckbox>
@@ -61,7 +61,7 @@ Use the `disabled` attribute to disable the checkbox.
 ```
 
 ```jsx react
-import { SlCheckbox } from '@shoelace-style/shoelace/dist/react';
+import { SlCheckbox } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlCheckbox disabled>Disabled</SlCheckbox>

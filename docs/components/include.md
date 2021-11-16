@@ -13,7 +13,7 @@ The included content will be inserted into the `<klik-include>` element's defaul
 ```
 
 ```jsx react
-import { SlInclude } from '@shoelace-style/shoelace/dist/react';
+import { SlInclude } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlInclude src="https://shoelace.style/assets/examples/include.html" />

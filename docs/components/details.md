@@ -12,7 +12,7 @@ Details show a brief summary and expand to show additional content.
 ```
 
 ```jsx react
-import { SlDetails } from '@shoelace-style/shoelace/dist/react';
+import { SlDetails } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlDetails summary="Toggle Me">
@@ -36,7 +36,7 @@ Use the `disable` attribute to prevent the details from expanding.
 ```
 
 ```jsx react
-import { SlDetails } from '@shoelace-style/shoelace/dist/react';
+import { SlDetails } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlDetails summary="Disabled" disabled>

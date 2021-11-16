@@ -17,7 +17,7 @@ Selects allow you to choose one or more items from a dropdown menu.
 ```
 
 ```jsx react
-import { SlDivider, SlMenuItem, SlSelect } from '@shoelace-style/shoelace/dist/react';
+import { SlDivider, SlMenuItem, SlSelect } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlSelect>
@@ -49,7 +49,7 @@ Use the `placeholder` attribute to add a placeholder.
 ```
 
 ```jsx react
-import { SlMenuItem, SlSelect } from '@shoelace-style/shoelace/dist/react';
+import { SlMenuItem, SlSelect } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlSelect placeholder="Select one">
@@ -73,7 +73,7 @@ Use the `clearable` attribute to make the control clearable.
 ```
 
 ```jsx react
-import { SlMenuItem, SlSelect } from '@shoelace-style/shoelace/dist/react';
+import { SlMenuItem, SlSelect } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlSelect placeholder="Clearable" clearable>
@@ -97,7 +97,7 @@ Add the `filled` attribute to draw a filled select.
 ```
 
 ```jsx react
-import { SlMenuItem, SlSelect } from '@shoelace-style/shoelace/dist/react';
+import { SlMenuItem, SlSelect } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlSelect filled>
@@ -121,7 +121,7 @@ Use the `pill` attribute to give selects rounded edges.
 ```
 
 ```jsx react
-import { SlMenuItem, SlSelect } from '@shoelace-style/shoelace/dist/react';
+import { SlMenuItem, SlSelect } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlSelect pill>
@@ -145,7 +145,7 @@ Use the `disabled` attribute to disable a select.
 ```
 
 ```jsx react
-import { SlMenuItem, SlSelect } from '@shoelace-style/shoelace/dist/react';
+import { SlMenuItem, SlSelect } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlSelect placeholder="Disabled" disabled>
@@ -173,7 +173,7 @@ To allow multiple options to be selected, use the `multiple` attribute. It's a g
 ```
 
 ```jsx react
-import { SlDivider, SlMenuItem, SlSelect } from '@shoelace-style/shoelace/dist/react';
+import { SlDivider, SlMenuItem, SlSelect } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlSelect placeholder="Select a few" multiple clearable>
@@ -207,7 +207,7 @@ Options can be grouped visually using menu labels and dividers.
 ```
 
 ```jsx react
-import { SlDivider, SlMenuItem, SlMenuLabel, SlSelect } from '@shoelace-style/shoelace/dist/react';
+import { SlDivider, SlMenuItem, SlMenuLabel, SlSelect } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlSelect placeholder="Select one">
@@ -253,7 +253,7 @@ Use the `size` attribute to change a select's size.
 ```
 
 ```jsx react
-import { SlMenuItem, SlSelect } from '@shoelace-style/shoelace/dist/react';
+import { SlMenuItem, SlSelect } from '@lego/klik/dist/react';
 
 const App = () => (
   <>
@@ -315,7 +315,7 @@ The `value` property is bound to the current selection. As the selection changes
 
 ```jsx react
 import { useState } from 'react';
-import { SlButton, SlMenuItem, SlSelect } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlMenuItem, SlSelect } from '@lego/klik/dist/react';
 
 const App = () => {
   const [value, setValue] = useState('option-1');
@@ -351,7 +351,7 @@ Use the `label` attribute to give the select an accessible label. For labels tha
 ```
 
 ```jsx react
-import { SlMenuItem, SlSelect } from '@shoelace-style/shoelace/dist/react';
+import { SlMenuItem, SlSelect } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlSelect label="Select one">
@@ -378,7 +378,7 @@ Add descriptive help text to a select with the `help-text` attribute. For help t
 ```
 
 ```jsx react
-import { SlMenuItem, SlSelect } from '@shoelace-style/shoelace/dist/react';
+import { SlMenuItem, SlSelect } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlSelect 
@@ -423,7 +423,7 @@ Use the `prefix` and `suffix` slots to add icons.
 ```
 
 ```jsx react
-import { SlIcon, SlMenuItem, SlSelect } from '@shoelace-style/shoelace/dist/react';
+import { SlIcon, SlMenuItem, SlSelect } from '@lego/klik/dist/react';
 
 const App = () => (
   <>

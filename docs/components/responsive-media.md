@@ -13,7 +13,7 @@ You can slot in any [replaced element](https://developer.mozilla.org/en-US/docs/
 ```
 
 ```jsx react
-import { SlResponsiveMedia } from '@shoelace-style/shoelace/dist/react';
+import { SlResponsiveMedia } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlResponsiveMedia>
@@ -38,7 +38,7 @@ The following image maintains a `4:3` aspect ratio as its container is resized.
 ```
 
 ```jsx react
-import { SlResponsiveMedia } from '@shoelace-style/shoelace/dist/react';
+import { SlResponsiveMedia } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlResponsiveMedia aspect-ratio="4:3">
@@ -61,7 +61,7 @@ The following video is embedded using an `iframe` and maintains a `16:9` aspect 
 ```
 
 ```jsx react
-import { SlResponsiveMedia } from '@shoelace-style/shoelace/dist/react';
+import { SlResponsiveMedia } from '@lego/klik/dist/react';
 
 const App = () => (
   <SlResponsiveMedia aspect-ratio="16:9">
