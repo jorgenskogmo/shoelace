@@ -1,14 +1,14 @@
 import { expect, fixture, html } from '@open-wc/testing';
 
 import '../../../dist/klik.js';
-import type SlCard from './card';
+import type KlikCard from './card';
 
 describe('<klik-card>', () => {
   let el: SlCard;
 
   describe('when provided no parameters', async () => {
     before(async () => {
-      el = await fixture<SlCard>(
+      el = await fixture<KlikCard>(
         html` <klik-card>This is just a basic card. No image, no header, and no footer. Just your content.</klik-card> `
       );
     });
@@ -29,7 +29,7 @@ describe('<klik-card>', () => {
 
   describe('when provided an element in the slot "header" to render a header', async () => {
     before(async () => {
-      el = await fixture<SlCard>(
+      el = await fixture<KlikCard>(
         html`<klik-card>
           <div slot="header">Header Title</div>
           This card has a header. You can put all sorts of things in it!
@@ -65,7 +65,7 @@ describe('<klik-card>', () => {
 
   describe('when provided an element in the slot "footer" to render a footer', async () => {
     before(async () => {
-      el = await fixture<SlCard>(
+      el = await fixture<KlikCard>(
         html`<klik-card>
           This card has a footer. You can put all sorts of things in it!
 
@@ -102,7 +102,7 @@ describe('<klik-card>', () => {
 
   describe('when provided an element in the slot "image" to render a image', async () => {
     before(async () => {
-      el = await fixture<SlCard>(
+      el = await fixture<KlikCard>(
         html`<klik-card>
           <img
             slot="image"

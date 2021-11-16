@@ -2,11 +2,11 @@ import { expect, fixture, html, waitUntil } from '@open-wc/testing';
 import sinon from 'sinon';
 
 import '../../../dist/klik.js';
-import type SlDropdown from './dropdown';
+import type KlikDropdown from './dropdown';
 
 describe('<klik-dropdown>', () => {
   it('should be visible with the open attribute', async () => {
-    const el = await fixture<SlDropdown>(html`
+    const el = await fixture<KlikDropdown>(html`
       <klik-dropdown open>
         <klik-button slot="trigger" caret>Toggle</klik-button>
         <klik-menu>
@@ -22,7 +22,7 @@ describe('<klik-dropdown>', () => {
   });
 
   it('should not be visible without the open attribute', async () => {
-    const el = await fixture<SlDropdown>(html`
+    const el = await fixture<KlikDropdown>(html`
       <klik-dropdown>
         <klik-button slot="trigger" caret>Toggle</klik-button>
         <klik-menu>
@@ -38,7 +38,7 @@ describe('<klik-dropdown>', () => {
   });
 
   it('should emit klik-show and klik-after-show when calling show()', async () => {
-    const el = await fixture<SlDropdown>(html`
+    const el = await fixture<KlikDropdown>(html`
       <klik-dropdown>
         <klik-button slot="trigger" caret>Toggle</klik-button>
         <klik-menu>
@@ -65,7 +65,7 @@ describe('<klik-dropdown>', () => {
   });
 
   it('should emit klik-hide and klik-after-hide when calling hide()', async () => {
-    const el = await fixture<SlDropdown>(html`
+    const el = await fixture<KlikDropdown>(html`
       <klik-dropdown open>
         <klik-button slot="trigger" caret>Toggle</klik-button>
         <klik-menu>
@@ -92,7 +92,7 @@ describe('<klik-dropdown>', () => {
   });
 
   it('should emit klik-show and klik-after-show when setting open = true', async () => {
-    const el = await fixture<SlDropdown>(html`
+    const el = await fixture<KlikDropdown>(html`
       <klik-dropdown>
         <klik-button slot="trigger" caret>Toggle</klik-button>
         <klik-menu>
@@ -119,7 +119,7 @@ describe('<klik-dropdown>', () => {
   });
 
   it('should emit klik-hide and klik-after-hide when setting open = false', async () => {
-    const el = await fixture<SlDropdown>(html`
+    const el = await fixture<KlikDropdown>(html`
       <klik-dropdown open>
         <klik-button slot="trigger" caret>Toggle</klik-button>
         <klik-menu>

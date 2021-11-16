@@ -22,7 +22,7 @@ let id = 0;
  * @csspart close-button - The close button, which is the icon button's base wrapper.
  */
 @customElement('klik-tab')
-export default class SlTab extends LitElement {
+export default class KlikTab extends LitElement {
   static styles = styles;
 
   @query('.tab') tab: HTMLElement;
@@ -94,6 +94,6 @@ export default class SlTab extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-tab': SlTab;
+    'klik-tab': KlikTab;
   }
 }

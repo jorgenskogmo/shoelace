@@ -21,7 +21,7 @@ import '../icon-button/icon-button';
  * @csspart remove-button - The remove button.
  */
 @customElement('klik-tag')
-export default class SlTag extends LitElement {
+export default class KlikTag extends LitElement {
   static styles = styles;
 
   /** The tag's type. */
@@ -87,6 +87,6 @@ export default class SlTag extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-tag': SlTag;
+    'klik-tag': KlikTag;
   }
 }

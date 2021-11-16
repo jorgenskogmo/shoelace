@@ -17,7 +17,7 @@ import '../icon/icon';
  * @csspart base - The component's base wrapper.
  */
 @customElement('klik-breadcrumb')
-export default class SlBreadcrumb extends LitElement {
+export default class KlikBreadcrumb extends LitElement {
   static styles = styles;
 
   @query('slot') defaultSlot: HTMLSlotElement;
@@ -77,6 +77,6 @@ export default class SlBreadcrumb extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-breadcrumb': SlBreadcrumb;
+    'klik-breadcrumb': KlikBreadcrumb;
   }
 }

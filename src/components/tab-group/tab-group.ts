@@ -34,7 +34,7 @@ import '../icon-button/icon-button';
  * @cssproperty --track-color - The color of the indicator's track (i.e. the line that separates tabs from panels).
  */
 @customElement('klik-tab-group')
-export default class SlTabGroup extends LitElement {
+export default class KlikTabGroup extends LitElement {
   static styles = styles;
 
   @query('.tab-group') tabGroup: HTMLElement;
@@ -397,6 +397,6 @@ export default class SlTabGroup extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-tab-group': SlTabGroup;
+    'klik-tab-group': KlikTabGroup;
   }
 }

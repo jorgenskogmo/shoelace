@@ -11,7 +11,7 @@ import styles from './menu-label.styles';
  * @csspart base - The component's base wrapper.
  */
 @customElement('klik-menu-label')
-export default class SlMenuLabel extends LitElement {
+export default class KlikMenuLabel extends LitElement {
   static styles = styles;
 
   render() {
@@ -25,6 +25,6 @@ export default class SlMenuLabel extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-menu-label': SlMenuLabel;
+    'klik-menu-label': KlikMenuLabel;
   }
 }

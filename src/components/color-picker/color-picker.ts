@@ -54,7 +54,7 @@ const hasEyeDropper = 'EyeDropper' in window;
  * @cssproperty --swatch-size - The size of each predefined color swatch.
  */
 @customElement('klik-color-picker')
-export default class SlColorPicker extends LitElement {
+export default class KlikColorPicker extends LitElement {
   static styles = styles;
 
   @query('[part="input"]') input: SlInput;
@@ -839,6 +839,6 @@ export default class SlColorPicker extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-color-picker': SlColorPicker;
+    'klik-color-picker': KlikColorPicker;
   }
 }

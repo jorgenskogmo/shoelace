@@ -2,11 +2,11 @@ import { expect, fixture, html, waitUntil } from '@open-wc/testing';
 import sinon from 'sinon';
 
 import '../../../dist/klik.js';
-import type SlDialog from './dialog';
+import type KlikDialog from './dialog';
 
 describe('<klik-dialog>', () => {
   it('should be visible with the open attribute', async () => {
-    const el = await fixture<SlDialog>(html`
+    const el = await fixture<KlikDialog>(html`
       <klik-dialog open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</klik-dialog>
     `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
@@ -15,7 +15,7 @@ describe('<klik-dialog>', () => {
   });
 
   it('should not be visible without the open attribute', async () => {
-    const el = await fixture<SlDialog>(
+    const el = await fixture<KlikDialog>(
       html` <klik-dialog>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</klik-dialog> `
     );
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
@@ -24,7 +24,7 @@ describe('<klik-dialog>', () => {
   });
 
   it('should emit klik-show and klik-after-show when calling show()', async () => {
-    const el = await fixture<SlDialog>(html`
+    const el = await fixture<KlikDialog>(html`
       <klik-dialog>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</klik-dialog>
     `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
@@ -44,7 +44,7 @@ describe('<klik-dialog>', () => {
   });
 
   it('should emit klik-hide and klik-after-hide when calling hide()', async () => {
-    const el = await fixture<SlDialog>(html`
+    const el = await fixture<KlikDialog>(html`
       <klik-dialog open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</klik-dialog>
     `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
@@ -64,7 +64,7 @@ describe('<klik-dialog>', () => {
   });
 
   it('should emit klik-show and klik-after-show when setting open = true', async () => {
-    const el = await fixture<SlDialog>(html`
+    const el = await fixture<KlikDialog>(html`
       <klik-dialog>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</klik-dialog>
     `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
@@ -84,7 +84,7 @@ describe('<klik-dialog>', () => {
   });
 
   it('should emit klik-hide and klik-after-hide when setting open = false', async () => {
-    const el = await fixture<SlDialog>(html`
+    const el = await fixture<KlikDialog>(html`
       <klik-dialog open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</klik-dialog>
     `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
@@ -104,7 +104,7 @@ describe('<klik-dialog>', () => {
   });
 
   it('should not close when klik-request-close is prevented', async () => {
-    const el = await fixture<SlDialog>(html`
+    const el = await fixture<KlikDialog>(html`
       <klik-dialog open>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</klik-dialog>
     `);
     const overlay = el.shadowRoot?.querySelector('[part="overlay"]') as HTMLElement;
@@ -116,7 +116,7 @@ describe('<klik-dialog>', () => {
   });
 
   it('should allow initial focus to be set', async () => {
-    const el = await fixture<SlDialog>(html` <klik-dialog><input /></klik-dialog> `);
+    const el = await fixture<KlikDialog>(html` <klik-dialog><input /></klik-dialog> `);
     const input = el.querySelector('input');
     const initialFocusHandler = sinon.spy(event => {
       event.preventDefault();

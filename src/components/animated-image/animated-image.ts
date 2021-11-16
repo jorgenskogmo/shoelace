@@ -23,7 +23,7 @@ import '../icon/icon';
  * @cssproperty --icon-size - The size of the play/pause icons.
  */
 @customElement('klik-animated-image')
-export default class SlAnimatedImage extends LitElement {
+export default class KlikAnimatedImage extends LitElement {
   static styles = styles;
 
   @state() frozenFrame: string;
@@ -115,6 +115,6 @@ export default class SlAnimatedImage extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-animated-image': SlAnimatedImage;
+    'klik-animated-image': KlikAnimatedImage;
   }
 }

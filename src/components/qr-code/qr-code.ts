@@ -12,7 +12,7 @@ import styles from './qr-code.styles';
  * @csspart base - The component's base wrapper.
  */
 @customElement('klik-qr-code')
-export default class SlQrCode extends LitElement {
+export default class KlikQrCode extends LitElement {
   static styles = styles;
 
   @query('canvas') canvas: HTMLElement;
@@ -85,6 +85,6 @@ export default class SlQrCode extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-qr-code': SlQrCode;
+    'klik-qr-code': KlikQrCode;
   }
 }

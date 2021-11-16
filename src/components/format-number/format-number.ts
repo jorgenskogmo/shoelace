@@ -6,7 +6,7 @@ import { customElement, property } from 'lit/decorators.js';
  * @status stable
  */
 @customElement('klik-format-number')
-export default class SlFormatNumber extends LitElement {
+export default class KlikFormatNumber extends LitElement {
   /** The number to format. */
   @property({ type: Number }) value = 0;
 
@@ -61,6 +61,6 @@ export default class SlFormatNumber extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-format-number': SlFormatNumber;
+    'klik-format-number': KlikFormatNumber;
   }
 }

@@ -2,11 +2,11 @@ import { expect, fixture, html, waitUntil, aTimeout } from '@open-wc/testing';
 import sinon from 'sinon';
 
 import '../../../dist/klik.js';
-import type SlSelect from './select';
+import type KlikSelect from './select';
 
 describe('<klik-select>', () => {
   it('should emit klik-change when the value changes', async () => {
-    const el = await fixture<SlSelect>(html`
+    const el = await fixture<KlikSelect>(html`
       <klik-select>
         <klik-menu-item value="option-1">Option 1</klik-menu-item>
         <klik-menu-item value="option-2">Option 2</klik-menu-item>

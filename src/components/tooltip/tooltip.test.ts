@@ -2,11 +2,11 @@ import { expect, fixture, html, waitUntil } from '@open-wc/testing';
 import sinon from 'sinon';
 
 import '../../../dist/klik.js';
-import type SlTooltip from './tooltip';
+import type KlikTooltip from './tooltip';
 
 describe('<klik-tooltip>', () => {
   it('should be visible with the open attribute', async () => {
-    const el = await fixture<SlTooltip>(html`
+    const el = await fixture<KlikTooltip>(html`
       <klik-tooltip content="This is a tooltip" open>
         <klik-button>Hover Me</klik-button>
       </klik-tooltip>
@@ -17,7 +17,7 @@ describe('<klik-tooltip>', () => {
   });
 
   it('should not be visible without the open attribute', async () => {
-    const el = await fixture<SlTooltip>(html`
+    const el = await fixture<KlikTooltip>(html`
       <klik-tooltip content="This is a tooltip">
         <klik-button>Hover Me</klik-button>
       </klik-tooltip>
@@ -28,7 +28,7 @@ describe('<klik-tooltip>', () => {
   });
 
   it('should emit klik-show and klik-after-show when calling show()', async () => {
-    const el = await fixture<SlTooltip>(html`
+    const el = await fixture<KlikTooltip>(html`
       <klik-tooltip content="This is a tooltip">
         <klik-button>Hover Me</klik-button>
       </klik-tooltip>
@@ -50,7 +50,7 @@ describe('<klik-tooltip>', () => {
   });
 
   it('should emit klik-hide and klik-after-hide when calling hide()', async () => {
-    const el = await fixture<SlTooltip>(html`
+    const el = await fixture<KlikTooltip>(html`
       <klik-tooltip content="This is a tooltip" open>
         <klik-button>Hover Me</klik-button>
       </klik-tooltip>
@@ -72,7 +72,7 @@ describe('<klik-tooltip>', () => {
   });
 
   it('should emit klik-show and klik-after-show when setting open = true', async () => {
-    const el = await fixture<SlTooltip>(html`
+    const el = await fixture<KlikTooltip>(html`
       <klik-tooltip content="This is a tooltip">
         <klik-button>Hover Me</klik-button>
       </klik-tooltip>
@@ -94,7 +94,7 @@ describe('<klik-tooltip>', () => {
   });
 
   it('should emit klik-hide and klik-after-hide when setting open = false', async () => {
-    const el = await fixture<SlTooltip>(html`
+    const el = await fixture<KlikTooltip>(html`
       <klik-tooltip content="This is a tooltip" open>
         <klik-button>Hover Me</klik-button>
       </klik-tooltip>

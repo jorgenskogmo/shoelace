@@ -30,7 +30,7 @@ import '../icon/icon';
  * @cssproperty --handle-size - The size of the compare handle.
  */
 @customElement('klik-image-comparer')
-export default class SlImageComparer extends LitElement {
+export default class KlikImageComparer extends LitElement {
   static styles = styles;
 
   @query('.image-comparer') base: HTMLElement;
@@ -144,6 +144,6 @@ export default class SlImageComparer extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-image-comparer': SlImageComparer;
+    'klik-image-comparer': KlikImageComparer;
   }
 }

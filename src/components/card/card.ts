@@ -25,7 +25,7 @@ import styles from './card.styles';
  * @cssproperty --padding - The padding to use for card sections.*
  */
 @customElement('klik-card')
-export default class SlCard extends LitElement {
+export default class KlikCard extends LitElement {
   static styles = styles;
 
   @state() private hasFooter = false;
@@ -71,6 +71,6 @@ export default class SlCard extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-card': SlCard;
+    'klik-card': KlikCard;
   }
 }

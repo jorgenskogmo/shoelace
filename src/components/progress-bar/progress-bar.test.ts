@@ -1,14 +1,14 @@
 import { expect, fixture, html } from '@open-wc/testing';
 
 import '../../../dist/klik.js';
-import type SlProgressBar from './progress-bar';
+import type KlikProgressBar from './progress-bar';
 
 describe('<klik-progress-bar>', () => {
   let el: SlProgressBar;
 
   describe('when provided just a value parameter', async () => {
     before(async () => {
-      el = await fixture<SlProgressBar>(html`<klik-progress-bar value="25"></klik-progress-bar>`);
+      el = await fixture<KlikProgressBar>(html`<klik-progress-bar value="25"></klik-progress-bar>`);
     });
 
     it('should render a component that passes accessibility test.', async () => {
@@ -21,7 +21,7 @@ describe('<klik-progress-bar>', () => {
     let indicator: HTMLDivElement;
 
     before(async () => {
-      el = await fixture<SlProgressBar>(
+      el = await fixture<KlikProgressBar>(
         html`<klik-progress-bar title="Titled Progress Ring" value="25"></klik-progress-bar>`
       );
       base = el.shadowRoot?.querySelector('[part="base"]') as HTMLDivElement;
@@ -45,7 +45,7 @@ describe('<klik-progress-bar>', () => {
     let base: HTMLDivElement;
 
     before(async () => {
-      el = await fixture<SlProgressBar>(
+      el = await fixture<KlikProgressBar>(
         html`<klik-progress-bar title="Titled Progress Ring" indeterminate></klik-progress-bar>`
       );
       base = el.shadowRoot?.querySelector('[part="base"]') as HTMLDivElement;
@@ -62,7 +62,7 @@ describe('<klik-progress-bar>', () => {
 
   describe('when provided a ariaLabel, and value parameter', async () => {
     before(async () => {
-      el = await fixture<SlProgressBar>(
+      el = await fixture<KlikProgressBar>(
         html`<klik-progress-bar ariaLabel="Labelled Progress Ring" value="25"></klik-progress-bar>`
       );
     });
@@ -74,7 +74,7 @@ describe('<klik-progress-bar>', () => {
 
   describe('when provided a ariaLabelledBy, and value parameter', async () => {
     before(async () => {
-      el = await fixture<SlProgressBar>(
+      el = await fixture<KlikProgressBar>(
         html`
           <label id="labelledby">Progress Ring Label</label>
           <klik-progress-bar ariaLabelledBy="labelledby" value="25"></klik-progress-bar>

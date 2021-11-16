@@ -13,7 +13,7 @@ import styles from './resize-observer.styles';
  * @event {{ entries: ResizeObserverEntry[] }} klik-resize - Emitted when the element is resized.
  */
 @customElement('klik-resize-observer')
-export default class SlResizeObserver extends LitElement {
+export default class KlikResizeObserver extends LitElement {
   static styles = styles;
 
   private resizeObserver: ResizeObserver;
@@ -82,6 +82,6 @@ export default class SlResizeObserver extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-resize-observer': SlResizeObserver;
+    'klik-resize-observer': KlikResizeObserver;
   }
 }

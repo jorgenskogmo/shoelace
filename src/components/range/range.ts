@@ -33,7 +33,7 @@ let id = 0;
  * @cssproperty --track-height - The height of the track.
  */
 @customElement('klik-range')
-export default class SlRange extends LitElement {
+export default class KlikRange extends LitElement {
   static styles = styles;
 
   @query('.range__control') input: HTMLInputElement;
@@ -271,6 +271,6 @@ export default class SlRange extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-range': SlRange;
+    'klik-range': KlikRange;
   }
 }

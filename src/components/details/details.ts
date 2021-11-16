@@ -36,7 +36,7 @@ let id = 0;
  * @animation details.hide - The animation to use when hiding details. You can use `height: auto` with this animation.
  */
 @customElement('klik-details')
-export default class SlDetails extends LitElement {
+export default class KlikDetails extends LitElement {
   static styles = styles;
 
   @query('.details') details: HTMLElement;
@@ -197,6 +197,6 @@ setDefaultAnimation('details.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-details': SlDetails;
+    'klik-details': KlikDetails;
   }
 }

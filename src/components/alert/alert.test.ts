@@ -2,25 +2,25 @@ import { expect, fixture, html, waitUntil } from '@open-wc/testing';
 import sinon from 'sinon';
 
 import '../../../dist/klik.js';
-import type SlAlert from './alert';
+import type KlikAlert from './alert';
 
 describe('<klik-alert>', () => {
   it('should be visible with the open attribute', async () => {
-    const el = await fixture<SlAlert>(html` <klik-alert open>I am an alert</klik-alert> `);
+    const el = await fixture<KlikAlert>(html` <klik-alert open>I am an alert</klik-alert> `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
 
     expect(base.hidden).to.be.false;
   });
 
   it('should not be visible without the open attribute', async () => {
-    const el = await fixture<SlAlert>(html` <klik-alert>I am an alert</klik-alert> `);
+    const el = await fixture<KlikAlert>(html` <klik-alert>I am an alert</klik-alert> `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
 
     expect(base.hidden).to.be.true;
   });
 
   it('should emit klik-show and klik-after-show when calling show()', async () => {
-    const el = await fixture<SlAlert>(html` <klik-alert>I am an alert</klik-alert> `);
+    const el = await fixture<KlikAlert>(html` <klik-alert>I am an alert</klik-alert> `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
@@ -38,7 +38,7 @@ describe('<klik-alert>', () => {
   });
 
   it('should emit klik-hide and klik-after-hide when calling hide()', async () => {
-    const el = await fixture<SlAlert>(html` <klik-alert open>I am an alert</klik-alert> `);
+    const el = await fixture<KlikAlert>(html` <klik-alert open>I am an alert</klik-alert> `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
@@ -56,7 +56,7 @@ describe('<klik-alert>', () => {
   });
 
   it('should emit klik-show and klik-after-show when setting open = true', async () => {
-    const el = await fixture<SlAlert>(html` <klik-alert>I am an alert</klik-alert> `);
+    const el = await fixture<KlikAlert>(html` <klik-alert>I am an alert</klik-alert> `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
@@ -74,7 +74,7 @@ describe('<klik-alert>', () => {
   });
 
   it('should emit klik-hide and klik-after-hide when setting open = false', async () => {
-    const el = await fixture<SlAlert>(html` <klik-alert open>I am an alert</klik-alert> `);
+    const el = await fixture<KlikAlert>(html` <klik-alert open>I am an alert</klik-alert> `);
     const base = el.shadowRoot?.querySelector('[part="base"]') as HTMLElement;
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();

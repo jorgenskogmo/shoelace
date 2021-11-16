@@ -38,7 +38,7 @@ const toastStack = Object.assign(document.createElement('div'), { className: 'kl
  */
 
 @customElement('klik-alert')
-export default class SlAlert extends LitElement {
+export default class KlikAlert extends LitElement {
   static styles = styles;
 
   private autoHideTimeout: any;
@@ -233,6 +233,6 @@ setDefaultAnimation('alert.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-alert': SlAlert;
+    'klik-alert': KlikAlert;
   }
 }

@@ -1,14 +1,14 @@
 import { expect, fixture, html } from '@open-wc/testing';
 
 import '../../../dist/klik.js';
-import type SlProgressRing from './progress-ring';
+import type KlikProgressRing from './progress-ring';
 
 describe('<klik-progress-ring>', () => {
   let el: SlProgressRing;
 
   describe('when provided just a value parameter', async () => {
     before(async () => {
-      el = await fixture<SlProgressRing>(html`<klik-progress-ring value="25"></klik-progress-ring>`);
+      el = await fixture<KlikProgressRing>(html`<klik-progress-ring value="25"></klik-progress-ring>`);
     });
 
     it('should render a component that passes accessibility test.', async () => {
@@ -20,7 +20,7 @@ describe('<klik-progress-ring>', () => {
     let base: HTMLDivElement;
 
     before(async () => {
-      el = await fixture<SlProgressRing>(
+      el = await fixture<KlikProgressRing>(
         html`<klik-progress-ring title="Titled Progress Ring" value="25"></klik-progress-ring>`
       );
       base = el.shadowRoot?.querySelector('[part="base"]') as HTMLDivElement;
@@ -41,7 +41,7 @@ describe('<klik-progress-ring>', () => {
 
   describe('when provided a ariaLabel, and value parameter', async () => {
     before(async () => {
-      el = await fixture<SlProgressRing>(
+      el = await fixture<KlikProgressRing>(
         html`<klik-progress-ring ariaLabel="Labelled Progress Ring" value="25"></klik-progress-ring>`
       );
     });
@@ -53,7 +53,7 @@ describe('<klik-progress-ring>', () => {
 
   describe('when provided a ariaLabelledBy, and value parameter', async () => {
     before(async () => {
-      el = await fixture<SlProgressRing>(
+      el = await fixture<KlikProgressRing>(
         html`
           <label id="labelledby">Progress Ring Label</label>
           <klik-progress-ring ariaLabelledBy="labelledby" value="25"></klik-progress-ring>

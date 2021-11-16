@@ -11,7 +11,7 @@ import styles from './button-group.styles';
  * @csspart base - The component's base wrapper.
  */
 @customElement('klik-button-group')
-export default class SlButtonGroup extends LitElement {
+export default class KlikButtonGroup extends LitElement {
   static styles = styles;
 
   @query('slot') defaultSlot: HTMLSlotElement;
@@ -79,6 +79,6 @@ function findButton(el: HTMLElement) {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-button-group': SlButtonGroup;
+    'klik-button-group': KlikButtonGroup;
   }
 }

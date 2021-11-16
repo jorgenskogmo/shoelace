@@ -1,14 +1,14 @@
 import { expect, fixture, html } from '@open-wc/testing';
 
 import '../../../dist/klik.js';
-import type SlAvatar from './avatar';
+import type KlikAvatar from './avatar';
 
 describe('<klik-avatar>', () => {
   let el: SlAvatar;
 
   describe('when provided no parameters', async () => {
     before(async () => {
-      el = await fixture<SlAvatar>(html` <klik-avatar></klik-avatar> `);
+      el = await fixture<KlikAvatar>(html` <klik-avatar></klik-avatar> `);
     });
 
     it('passes accessibility test', async () => {
@@ -27,7 +27,7 @@ describe('<klik-avatar>', () => {
       'https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80';
     const alt = 'Gray tabby kitten looking down';
     before(async () => {
-      el = await fixture<SlAvatar>(html`<klik-avatar image="${image}" alt="${alt}"></klik-avatar>`);
+      el = await fixture<KlikAvatar>(html`<klik-avatar image="${image}" alt="${alt}"></klik-avatar>`);
     });
 
     it('passes accessibility test', async () => {
@@ -55,7 +55,7 @@ describe('<klik-avatar>', () => {
 
     describe('when an error occurs when attempting to load the image', async () => {
       before(async () => {
-        el = await fixture<SlAvatar>(
+        el = await fixture<KlikAvatar>(
           html`<klik-avatar image="data:text/plain;not-an-image-url" alt="${alt}"></klik-avatar>`
         );
       });
@@ -71,7 +71,7 @@ describe('<klik-avatar>', () => {
   describe('when provided initials parameter', async () => {
     const initials = 'SL';
     before(async () => {
-      el = await fixture<SlAvatar>(html`<klik-avatar initials="${initials}"></klik-avatar>`);
+      el = await fixture<KlikAvatar>(html`<klik-avatar initials="${initials}"></klik-avatar>`);
     });
 
     it('passes accessibility test', async () => {
@@ -88,7 +88,7 @@ describe('<klik-avatar>', () => {
   ['square', 'rounded', 'circle'].forEach(shape => {
     describe(`when passed a shape attribute ${shape}`, () => {
       before(async () => {
-        el = await fixture<SlAvatar>(html`<klik-avatar shape="${shape}"></klik-avatar>`);
+        el = await fixture<KlikAvatar>(html`<klik-avatar shape="${shape}"></klik-avatar>`);
       });
 
       it('passes accessibility test', async () => {
@@ -106,7 +106,7 @@ describe('<klik-avatar>', () => {
 
   describe('when passed a <span>, on slot "icon"', async () => {
     before(async () => {
-      el = await fixture<SlAvatar>(html`<klik-avatar><span slot="icon">random content</span></klik-avatar>`);
+      el = await fixture<KlikAvatar>(html`<klik-avatar><span slot="icon">random content</span></klik-avatar>`);
     });
 
     it('passes accessibility test', async () => {

@@ -29,7 +29,7 @@ let id = 0;
  * @cssproperty --thumb-size - The size of the thumb.
  */
 @customElement('klik-switch')
-export default class SlSwitch extends LitElement {
+export default class KlikSwitch extends LitElement {
   static styles = styles;
 
   @query('input[type="checkbox"]') input: HTMLInputElement;
@@ -177,6 +177,6 @@ export default class SlSwitch extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-switch': SlSwitch;
+    'klik-switch': KlikSwitch;
   }
 }

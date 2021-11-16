@@ -33,7 +33,7 @@ interface FormControl {
  * @csspart base - The component's base wrapper.
  */
 @customElement('klik-form')
-export default class SlForm extends LitElement {
+export default class KlikForm extends LitElement {
   static styles = styles;
 
   @query('.form') form: HTMLElement;
@@ -278,6 +278,6 @@ export default class SlForm extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-form': SlForm;
+    'klik-form': KlikForm;
   }
 }

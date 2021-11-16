@@ -2,25 +2,25 @@ import { expect, fixture, html, oneEvent } from '@open-wc/testing';
 import { sendKeys } from '@web/test-runner-commands';
 
 import '../../../dist/klik.js';
-import type SlRadio from './radio';
-import type SlRadioGroup from '../radio-group/radio-group';
+import type KlikRadio from './radio';
+import type KlikRadioGroup from '../radio-group/radio-group';
 
 describe('<klik-radio>', () => {
   it('should be disabled with the disabled attribute', async () => {
-    const el = await fixture<SlRadio>(html` <klik-radio disabled></klik-radio> `);
+    const el = await fixture<KlikRadio>(html` <klik-radio disabled></klik-radio> `);
     const radio = el.shadowRoot?.querySelector('input');
 
     expect(radio.disabled).to.be.true;
   });
 
   it('should be valid by default', async () => {
-    const el = await fixture<SlRadio>(html` <klik-radio></klik-radio> `);
+    const el = await fixture<KlikRadio>(html` <klik-radio></klik-radio> `);
 
     expect(el.invalid).to.be.false;
   });
 
   it('should fire klik-change when clicked', async () => {
-    const el = await fixture<SlRadio>(html` <klik-radio></klik-radio> `);
+    const el = await fixture<KlikRadio>(html` <klik-radio></klik-radio> `);
     setTimeout(() => el.shadowRoot?.querySelector('input').click());
     const event = await oneEvent(el, 'klik-change');
     expect(event.target).to.equal(el);
@@ -28,7 +28,7 @@ describe('<klik-radio>', () => {
   });
 
   it('should fire klik-change when toggled via keyboard - space', async () => {
-    const el = await fixture<SlRadio>(html` <klik-radio></klik-radio> `);
+    const el = await fixture<KlikRadio>(html` <klik-radio></klik-radio> `);
     const input = el.shadowRoot?.querySelector('input');
     input.focus();
     setTimeout(() => sendKeys({ press: ' ' }));
@@ -38,7 +38,7 @@ describe('<klik-radio>', () => {
   });
 
   it('should fire klik-change when toggled via keyboard - arrow key', async () => {
-    const radioGroup = await fixture<SlRadioGroup>(html`
+    const radioGroup = await fixture<KlikRadioGroup>(html`
       <klik-radio-group>
         <klik-radio id="radio-1"></klik-radio>
         <klik-radio id="radio-2"></klik-radio>
@@ -55,7 +55,7 @@ describe('<klik-radio>', () => {
   });
 
   it('should not fire klik-change when checked is set by javascript', async () => {
-    const el = await fixture<SlRadio>(html` <klik-radio></klik-radio> `);
+    const el = await fixture<KlikRadio>(html` <klik-radio></klik-radio> `);
     el.addEventListener('klik-change', () => expect.fail('event fired'));
     el.checked = true;
     await el.updateComplete;

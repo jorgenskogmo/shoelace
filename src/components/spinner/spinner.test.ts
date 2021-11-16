@@ -1,14 +1,14 @@
 import { expect, fixture, html } from '@open-wc/testing';
 
 import '../../../dist/klik.js';
-import type SlSpinner from './spinner';
+import type KlikSpinner from './spinner';
 
 describe('<klik-spinner>', () => {
   let el: SlSpinner;
 
   describe('when provided no parameters', () => {
     before(async () => {
-      el = await fixture<SlSpinner>(html` <klik-spinner></klik-spinner> `);
+      el = await fixture<KlikSpinner>(html` <klik-spinner></klik-spinner> `);
     });
 
     it('should render a component that passes accessibility test.', async () => {

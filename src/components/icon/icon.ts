@@ -19,7 +19,7 @@ const parser = new DOMParser();
  * @csspart base - The component's base wrapper.
  */
 @customElement('klik-icon')
-export default class SlIcon extends LitElement {
+export default class KlikIcon extends LitElement {
   static styles = styles;
 
   @state() private svg = '';
@@ -129,6 +129,6 @@ export default class SlIcon extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-icon': SlIcon;
+    'klik-icon': KlikIcon;
   }
 }

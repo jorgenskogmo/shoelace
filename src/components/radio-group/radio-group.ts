@@ -15,7 +15,7 @@ import styles from './radio-group.styles';
  * @csspart label - The radio group label.
  */
 @customElement('klik-radio-group')
-export default class SlRadioGroup extends LitElement {
+export default class KlikRadioGroup extends LitElement {
   static styles = styles;
 
   @query('slot:not([name])') defaultSlot: HTMLSlotElement;
@@ -61,6 +61,6 @@ export default class SlRadioGroup extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-radio-group': SlRadioGroup;
+    'klik-radio-group': KlikRadioGroup;
   }
 }

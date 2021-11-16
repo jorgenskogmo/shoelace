@@ -15,7 +15,7 @@ import '../icon/icon';
  * @csspart base - The component's base wrapper.
  */
 @customElement('klik-icon-button')
-export default class SlIconButton extends LitElement {
+export default class KlikIconButton extends LitElement {
   static styles = styles;
 
   @query('button') button: HTMLButtonElement | HTMLLinkElement;
@@ -95,6 +95,6 @@ export default class SlIconButton extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-icon-button': SlIconButton;
+    'klik-icon-button': KlikIconButton;
   }
 }

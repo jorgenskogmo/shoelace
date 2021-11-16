@@ -21,7 +21,7 @@ import '../icon/icon';
  * @cssproperty --size - The size of the avatar.
  */
 @customElement('klik-avatar')
-export default class SlAvatar extends LitElement {
+export default class KlikAvatar extends LitElement {
   static styles = styles;
 
   @state() private hasError = false;
@@ -77,6 +77,6 @@ export default class SlAvatar extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-avatar': SlAvatar;
+    'klik-avatar': KlikAvatar;
   }
 }

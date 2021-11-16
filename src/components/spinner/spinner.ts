@@ -14,7 +14,7 @@ import styles from './spinner.styles';
  * @cssproperty --speed - The time it takes for the spinner to complete one animation cycle.
  */
 @customElement('klik-spinner')
-export default class SlSpinner extends LitElement {
+export default class KlikSpinner extends LitElement {
   static styles = styles;
 
   render() {
@@ -29,6 +29,6 @@ export default class SlSpinner extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-spinner': SlSpinner;
+    'klik-spinner': KlikSpinner;
   }
 }

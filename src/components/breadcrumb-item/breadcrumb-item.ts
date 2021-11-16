@@ -22,7 +22,7 @@ import styles from './breadcrumb-item.styles';
  * @csspart separator - The container that wraps the separator slot.
  */
 @customElement('klik-breadcrumb-item')
-export default class SlBreadcrumbItem extends LitElement {
+export default class KlikBreadcrumbItem extends LitElement {
   static styles = styles;
 
   @state() hasPrefix = false;
@@ -93,6 +93,6 @@ export default class SlBreadcrumbItem extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-breadcrumb-item': SlBreadcrumbItem;
+    'klik-breadcrumb-item': KlikBreadcrumbItem;
   }
 }

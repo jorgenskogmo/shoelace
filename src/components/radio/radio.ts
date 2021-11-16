@@ -25,7 +25,7 @@ let id = 0;
  * @csspart label - The radio label.
  */
 @customElement('klik-radio')
-export default class SlRadio extends LitElement {
+export default class KlikRadio extends LitElement {
   static styles = styles;
 
   @query('input[type="radio"]') input: HTMLInputElement;
@@ -193,6 +193,6 @@ export default class SlRadio extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-radio': SlRadio;
+    'klik-radio': KlikRadio;
   }
 }

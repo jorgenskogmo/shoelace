@@ -13,7 +13,7 @@ import styles from './include.styles';
  * @event {{ status: number }} klik-error - Emitted when the included file fails to load due to an error.
  */
 @customElement('klik-include')
-export default class SlInclude extends LitElement {
+export default class KlikInclude extends LitElement {
   static styles = styles;
 
   /** The location of the HTML file to include. */
@@ -75,6 +75,6 @@ export default class SlInclude extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-include': SlInclude;
+    'klik-include': KlikInclude;
   }
 }

@@ -30,7 +30,7 @@ let id = 0;
  * @csspart help-text - The textarea help text.
  */
 @customElement('klik-textarea')
-export default class SlTextarea extends LitElement {
+export default class KlikTextarea extends LitElement {
   static styles = styles;
 
   @query('.textarea__control') input: HTMLTextAreaElement;
@@ -352,6 +352,6 @@ export default class SlTextarea extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-textarea': SlTextarea;
+    'klik-textarea': KlikTextarea;
   }
 }

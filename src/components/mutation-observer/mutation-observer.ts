@@ -13,7 +13,7 @@ import styles from './mutation-observer.styles';
  * @slot - The content to watch for mutations.
  */
 @customElement('klik-mutation-observer')
-export default class SlMutationObserver extends LitElement {
+export default class KlikMutationObserver extends LitElement {
   static styles = styles;
 
   private mutationObserver: MutationObserver;
@@ -113,6 +113,6 @@ export default class SlMutationObserver extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-mutation-observer': SlMutationObserver;
+    'klik-mutation-observer': KlikMutationObserver;
   }
 }

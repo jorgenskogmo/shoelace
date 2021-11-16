@@ -7,7 +7,7 @@ import { watch } from '../../internal/watch';
  * @status stable
  */
 @customElement('klik-relative-time')
-export default class SlRelativeTime extends LitElement {
+export default class KlikRelativeTime extends LitElement {
   private updateTimeout: any;
 
   @state() private isoTime = '';
@@ -116,6 +116,6 @@ export default class SlRelativeTime extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-relative-time': SlRelativeTime;
+    'klik-relative-time': KlikRelativeTime;
   }
 }

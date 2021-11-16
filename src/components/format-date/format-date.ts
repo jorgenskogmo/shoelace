@@ -6,7 +6,7 @@ import { customElement, property } from 'lit/decorators.js';
  * @status stable
  */
 @customElement('klik-format-date')
-export default class SlFormatDate extends LitElement {
+export default class KlikFormatDate extends LitElement {
   /** The date/time to format. If not set, the current date and time will be used. */
   @property() date: Date | string = new Date();
 
@@ -73,6 +73,6 @@ export default class SlFormatDate extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-format-date': SlFormatDate;
+    'klik-format-date': KlikFormatDate;
   }
 }

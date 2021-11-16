@@ -44,7 +44,7 @@ let id = 0;
  * @csspart help-text - The input help text.
  */
 @customElement('klik-input')
-export default class SlInput extends LitElement {
+export default class KlikInput extends LitElement {
   static styles = styles;
 
   @query('.input__control') input: HTMLInputElement;
@@ -399,6 +399,6 @@ export default class SlInput extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-input': SlInput;
+    'klik-input': KlikInput;
   }
 }

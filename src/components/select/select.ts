@@ -56,7 +56,7 @@ let id = 0;
  * @csspart tags - The container in which multiselect options are rendered.
  */
 @customElement('klik-select')
-export default class SlSelect extends LitElement {
+export default class KlikSelect extends LitElement {
   static styles = styles;
 
   @query('.select') dropdown: SlDropdown;
@@ -545,6 +545,6 @@ export default class SlSelect extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-select': SlSelect;
+    'klik-select': KlikSelect;
   }
 }

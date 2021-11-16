@@ -26,7 +26,7 @@ import '../icon/icon';
  * @cssproperty --symbol-spacing - The spacing to use around symbols.
  */
 @customElement('klik-rating')
-export default class SlRating extends LitElement {
+export default class KlikRating extends LitElement {
   static styles = styles;
 
   @query('.rating') rating: HTMLElement;
@@ -244,6 +244,6 @@ export default class SlRating extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-rating': SlRating;
+    'klik-rating': KlikRating;
   }
 }

@@ -1,14 +1,14 @@
 import { expect, fixture, html } from '@open-wc/testing';
 
 import '../../../dist/klik.js';
-import type SlBreadcrumb from './breadcrumb';
+import type KlikBreadcrumb from './breadcrumb';
 
 describe('<klik-breadcrumb>', () => {
   let el: SlBreadcrumb;
 
   describe('when provided a standard list of el-breadcrumb-item children and no parameters', async () => {
     before(async () => {
-      el = await fixture<SlBreadcrumb>(html`
+      el = await fixture<KlikBreadcrumb>(html`
         <klik-breadcrumb>
           <klik-breadcrumb-item>Catalog</klik-breadcrumb-item>
           <klik-breadcrumb-item>Clothing</klik-breadcrumb-item>
@@ -35,7 +35,7 @@ describe('<klik-breadcrumb>', () => {
 
   describe('when provided a standard list of el-breadcrumb-item children and an element in the slot "seperator" to support Custom Separators', async () => {
     before(async () => {
-      el = await fixture<SlBreadcrumb>(html`
+      el = await fixture<KlikBreadcrumb>(html`
         <klik-breadcrumb>
           <span class="replacement-separator" slot="separator">/</span>
           <klik-breadcrumb-item>First</klik-breadcrumb-item>
@@ -64,7 +64,7 @@ describe('<klik-breadcrumb>', () => {
 
   describe('when provided a standard list of el-breadcrumb-item children and an element in the slot "prefix" to support prefix icons', async () => {
     before(async () => {
-      el = await fixture<SlBreadcrumb>(html`
+      el = await fixture<KlikBreadcrumb>(html`
         <klik-breadcrumb>
           <klik-breadcrumb-item>
             <span class="prefix-example" slot="prefix">/</span>
@@ -84,7 +84,7 @@ describe('<klik-breadcrumb>', () => {
 
   describe('when provided a standard list of el-breadcrumb-item children and an element in the slot "suffix" to support suffix icons', async () => {
     before(async () => {
-      el = await fixture<SlBreadcrumb>(html`
+      el = await fixture<KlikBreadcrumb>(html`
         <klik-breadcrumb>
           <klik-breadcrumb-item>First</klik-breadcrumb-item>
           <klik-breadcrumb-item>Second</klik-breadcrumb-item>

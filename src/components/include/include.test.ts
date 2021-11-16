@@ -2,11 +2,11 @@ import { expect, fixture, html, waitUntil } from '@open-wc/testing';
 import sinon from 'sinon';
 
 import '../../../dist/klik.js';
-import type SlInclude from './include';
+import type KlikInclude from './include';
 
 describe('<klik-include>', () => {
   it('should load content and emit klik-load', async () => {
-    const el = await fixture<SlInclude>(
+    const el = await fixture<KlikInclude>(
       html` <klik-include src="https://jsonplaceholder.typicode.com/posts/1"></klik-include> `
     );
     const loadHandler = sinon.spy();
@@ -19,7 +19,7 @@ describe('<klik-include>', () => {
   });
 
   it('should emit klik-error when content cannot be loaded', async () => {
-    const el = await fixture<SlInclude>(
+    const el = await fixture<KlikInclude>(
       html` <klik-include src="https://jsonplaceholder.typicode.com/not-found"></klik-include> `
     );
     const loadHandler = sinon.spy();

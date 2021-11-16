@@ -26,7 +26,7 @@ let id = 0;
  * @csspart label - The checkbox label.
  */
 @customElement('klik-checkbox')
-export default class SlCheckbox extends LitElement {
+export default class KlikCheckbox extends LitElement {
   static styles = styles;
 
   @query('input[type="checkbox"]') input: HTMLInputElement;
@@ -193,6 +193,6 @@ export default class SlCheckbox extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-checkbox': SlCheckbox;
+    'klik-checkbox': KlikCheckbox;
   }
 }

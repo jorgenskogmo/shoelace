@@ -7,7 +7,7 @@ import { formatBytes } from '../../internal/number';
  * @status stable
  */
 @customElement('klik-format-bytes')
-export default class SlFormatBytes extends LitElement {
+export default class KlikFormatBytes extends LitElement {
   /** The number to format in bytes. */
   @property({ type: Number }) value = 0;
 
@@ -27,6 +27,6 @@ export default class SlFormatBytes extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-format-bytes': SlFormatBytes;
+    'klik-format-bytes': KlikFormatBytes;
   }
 }

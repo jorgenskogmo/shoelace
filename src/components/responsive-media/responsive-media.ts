@@ -10,7 +10,7 @@ import styles from './responsive-media.styles';
  * @slot - The element to receive the aspect ratio. Should be a replaced element, such as `<img>`, `<iframe>`, or `<video>`.
  */
 @customElement('klik-responsive-media')
-export default class SlResponsiveMedia extends LitElement {
+export default class KlikResponsiveMedia extends LitElement {
   static styles = styles;
 
   /**
@@ -45,6 +45,6 @@ export default class SlResponsiveMedia extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-responsive-media': SlResponsiveMedia;
+    'klik-responsive-media': KlikResponsiveMedia;
   }
 }

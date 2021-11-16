@@ -23,7 +23,7 @@ import '../icon/icon';
  * @csspart suffix - The suffix container.
  */
 @customElement('klik-menu-item')
-export default class SlMenuItem extends LitElement {
+export default class KlikMenuItem extends LitElement {
   static styles = styles;
 
   @query('.menu-item') menuItem: HTMLElement;
@@ -87,6 +87,6 @@ export default class SlMenuItem extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-menu-item': SlMenuItem;
+    'klik-menu-item': KlikMenuItem;
   }
 }

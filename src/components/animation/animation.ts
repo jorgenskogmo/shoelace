@@ -16,7 +16,7 @@ import styles from './animation.styles';
  * @slot - The element to animate. If multiple elements are to be animated, wrap them in a single container.
  */
 @customElement('klik-animation')
-export default class SlAnimation extends LitElement {
+export default class KlikAnimation extends LitElement {
   static styles = styles;
 
   private animation: Animation;
@@ -216,6 +216,6 @@ export default class SlAnimation extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-animation': SlAnimation;
+    'klik-animation': KlikAnimation;
   }
 }

@@ -32,7 +32,7 @@ let id = 0;
  * @animation tooltip.hide - The animation to use when hiding the tooltip.
  */
 @customElement('klik-tooltip')
-export default class SlTooltip extends LitElement {
+export default class KlikTooltip extends LitElement {
   static styles = styles;
 
   @query('.tooltip-positioner') positioner: HTMLElement;
@@ -356,6 +356,6 @@ setDefaultAnimation('tooltip.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-tooltip': SlTooltip;
+    'klik-tooltip': KlikTooltip;
   }
 }

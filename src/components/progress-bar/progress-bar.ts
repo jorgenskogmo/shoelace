@@ -21,7 +21,7 @@ import styles from './progress-bar.styles';
  * @cssproperty --label-color - The label color.
  */
 @customElement('klik-progress-bar')
-export default class SlProgressBar extends LitElement {
+export default class KlikProgressBar extends LitElement {
   static styles = styles;
 
   /** The current progress, 0 to 100. */
@@ -64,6 +64,6 @@ export default class SlProgressBar extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-progress-bar': SlProgressBar;
+    'klik-progress-bar': KlikProgressBar;
   }
 }

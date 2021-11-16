@@ -60,7 +60,7 @@ let id = 0;
  * @animation dialog.overlay.hide - The animation to use when hiding the dialog's overlay.
  */
 @customElement('klik-dialog')
-export default class SlDialog extends LitElement {
+export default class KlikDialog extends LitElement {
   static styles = styles;
 
   @query('.dialog') dialog: HTMLElement;
@@ -301,6 +301,6 @@ setDefaultAnimation('dialog.overlay.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-dialog': SlDialog;
+    'klik-dialog': KlikDialog;
   }
 }

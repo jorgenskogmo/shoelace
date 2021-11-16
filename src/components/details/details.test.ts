@@ -2,11 +2,11 @@ import { expect, fixture, html, waitUntil } from '@open-wc/testing';
 import sinon from 'sinon';
 
 import '../../../dist/klik.js';
-import type SlDetails from './details';
+import type KlikDetails from './details';
 
 describe('<klik-details>', () => {
   it('should be visible with the open attribute', async () => {
-    const el = await fixture<SlDetails>(html`
+    const el = await fixture<KlikDetails>(html`
       <klik-details open>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -19,7 +19,7 @@ describe('<klik-details>', () => {
   });
 
   it('should not be visible without the open attribute', async () => {
-    const el = await fixture<SlDetails>(html`
+    const el = await fixture<KlikDetails>(html`
       <klik-details>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -32,7 +32,7 @@ describe('<klik-details>', () => {
   });
 
   it('should emit klik-show and klik-after-show when calling show()', async () => {
-    const el = await fixture<SlDetails>(html`
+    const el = await fixture<KlikDetails>(html`
       <klik-details>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -56,7 +56,7 @@ describe('<klik-details>', () => {
   });
 
   it('should emit klik-hide and klik-after-hide when calling hide()', async () => {
-    const el = await fixture<SlDetails>(html`
+    const el = await fixture<KlikDetails>(html`
       <klik-details open>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -80,7 +80,7 @@ describe('<klik-details>', () => {
   });
 
   it('should emit klik-show and klik-after-show when setting open = true', async () => {
-    const el = await fixture<SlDetails>(html`
+    const el = await fixture<KlikDetails>(html`
       <klik-details>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -104,7 +104,7 @@ describe('<klik-details>', () => {
   });
 
   it('should emit klik-hide and klik-after-hide when setting open = false', async () => {
-    const el = await fixture<SlDetails>(html`
+    const el = await fixture<KlikDetails>(html`
       <klik-details open>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -128,7 +128,7 @@ describe('<klik-details>', () => {
   });
 
   it('should be the correct size after opening more than one instance', async () => {
-    const el = await fixture<SlDetails>(html`
+    const el = await fixture<KlikDetails>(html`
       <div>
         <klik-details>
           <div style="height: 200px;"></div>

@@ -68,7 +68,7 @@ let id = 0;
  * @animation drawer.overlay.hide - The animation to use when hiding the drawer's overlay.
  */
 @customElement('klik-drawer')
-export default class SlDrawer extends LitElement {
+export default class KlikDrawer extends LitElement {
   static styles = styles;
 
   @query('.drawer') drawer: HTMLElement;
@@ -382,6 +382,6 @@ setDefaultAnimation('drawer.overlay.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-drawer': SlDrawer;
+    'klik-drawer': KlikDrawer;
   }
 }

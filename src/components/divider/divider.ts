@@ -14,7 +14,7 @@ import styles from './divider.styles';
  * @cssproperty --width - The width of the divider.
  */
 @customElement('klik-divider')
-export default class SlDivider extends LitElement {
+export default class KlikDivider extends LitElement {
   static styles = styles;
 
   /** Draws the divider in a vertical orientation. */
@@ -36,6 +36,6 @@ export default class SlDivider extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-divider': SlDivider;
+    'klik-divider': KlikDivider;
   }
 }

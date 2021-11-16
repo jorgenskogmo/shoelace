@@ -28,7 +28,7 @@ import '../spinner/spinner';
  * @csspart caret - The button's caret.
  */
 @customElement('klik-button')
-export default class SlButton extends LitElement {
+export default class KlikButton extends LitElement {
   static styles = styles;
 
   @query('.button') button: HTMLButtonElement | HTMLLinkElement;
@@ -241,6 +241,6 @@ export default class SlButton extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-button': SlButton;
+    'klik-button': KlikButton;
   }
 }

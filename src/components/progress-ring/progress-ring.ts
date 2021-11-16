@@ -18,7 +18,7 @@ import styles from './progress-ring.styles';
  * @cssproperty --indicator-color - The indicator color.
  */
 @customElement('klik-progress-ring')
-export default class SlProgressRing extends LitElement {
+export default class KlikProgressRing extends LitElement {
   static styles = styles;
 
   @query('.progress-ring__indicator') indicator: SVGCircleElement;
@@ -75,6 +75,6 @@ export default class SlProgressRing extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-progress-ring': SlProgressRing;
+    'klik-progress-ring': KlikProgressRing;
   }
 }

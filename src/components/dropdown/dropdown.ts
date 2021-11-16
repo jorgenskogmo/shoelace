@@ -35,7 +35,7 @@ let id = 0;
  * @animation dropdown.hide - The animation to use when hiding the dropdown.
  */
 @customElement('klik-dropdown')
-export default class SlDropdown extends LitElement {
+export default class KlikDropdown extends LitElement {
   static styles = styles;
 
   @query('.dropdown__trigger') trigger: HTMLElement;
@@ -455,6 +455,6 @@ setDefaultAnimation('dropdown.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'klik-dropdown': SlDropdown;
+    'klik-dropdown': KlikDropdown;
   }
 }
