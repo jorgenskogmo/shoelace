@@ -1,7 +1,7 @@
 import { expect, fixture, html, waitUntil, aTimeout } from '@open-wc/testing';
 import sinon from 'sinon';
 
-import '../../../dist/shoelace.js';
+import '../../../dist/klik.js';
 import type SlSelect from './select';
 
 describe('<klik-select>', () => {

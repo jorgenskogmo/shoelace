@@ -1,6 +1,6 @@
 import { expect, fixture, html } from '@open-wc/testing';
 
-import '../../../dist/shoelace.js';
+import '../../../dist/klik.js';
 import type SlProgressBar from './progress-bar';
 
 describe('<klik-progress-bar>', () => {

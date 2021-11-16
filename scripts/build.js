@@ -50,7 +50,8 @@ mkdirp.sync(outdir);
       target: 'es2017',
       entryPoints: [
         // The whole shebang
-        './src/shoelace.ts',
+        // './src/shoelace.ts',
+        './src/klik.ts',
         // Components
         ...(await glob('./src/components/**/!(*.(style|test)).ts')),
         // Public utilities

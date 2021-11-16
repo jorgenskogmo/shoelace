@@ -1,6 +1,6 @@
 import { expect, fixture, html } from '@open-wc/testing';
 
-import '../../../dist/shoelace.js';
+import '../../../dist/klik.js';
 import type SlBreadcrumbItem from './breadcrumb-item';
 
 describe('<klik-breadcrumb-item>', () => {

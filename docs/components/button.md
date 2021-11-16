@@ -2,6 +2,18 @@
 
 [component-header:klik-button]
 
+
+<!-- tabs:start -->
+
+#### **Usage**
+
+
+
+#### **Code**
+
+
+
+
 Buttons represent actions that are available to the user.
 
 ```html preview
@@ -406,6 +418,11 @@ const App = () => (
 );
 ```
 
+
+#### **Style**
+
+
+
 ### Styling Buttons
 
 This example demonstrates how to style buttons using a custom class. This is the recommended approach if you need to add additional variations. To customize an existing variation, modify the selector to target the button's type attribute instead of a class (e.g. `klik-button[type="primary"]`).
@@ -451,3 +468,6 @@ This example demonstrates how to style buttons using a custom class. This is the
 ```
 
 [component-metadata:klik-button]
+
+
+<!-- tabs:end -->

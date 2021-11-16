@@ -1,7 +1,7 @@
 import { expect, fixture, html, oneEvent } from '@open-wc/testing';
 import { sendKeys } from '@web/test-runner-commands';
 
-import '../../../dist/shoelace.js';
+import '../../../dist/klik.js';
 import type SlRadio from './radio';
 import type SlRadioGroup from '../radio-group/radio-group';
 
