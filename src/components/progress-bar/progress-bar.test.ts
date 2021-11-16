@@ -4,7 +4,7 @@ import '../../../dist/klik.js';
 import type KlikProgressBar from './progress-bar';
 
 describe('<klik-progress-bar>', () => {
-  let el: SlProgressBar;
+  let el: KlikProgressBar;
 
   describe('when provided just a value parameter', async () => {
     before(async () => {

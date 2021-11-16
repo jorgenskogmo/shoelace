@@ -4,7 +4,7 @@ import '../../../dist/klik.js';
 import type KlikCard from './card';
 
 describe('<klik-card>', () => {
-  let el: SlCard;
+  let el: KlikCard;
 
   describe('when provided no parameters', async () => {
     before(async () => {

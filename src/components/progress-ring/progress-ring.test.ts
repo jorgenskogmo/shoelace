@@ -4,7 +4,7 @@ import '../../../dist/klik.js';
 import type KlikProgressRing from './progress-ring';
 
 describe('<klik-progress-ring>', () => {
-  let el: SlProgressRing;
+  let el: KlikProgressRing;
 
   describe('when provided just a value parameter', async () => {
     before(async () => {

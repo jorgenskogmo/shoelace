@@ -4,7 +4,7 @@ import '../../../dist/klik.js';
 import type KlikBreadcrumbItem from './breadcrumb-item';
 
 describe('<klik-breadcrumb-item>', () => {
-  let el: SlBreadcrumbItem;
+  let el: KlikBreadcrumbItem;
 
   describe('when not provided a href attribute', async () => {
     before(async () => {

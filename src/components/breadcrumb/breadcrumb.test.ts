@@ -4,7 +4,7 @@ import '../../../dist/klik.js';
 import type KlikBreadcrumb from './breadcrumb';
 
 describe('<klik-breadcrumb>', () => {
-  let el: SlBreadcrumb;
+  let el: KlikBreadcrumb;
 
   describe('when provided a standard list of el-breadcrumb-item children and no parameters', async () => {
     before(async () => {

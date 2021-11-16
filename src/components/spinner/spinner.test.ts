@@ -4,7 +4,7 @@ import '../../../dist/klik.js';
 import type KlikSpinner from './spinner';
 
 describe('<klik-spinner>', () => {
-  let el: SlSpinner;
+  let el: KlikSpinner;
 
   describe('when provided no parameters', () => {
     before(async () => {

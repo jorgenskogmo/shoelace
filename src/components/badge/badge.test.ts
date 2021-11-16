@@ -4,7 +4,7 @@ import '../../../dist/klik.js';
 import type KlikBadge from './badge';
 
 describe('<klik-badge>', () => {
-  let el: SlBadge;
+  let el: KlikBadge;
 
   describe('when provided no parameters', async () => {
     before(async () => {

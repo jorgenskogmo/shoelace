@@ -4,7 +4,7 @@ import '../../../dist/klik.js';
 import type KlikAvatar from './avatar';
 
 describe('<klik-avatar>', () => {
-  let el: SlAvatar;
+  let el: KlikAvatar;
 
   describe('when provided no parameters', async () => {
     before(async () => {
