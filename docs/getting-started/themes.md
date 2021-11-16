@@ -2,7 +2,7 @@
 
 Shoelace is designed to be highly customizable through pure CSS. Out of the box, you can choose from a light or dark theme. Alternatively, you can design your own theme from scratch.
 
-A theme is nothing more than a stylesheet that uses the Shoelace API to define design tokens and apply custom styles to components. To create a theme, you will need a decent understanding of CSS, including [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) and the [`::part` selector](https://developer.mozilla.org/en-US/docs/Web/CSS/::part).
+A theme is nothing more than a stylesheet that uses the Klik API to define design tokens and apply custom styles to components. To create a theme, you will need a decent understanding of CSS, including [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) and the [`::part` selector](https://developer.mozilla.org/en-US/docs/Web/CSS/::part).
 
 For developers, built-in themes are also available as JavaScript modules that export [Lit CSSResult](https://lit.dev/docs/api/styles/#CSSResult) objects. You can find them in `dist/themes/*.styles.js`.
 
@@ -64,7 +64,7 @@ There are two ways to create themes. The easiest way is to customize a built-in 
 
 ### Customizing a Built-in Theme
 
-The easiest way to customize Shoelace is to override one of the built-in themes. You can do this by importing the light or dark theme as-is, then creating a separate stylesheet that overrides the [design tokens](/getting-started/customizing#design-tokens) and adds [component styles](/getting-started/customizing#component-parts) to your liking. You must import your theme _after_ the built-in theme.
+The easiest way to customize Klik is to override one of the built-in themes. You can do this by importing the light or dark theme as-is, then creating a separate stylesheet that overrides the [design tokens](/getting-started/customizing#design-tokens) and adds [component styles](/getting-started/customizing#component-parts) to your liking. You must import your theme _after_ the built-in theme.
 
 If you're customizing the light theme, you should scope your styles to the following selectors.
 
@@ -85,7 +85,7 @@ If you're customizing the dark theme, you should scope your styles to the follow
 }
 ```
 
-By customizing a built-in theme, you'll maintain a smaller stylesheet containing only the changes you've made. Contrast this to [creating a new theme](#creating-a-new-theme), where you need to explicitly define every design token required by the library. This approach is more "future-proof," as new design tokens that emerge in subsequent versions of Shoelace will be accounted for by the built-in theme.
+By customizing a built-in theme, you'll maintain a smaller stylesheet containing only the changes you've made. Contrast this to [creating a new theme](#creating-a-new-theme), where you need to explicitly define every design token required by the library. This approach is more "future-proof," as new design tokens that emerge in subsequent versions of Klik will be accounted for by the built-in theme.
 
 While this may be easier to maintain, the drawback is that your theme modifies a built-in theme and thus can't be activated independently.
 
@@ -104,7 +104,7 @@ Start by changing the selector to match your theme's name. Assuming your new the
 
 By creating a new theme, you won't be relying on a built-in theme as a foundation. Because the theme is decoupled from the built-ins, you can activate it independently as an alternative to the built-ins. This is the recommended approach if you're looking to open source your theme for others to use.
 
-You will, however, need to maintain your theme more carefully, as new versions of Shoelace may introduce new design tokens that your theme won't have accounted for. Because of this, it's recommended that you clearly specify which version(s) of Shoelace your theme is designed to work with and keep it up to date as new versions of Shoelace are released.
+You will, however, need to maintain your theme more carefully, as new versions of Klik may introduce new design tokens that your theme won't have accounted for. Because of this, it's recommended that you clearly specify which version(s) of Klik your theme is designed to work with and keep it up to date as new versions of Klik are released.
 
 ## Dark Theme
 

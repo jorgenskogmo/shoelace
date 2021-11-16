@@ -8,7 +8,7 @@ QR codes are useful for providing small pieces of information to users who can q
 
 ```html preview
 <div class="qr-overview">
-  <klik-qr-code value="https://shoelace.style/" label="Scan this code to visit Shoelace on the web!"></klik-qr-code>
+  <klik-qr-code value="https://shoelace.style/" label="Scan this code to visit Klik on the web!"></klik-qr-code>
   <br>
 
   <klik-input maxlength="255" clearable></klik-input>
@@ -54,7 +54,7 @@ const App = () => {
   return (
     <>
       <div className="qr-overview">
-        <SlQrCode value={value} label="Scan this code to visit Shoelace on the web!" />
+        <SlQrCode value={value} label="Scan this code to visit Klik on the web!" />
         <br />
 
         <SlInput maxlength="255" clearable onInput={event => setValue(event.target.value)} />

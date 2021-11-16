@@ -19,4 +19,4 @@ import { AppComponent } from './app.component';
 export class AppModule {}
 ```
 
-?> Are you using Shoelace with Angular? This page could use some love. [Please help us improve it!](https://github.com/shoelace-style/shoelace/blob/next/docs/frameworks/angular.md)
+?> Are you using Klik with Angular? This page could use some love. [Please help us improve it!](https://github.com/shoelace-style/shoelace/blob/next/docs/frameworks/angular.md)

@@ -1,6 +1,6 @@
 # Integrating with NextJS
 
-This page explains how to integrate Shoelace with a NextJS app. This is a community-maintained document. For questions about this integration, please [ask the community](/resources/community).
+This page explains how to integrate Klik with a NextJS app. This is a community-maintained document. For questions about this integration, please [ask the community](/resources/community).
 
 ## Requirements
 
@@ -11,7 +11,7 @@ This integration has been tested with the following:
 
 ## Instructions
 
-To get started using Shoelace with NextJS, the following packages must be installed.
+To get started using Klik with NextJS, the following packages must be installed.
 
 ```bash
 yarn add @shoelace-style/shoelace @shoelace-style/shoelace copy-webpack-plugin next-compose-plugins next-transpile-modules
@@ -19,7 +19,7 @@ yarn add @shoelace-style/shoelace @shoelace-style/shoelace copy-webpack-plugin n
 
 ### Importing the Default Theme
 
-The next step is to import Shoelace's default theme (stylesheet) in your `_app.js` file:
+The next step is to import Klik's default theme (stylesheet) in your `_app.js` file:
 
 ```css
 import '@lego/klik/dist/themes/light.css';
@@ -27,7 +27,7 @@ import '@lego/klik/dist/themes/light.css';
 
 ### Defining Custom Elements
 
-After importing the theme, you'll need to import the JavaScript files for Shoelace. However, this is a bit tricky to do in NextJS thanks to the SSR environment not having any of the required browser APIs to define endpoints.
+After importing the theme, you'll need to import the JavaScript files for Klik. However, this is a bit tricky to do in NextJS thanks to the SSR environment not having any of the required browser APIs to define endpoints.
 
 We'll want to create a component that uses [React's `useLayoutEffect`](https://reactjs.org/docs/hooks-reference.html#uselayouteffect) to add in the custom components before the first render:
 
@@ -60,7 +60,7 @@ function CustomEls({ URL }) {
 
 ?> If we use `useEffect` instead of `useLayoutEffect`, the initial render will occur with the expected `klik-` props applied, but the subsequent render (caused by the `useEffect`) will remove those props as the custom components initialize. We _must_ use `useLayoutEffect` to have expected behavior
 
-?> This will import all Shoelace components for convenience. To selectively import components, refer to the [Using webpack](/getting-started/installation?id=using-webpack) section of the docs.
+?> This will import all Klik components for convenience. To selectively import components, refer to the [Using webpack](/getting-started/installation?id=using-webpack) section of the docs.
 
 You may be wondering where the `URL` property is coming from. We'll address that in the next few sections.
 
@@ -99,11 +99,11 @@ MyApp.getInitialProps = async (context) => {
 };
 ```
 
-?> You'll need to set this `BASE_URL` variable inside the build process of whatever local build or CI/CD you have. This will need to be an absolute URL, as a relative URL will cause shoelace to throw a warning
+?> You'll need to set this `BASE_URL` variable inside the build process of whatever local build or CI/CD you have. This will need to be an absolute URL, as a relative URL will cause Klik to throw a warning
 
 ### webpack Config
 
-Next we need to add Shoelace's assets to the final build output. To do this, modify `next.config.js` to look like this.
+Next we need to add Klik's assets to the final build output. To do this, modify `next.config.js` to look like this.
 
 ```javascript
 const path = require("path");

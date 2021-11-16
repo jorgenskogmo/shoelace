@@ -1,6 +1,6 @@
 # Integrating with Rails
 
-This page explains how to integrate Shoelace with a Rails app. This is a community-maintained document. For questions about this integration, please [ask the community](/resources/community).
+This page explains how to integrate Klik with a Rails app. This is a community-maintained document. For questions about this integration, please [ask the community](/resources/community).
 
 ## Requirements
 
@@ -12,7 +12,7 @@ This integration has been tested with the following:
 
 ## Instructions
 
-To get started using Shoelace with Rails, the following packages must be installed.
+To get started using Klik with Rails, the following packages must be installed.
 
 ```bash
 yarn add @shoelace-style/shoelace copy-webpack-plugin
@@ -20,7 +20,7 @@ yarn add @shoelace-style/shoelace copy-webpack-plugin
 
 ### Importing the Default Theme
 
-The next step is to import Shoelace's default theme (stylesheet) in `app/javascript/stylesheets/application.scss`.
+The next step is to import Klik's default theme (stylesheet) in `app/javascript/stylesheets/application.scss`.
 
 ```css
 @import '~@lego/klik/dist/themes/light';
@@ -31,7 +31,7 @@ Fore more details about themes, please refer to [Theme Basics](/getting-started/
 
 ### Importing Required Scripts
 
-After importing the theme, you'll need to import the JavaScript files for Shoelace. Add the following code to `app/javascript/packs/application.js`.
+After importing the theme, you'll need to import the JavaScript files for Klik. Add the following code to `app/javascript/packs/application.js`.
 
 ```js
 import '../stylesheets/application.scss'
@@ -48,16 +48,16 @@ setBasePath(rootUrl + '/packs/js/')
 
 ### webpack Config
 
-Next we need to add Shoelace's assets to the final build output. To do this, modify `config/webpack/environment.js` to look like this.
+Next we need to add Klik's assets to the final build output. To do this, modify `config/webpack/environment.js` to look like this.
 
 ```js
 const { environment } = require('@rails/webpacker')
 
-// Shoelace config
+// Klik config
 const path = require('path')
 const CopyPlugin = require('copy-webpack-plugin')
 
-// Add shoelace assets to webpack's build process
+// Add Klik assets to webpack's build process
 environment.plugins.append(
   'CopyPlugin',
   new CopyPlugin({
@@ -93,9 +93,9 @@ The final step is to add the corresponding `pack_tags` to the page. You should h
 </html>
 ```
 
-Now you can start using Shoelace components with Rails!
+Now you can start using Klik components with Rails!
 
 ## Additional Resources
 
 - There is a third-party [example repo](https://github.com/ParamagicDev/rails-shoelace-example), courtesy of [ParamagicDev](https://github.com/ParamagicDev) available to help you get started.
-- If you would like to avoid repeating this process, check out the associated [Railsbyte for Shoelace](https://railsbytes.com/templates/X8BsEb).
+- If you would like to avoid repeating this process, check out the associated [Railsbyte for Klik](https://railsbytes.com/templates/X8BsEb).

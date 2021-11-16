@@ -4,7 +4,7 @@
 
 Icons buttons are simple, icon-only buttons that can be used for actions and in toolbars.
 
-For a full list of icons that come bundled with Shoelace, refer to the [icon component](/components/icon).
+For a full list of icons that come bundled with Klik, refer to the [icon component](/components/icon).
 
 ```html preview
 <klik-icon-button name="gear" label="Settings"></klik-icon-button>

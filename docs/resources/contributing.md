@@ -1,6 +1,6 @@
 # Contributing
 
-Shoelace is an open source project, meaning everyone can use it and contribute to its development. When you join our community, you'll find a friendly group of enthusiasts at all experience levels who are willing to chat about anything and everything related to Shoelace.
+Shoelace is an open source project, meaning everyone can use it and contribute to its development. When you join our community, you'll find a friendly group of enthusiasts at all experience levels who are willing to chat about anything and everything related to Klik.
 
 The easiest way to get started contributing is to join the [community chat](https://discord.gg/mg8f26C). This is where we hang out, discuss new ideas, ask for feedback, and more!
 
@@ -78,11 +78,11 @@ To set up a local dev environment, [fork the repo](https://github.com/shoelace-s
 
 ```bash
 git clone https://github.com/YOUR_GITHUB_USERNAME/shoelace
-cd shoelace
+cd Klik
 npm install
 ```
 
-Once you've cloned the repo, run the following command to spin up the Shoelace dev server.
+Once you've cloned the repo, run the following command to spin up the Klik dev server.
 
 ```bash
 npm start
@@ -141,7 +141,7 @@ If in doubt, use your best judgment and the maintainers will be happy to guide y
 
 ### Accessibility
 
-Shoelace is built with accessibility in mind. Creating generic components that are fully accessible to users with varying capabilities across a multitude of circumstances is a daunting challenge. Oftentimes, the solution to an a11y problem is not written in black and white and, therefore, we may not get it right the first time around. There are, however, guidelines we can follow in our effort to make Shoelace an accessible foundation from which applications and websites can be built.
+Shoelace is built with accessibility in mind. Creating generic components that are fully accessible to users with varying capabilities across a multitude of circumstances is a daunting challenge. Oftentimes, the solution to an a11y problem is not written in black and white and, therefore, we may not get it right the first time around. There are, however, guidelines we can follow in our effort to make Klik an accessible foundation from which applications and websites can be built.
 
 We take this commitment seriously, so please ensure your contributions have this goal in mind. If you need help with anything a11y-related, please [reach out to the community](/resources/community) for assistance. If you discover an accessibility concern within the library, please file a bug on the [issue tracker](https://github.com/shoelace-style/shoelace/issues).
 
@@ -149,9 +149,9 @@ It's important to remember that, although accessibility starts with foundational
 
 ### Documentation
 
-Maintaining good documentation can be a painstaking task, but poor documentation leads to frustration and makes the project less appealing to users. Fortunately, writing documentation for Shoelace is fast and easy!
+Maintaining good documentation can be a painstaking task, but poor documentation leads to frustration and makes the project less appealing to users. Fortunately, writing documentation for Klik is fast and easy!
 
-Most of Shoelace's technical documentation is generated with JSDoc comments and TypeScript metadata from the source code. Every property, method, event, etc. is documented this way. In-code comments encourage contributors to keep the documentation up to date as changes occur so the docs are less likely to become stale. Refer to an existing component to see how JSDoc comments are used in Shoelace.
+Most of Klik's technical documentation is generated with JSDoc comments and TypeScript metadata from the source code. Every property, method, event, etc. is documented this way. In-code comments encourage contributors to keep the documentation up to date as changes occur so the docs are less likely to become stale. Refer to an existing component to see how JSDoc comments are used in Klik.
 
 Instructions, code examples, and interactive demos are hand-curated to give users the best possible experience. Typically, the most relevant information is shown first and less common examples are shown towards the bottom. Edge cases and gotchas should be called out in context with tips or warnings.
 

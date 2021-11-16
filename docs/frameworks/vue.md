@@ -1,16 +1,16 @@
 # Vue
 
-Vue [plays nice](https://custom-elements-everywhere.com/#vue) with custom elements, so you can use Shoelace in your Vue apps with ease.
+Vue [plays nice](https://custom-elements-everywhere.com/#vue) with custom elements, so you can use Klik in your Vue apps with ease.
 
 ## Installation
 
-To add Shoelace to your Vue app, install the package from npm.
+To add Klik to your Vue app, install the package from npm.
 
 ```bash
 npm install @shoelace-style/shoelace
 ```
 
-You'll need to tell Vue to ignore Shoelace components. This is pretty easy because they all start with `klik-`.
+You'll need to tell Vue to ignore Klik components. This is pretty easy because they all start with `klik-`.
 
 ```js
 import { createApp } from 'vue';
@@ -43,7 +43,7 @@ One caveat is there's currently [no support for v-model on custom elements](http
 <klik-input :value="name" @input="name = $event.target.value">
 ```
 
-If that's too verbose for your liking, you can use a custom directive instead. [This utility](https://www.npmjs.com/package/@shoelace-style/vue-klik-model) adds a custom directive that will work just like `v-model` but for Shoelace components. To install it, use this command.
+If that's too verbose for your liking, you can use a custom directive instead. [This utility](https://www.npmjs.com/package/@shoelace-style/vue-klik-model) adds a custom directive that will work just like `v-model` but for Klik components. To install it, use this command.
 
 ```bash
 npm install @shoelace-style/vue-klik-model
@@ -52,7 +52,7 @@ npm install @shoelace-style/vue-klik-model
 Next, import the directive and enable it like this.
 
 ```js
-import ShoelaceModelDirective from '@shoelace-style/vue-klik-model';
+import KlikModelDirective from '@shoelace-style/vue-klik-model';
 import { createApp } from 'vue';
 import App from './App.vue';
 

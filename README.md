@@ -1,4 +1,4 @@
-# Shoelace
+# Klik
 
 A forward-thinking library of web components.
 
@@ -23,13 +23,13 @@ Twitter: [@shoelace_style](https://twitter.com/shoelace_style)
 
 ## Shoemakers 🥾
 
-Shoemakers, or "Shoelace developers," can use this documentation to learn how to build Shoelace from source. You will need Node >= 14 to build and run the project locally. It is preferred, but not required, to use npm 7.
+Shoemakers, or "Shoelace developers," can use this documentation to learn how to build Klik from source. You will need Node >= 14 to build and run the project locally. It is preferred, but not required, to use npm 7.
 
-**You don't need to do any of this to use Shoelace!** This page is for people who want to contribute to the project, tinker with the source, or create a custom build of Shoelace.
+**You don't need to do any of this to use Klik!** This page is for people who want to contribute to the project, tinker with the source, or create a custom build of Klik.
 
 If that's not what you're trying to do, the [documentation website](https://shoelace.style) is where you want to be.
 
-### What are you using to build Shoelace?
+### What are you using to build Klik?
 
 Components are built with [LitElement](https://lit-element.polymer-project.org/), a custom elements base class that provides an intuitive API and reactive data binding. The build is a custom script with bundling powered by [esbuild](https://esbuild.github.io/).
 
@@ -39,7 +39,7 @@ Start by [forking the repo](https://github.com/shoelace-style/shoelace/fork) on 
 
 ```bash
 git clone https://github.com/YOUR_GITHUB_USERNAME/shoelace
-cd shoelace
+cd Klik
 npm install
 ```
 
@@ -51,7 +51,7 @@ Once you've cloned the repo, run the following command.
 npm start
 ```
 
-This will spin up the Shoelace dev server. After the initial build, a browser will open automatically. There is currently no hot module reloading (HMR), as browser's don't provide a way to reregister custom elements, but most changes to the source will reload the browser automatically.
+This will spin up the Klik dev server. After the initial build, a browser will open automatically. There is currently no hot module reloading (HMR), as browser's don't provide a way to reregister custom elements, but most changes to the source will reload the browser automatically.
 
 The documentation is powered by Docsify, which uses raw markdown files to generate pages. As such, no static files are built for the docs.
 
@@ -91,4 +91,4 @@ Designing, developing, and supporting this library requires a lot of time, effor
 - [Star on GitHub](https://github.com/shoelace-style/shoelace/stargazers)
 - [Follow on Twitter](https://twitter.com/shoelace_style)
 
-Whether you're building Shoelace or building something _with_ Shoelace — have fun creating! 🥾
+Whether you're building Klik or building something _with_ Klik — have fun creating! 🥾

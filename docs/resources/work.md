@@ -4,7 +4,7 @@
 
 ## Plan
 
-- [ ] discuss whether we should remove or keep shoelace branding
+- [ ] discuss whether we should remove or keep Klik branding
 - [ ] understand whether we ship too many css-globals
 - [ ] what happens with Box (a div) in HTML? Will all content/children end up in VDOM then??
 - [x] contact Cory

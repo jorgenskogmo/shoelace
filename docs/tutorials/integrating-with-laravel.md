@@ -1,6 +1,6 @@
 # Integrating with Laravel
 
-This page explains how to integrate Shoelace with a [Laravel](https://laravel.com) app using a local Webpack bundle. This is a community-maintained document. For questions about this integration, please [ask the community](/resources/community).
+This page explains how to integrate Klik with a [Laravel](https://laravel.com) app using a local Webpack bundle. This is a community-maintained document. For questions about this integration, please [ask the community](/resources/community).
 
 ## Requirements
 
@@ -13,9 +13,9 @@ This integration has been tested with the following:
 ## Instructions
 
 These instructions assume an out-of-the-box [Laravel 8+ install](https://laravel.com/docs/8.x/installation) that uses [Laravel Mix](https://laravel.com/docs/8.x/mix) to compile assets.
-Be sure to run `npm install` to install the default Laravel front-end dependencies before installing Shoelace. 
+Be sure to run `npm install` to install the default Laravel front-end dependencies before installing Klik. 
 
-### Install the Shoelace package
+### Install the Klik package
 
 ```bash
 npm install @shoelace-style/shoelace
@@ -23,15 +23,15 @@ npm install @shoelace-style/shoelace
 
 ### Import the Default Theme
 
-Import Shoelace's default theme (stylesheet) in `/resources/css/app.css`:
+Import Klik's default theme (stylesheet) in `/resources/css/app.css`:
 
 ```css
 @import "/node_modules/@lego/klik/dist/themes/light.css";
 ```
 
-### Import Your Shoelace Components
+### Import Your Klik Components
 
-Import each Shoelace component you plan to use in `/resources/js/boostrap.js`. Since [Laravel Mix](https://laravel.com/docs/8.x/mix) uses Webpack, use the full path to each component -- as outlined in the [Cherry Picking instructions](https://shoelace.style/getting-started/installation?id=cherry-picking). You can find the full import statement for a component in the *Importing* section of the component's documentation (use the *Bundler* import). Your imports should look similar to:
+Import each Klik component you plan to use in `/resources/js/boostrap.js`. Since [Laravel Mix](https://laravel.com/docs/8.x/mix) uses Webpack, use the full path to each component -- as outlined in the [Cherry Picking instructions](https://shoelace.style/getting-started/installation?id=cherry-picking). You can find the full import statement for a component in the *Importing* section of the component's documentation (use the *Bundler* import). Your imports should look similar to:
 
 ```js
 import "@lego/klik/dist/components/button/button.js";
@@ -43,7 +43,7 @@ import "@lego/klik/dist/components/menu-item/menu-item.js";
 
 ### Set the Base Path
 
-Add the base path to your Shoelace assets (icons, images, etc.) in `/resources/js/boostrap.js`. The path must point to the same folder where you copy assets to in the next step.
+Add the base path to your Klik assets (icons, images, etc.) in `/resources/js/boostrap.js`. The path must point to the same folder where you copy assets to in the next step.
 
 ```js
 import { setBasePath } from "@lego/klik/dist/utilities/base-path.js";
@@ -68,14 +68,14 @@ import "@lego/klik/dist/components/menu-item/menu-item.js";
 
 [Laravel Mix](https://laravel.com/docs/8.x/mix) is a wrapper around Webpack that simplifies configuration. Mix is used by default for compiling front-end assets in Laravel.
 
-Modify `webpack.mix.js` to add Shoelace's assets to Webpack's build process:
+Modify `webpack.mix.js` to add Klik's assets to Webpack's build process:
 ```js
 mix.js("resources/js/app.js", "public/js")
     .postCss("resources/css/app.css", "public/css", [])
     .copy("node_modules/@lego/klik/dist/assets", "public/assets")
 ```
 
-Consider [extracting vendor libraries](https://laravel.com/docs/8.x/mix#vendor-extraction) to a separate file. This splits frequently updated vendor libraries (like Shoelace) from your front-end application code -- for better long-term caching.
+Consider [extracting vendor libraries](https://laravel.com/docs/8.x/mix#vendor-extraction) to a separate file. This splits frequently updated vendor libraries (like Klik) from your front-end application code -- for better long-term caching.
 Here's an example `webpack.mix.js` file that compiles and splits your JS into `app.js` and `vendor.js` files, and builds an optimized CSS bundle using PostCSS.
 
 ```js
@@ -110,5 +110,5 @@ After compiling your front-end assets (above), include them in your top-level la
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 ```
 
-Have fun using Shoelace components in your Laravel app!
+Have fun using Klik components in your Laravel app!
 

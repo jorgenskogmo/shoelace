@@ -22,13 +22,13 @@ Add the following code to your page.
 <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@%VERSION%/dist/shoelace.js"></script>
 ```
 
-Now you have access to all of Shoelace's components! Try adding a button:
+Now you have access to all of Klik's components! Try adding a button:
 
 ```html
 <klik-button>Click me</klik-button>
 ```
 
-This will load all of Shoelace's components, but you should probably only load the ones you're actually using. To learn how, or for other ways to install Shoelace, refer to the [installation instructions](getting-started/installation).
+This will load all of Klik's components, but you should probably only load the ones you're actually using. To learn how, or for other ways to install Klik, refer to the [installation instructions](getting-started/installation).
 
 
 ## Browser Support
@@ -48,7 +48,7 @@ If you need to support IE11 or pre-Chromium Edge, this library isn't for you.
 
 ## Attribution
 
-Special thanks to the following projects and individuals that help make Shoelace possible.
+Special thanks to the following projects and individuals that help make Klik possible.
 
 - Based on Cory LaViska's [Shoelace](https://shoelace.style/) library
 - Components are built with [LitElement](https://lit-element.polymer-project.org/)

@@ -1,10 +1,10 @@
 # React
 
-React [doesn't play nice](https://custom-elements-everywhere.com/#react) with custom elements, so Shoelace offers a React version of its components to provide an idiomatic experience for React users. You can easily toggle between HTML and React examples throughout the documentation.
+React [doesn't play nice](https://custom-elements-everywhere.com/#react) with custom elements, so Klik offers a React version of its components to provide an idiomatic experience for React users. You can easily toggle between HTML and React examples throughout the documentation.
 
 ## Installation
 
-To add Shoelace to your React app, install the package from npm.
+To add Klik to your React app, install the package from npm.
 
 ```bash
 npm install @shoelace-style/shoelace
@@ -26,7 +26,7 @@ Now you can start using components!
 
 ## Importing Components
 
-Every Shoelace component is available to import as a React component. Note that we're importing the `<SlButton>` _React component_ instead of the `<klik-button>` _custom element_ in the example below.
+Every Klik component is available to import as a React component. Note that we're importing the `<SlButton>` _React component_ instead of the `<klik-button>` _custom element_ in the example below.
 
 ```jsx
 import { SlButton } from '@lego/klik/dist/react';
@@ -44,7 +44,7 @@ You can find a copy + paste import for every component at the bottom of each pag
 
 ## Event Handling
 
-Many Shoelace components emit [custom events](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent). For example, the [input component](/components/input) emits the `klik-input` event when it receives input. In React, you can listen for the event using `onSlInput`.
+Many Klik components emit [custom events](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent). For example, the [input component](/components/input) emits the `klik-input` event when it receives input. In React, you can listen for the event using `onSlInput`.
 
 Here's how you can bind the input's value to a state variable.
 

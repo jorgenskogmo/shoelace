@@ -50,7 +50,7 @@ Refer to a component's documentation for a complete list of its custom events.
 
 ## Methods
 
-Some components have methods you can call to trigger various behaviors. For example, you can set focus on a Shoelace input using the `focus()` method.
+Some components have methods you can call to trigger various behaviors. For example, you can set focus on a Klik input using the `focus()` method.
 
 ```html
 <klik-input></klik-input>
@@ -100,7 +100,7 @@ Custom elements cannot have self-closing tags. Similar to `<script>` and `<texta
 
 ## Differences from Native Elements
 
-You might expect similarly named elements to share the same API as native HTML elements. This is not always the case. Shoelace components **are not** designed to be one-to-one replacements for their HTML counterparts.
+You might expect similarly named elements to share the same API as native HTML elements. This is not always the case. Klik components **are not** designed to be one-to-one replacements for their HTML counterparts.
 
 For example, `<button>` and `<klik-button>` both have a `type` attribute, but it does different things. The former controls whether the button submits a form and the latter controls the button's appearance.
 
@@ -110,9 +110,9 @@ For example, `<button>` and `<klik-button>` both have a `type` attribute, but it
 
 ### VS Code
 
-Shoelace ships with a file called `vscode.html-custom-data.json` that can be used to describe its components to Visual Studio Code. This enables code completion for Shoelace components (also known as "code hinting" or "IntelliSense"). To enable it, you need to tell VS Code where the file is.
+Shoelace ships with a file called `vscode.html-custom-data.json` that can be used to describe its components to Visual Studio Code. This enables code completion for Klik components (also known as "code hinting" or "IntelliSense"). To enable it, you need to tell VS Code where the file is.
 
-1. [Install Shoelace locally](/getting-started/installation#local-installation)
+1. [Install Klik locally](/getting-started/installation#local-installation)
 2. Create a folder called `.vscode` at the root of your project
 3. Create a file inside the folder called `settings.json`
 4. Add the following to the file

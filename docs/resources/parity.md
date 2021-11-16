@@ -1,6 +1,6 @@
 # Parity
 
-The following table maps what's in our chakra and shoelace versions.
+The following table maps what's in our chakra and Klik versions.
 
 
 | **klik/chakra**               | **klik/shoelace** | Parity | Notes |

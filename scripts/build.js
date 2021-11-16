@@ -50,7 +50,6 @@ mkdirp.sync(outdir);
       target: 'es2017',
       entryPoints: [
         // The whole shebang
-        // './src/shoelace.ts',
         './src/klik.ts',
         // Components
         ...(await glob('./src/components/**/!(*.(style|test)).ts')),
@@ -103,7 +102,7 @@ mkdirp.sync(outdir);
     // Make sure docs/dist is empty since we're serving it virtually
     del.sync('docs/dist');
 
-    console.log(chalk.cyan(`Launching the Shoelace dev server at http://localhost:${port}! 🥾\n`));
+    console.log(chalk.cyan(`Launching the Klik dev server at http://localhost:${port}! 🥾\n`));
 
     // Launch browser sync
     bs.init({
