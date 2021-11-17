@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>klik-shoelace dt example</title>
+
+    <script type="module" src="../../dist/klik.js"></script>
+    <!-- todo: make klik auto-inject [fonts, default, dt-*] -->
+    <!-- document how user can redefine tokens in ./styles.css and/or dt-global-x -->
+
+    <!-- fonts -->
+    <link rel="stylesheet" href="../../dist/assets/fonts/cera-pro.css" />
+
+    <!-- 1. misc global styles -->
+    <link rel="stylesheet" href="../../dist/themes/dt-global-tw-colors.css" />
+    <link rel="stylesheet" href="../../dist/themes/dt-global-klik-colors.css" />
+    <link rel="stylesheet" href="../../dist/themes/dt-global-klik-ui.css" />
+
+    <!-- 2.1 component defaults -->
+    <link rel="stylesheet" href="../../dist/themes/dtx-defaults-light.css" />
+
+    <!-- 2.2 globals-alias map -->
+    <link rel="stylesheet" href="../../dist/themes/dtx-alias.css" />
+
+    <!-- 3. alias-component map -->
+    <link rel="stylesheet" href="../../dist/themes/dtx-map.css" />
+
+    <!-- demo specific styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <body>
+      <p>Design Token Example</p>
+
+      <p>Default</p>
+      <klik-button>Plain (Default)</klik-button>
+      <klik-button outline>Outline</klik-button>
+      <klik-button type="text">Ghost</klik-button>
+      <klik-button ghost>Ghost*</klik-button>
+
+      <p>Sizes</p>
+      <klik-button size="small">Small</klik-button>
+      <klik-button size="medium">Medium</klik-button>
+      <klik-button size="large">Large</klik-button>
+      <!--
+      <p>Types</p>
+      <klik-button type="primary">Primary</klik-button>
+      <klik-button type="success">Success</klik-button>
+      <klik-button type="neutral">Neutral</klik-button>
+      <klik-button type="warning">Warning</klik-button>
+      <klik-button type="danger">Danger</klik-button>
+
+      <p>Disabled</p>
+      <klik-button type="primary" disabled>Primary</klik-button>
+      <klik-button type="success" disabled>Success</klik-button>
+      <klik-button type="neutral" disabled>Neutral</klik-button>
+      <klik-button type="warning" disabled>Warning</klik-button>
+      <klik-button type="danger" disabled>Danger</klik-button>
+
+      <p>Outline</p>
+      <klik-button type="primary" outline>Primary</klik-button>
+      <klik-button type="success" outline>Success</klik-button>
+      <klik-button type="neutral" outline>Neutral</klik-button>
+      <klik-button type="warning" outline>Warning</klik-button>
+      <klik-button type="danger" outline>Danger</klik-button>
+      -->
+
+      <p>Icons</p>
+      <klik-button type="default">
+        <klik-icon slot="suffix" name="arrow-counterclockwise"></klik-icon>
+        Refresh
+      </klik-button>
+    </body>
+  </head>
+</html>

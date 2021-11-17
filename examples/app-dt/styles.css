@@ -1,0 +1,35 @@
+:root {
+  --klik-font-sans: 'Cera Pro';
+  --klik-input-font-family: 'Cera Pro';
+  font-feature-settings: 'kern';
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  font-family: var(--klik-font-sans);
+}
+
+html.klik-theme-dark body {
+  background-color: #222;
+  color: #fafafa;
+}
+
+/*
+
+Theme file structure:
+
+# 1. Sources, Global Level: dt-global-*
+
+dt-global-klik-colors.styles.ts
+dt-global-tw-colors.styles.ts
+dt-global-klik-ui.styles.ts
+
+# 2. Connect, Alias (Theme?) Level: dt-alias-*
+
+dtx-alias.styles.ts
+
+# 3. Assign, Map Level: dt-map-*
+
+dtx-map.styles.ts
+
+*/
