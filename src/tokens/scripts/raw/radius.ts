@@ -7,7 +7,7 @@ export const radii = {
   xl: '0.75rem', // 12px
   '2xl': '1rem', // 16px
   '3xl': '1.5rem', // 24px
-  full: '9999px',
+  full: '9999px'
 };
 
 export type Radii = typeof radii;

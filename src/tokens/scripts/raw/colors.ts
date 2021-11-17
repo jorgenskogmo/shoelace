@@ -7,5 +7,5 @@ export const colors = {
   white: '#ffffff',
   black: '#000000',
 
-  ...tokens.colors,
+  ...tokens.colors
 };

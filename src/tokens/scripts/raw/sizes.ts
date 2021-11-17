@@ -17,18 +17,18 @@ const largeSizes = {
   '5xl': '64rem',
   '6xl': '72rem',
   '7xl': '80rem',
-  '8xl': '90rem',
+  '8xl': '90rem'
 };
 
 const container = {
   sm: '640px',
   md: '768px',
   lg: '1024px',
-  xl: '1280px',
+  xl: '1280px'
 };
 
 export const sizes = {
   ...space,
   ...largeSizes,
-  container,
+  container
 };

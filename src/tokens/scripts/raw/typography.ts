@@ -1,7 +1,7 @@
 export const fonts = {
   body: 'Cera Pro',
   heading: 'Cera Pro',
-  mono: `SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace`,
+  mono: `SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace`
 };
 
 export const fontWeights = {
@@ -13,7 +13,7 @@ export const fontWeights = {
   semibold: 600,
   bold: 700,
   extrabold: 800,
-  black: 900,
+  black: 900
 };
 
 export const fontSizes = {
@@ -28,7 +28,7 @@ export const fontSizes = {
   '5xl': '3.0625rem', // 5
   '6xl': '3.8125rem', // 6
   '7xl': '4.75rem', // 7
-  '8xl': '5.9375rem', // 8
+  '8xl': '5.9375rem' // 8
 };
 
 export const lineHeights = {
@@ -43,7 +43,7 @@ export const lineHeights = {
   '5xl': '3.75rem',
   '6xl': '4.5rem',
   '7xl': '5.5rem',
-  '8xl': '6.75rem',
+  '8xl': '6.75rem'
 };
 
 // needed here because of the TypeScript

@@ -20,8 +20,7 @@ export const shadows = {
   inline: `inset 0 0 0 2px ${tokens.colors.information['400']}`,
   inner: 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
   none: 'none',
-  'dark-lg':
-    'rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.2) 0px 5px 10px, rgba(0, 0, 0, 0.4) 0px 15px 40px',
+  'dark-lg': 'rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.2) 0px 5px 10px, rgba(0, 0, 0, 0.4) 0px 15px 40px'
 };
 
 export type Shadows = typeof shadows;
