@@ -11,10 +11,7 @@ import { css } from 'lit';
 
 export default css`
   :root {
-  /**
-   * Border radii
-   */
-
-  /* --dt-global-klikui-border-radius-small: 0.125rem; */
-
+    --dt-global-klikui-shadows-button: 0px 1px 0px rgba(0, 0, 0, 0.1), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+    --dt-global-klikui-shadows--1: inset 0px 2px 0px rgba(0, 0, 0, 0.1);
+  }
 `;

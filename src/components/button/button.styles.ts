@@ -19,15 +19,20 @@ export default css`
     border-style: solid;
     border-width: var(--klik-input-border-width);
     font-family: var(--klik-input-font-family);
-    font-weight: var(--klik-font-weight-semibold);
+    font-weight: var(--klik-input-font-weight-medium);
     text-decoration: none;
     user-select: none;
     white-space: nowrap;
     vertical-align: middle;
+    align-items: center;
     padding: 0;
-    transition: var(--klik-transition-fast) background-color, var(--klik-transition-fast) color,
-      var(--klik-transition-fast) border, var(--klik-transition-fast) box-shadow;
+    /* transition: var(--klik-transition-fast) background-color, var(--klik-transition-fast) color,
+      var(--klik-transition-fast) border, var(--klik-transition-fast) box-shadow; */
     cursor: inherit;
+    /* shared */
+    background-color: rgb(var(--klik-color-primary-interaction));
+    color: rgb(var(--klik-color-primary-interaction-text));
+    /* box-shadow: var(--klik-button-shadow); */
   }
 
   .button::-moz-focus-inner {
@@ -36,6 +41,11 @@ export default css`
 
   .button:focus {
     outline: none;
+  }
+
+  .button:active {
+    transform: translateY(1px);
+    box-shadow: none;
   }
 
   .button--disabled {
@@ -61,7 +71,15 @@ export default css`
   }
 
   .button__label ::slotted(klik-icon) {
-    vertical-align: -2px;
+    /* vertical-align: -2px; */
+    vertical-align: 2px;
+    /* display: inline-flex;
+    align-content: center; */
+  }
+
+  .button__label {
+    display: inline-flex;
+    align-content: center;
   }
 
   /*
@@ -70,15 +88,12 @@ export default css`
 
   /* Default */
   .button--standard.button--default {
-    background-color: rgb(var(--klik-color-neutral-0));
-    border-color: rgb(var(--klik-color-neutral-300));
-    color: rgb(var(--klik-color-neutral-700));
+    border: 1px transparent;
+    box-shadow: var(--klik-button-shadow);
   }
 
   .button--standard.button--default:hover:not(.button--disabled) {
-    background-color: rgb(var(--klik-color-primary-50));
-    border-color: rgb(var(--klik-color-primary-300));
-    color: rgb(var(--klik-color-primary-700));
+    background-color: rgb(var(--klik-color-primary-interaction-hover));
   }
 
   .button--standard.button--default${focusVisibleSelector}:not(.button--disabled) {
@@ -89,9 +104,7 @@ export default css`
   }
 
   .button--standard.button--default:active:not(.button--disabled) {
-    background-color: rgb(var(--klik-color-primary-100));
-    border-color: rgb(var(--klik-color-primary-400));
-    color: rgb(var(--klik-color-primary-700));
+    background-color: rgb(var(--klik-color-primary-interaction-hover));
   }
 
   /* Primary */
@@ -233,19 +246,21 @@ export default css`
 
   .button--outline {
     background: none;
-    border: solid 1px;
+    border: var(--klik-input-border-width);
+    box-shadow: none;
   }
 
   /* Default */
   .button--outline.button--default {
-    border-color: rgb(var(--klik-color-neutral-300));
-    color: rgb(var(--klik-color-neutral-700));
+    border-color: rgb(var(--klik-color-primary-interaction));
+    color: rgb(var(--klik-color-primary-interaction));
+    box-shadow: none;
   }
 
   .button--outline.button--default:hover:not(.button--disabled) {
-    border-color: rgb(var(--klik-color-primary-600));
-    background-color: rgb(var(--klik-color-primary-600));
-    color: rgb(var(--klik-color-neutral-0));
+    border-color: rgb(var(--klik-color-primary-interaction));
+    color: rgb(var(--klik-color-primary-interaction));
+    background-color: rgb(var(--klik-button-outline-background-hover));
   }
 
   .button--outline.button--default${focusVisibleSelector}:not(.button--disabled) {
@@ -254,9 +269,9 @@ export default css`
   }
 
   .button--outline.button--default:active:not(.button--disabled) {
-    border-color: rgb(var(--klik-color-primary-700));
-    background-color: rgb(var(--klik-color-primary-700));
-    color: rgb(var(--klik-color-neutral-0));
+    border-color: rgb(var(--klik-color-primary-interaction));
+    color: rgb(var(--klik-color-primary-interaction));
+    background-color: rgb(var(--klik-button-outline-background-hover));
   }
 
   /* Primary */
@@ -375,27 +390,24 @@ export default css`
 
   .button--text {
     background-color: transparent;
-    border-color: transparent;
-    color: rgb(var(--klik-color-primary-600));
+    border: none;
+    box-shadow: none;
+    color: rgb(var(--klik-color-primary-interaction));
   }
 
   .button--text:hover:not(.button--disabled) {
-    background-color: transparent;
-    border-color: transparent;
-    color: rgb(var(--klik-color-primary-500));
+    background-color: rgb(var(--klik-button-outline-background-hover));
   }
 
   .button--text${focusVisibleSelector}:not(.button--disabled) {
     background-color: transparent;
-    border-color: transparent;
     color: rgb(var(--klik-color-primary-500));
     box-shadow: 0 0 0 var(--klik-focus-ring-width) rgb(var(--klik-color-primary-500) / var(--klik-focus-ring-alpha));
   }
 
   .button--text:active:not(.button--disabled) {
-    background-color: transparent;
-    border-color: transparent;
-    color: rgb(var(--klik-color-primary-700));
+    background-color: rgb(var(--klik-button-outline-background-hover));
+    box-shadow: var(--dt-global-klikui-shadows--1);
   }
 
   /*
@@ -407,6 +419,8 @@ export default css`
     height: var(--klik-input-height-small);
     line-height: calc(var(--klik-input-height-small) - var(--klik-input-border-width) * 2);
     border-radius: var(--klik-input-border-radius-small);
+
+    font-size: var(--klik-input-font-size-small);
   }
 
   .button--medium {
@@ -414,6 +428,8 @@ export default css`
     height: var(--klik-input-height-medium);
     line-height: calc(var(--klik-input-height-medium) - var(--klik-input-border-width) * 2);
     border-radius: var(--klik-input-border-radius-medium);
+
+    font-size: var(--klik-input-font-size-medium);
   }
 
   .button--large {
@@ -421,6 +437,8 @@ export default css`
     height: var(--klik-input-height-large);
     line-height: calc(var(--klik-input-height-large) - var(--klik-input-border-width) * 2);
     border-radius: var(--klik-input-border-radius-large);
+
+    font-size: var(--klik-input-font-size-large);
   }
 
   /*
@@ -446,21 +464,27 @@ export default css`
   .button--circle {
     padding-left: 0;
     padding-right: 0;
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
   }
 
   .button--circle.button--small {
     width: var(--klik-input-height-small);
     border-radius: 50%;
+    font-size: var(--klik-button-icon-size-small);
   }
 
   .button--circle.button--medium {
     width: var(--klik-input-height-medium);
     border-radius: 50%;
+    font-size: var(--klik-button-icon-size-medium);
   }
 
   .button--circle.button--large {
     width: var(--klik-input-height-large);
     border-radius: 50%;
+    font-size: var(--klik-button-icon-size-large);
   }
 
   .button--circle .button__prefix,

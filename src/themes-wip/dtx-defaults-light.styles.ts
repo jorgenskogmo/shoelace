@@ -11,12 +11,6 @@ export default css`
   :host,
   .klik-theme-light {
     /*
-     * Buttons
-    */
-
-    --klik-button-outline-border-width: 2px;
-
-    /*
      * Border radii
      */
 
@@ -289,5 +283,12 @@ export default css`
     --klik-color-danger-800: 153 27 27;
     --klik-color-danger-900: 127 29 29;
     --klik-color-danger-950: 80 20 20;
+
+    /* js exts */
+    --klik-color-primary-interaction: var(klik-color-neutral-500);
+    --klik-color-primary-interaction-hover: var(klik-color-neutral-600);
+    --klik-color-primary-interaction-text: var(klik-color-neutral-0);
+
+    --klik-button-shadow: 'none';
   }
 `;

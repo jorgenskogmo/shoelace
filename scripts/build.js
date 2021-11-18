@@ -34,6 +34,7 @@ mkdirp.sync(outdir);
     execSync(`node scripts/make-search.js --outdir "${outdir}"`, { stdio: 'inherit' });
     execSync(`node scripts/make-react.js`, { stdio: 'inherit' });
     execSync(`node scripts/make-vscode-data.js --outdir "${outdir}"`, { stdio: 'inherit' });
+    execSync(`node scripts/make-dt-css.js --outdir "${outdir}"`, { stdio: 'inherit' });
     execSync(`node scripts/make-css.js --outdir "${outdir}"`, { stdio: 'inherit' });
     execSync(`node scripts/copy-static.js --outdir "${outdir}"`, { stdio: 'inherit' });
     execSync(`node scripts/make-icons.js --outdir "${outdir}"`, { stdio: 'inherit' });
@@ -129,6 +130,12 @@ mkdirp.sync(outdir);
         // Rebuild and reload
         .rebuild()
         .then(() => {
+          // Rebuild stylesheets when a token file changes
+          if (/^src\/tokens/.test(filename)) {
+            execSync(`node scripts/make-dt-css.js --outdir "${outdir}"`, { stdio: 'inherit' });
+            execSync(`node scripts/make-css.js --outdir "${outdir}"`, { stdio: 'inherit' });
+          }
+
           // Rebuild stylesheets when a theme file changes
           if (/^src\/themes/.test(filename)) {
             execSync(`node scripts/make-css.js --outdir "${outdir}"`, { stdio: 'inherit' });

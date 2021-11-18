@@ -1,0 +1,77 @@
+/**
+ * Manually copied style keys from klik-ui
+ * TODO: Should come from Style-Dictionary
+ *
+ * Left-hand keys  : --dt-global-klikui-*
+ * Right-hand keys : hardcoded value
+ *
+ */
+:root {
+  /* Shadows */
+  --dt-global-klikui-shadows-button: 0px 1px 0px rgba(0, 0, 0, 0.1), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+  --dt-global-klikui-shadows--1: inset 0px 2px 0px rgba(0, 0, 0, 0.1);
+
+  /* Borders */
+  --dt-global-klikui-border-none: 0;
+  --dt-global-klikui-border-1px: 1px solid;
+  --dt-global-klikui-border-2px: 2px solid;
+  --dt-global-klikui-border-4px: 4px solid;
+  --dt-global-klikui-border-8px: 8px solid;
+
+  /* Radius */
+  --dt-global-klikui-radii-none: 0;
+  --dt-global-klikui-radii-sm: 0.125rem; /* 2px */
+  --dt-global-klikui-radii-base: 0.25rem; /* 4px */
+  --dt-global-klikui-radii-md: 0.375rem; /* 6px */
+  --dt-global-klikui-radii-lg: 0.5rem; /* 8px */
+  --dt-global-klikui-radii-xl: 0.75rem; /* 12px */
+  --dt-global-klikui-radii-2xl: 1rem; /* 16px */
+  --dt-global-klikui-radii-3xl: 1.5rem; /* 24px */
+  --dt-global-klikui-radii-full: 9999px;
+
+  /* Sizes */
+  --dt-global-klikui-size-input-small: 2rem;
+  --dt-global-klikui-size-input-medium: 3rem;
+  --dt-global-klikui-size-input-large: 4rem;
+
+  /* Typo */
+  --dt-global-klikui-fontfamily-body: 'Cera Pro';
+  --dt-global-klikui-fontfamily-heading: 'Cera Pro';
+  --dt-global-klikui-fontfamily-mono: 'SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace';
+
+  --dt-global-klikui-fontweight-hairline: 100;
+  --dt-global-klikui-fontweight-thin: 200;
+  --dt-global-klikui-fontweight-light: 300;
+  --dt-global-klikui-fontweight-normal: 400;
+  --dt-global-klikui-fontweight-medium: 500;
+  --dt-global-klikui-fontweight-semibold: 600;
+  --dt-global-klikui-fontweight-bold: 700;
+  --dt-global-klikui-fontweight-extrabold: 800;
+  --dt-global-klikui-fontweight-black: 900;
+
+  --dt-global-klikui-fontsize-xs: 0.75rem;
+  --dt-global-klikui-fontsize-sm: 0.875rem;
+  --dt-global-klikui-fontsize-md: 1rem;
+  --dt-global-klikui-fontsize-lg: 1.125rem;
+  --dt-global-klikui-fontsize-xl: 1.25rem;
+  --dt-global-klikui-fontsize-2xl: 1.5625rem;
+  --dt-global-klikui-fontsize-3xl: 1.9375rem;
+  --dt-global-klikui-fontsize-4xl: 2.4375rem;
+  --dt-global-klikui-fontsize-5xl: 3.0625rem;
+  --dt-global-klikui-fontsize-6xl: 3.8125rem;
+  --dt-global-klikui-fontsize-7xl: 4.75rem;
+  --dt-global-klikui-fontsize-8xl: 5.9375rem;
+
+  --dt-global-klikui-lineheight-xs: 1rem;
+  --dt-global-klikui-lineheight-sm: 1.25rem;
+  --dt-global-klikui-lineheight-md: 1.5rem;
+  --dt-global-klikui-lineheight-lg: 1.75rem;
+  --dt-global-klikui-lineheight-xl: 2rem;
+  --dt-global-klikui-lineheight-2xl: 2.25rem;
+  --dt-global-klikui-lineheight-3xl: 2.5rem;
+  --dt-global-klikui-lineheight-4xl: 3rem;
+  --dt-global-klikui-lineheight-5xl: 3.75rem;
+  --dt-global-klikui-lineheight-6xl: 4.5rem;
+  --dt-global-klikui-lineheight-7xl: 5.5rem;
+  --dt-global-klikui-lineheight-8xl: 6.75rem;
+}

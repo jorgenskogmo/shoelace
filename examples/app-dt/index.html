@@ -3,32 +3,16 @@
   <head>
     <title>klik-shoelace dt example</title>
 
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
     <script type="module" src="../../dist/klik.js"></script>
-    <!-- todo: make klik auto-inject [fonts, default, dt-*] -->
-    <!-- document how user can redefine tokens in ./styles.css and/or dt-global-x -->
-
-    <!-- fonts -->
-    <link rel="stylesheet" href="../../dist/assets/fonts/cera-pro.css" />
-
-    <!-- 1. misc global styles -->
-    <link rel="stylesheet" href="../../dist/themes/dt-global-tw-colors.css" />
-    <link rel="stylesheet" href="../../dist/themes/dt-global-klik-colors.css" />
-    <link rel="stylesheet" href="../../dist/themes/dt-global-klik-ui.css" />
-
-    <!-- 2.1 component defaults -->
-    <link rel="stylesheet" href="../../dist/themes/dtx-defaults-light.css" />
-
-    <!-- 2.2 globals-alias map -->
-    <link rel="stylesheet" href="../../dist/themes/dtx-alias.css" />
-
-    <!-- 3. alias-component map -->
-    <link rel="stylesheet" href="../../dist/themes/dtx-map.css" />
+    <link rel="stylesheet" href="../../dist/themes/dt-klik-light.css" />
 
     <!-- demo specific styles -->
     <link rel="stylesheet" href="styles.css" />
 
     <body>
-      <p>Design Token Example</p>
+      <h2>Design Token Example</h2>
 
       <p>Default</p>
       <klik-button>Plain (Default)</klik-button>
@@ -37,37 +21,299 @@
       <klik-button ghost>Ghost*</klik-button>
 
       <p>Sizes</p>
-      <klik-button size="small">Small</klik-button>
-      <klik-button size="medium">Medium</klik-button>
-      <klik-button size="large">Large</klik-button>
-      <!--
+      <klik-button size="large">Large button</klik-button>
+      <klik-button size="medium">Medium button</klik-button>
+      <klik-button size="small">Small button</klik-button>
+
+      <p>Sizes & Icons</p>
+      <klik-button size="large">
+        <klik-icon slot="prefix" library="klik" name="edit-bold"></klik-icon>
+        Large button</klik-button
+      >
+      <klik-button size="medium">
+        <klik-icon slot="prefix" library="klik" name="edit-bold"></klik-icon>
+        Medium button</klik-button
+      >
+      <klik-button size="small">
+        <klik-icon slot="prefix" library="klik" name="edit-bold"></klik-icon>
+        Small button</klik-button
+      >
+
+      <p></p>
+
+      <klik-button size="large">
+        <klik-icon slot="suffix" library="klik" name="alert-bold"></klik-icon>
+        Large button</klik-button
+      >
+      <klik-button size="medium">
+        <klik-icon slot="suffix" library="klik" name="alert-bold"></klik-icon>
+        Medium button</klik-button
+      >
+      <klik-button size="small">
+        <klik-icon slot="suffix" library="klik" name="alert-bold"></klik-icon>
+        Small button</klik-button
+      >
+
       <p>Types</p>
-      <klik-button type="primary">Primary</klik-button>
+      <klik-button>Primary</klik-button>
       <klik-button type="success">Success</klik-button>
       <klik-button type="neutral">Neutral</klik-button>
       <klik-button type="warning">Warning</klik-button>
       <klik-button type="danger">Danger</klik-button>
 
       <p>Disabled</p>
-      <klik-button type="primary" disabled>Primary</klik-button>
+      <klik-button disabled>Primary</klik-button>
       <klik-button type="success" disabled>Success</klik-button>
       <klik-button type="neutral" disabled>Neutral</klik-button>
       <klik-button type="warning" disabled>Warning</klik-button>
       <klik-button type="danger" disabled>Danger</klik-button>
 
       <p>Outline</p>
-      <klik-button type="primary" outline>Primary</klik-button>
+      <klik-button outline>Primary</klik-button>
       <klik-button type="success" outline>Success</klik-button>
       <klik-button type="neutral" outline>Neutral</klik-button>
       <klik-button type="warning" outline>Warning</klik-button>
       <klik-button type="danger" outline>Danger</klik-button>
-      -->
 
       <p>Icons</p>
+      <klik-button type="default" size="small">
+        <klik-icon slot="prefix" name="gear"></klik-icon>
+        Settings
+      </klik-button>
+
+      <klik-button type="default" size="small">
+        <klik-icon slot="suffix" name="arrow-counterclockwise"></klik-icon>
+        Refresh
+      </klik-button>
+
+      <klik-button type="default" size="small">
+        <klik-icon slot="prefix" name="link-45deg"></klik-icon>
+        <klik-icon slot="suffix" name="box-arrow-up-right"></klik-icon>
+        Open
+      </klik-button>
+
+      <br /><br />
+
+      <klik-button type="default">
+        <klik-icon slot="prefix" name="gear"></klik-icon>
+        Settings
+      </klik-button>
+
       <klik-button type="default">
         <klik-icon slot="suffix" name="arrow-counterclockwise"></klik-icon>
         Refresh
       </klik-button>
+
+      <klik-button type="default">
+        <klik-icon slot="prefix" name="link-45deg"></klik-icon>
+        <klik-icon slot="suffix" name="box-arrow-up-right"></klik-icon>
+        Open
+      </klik-button>
+
+      <br /><br />
+
+      <klik-button type="default" size="large">
+        <klik-icon slot="prefix" name="gear"></klik-icon>
+        Settings
+      </klik-button>
+
+      <klik-button type="default" size="large">
+        <klik-icon slot="suffix" name="arrow-counterclockwise"></klik-icon>
+        Refresh
+      </klik-button>
+
+      <klik-button type="default" size="large">
+        <klik-icon slot="prefix" name="link-45deg"></klik-icon>
+        <klik-icon slot="suffix" name="box-arrow-up-right"></klik-icon>
+        Open
+      </klik-button>
+
+      <p>Pills</p>
+      <klik-button size="small" pill>Small</klik-button>
+      <klik-button size="medium" pill>Medium</klik-button>
+      <klik-button size="large" pill>Large</klik-button>
+
+      <p>Round</p>
+      <klik-button type="default" size="small" circle
+        ><klik-icon library="klik" name="settings-bold"></klik-icon
+      ></klik-button>
+      <klik-button type="default" size="medium" circle
+        ><klik-icon library="klik" name="settings-bold"></klik-icon
+      ></klik-button>
+      <klik-button type="default" size="large" circle
+        ><klik-icon library="klik" name="settings-bold"></klik-icon
+      ></klik-button>
+
+      <p>Badge</p>
+      <klik-button>
+        Requests
+        <klik-badge type="success" pill>30</klik-badge>
+      </klik-button>
+
+      <klik-button style="margin-left: 1rem">
+        Warnings
+        <klik-badge type="warning" pill>8</klik-badge>
+      </klik-button>
+
+      <klik-button style="margin-left: 1rem">
+        Errors
+        <klik-badge type="danger" pill>6</klik-badge>
+      </klik-button>
+
+      <p>Badge, Pulsating</p>
+      <klik-button>
+        Requests
+        <klik-badge type="success" pill pulse>30</klik-badge>
+      </klik-button>
+
+      <klik-button style="margin-left: 1rem">
+        Warnings
+        <klik-badge type="warning" pill pulse>8</klik-badge>
+      </klik-button>
+
+      <klik-button style="margin-left: 1rem">
+        Errors
+        <klik-badge type="danger" pill pulse>6</klik-badge>
+      </klik-button>
+
+      <p>Caret</p>
+      <klik-button size="small" caret>Small</klik-button>
+      <klik-button size="medium" caret>Medium</klik-button>
+      <klik-button size="large" caret>Large</klik-button>
+
+      <p>Loading / Spinner</p>
+      <klik-button loading>Primary</klik-button>
+      <klik-button type="success" loading>Success</klik-button>
+      <klik-button type="neutral" loading>Neutral</klik-button>
+      <klik-button type="warning" loading>Warning</klik-button>
+      <klik-button type="danger" loading>Danger</klik-button>
+
+      <p>Groups</p>
+      <klik-button-group>
+        <klik-button size="small">Left</klik-button>
+        <klik-button size="small">Center</klik-button>
+        <klik-button size="small">Right</klik-button>
+      </klik-button-group>
+
+      <br /><br />
+
+      <klik-button-group>
+        <klik-button size="medium">Left</klik-button>
+        <klik-button size="medium">Center</klik-button>
+        <klik-button size="medium">Right</klik-button>
+      </klik-button-group>
+
+      <br /><br />
+
+      <klik-button-group>
+        <klik-button size="large">Left</klik-button>
+        <klik-button size="large">Center</klik-button>
+        <klik-button size="large">Right</klik-button>
+      </klik-button-group>
+
+      <p>Dropdowns in Button Groups</p>
+      <klik-button-group>
+        <klik-button>Button</klik-button>
+        <klik-button>Button</klik-button>
+        <klik-dropdown>
+          <klik-button slot="trigger" caret>Dropdown</klik-button>
+          <klik-menu>
+            <klik-menu-item>Item 1</klik-menu-item>
+            <klik-menu-item>Item 2</klik-menu-item>
+            <klik-menu-item>Item 3</klik-menu-item>
+          </klik-menu>
+        </klik-dropdown>
+      </klik-button-group>
+
+      <p>Toolbar</p>
+      <div class="button-group-toolbar">
+        <klik-button-group label="History">
+          <klik-button type="success"><klik-icon name="arrow-counterclockwise"></klik-icon></klik-button>
+          <klik-button type="danger"><klik-icon name="arrow-clockwise"></klik-icon></klik-button>
+        </klik-button-group>
+
+        <klik-button-group label="Formatting">
+          <klik-button><klik-icon name="type-bold"></klik-icon></klik-button>
+          <klik-button><klik-icon name="type-italic"></klik-icon></klik-button>
+          <klik-button><klik-icon name="type-underline"></klik-icon></klik-button>
+        </klik-button-group>
+
+        <klik-button-group label="Alignment">
+          <klik-button><klik-icon name="justify-left"></klik-icon></klik-button>
+          <klik-button><klik-icon name="justify"></klik-icon></klik-button>
+          <klik-button><klik-icon name="justify-right"></klik-icon></klik-button>
+        </klik-button-group>
+      </div>
+
+      <p>Toolbar with Tooltip</p>
+      <div class="button-group-toolbar">
+        <klik-button-group label="History">
+          <klik-tooltip content="Undo">
+            <klik-button><klik-icon name="arrow-counterclockwise"></klik-icon></klik-button>
+          </klik-tooltip>
+          <klik-tooltip content="Redo">
+            <klik-button><klik-icon name="arrow-clockwise"></klik-icon></klik-button>
+          </klik-tooltip>
+        </klik-button-group>
+
+        <klik-button-group label="Formatting">
+          <klik-tooltip content="Bold">
+            <klik-button><klik-icon name="type-bold"></klik-icon></klik-button>
+          </klik-tooltip>
+          <klik-tooltip content="Italic">
+            <klik-button><klik-icon name="type-italic"></klik-icon></klik-button>
+          </klik-tooltip>
+          <klik-tooltip content="Underline">
+            <klik-button><klik-icon name="type-underline"></klik-icon></klik-button>
+          </klik-tooltip>
+        </klik-button-group>
+
+        <klik-button-group label="Alignment">
+          <klik-tooltip content="Align Left">
+            <klik-button><klik-icon name="justify-left"></klik-icon></klik-button>
+          </klik-tooltip>
+          <klik-tooltip content="Align Center">
+            <klik-button><klik-icon name="justify"></klik-icon></klik-button>
+          </klik-tooltip>
+          <klik-tooltip content="Align Right">
+            <klik-button><klik-icon name="justify-right"></klik-icon></klik-button>
+          </klik-tooltip>
+        </klik-button-group>
+      </div>
+
+      <style>
+        .button-group-toolbar klik-button-group:not(:last-of-type) {
+          margin-right: var(--klik-spacing-x-small);
+        }
+      </style>
+
+      <script>
+        function notify(message, type = 'primary', icon = 'info-circle', duration = 3000) {
+          const alert = Object.assign(document.createElement('klik-alert'), {
+            type: type,
+            closable: true,
+            duration: duration,
+            innerHTML: `
+              <klik-icon name="${icon}" slot="icon"></klik-icon>
+              ${message}
+            `
+          });
+
+          document.body.append(alert);
+          return alert.toast();
+        }
+
+        window.addEventListener('load', () => {
+          console.log('ready');
+
+          document.querySelectorAll('klik-button').forEach(el => {
+            el.addEventListener('click', () => {
+              console.log('clicked btn', el);
+              notify(`Button Clicked`, el.type);
+            });
+          });
+        });
+      </script>
     </body>
   </head>
 </html>

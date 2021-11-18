@@ -1,0 +1,74 @@
+/**
+ * Map Aliases to Component Styles
+ *
+ * Left-hand keys  : --klik-*
+ * Right-hand keys : --dt-alias-* (or --dt-global-* if used without alias layer)
+ *
+ * See dtx-defaults-* for keys to redefine/link
+ */
+:root {
+  /* typo */
+  --klik-font-sans: var(--dt-alias-fontfamily-sans);
+  --klik-input-font-family: var(--dt-alias-fontfamily-input);
+
+  /* Font sizes */
+  --klik-font-size-2x-small: 0.625rem; /* 10px */
+  --klik-font-size-x-small: var(--dt-global-klikui-fontsize-xs);
+  --klik-font-size-small: var(--dt-global-klikui-fontsize-sm);
+  --klik-font-size-medium: var(--dt-global-klikui-fontsize-md);
+  --klik-font-size-large: var(--dt-global-klikui-fontsize-lg);
+  --klik-font-size-x-large: var(--dt-global-klikui-fontsize-xl);
+  --klik-font-size-2x-large: var(--dt-global-klikui-fontsize-2xl);
+  --klik-font-size-3x-large: var(--dt-global-klikui-fontsize-3xl);
+  --klik-font-size-4x-large: var(--dt-global-klikui-fontsize-4xl);
+
+  /* Font weights */
+  --klik-font-weight-light: var(--dt-global-klikui-fontweight-light);
+  --klik-font-weight-normal: var(--dt-global-klikui-fontweight-normal);
+  --klik-font-weight-medium: var(--dt-global-klikui-fontweight-medium);
+  --klik-font-weight-semibold: var(--dt-global-klikui-fontweight-semibold);
+  --klik-font-weight-bold: var(--dt-global-klikui-fontweight-bold);
+
+  /* Line heights */
+  --klik-line-height-denser: 1;
+  --klik-line-height-dense: 1.4;
+  --klik-line-height-normal: 1.8;
+  --klik-line-height-loose: 2.2;
+  --klik-line-height-looser: 2.6;
+
+  /* primary interaction */
+  --klik-color-primary-interaction: var(--dt-alias-color-primary-interaction);
+  --klik-color-primary-interaction-hover: var(--dt-alias-color-primary-interaction-hover);
+  --klik-color-primary-interaction-text: var(--dt-alias-color-primary-interaction-text);
+
+  /* buttons */
+  --klik-button-shadow: var(--dt-global-klikui-shadows-button);
+  --klik-button-outline-background-hover: var(--dt-global-klik-color-slate-50);
+
+  --klik-button-font-size-small: var(--dt-global-klikui-fontsize-medium);
+  --klik-button-font-size-medium: var(--dt-global-klikui-fontsize-medium);
+  --klik-button-font-size-large: var(--dt-global-klikui-fontsize-xl);
+
+  /* radii */
+  --klik-border-radius-small: var(--dt-global-klikui-radii-sm);
+  --klik-border-radius-medium: var(--dt-global-klikui-radii-base);
+  --klik-border-radius-large: var(--dt-global-klikui-radii-medium);
+  --klik-border-radius-x-large: var(--dt-global-klikui-radii-large);
+
+  /* input */
+  --klik-input-border-width: var(--dt-global-klikui-border-2px);
+
+  --klik-input-height-small: var(--dt-global-klikui-size-input-small);
+  --klik-input-height-medium: var(--dt-global-klikui-size-input-medium);
+  --klik-input-height-large: var(--dt-global-klikui-size-input-large);
+
+  --klik-input-font-weight-medium: var(--dt-global-klikui-fontweight-medium);
+
+  --klik-input-font-size-small: var(--dt-global-klikui-fontsize-medium);
+  --klik-input-font-size-medium: var(--dt-global-klikui-fontsize-lg);
+  --klik-input-font-size-large: var(--dt-global-klikui-fontsize-xl);
+
+  --klik-button-icon-size-small: 0.875rem; /* */
+  --klik-button-icon-size-medium: 1rem;
+  --klik-button-icon-size-large: 1.625rem; /* */
+}
