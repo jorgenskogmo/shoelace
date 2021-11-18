@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>klik-shoelace dt example</title>
 
@@ -13,6 +13,92 @@
 
     <body>
       <h2>Design Token Example</h2>
+
+      <klik-card>
+        <p>Colors</p>
+        <klik-button type="text" size="small" onclick="document.documentElement.classList=''">Light</klik-button>
+        <klik-button type="text" size="small" onclick="document.documentElement.classList='klik_theme_dark'"
+          >Dark</klik-button
+        >
+        <p>Klik-UI</p>
+        <klik-button type="text" size="small" onclick="setTheme('klik-color-slate')">klik-color-slate</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('klik-color-turquoise')"
+          >klik-color-turquoise</klik-button
+        >
+        <klik-button type="text" size="small" onclick="setTheme('klik-color-teal')">klik-color-teal</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('klik-color-light-blue')"
+          >klik-color-light-blue</klik-button
+        >
+        <klik-button type="text" size="small" onclick="setTheme('klik-color-dark-blue')"
+          >klik-color-dark-blue</klik-button
+        >
+        <klik-button type="text" size="small" onclick="setTheme('klik-color-purple')">klik-color-purple</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('klik-color-magenta')">klik-color-magenta</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('klik-color-copper')">klik-color-copper</klik-button>
+
+        <p>Tailwind</p>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-blue-gray')">blue-gray</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-cool-gray')">cool-gray</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-gray')">gray</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-true-gray')">true-gray</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-warm-gray')">warm-gray</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-red')">red</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-orange')">orange</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-amber')">amber</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-yellow')">yellow</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-lime')">lime</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-green')">green</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-emerald')">emerald</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-teal')">teal</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-cyan')">cyan</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-sky')">sky</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-blue')">blue</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-indigo')">indigo</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-violet')">violet</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-purple')">purple</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-fuchsia')">fuchsia</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-pink')">pink</klik-button>
+        <klik-button type="text" size="small" onclick="setTheme('tw-color-rose')">rose</klik-button>
+
+        <script>
+          function setTheme(t) {
+            if (t === 'light') {
+              document.documentElement.style.setProperty(
+                '--klik-color-primary-interaction',
+                `var(--dt-global-klik-color-light-blue-500)`
+              );
+              document.documentElement.style.setProperty(
+                '--klik-color-primary-interaction',
+                `var(--dt-global-klik-color-light-blue-600)`
+              );
+
+              document.body.style.backgroundColor = '#fff';
+            } else {
+              document.documentElement.style.setProperty(
+                '--klik-color-primary-interaction',
+                `var(--dt-global-${t}-500)`
+              );
+              document.documentElement.style.setProperty(
+                '--klik-color-primary-interaction-hover',
+                `var(--dt-global-${t}-600)`
+              );
+
+              if (t.indexOf('gray') > -1 || t === 'dark') {
+                document.body.style.backgroundColor = '#202020';
+                document.body.style.color = '#eee';
+                // document.documentElement.style.setProperty(
+                //   '--klik-surface-base-alt',
+                //   `var(--dt-global-tw-color-gray-900)`
+                // );
+                --klik - surface - base - alt;
+              } else {
+                document.body.style.backgroundColor = '#eee';
+                document.body.style.color = '#222';
+              }
+            }
+          }
+        </script>
+      </klik-card>
 
       <p>Default</p>
       <klik-button>Plain (Default)</klik-button>
@@ -306,12 +392,12 @@
         window.addEventListener('load', () => {
           console.log('ready');
 
-          document.querySelectorAll('klik-button').forEach(el => {
-            el.addEventListener('click', () => {
-              console.log('clicked btn', el);
-              notify(`Button Clicked`, el.type);
-            });
-          });
+          // document.querySelectorAll('klik-button').forEach(el => {
+          //   el.addEventListener('click', () => {
+          //     console.log('clicked btn', el);
+          //     notify(`Button Clicked`, el.type);
+          //   });
+          // });
         });
       </script>
     </body>

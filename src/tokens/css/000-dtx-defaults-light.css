@@ -3,9 +3,13 @@
  *
  * To redefine a value, add the key(s) to dtx-map (and ideally dtx-alias)
  */
-:root,
+
+/* :root,
 :host,
-.klik-theme-light {
+.klik-theme-light { */
+
+:root,
+:host {
   /*
    * Border radii
    */
