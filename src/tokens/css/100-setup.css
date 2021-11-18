@@ -1,0 +1,17 @@
+/**
+ * Document-wide setup
+ */
+
+/* * {
+  font-family: var(--klik-font-sans);
+} */
+
+:root {
+  font-size: 16px;
+  font-feature-settings: 'kern';
+
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
