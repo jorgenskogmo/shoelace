@@ -200,6 +200,7 @@ export default class KlikButton extends LitElement {
         `
       : html`
           <button
+            aria-label="default-aria-button-label"
             part="base"
             class=${classMap({
               button: true,

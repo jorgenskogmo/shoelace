@@ -5,30 +5,15 @@
  * Right-hand keys : --dt-global-* or hardcoded value
  *
  * */
-:root {
+
+:root.klik-theme-klikui {
+  --dt-alias-color-primary-interaction: var(--dt-global-klik-color-light-blue-500);
+  --dt-alias-color-primary-interaction-hover: var(--dt-global-klik-color-light-blue-600);
+  --dt-alias-color-primary-interaction-text: var(--dt-global-klik-color-white);
+
   --dt-alias-fontfamily-sans: 'Cera Pro';
   --dt-alias-fontfamily-input: 'Cera Pro';
 
-  /* Default */
-  --dt-alias-color-primary-interaction: var(--dt-global-klik-color-light-blue-500);
-  --dt-alias-color-primary-interaction-hover: var(--dt-global-klik-color-light-blue-600);
-  --dt-alias-color-primary-interaction-text: var(--dt-global-klik-color-white);
-}
-
-/* :root,
-:host,
-.klik-theme-light {
-  --dt-alias-color-primary-interaction: var(--dt-global-klik-color-light-blue-500);
-  --dt-alias-color-primary-interaction-hover: var(--dt-global-klik-color-light-blue-600);
-  --dt-alias-color-primary-interaction-text: var(--dt-global-klik-color-white);
-} */
-
-html.klik-theme-dark {
-  --dt-alias-color-primary-interaction: 0 0 255;
-  --dt-alias-color-primary-interaction-text: 255 0 0;
-}
-
-.klik-theme-dark body {
-  background-color: #202020;
-  /* color: #00ff00; */
+  /* --dt-alias-color-primary-interaction: 255 0 0;
+  --dt-alias-color-primary-interaction-text: 0 0 0; */
 }

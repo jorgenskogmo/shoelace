@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="klik-mode-dark">
   <head>
     <title>klik-shoelace dt example</title>
+    <meta name="description" content="Design Token test page" />
 
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
@@ -14,91 +15,131 @@
     <body>
       <h2>Design Token Example</h2>
 
-      <klik-card>
-        <p>Colors</p>
-        <klik-button type="text" size="small" onclick="document.documentElement.classList=''">Light</klik-button>
-        <klik-button type="text" size="small" onclick="document.documentElement.classList='klik_theme_dark'"
-          >Dark</klik-button
-        >
-        <p>Klik-UI</p>
-        <klik-button type="text" size="small" onclick="setTheme('klik-color-slate')">klik-color-slate</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('klik-color-turquoise')"
-          >klik-color-turquoise</klik-button
-        >
-        <klik-button type="text" size="small" onclick="setTheme('klik-color-teal')">klik-color-teal</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('klik-color-light-blue')"
-          >klik-color-light-blue</klik-button
-        >
-        <klik-button type="text" size="small" onclick="setTheme('klik-color-dark-blue')"
-          >klik-color-dark-blue</klik-button
-        >
-        <klik-button type="text" size="small" onclick="setTheme('klik-color-purple')">klik-color-purple</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('klik-color-magenta')">klik-color-magenta</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('klik-color-copper')">klik-color-copper</klik-button>
+      <p>
+        Although there was never an intention to (re-)introduce the <strong>mess</strong> we currently have in Chakra,
+        it kind of came by itself... we (probably) need a way to change things:
+      </p>
+      <p><klik-tag type="neutral">Mode</klik-tag> Speaks to which overall colorScheme to pick. Light, Dark.</p>
+      <p>
+        <klik-tag type="neutral">Theme</klik-tag> Speaks to which set of design-token-sets to override defaults with.
+        <br />
+        (We could of course ship just one theme (and no defaults to override)
+      </p>
+      <p>
+        <klik-tag type="neutral">ColorScheme</klik-tag> Just changes two CSS keys: <br />
 
-        <p>Tailwind</p>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-blue-gray')">blue-gray</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-cool-gray')">cool-gray</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-gray')">gray</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-true-gray')">true-gray</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-warm-gray')">warm-gray</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-red')">red</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-orange')">orange</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-amber')">amber</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-yellow')">yellow</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-lime')">lime</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-green')">green</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-emerald')">emerald</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-teal')">teal</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-cyan')">cyan</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-sky')">sky</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-blue')">blue</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-indigo')">indigo</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-violet')">violet</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-purple')">purple</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-fuchsia')">fuchsia</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-pink')">pink</klik-button>
-        <klik-button type="text" size="small" onclick="setTheme('tw-color-rose')">rose</klik-button>
+        '--klik-color-primary-interaction' and '--klik-color-primary-interaction-hover', with the chosen color (value
+        500 and 600 respecively)
+        <br />
+        (We could of course ship just one colorScheme, baked into the theme?)
+      </p>
 
-        <script>
-          function setTheme(t) {
-            if (t === 'light') {
-              document.documentElement.style.setProperty(
-                '--klik-color-primary-interaction',
-                `var(--dt-global-klik-color-light-blue-500)`
-              );
-              document.documentElement.style.setProperty(
-                '--klik-color-primary-interaction',
-                `var(--dt-global-klik-color-light-blue-600)`
-              );
+      <p>so, yes - lets find a way to cook all into ONE CSS file, and expose as little as possible in :root</p>
 
-              document.body.style.backgroundColor = '#fff';
-            } else {
-              document.documentElement.style.setProperty(
-                '--klik-color-primary-interaction',
-                `var(--dt-global-${t}-500)`
-              );
-              document.documentElement.style.setProperty(
-                '--klik-color-primary-interaction-hover',
-                `var(--dt-global-${t}-600)`
-              );
+      <klik-details summary="Controls">
+        <klik-card style="width: 100%; margin-bottom: 1rem">
+          <p>Mode</p>
+          <klik-button type="text" size="small" onclick="setMode('light')">Light</klik-button>
+          <klik-button type="text" size="small" onclick="setMode('dark')">Dark</klik-button>
+        </klik-card>
 
-              if (t.indexOf('gray') > -1 || t === 'dark') {
-                document.body.style.backgroundColor = '#202020';
-                document.body.style.color = '#eee';
-                // document.documentElement.style.setProperty(
-                //   '--klik-surface-base-alt',
-                //   `var(--dt-global-tw-color-gray-900)`
-                // );
-                --klik - surface - base - alt;
-              } else {
-                document.body.style.backgroundColor = '#eee';
-                document.body.style.color = '#222';
-              }
-            }
+        <klik-card style="width: 100%; margin-bottom: 1rem">
+          <p>Theme</p>
+          <klik-button type="text" size="small" onclick="setTheme('none')">None</klik-button>
+          <klik-button type="text" size="small" onclick="setTheme('klikui')">Klik-UI</klik-button>
+        </klik-card>
+
+        <klik-card>
+          <p>ColorScheme: Klik-UI colors</p>
+          <klik-button type="text" size="small" onclick="setColorScheme('klik-color-slate')"
+            >klik-color-slate</klik-button
+          >
+          <klik-button type="text" size="small" onclick="setColorScheme('klik-color-turquoise')"
+            >klik-color-turquoise</klik-button
+          >
+          <klik-button type="text" size="small" onclick="setColorScheme('klik-color-teal')"
+            >klik-color-teal</klik-button
+          >
+          <klik-button type="text" size="small" onclick="setColorScheme('klik-color-light-blue')"
+            >klik-color-light-blue</klik-button
+          >
+          <klik-button type="text" size="small" onclick="setColorScheme('klik-color-dark-blue')"
+            >klik-color-dark-blue</klik-button
+          >
+          <klik-button type="text" size="small" onclick="setColorScheme('klik-color-purple')"
+            >klik-color-purple</klik-button
+          >
+          <klik-button type="text" size="small" onclick="setColorScheme('klik-color-magenta')"
+            >klik-color-magenta</klik-button
+          >
+          <klik-button type="text" size="small" onclick="setColorScheme('klik-color-copper')"
+            >klik-color-copper</klik-button
+          >
+
+          <p>ColorScheme: Tailwind colors</p>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-blue-gray')">blue-gray</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-cool-gray')">cool-gray</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-gray')">gray</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-true-gray')">true-gray</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-warm-gray')">warm-gray</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-red')">red</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-orange')">orange</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-amber')">amber</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-yellow')">yellow</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-lime')">lime</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-green')">green</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-emerald')">emerald</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-teal')">teal</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-cyan')">cyan</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-sky')">sky</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-blue')">blue</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-indigo')">indigo</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-violet')">violet</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-purple')">purple</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-fuchsia')">fuchsia</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-pink')">pink</klik-button>
+          <klik-button type="text" size="small" onclick="setColorScheme('tw-color-rose')">rose</klik-button>
+        </klik-card>
+      </klik-details>
+
+      <script>
+        function setMode(mode) {
+          if (mode === 'light') {
+            document.documentElement.classList.remove('klik-mode-dark');
+            document.documentElement.classList.add('klik-mode-light');
+          } else {
+            document.documentElement.classList.remove('klik-mode-light');
+            document.documentElement.classList.add('klik-mode-dark');
           }
-        </script>
-      </klik-card>
+        }
+
+        function setTheme(mode) {
+          if (mode === 'none') {
+            document.documentElement.classList.remove('klik-theme-klikui');
+          } else {
+            document.documentElement.classList.add('klik-theme-klikui');
+          }
+        }
+
+        function setColorScheme(t) {
+          if (t === 'light') {
+            document.documentElement.style.setProperty(
+              '--klik-color-primary-interaction',
+              `var(--dt-global-klik-color-light-blue-500)`
+            );
+            document.documentElement.style.setProperty(
+              '--klik-color-primary-interaction-hover',
+              `var(--dt-global-klik-color-light-blue-600)`
+            );
+          } else {
+            document.documentElement.style.setProperty('--klik-color-primary-interaction', `var(--dt-global-${t}-500)`);
+            document.documentElement.style.setProperty(
+              '--klik-color-primary-interaction-hover',
+              `var(--dt-global-${t}-600)`
+            );
+          }
+        }
+      </script>
 
       <p>Default</p>
       <klik-button>Plain (Default)</klik-button>
@@ -141,7 +182,7 @@
       >
 
       <p>Types</p>
-      <klik-button>Primary</klik-button>
+      <klik-button aria-label="test">Primary</klik-button>
       <klik-button type="success">Success</klik-button>
       <klik-button type="neutral">Neutral</klik-button>
       <klik-button type="warning">Warning</klik-button>
@@ -373,6 +414,252 @@
         }
       </style>
 
+      <klik-divider></klik-divider>
+
+      <p>Forms</p>
+
+      <klik-checkbox>Checkbox</klik-checkbox>
+      <klik-checkbox checked>Checked</klik-checkbox>
+      <klik-checkbox indeterminate>Indeterminate</klik-checkbox>
+      <klik-checkbox disabled>Disabled</klik-checkbox>
+
+      <klik-radio-group label="Select an option">
+        <klik-radio value="1" checked>Option 1</klik-radio>
+        <klik-radio value="2">Option 2</klik-radio>
+        <klik-radio value="3">Option 3</klik-radio>
+        <klik-radio value="4" disabled>Disabled</klik-radio>
+      </klik-radio-group>
+
+      <klik-radio-group label="Select an option (fieldset)" fieldset>
+        <klik-radio value="1" checked>Option 1</klik-radio>
+        <klik-radio value="2">Option 2</klik-radio>
+        <klik-radio value="3">Option 3</klik-radio>
+      </klik-radio-group>
+
+      <klik-switch checked>Checked</klik-switch>
+      <klik-switch disabled>Disabled</klik-switch>
+      <klik-switch style="--width: 80px; --height: 32px; --thumb-size: 26px"></klik-switch>
+
+      <p>Dropdown</p>
+
+      <klik-dropdown>
+        <klik-button slot="trigger" caret>Dropdown</klik-button>
+        <klik-menu>
+          <klik-menu-item>Dropdown Item 1</klik-menu-item>
+          <klik-menu-item>Dropdown Item 2</klik-menu-item>
+          <klik-menu-item>Dropdown Item 3</klik-menu-item>
+          <klik-divider></klik-divider>
+          <klik-menu-item checked>Checked</klik-menu-item>
+          <klik-menu-item disabled>Disabled</klik-menu-item>
+          <klik-divider></klik-divider>
+          <klik-menu-item>
+            Prefix
+            <klik-icon slot="prefix" name="gift"></klik-icon>
+          </klik-menu-item>
+          <klik-menu-item>
+            Suffix Icon
+            <klik-icon slot="suffix" name="heart"></klik-icon>
+          </klik-menu-item>
+        </klik-menu>
+      </klik-dropdown>
+
+      <klik-form class="input-validation-type">
+        <klik-input type="email" Placeholder="Email"></klik-input>
+        <br />
+        <klik-input type="number" Placeholder="Number"></klik-input>
+        <br />
+        <klik-input type="date" Placeholder="Date"></klik-input>
+        <br />
+        <klik-input type="url" label="URL" placeholder="https://example.com/" required></klik-input>
+        <br />
+        <klik-textarea name="comment" label="Comment" required></klik-textarea>
+        <br />
+        <klik-input placeholder="Small" size="small"></klik-input>
+        <br />
+        <klik-input placeholder="Medium" size="medium"></klik-input>
+        <br />
+        <klik-input placeholder="Large" size="large"></klik-input>
+        <br />
+        <klik-input placeholder="Small" size="small">
+          <klik-icon name="house" slot="prefix"></klik-icon>
+          <klik-icon name="chat" slot="suffix"></klik-icon>
+        </klik-input>
+        <br />
+        <klik-input placeholder="Medium" size="medium">
+          <klik-icon name="house" slot="prefix"></klik-icon>
+          <klik-icon name="chat" slot="suffix"></klik-icon>
+        </klik-input>
+        <br />
+        <klik-input placeholder="Large" size="large">
+          <klik-icon name="house" slot="prefix"></klik-icon>
+          <klik-icon name="chat" slot="suffix"></klik-icon>
+        </klik-input>
+        <br />
+        <klik-input label="Nickname" help-text="What would you like people to call you?"></klik-input>
+        <br />
+        <klik-button type="primary" submit>Submit</klik-button>
+      </klik-form>
+
+      <script>
+        const form = document.querySelector('.input-validation-type');
+        form.addEventListener('klik-submit', () => alert('All fields are valid!'));
+      </script>
+
+      <klik-divider></klik-divider>
+
+      <p>Progress</p>
+
+      <klik-progress-bar value="50"></klik-progress-bar>
+      <klik-progress-bar value="50" style="--height: 6px"></klik-progress-bar>
+      <klik-progress-bar indeterminate></klik-progress-bar>
+
+      <klik-progress-bar value="50" class="progress-bar-values">50%</klik-progress-bar>
+
+      <br />
+
+      <klik-button circle><klik-icon name="dash"></klik-icon></klik-button>
+      <klik-button circle><klik-icon name="plus"></klik-icon></klik-button>
+
+      <script>
+        const progressBar = document.querySelector('.progress-bar-values');
+        const subtractButton = progressBar.nextElementSibling.nextElementSibling;
+        const addButton = subtractButton.nextElementSibling;
+
+        addButton.addEventListener('click', () => {
+          const value = Math.min(100, progressBar.value + 10);
+          progressBar.value = value;
+          progressBar.textContent = `${value}%`;
+        });
+
+        subtractButton.addEventListener('click', () => {
+          const value = Math.max(0, progressBar.value - 10);
+          progressBar.value = value;
+          progressBar.textContent = `${value}%`;
+        });
+      </script>
+
+      <klik-progress-ring value="50" style="--track-width: 10px"></klik-progress-ring>
+
+      <p>Range</p>
+      <klik-range help-text="Controls the volume of the current song."></klik-range>
+      <klik-range label="Steps" min="0" max="10" step="1"></klik-range>
+      <klik-range label="Free" min="0" max="100"></klik-range>
+
+      <p>Rating</p>
+      <klik-rating></klik-rating>
+      <klik-rating precision="0.5" value="2.5"></klik-rating>
+      <klik-rating style="--symbol-size: 2rem"></klik-rating>
+      <klik-rating readonly value="3"></klik-rating>
+      <klik-rating disabled value="3"></klik-rating>
+      <klik-rating class="rating-hearts" style="--symbol-color-active: #ff4136"></klik-rating>
+      <klik-rating class="rating-emojis"></klik-rating>
+
+      <script>
+        const rating = document.querySelector('.rating-emojis');
+
+        rating.getSymbol = value => {
+          const icons = ['emoji-angry', 'emoji-frown', 'emoji-expressionless', 'emoji-smile', 'emoji-laughing'];
+          return `<klik-icon name="${icons[value - 1]}"></klik-icon>`;
+        };
+      </script>
+
+      <script>
+        const rating = document.querySelector('.rating-hearts');
+        rating.getSymbol = () => '<klik-icon name="heart-fill"></klik-icon>';
+      </script>
+
+      <p>Select</p>
+
+      <klik-select placeholder="Select one">
+        <klik-menu-item value="option-1">Option 1</klik-menu-item>
+        <klik-menu-item value="option-2">Option 2</klik-menu-item>
+        <klik-menu-item value="option-3">Option 3</klik-menu-item>
+        <klik-divider></klik-divider>
+        <klik-menu-item value="option-4">Option 4</klik-menu-item>
+        <klik-menu-item value="option-5">Option 5</klik-menu-item>
+        <klik-menu-item value="option-6">Option 6</klik-menu-item>
+      </klik-select>
+
+      <klik-select placeholder="Clearable" clearable>
+        <klik-menu-item value="option-1">Option 1</klik-menu-item>
+        <klik-menu-item value="option-2">Option 2</klik-menu-item>
+        <klik-menu-item value="option-3">Option 3</klik-menu-item>
+      </klik-select>
+
+      <klik-select placeholder="Select a few" multiple clearable>
+        <klik-menu-item value="option-1">Option 1</klik-menu-item>
+        <klik-menu-item value="option-2">Option 2</klik-menu-item>
+        <klik-menu-item value="option-3">Option 3</klik-menu-item>
+        <klik-divider></klik-divider>
+        <klik-menu-item value="option-4">Option 4</klik-menu-item>
+        <klik-menu-item value="option-5">Option 5</klik-menu-item>
+        <klik-menu-item value="option-6">Option 6</klik-menu-item>
+      </klik-select>
+
+      <klik-select placeholder="Small" size="small">
+        <klik-icon name="house" slot="prefix"></klik-icon>
+        <klik-menu-item value="option-1">Option 1</klik-menu-item>
+        <klik-menu-item value="option-2">Option 2</klik-menu-item>
+        <klik-menu-item value="option-3">Option 3</klik-menu-item>
+        <klik-icon name="chat" slot="suffix"></klik-icon>
+      </klik-select>
+      <br />
+      <klik-select placeholder="Medium" size="medium">
+        <klik-icon name="house" slot="prefix"></klik-icon>
+        <klik-menu-item value="option-1">Option 1</klik-menu-item>
+        <klik-menu-item value="option-2">Option 2</klik-menu-item>
+        <klik-menu-item value="option-3">Option 3</klik-menu-item>
+        <klik-icon name="chat" slot="suffix"></klik-icon>
+      </klik-select>
+      <br />
+      <klik-select placeholder="Large" size="large">
+        <klik-icon name="house" slot="prefix"></klik-icon>
+        <klik-menu-item value="option-1">Option 1</klik-menu-item>
+        <klik-menu-item value="option-2">Option 2</klik-menu-item>
+        <klik-menu-item value="option-3">Option 3</klik-menu-item>
+        <klik-icon name="chat" slot="suffix"></klik-icon>
+      </klik-select>
+
+      <p>Tags</p>
+      <klik-tag type="primary">Primary</klik-tag>
+      <klik-tag type="success">Success</klik-tag>
+      <klik-tag type="neutral">Neutral</klik-tag>
+      <klik-tag type="warning">Warning</klik-tag>
+      <klik-tag type="danger">Danger</klik-tag>
+      <div class="tags-removable">
+        <klik-tag size="small" removable>Small</klik-tag>
+        <klik-tag size="medium" removable>Medium</klik-tag>
+        <klik-tag size="large" removable>Large</klik-tag>
+      </div>
+
+      <script>
+        const div = document.querySelector('.tags-removable');
+
+        div.addEventListener('klik-remove', event => {
+          const tag = event.target;
+          tag.style.opacity = '0';
+          setTimeout(() => (tag.style.opacity = '1'), 2000);
+        });
+      </script>
+
+      <style>
+        .tags-removable klik-tag {
+          transition: var(--klik-transition-medium) opacity;
+        }
+      </style>
+
+      <p>Responsive Media</p>
+      <klik-responsive-media aspect-ratio="16:9">
+        <iframe
+          src="https://player.vimeo.com/video/1053647?title=0&byline=0&portrait=0"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          allowfullscreen
+        ></iframe>
+      </klik-responsive-media>
+
+      <!-- -->
+
       <script>
         function notify(message, type = 'primary', icon = 'info-circle', duration = 3000) {
           const alert = Object.assign(document.createElement('klik-alert'), {
@@ -392,12 +679,12 @@
         window.addEventListener('load', () => {
           console.log('ready');
 
-          // document.querySelectorAll('klik-button').forEach(el => {
-          //   el.addEventListener('click', () => {
-          //     console.log('clicked btn', el);
-          //     notify(`Button Clicked`, el.type);
-          //   });
-          // });
+          document.querySelectorAll('klik-button').forEach(el => {
+            el.addEventListener('click', () => {
+              console.log('clicked btn', el);
+              notify(`Button Clicked`, el.type);
+            });
+          });
         });
       </script>
     </body>

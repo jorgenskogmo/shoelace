@@ -6,7 +6,7 @@
  *
  * See dtx-defaults-* for keys to redefine/link
  */
-:root {
+:root.klik-theme-klikui {
   /* typo */
   --klik-font-sans: var(--dt-alias-fontfamily-sans);
   --klik-input-font-family: var(--dt-alias-fontfamily-input);

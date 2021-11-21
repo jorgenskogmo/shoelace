@@ -1,0 +1,22 @@
+/**
+ * We have made some modifications to the shoelace styles
+ * so it uses a dedicated token for 'primary interaction'
+ * We need to make sure there's default values for it:
+ */
+:root {
+  --dt-alias-color-primary-interaction: var(--klik-color-neutral-200);
+  --dt-alias-color-primary-interaction-hover: var(--klik-color-neutral-300);
+  --dt-alias-color-primary-interaction-text: var(--klik-color-neutral-900);
+
+  --klik-color-primary-interaction: var(--dt-alias-color-primary-interaction);
+  --klik-color-primary-interaction-hover: var(--dt-alias-color-primary-interaction-hover);
+  --klik-color-primary-interaction-text: var(--dt-alias-color-primary-interaction-text);
+
+  --klik-button-shadow: none;
+  --klik-button-border: 0px solid;
+  --klik-button-outline-border: 1px solid;
+
+  /* --klik-button-font-size-small: var(--klik-font-size-xsmall);
+  --klik-button-font-size-medium: var(--klik-font-size-small);
+  --klik-button-font-size-large: var(--klik-font-size-medium); */
+}

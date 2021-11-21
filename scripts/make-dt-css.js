@@ -16,11 +16,15 @@ try {
 `;
 
   files.map(file => {
-    css += `
+    if (path.basename(file).substr(0, 1) === '_') {
+      console.log('- ignoring', file);
+    } else {
+      css += `
 
 /* ------------------- ${file} ----------------------*/
 `;
-    css += readFileSync(file, 'utf8');
+      css += readFileSync(file, 'utf8');
+    }
   });
 
   let code = `import { css } from 'lit';

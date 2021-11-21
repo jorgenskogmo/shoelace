@@ -527,22 +527,164 @@ export default css`
 }
 
 
-/* ------------------- ./src/tokens/css/000-dtx-defaults-light.css ----------------------*/
-/**
- * A complete set of defaults for all exposed component keys
- *
- * To redefine a value, add the key(s) to dtx-map (and ideally dtx-alias)
- */
-
-/* :root,
-:host,
-.klik-theme-light { */
+/* ------------------- ./src/tokens/css/100-slk-defaults.css ----------------------*/
+/***
+* A complete set of defaults for all exposed component keys
+*
+* To redefine a value, add the key(s) to dtx-map (and ideally dtx-alias)
+***/
 
 :root,
-:host {
+:host,
+:root.klik-mode-light {
   /*
-   * Border radii
-   */
+* Color Primitives
+*/
+
+  /* Green */
+  --klik-color-green-50: 240 253 244;
+  --klik-color-green-100: 220 252 231;
+  --klik-color-green-200: 187 247 208;
+  --klik-color-green-300: 134 239 172;
+  --klik-color-green-400: 74 222 128;
+  --klik-color-green-500: 34 197 94;
+  --klik-color-green-600: 22 163 74;
+  --klik-color-green-700: 21 128 61;
+  --klik-color-green-800: 22 101 52;
+  --klik-color-green-900: 20 83 45;
+  --klik-color-green-950: 12 49 27;
+
+  /* Amber */
+  --klik-color-amber-50: 255 251 235;
+  --klik-color-amber-100: 254 243 199;
+  --klik-color-amber-200: 253 230 138;
+  --klik-color-amber-300: 252 211 77;
+  --klik-color-amber-400: 251 191 36;
+  --klik-color-amber-500: 245 158 11;
+  --klik-color-amber-600: 217 119 6;
+  --klik-color-amber-700: 180 83 9;
+  --klik-color-amber-800: 146 64 14;
+  --klik-color-amber-900: 120 53 15;
+  --klik-color-amber-950: 74 35 11;
+
+  /* Red */
+  --klik-color-red-50: 254 242 242;
+  --klik-color-red-100: 254 226 226;
+  --klik-color-red-200: 254 202 202;
+  --klik-color-red-300: 252 165 165;
+  --klik-color-red-400: 248 113 113;
+  --klik-color-red-500: 239 68 68;
+  --klik-color-red-600: 220 38 38;
+  --klik-color-red-700: 185 28 28;
+  --klik-color-red-800: 153 27 27;
+  --klik-color-red-900: 127 29 29;
+  --klik-color-red-950: 80 20 20;
+
+  /* Gray */
+  --klik-color-gray-50: 250 250 250;
+  --klik-color-gray-100: 244 244 245;
+  --klik-color-gray-200: 228 228 231;
+  --klik-color-gray-300: 212 212 216;
+  --klik-color-gray-400: 161 161 170;
+  --klik-color-gray-500: 113 113 122;
+  --klik-color-gray-600: 82 82 91;
+  --klik-color-gray-700: 63 63 70;
+  --klik-color-gray-800: 39 39 42;
+  --klik-color-gray-900: 24 24 27;
+  --klik-color-gray-950: 19 19 22;
+
+  /* Sky (used as primary) */
+  --klik-color-sky-50: 240 249 255;
+  --klik-color-sky-100: 224 242 254;
+  --klik-color-sky-200: 186 230 253;
+  --klik-color-sky-300: 125 211 252;
+  --klik-color-sky-400: 56 189 248;
+  --klik-color-sky-500: 14 165 233;
+  --klik-color-sky-600: 2 132 199;
+  --klik-color-sky-700: 3 105 161;
+  --klik-color-sky-800: 7 89 133;
+  --klik-color-sky-900: 12 74 110;
+  --klik-color-sky-950: 11 50 73;
+
+  /*
+* Theme Colors
+*/
+
+  /* Primary */
+  --klik-color-primary-50: var(--klik-color-sky-50);
+  --klik-color-primary-100: var(--klik-color-sky-100);
+  --klik-color-primary-200: var(--klik-color-sky-200);
+  --klik-color-primary-300: var(--klik-color-sky-300);
+  --klik-color-primary-400: var(--klik-color-sky-400);
+  --klik-color-primary-500: var(--klik-color-sky-500);
+  --klik-color-primary-600: var(--klik-color-sky-600);
+  --klik-color-primary-700: var(--klik-color-sky-700);
+  --klik-color-primary-800: var(--klik-color-sky-800);
+  --klik-color-primary-900: var(--klik-color-sky-900);
+  --klik-color-primary-950: var(--klik-color-sky-950);
+
+  /* Success */
+  --klik-color-success-50: var(--klik-color-green-50);
+  --klik-color-success-100: var(--klik-color-green-100);
+  --klik-color-success-200: var(--klik-color-green-200);
+  --klik-color-success-300: var(--klik-color-green-300);
+  --klik-color-success-400: var(--klik-color-green-400);
+  --klik-color-success-500: var(--klik-color-green-500);
+  --klik-color-success-600: var(--klik-color-green-600);
+  --klik-color-success-700: var(--klik-color-green-700);
+  --klik-color-success-800: var(--klik-color-green-800);
+  --klik-color-success-900: var(--klik-color-green-900);
+  --klik-color-success-950: var(--klik-color-green-950);
+
+  /* Warning */
+  --klik-color-warning-50: var(--klik-color-amber-50);
+  --klik-color-warning-100: var(--klik-color-amber-100);
+  --klik-color-warning-200: var(--klik-color-amber-200);
+  --klik-color-warning-300: var(--klik-color-amber-300);
+  --klik-color-warning-400: var(--klik-color-amber-400);
+  --klik-color-warning-500: var(--klik-color-amber-500);
+  --klik-color-warning-600: var(--klik-color-amber-600);
+  --klik-color-warning-700: var(--klik-color-amber-700);
+  --klik-color-warning-800: var(--klik-color-amber-800);
+  --klik-color-warning-900: var(--klik-color-amber-900);
+  --klik-color-warning-950: var(--klik-color-amber-950);
+
+  /* Danger */
+  --klik-color-danger-50: var(--klik-color-red-50);
+  --klik-color-danger-100: var(--klik-color-red-100);
+  --klik-color-danger-200: var(--klik-color-red-200);
+  --klik-color-danger-300: var(--klik-color-red-300);
+  --klik-color-danger-400: var(--klik-color-red-400);
+  --klik-color-danger-500: var(--klik-color-red-500);
+  --klik-color-danger-600: var(--klik-color-red-600);
+  --klik-color-danger-700: var(--klik-color-red-700);
+  --klik-color-danger-800: var(--klik-color-red-800);
+  --klik-color-danger-900: var(--klik-color-red-900);
+  --klik-color-danger-950: var(--klik-color-red-950);
+
+  /* Neutral */
+  --klik-color-neutral-50: var(--klik-color-gray-50);
+  --klik-color-neutral-100: var(--klik-color-gray-100);
+  --klik-color-neutral-200: var(--klik-color-gray-200);
+  --klik-color-neutral-300: var(--klik-color-gray-300);
+  --klik-color-neutral-400: var(--klik-color-gray-400);
+  --klik-color-neutral-500: var(--klik-color-gray-500);
+  --klik-color-neutral-600: var(--klik-color-gray-600);
+  --klik-color-neutral-700: var(--klik-color-gray-700);
+  --klik-color-neutral-800: var(--klik-color-gray-800);
+  --klik-color-neutral-900: var(--klik-color-gray-900);
+  --klik-color-neutral-950: var(--klik-color-gray-950);
+
+  /* Neutral (light) */
+  --klik-color-neutral-0: 255 255 255;
+  --klik-color-neutral-1000: 0 0 0;
+
+  --klik-surface-base: var(--klik-color-neutral-0);
+  --klik-surface-base-alt: var(--klik-color-neutral-0);
+
+  /*
+* Border radii
+*/
 
   --klik-border-radius-small: 0.125rem; /* 2px */
   --klik-border-radius-medium: 0.25rem; /* 4px */
@@ -553,8 +695,8 @@ export default css`
   --klik-border-radius-pill: 9999px;
 
   /*
-    * Elevations
-    */
+* Elevations
+*/
 
   --klik-shadow-x-small: 0 1px 2px rgb(var(--klik-color-neutral-500) / 6%);
   --klik-shadow-small: 0 1px 2px rgb(var(--klik-color-neutral-500) / 12%);
@@ -563,15 +705,15 @@ export default css`
   --klik-shadow-x-large: 0 4px 16px rgb(var(--klik-color-neutral-500) / 12%);
 
   /*
-    * Surfaces
-    */
+* Surfaces
+*/
 
   --klik-surface-base: var(--klik-color-neutral-0);
   --klik-surface-base-alt: var(--klik-color-neutral-0);
 
   /*
-    * Spacings
-    */
+* Spacings
+*/
 
   --klik-spacing-3x-small: 0.125rem; /* 2px */
   --klik-spacing-2x-small: 0.25rem; /* 4px */
@@ -585,8 +727,8 @@ export default css`
   --klik-spacing-4x-large: 4.5rem; /* 72px */
 
   /*
-    * Transitions
-    */
+* Transitions
+*/
 
   --klik-transition-x-slow: 1000ms;
   --klik-transition-slow: 500ms;
@@ -595,8 +737,8 @@ export default css`
   --klik-transition-x-fast: 50ms;
 
   /*
-    * Typography
-    */
+* Typography
+*/
 
   /* Fonts */
   --klik-font-mono: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
@@ -636,8 +778,8 @@ export default css`
   --klik-line-height-looser: 2.6;
 
   /*
-    * Forms
-    */
+* Forms
+*/
 
   /* Focus rings */
   --klik-focus-ring-color: var(--klik-color-primary-500);
@@ -716,23 +858,23 @@ export default css`
   --klik-toggle-size: 1rem;
 
   /*
-    * Overlays
-    */
+* Overlays
+*/
 
   --klik-overlay-background-color: var(--klik-color-blue-gray-500);
   --klik-overlay-opacity: 33%;
 
   /*
-    * Panels
-    */
+* Panels
+*/
 
   --klik-panel-background-color: var(--klik-surface-base-alt);
   --klik-panel-border-color: var(--klik-color-neutral-200);
   --klik-panel-border-width: 1px;
 
   /*
-    * Tooltips
-    */
+* Tooltips
+*/
 
   --klik-tooltip-border-radius: var(--klik-border-radius-medium);
   --klik-tooltip-background-color: var(--klik-color-neutral-800);
@@ -746,8 +888,8 @@ export default css`
   --klik-tooltip-arrow-start-end-offset: 8px;
 
   /*
-    * Z-indexes
-    */
+* Z-indexes
+*/
 
   --klik-z-index-drawer: 700;
   --klik-z-index-dialog: 800;
@@ -755,90 +897,121 @@ export default css`
   --klik-z-index-toast: 950;
   --klik-z-index-tooltip: 1000;
 
-  /**
-    * Fallback Colors
-    */
-
-  /* Neutral */
-  --klik-color-neutral-0: 255 255 255;
-  --klik-color-neutral-50: 250 250 250;
-  --klik-color-neutral-100: 244 244 245;
-  --klik-color-neutral-200: 228 228 231;
-  --klik-color-neutral-300: 212 212 216;
-  --klik-color-neutral-400: 161 161 170;
-  --klik-color-neutral-500: 113 113 122;
-  --klik-color-neutral-600: 82 82 91;
-  --klik-color-neutral-700: 63 63 70;
-  --klik-color-neutral-800: 39 39 42;
-  --klik-color-neutral-900: 24 24 27;
-  --klik-color-neutral-950: 19 19 22;
-  --klik-color-neutral-1000: 0 0 0;
-
-  /* Success */
-  --klik-color-success-50: 240 253 244;
-  --klik-color-success-100: 220 252 231;
-  --klik-color-success-200: 187 247 208;
-  --klik-color-success-300: 134 239 172;
-  --klik-color-success-400: 74 222 128;
-  --klik-color-success-500: 34 197 94;
-  --klik-color-success-600: 22 163 74;
-  --klik-color-success-700: 21 128 61;
-  --klik-color-success-800: 22 101 52;
-  --klik-color-success-900: 20 83 45;
-  --klik-color-success-950: 12 49 27;
-
-  /* Warning */
-  --klik-color-warning-50: 255 251 235;
-  --klik-color-warning-100: 254 243 199;
-  --klik-color-warning-200: 253 230 138;
-  --klik-color-warning-300: 252 211 77;
-  --klik-color-warning-400: 251 191 36;
-  --klik-color-warning-500: 245 158 11;
-  --klik-color-warning-600: 217 119 6;
-  --klik-color-warning-700: 180 83 9;
-  --klik-color-warning-800: 146 64 14;
-  --klik-color-warning-900: 120 53 15;
-  --klik-color-warning-950: 74 35 11;
-
-  /* Danger */
-  --klik-color-danger-50: 254 242 242;
-  --klik-color-danger-100: 254 226 226;
-  --klik-color-danger-200: 254 202 202;
-  --klik-color-danger-300: 252 165 165;
-  --klik-color-danger-400: 248 113 113;
-  --klik-color-danger-500: 239 68 68;
-  --klik-color-danger-600: 220 38 38;
-  --klik-color-danger-700: 185 28 28;
-  --klik-color-danger-800: 153 27 27;
-  --klik-color-danger-900: 127 29 29;
-  --klik-color-danger-950: 80 20 20;
-
-  /* js exts */
-  --klik-color-primary-interaction: var(klik-color-neutral-500);
-  --klik-color-primary-interaction-hover: var(klik-color-neutral-600);
-  --klik-color-primary-interaction-text: var(klik-color-neutral-0);
-
-  --klik-button-shadow: 'none';
-}
-
-
-/* ------------------- ./src/tokens/css/100-setup.css ----------------------*/
-/**
- * Document-wide setup
- */
-
-/* * {
-  font-family: var(--klik-font-sans);
-} */
-
-:root {
-  font-size: 16px;
+  /* Document */
+  /* font-size: 16px; Use host (allow client to set this) */
   font-feature-settings: 'kern';
 
-  line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+
+  font-family: var(--klik-font-sans);
+  font-size: var(--klik-font-size-medium);
+  font-weight: var(--klik-font-weight-normal);
+  letter-spacing: var(--klik-letter-spacing-normal);
+  line-height: var(--klik-line-height-normal);
+  background-color: rgb(var(--klik-surface-base));
+  color: rgb(var(--klik-color-neutral-800));
+}
+
+/* Redefine select colors for light/dark mode */
+
+:root.klik-mode-dark {
+  --klik-color-neutral-0: 24 24 27;
+  --klik-color-neutral-1000: 255 255 255;
+
+  --klik-surface-base: var(--klik-color-neutral-0);
+  --klik-surface-base-alt: var(--klik-color-neutral-50);
+
+  /* Green */
+  --klik-color-green-50: 16 53 31;
+  --klik-color-green-100: 25 87 49;
+  --klik-color-green-200: 28 106 56;
+  --klik-color-green-300: 29 133 65;
+  --klik-color-green-400: 32 168 78;
+  --klik-color-green-500: 43 202 99;
+  --klik-color-green-600: 80 227 133;
+  --klik-color-green-700: 139 244 177;
+  --klik-color-green-800: 192 252 213;
+  --klik-color-green-900: 225 255 236;
+  --klik-color-green-950: 245 255 249;
+
+  /* Amber */
+  --klik-color-amber-50: 79 39 16;
+  --klik-color-amber-100: 125 57 19;
+  --klik-color-amber-200: 151 68 19;
+  --klik-color-amber-300: 186 88 16;
+  --klik-color-amber-400: 223 124 15;
+  --klik-color-amber-500: 251 163 21;
+  --klik-color-amber-600: 255 196 43;
+  --klik-color-amber-700: 255 216 82;
+  --klik-color-amber-800: 255 235 143;
+  --klik-color-amber-900: 255 248 204;
+  --klik-color-amber-950: 255 255 240;
+
+  /* Red */
+  --klik-color-red-50: 85 24 24;
+  --klik-color-red-100: 132 34 33;
+  --klik-color-red-200: 158 33 31;
+  --klik-color-red-300: 191 35 32;
+  --klik-color-red-400: 226 45 42;
+  --klik-color-red-500: 245 74 72;
+  --klik-color-red-600: 254 118 118;
+  --klik-color-red-700: 255 170 170;
+  --klik-color-red-800: 255 207 207;
+  --klik-color-red-900: 255 231 231;
+  --klik-color-red-950: 255 247 247;
+
+  /* Gray */
+  --klik-color-gray-50: 28 28 31;
+  --klik-color-gray-100: 33 33 37;
+  --klik-color-gray-200: 43 43 46;
+  --klik-color-gray-300: 67 67 74;
+  --klik-color-gray-400: 86 86 95;
+  --klik-color-gray-500: 118 118 127;
+  --klik-color-gray-600: 166 166 175;
+  --klik-color-gray-700: 217 217 221;
+  --klik-color-gray-800: 233 233 236;
+  --klik-color-gray-900: 249 249 250;
+  --klik-color-gray-950: 255 255 255;
+
+  /* Sky */
+  --klik-color-sky-50: 17 54 77;
+  --klik-color-sky-100: 20 78 115;
+  --klik-color-sky-200: 19 93 138;
+  --klik-color-sky-300: 18 109 166;
+  --klik-color-sky-400: 22 137 204;
+  --klik-color-sky-500: 31 170 238;
+  --klik-color-sky-600: 64 194 253;
+  --klik-color-sky-700: 130 216 255;
+  --klik-color-sky-800: 191 235 255;
+  --klik-color-sky-900: 229 247 255;
+  --klik-color-sky-950: 245 254 255;
+}
+
+
+/* ------------------- ./src/tokens/css/190-shoelace-mod.css ----------------------*/
+/**
+ * We have made some modifications to the shoelace styles
+ * so it uses a dedicated token for 'primary interaction'
+ * We need to make sure there's default values for it:
+ */
+:root {
+  --dt-alias-color-primary-interaction: var(--klik-color-neutral-200);
+  --dt-alias-color-primary-interaction-hover: var(--klik-color-neutral-300);
+  --dt-alias-color-primary-interaction-text: var(--klik-color-neutral-900);
+
+  --klik-color-primary-interaction: var(--dt-alias-color-primary-interaction);
+  --klik-color-primary-interaction-hover: var(--dt-alias-color-primary-interaction-hover);
+  --klik-color-primary-interaction-text: var(--dt-alias-color-primary-interaction-text);
+
+  --klik-button-shadow: none;
+  --klik-button-border: 0px solid;
+  --klik-button-outline-border: 1px solid;
+
+  /* --klik-button-font-size-small: var(--klik-font-size-xsmall);
+  --klik-button-font-size-medium: var(--klik-font-size-small);
+  --klik-button-font-size-large: var(--klik-font-size-medium); */
 }
 
 
@@ -850,32 +1023,17 @@ export default css`
  * Right-hand keys : --dt-global-* or hardcoded value
  *
  * */
-:root {
+
+:root.klik-theme-klikui {
+  --dt-alias-color-primary-interaction: var(--dt-global-klik-color-light-blue-500);
+  --dt-alias-color-primary-interaction-hover: var(--dt-global-klik-color-light-blue-600);
+  --dt-alias-color-primary-interaction-text: var(--dt-global-klik-color-white);
+
   --dt-alias-fontfamily-sans: 'Cera Pro';
   --dt-alias-fontfamily-input: 'Cera Pro';
 
-  /* Default */
-  --dt-alias-color-primary-interaction: var(--dt-global-klik-color-light-blue-500);
-  --dt-alias-color-primary-interaction-hover: var(--dt-global-klik-color-light-blue-600);
-  --dt-alias-color-primary-interaction-text: var(--dt-global-klik-color-white);
-}
-
-/* :root,
-:host,
-.klik-theme-light {
-  --dt-alias-color-primary-interaction: var(--dt-global-klik-color-light-blue-500);
-  --dt-alias-color-primary-interaction-hover: var(--dt-global-klik-color-light-blue-600);
-  --dt-alias-color-primary-interaction-text: var(--dt-global-klik-color-white);
-} */
-
-html.klik-theme-dark {
-  --dt-alias-color-primary-interaction: 0 0 255;
-  --dt-alias-color-primary-interaction-text: 255 0 0;
-}
-
-.klik-theme-dark body {
-  background-color: #202020;
-  /* color: #00ff00; */
+  /* --dt-alias-color-primary-interaction: 255 0 0;
+  --dt-alias-color-primary-interaction-text: 0 0 0; */
 }
 
 
@@ -888,7 +1046,7 @@ html.klik-theme-dark {
  *
  * See dtx-defaults-* for keys to redefine/link
  */
-:root {
+:root.klik-theme-klikui {
   /* typo */
   --klik-font-sans: var(--dt-alias-fontfamily-sans);
   --klik-input-font-family: var(--dt-alias-fontfamily-input);

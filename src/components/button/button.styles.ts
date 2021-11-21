@@ -32,7 +32,7 @@ export default css`
     /* shared */
     background-color: rgb(var(--klik-color-primary-interaction));
     color: rgb(var(--klik-color-primary-interaction-text));
-    /* box-shadow: var(--klik-button-shadow); */
+    border: var(--klik-button-border);
   }
 
   .button::-moz-focus-inner {
@@ -72,9 +72,6 @@ export default css`
 
   .button__label ::slotted(klik-icon) {
     /* vertical-align: -2px; */
-    vertical-align: 2px;
-    /* display: inline-flex;
-    align-content: center; */
   }
 
   .button__label {
@@ -88,7 +85,8 @@ export default css`
 
   /* Default */
   .button--standard.button--default {
-    border: 1px transparent;
+    /* border: 1px transparent; */
+    border: var(--klik-button-border);
     box-shadow: var(--klik-button-shadow);
   }
 
@@ -246,21 +244,25 @@ export default css`
 
   .button--outline {
     background: none;
-    border: var(--klik-input-border-width);
+    border: var(--klik-button-outline-border, --klik-input-border-width);
     box-shadow: none;
   }
 
   /* Default */
   .button--outline.button--default {
-    border-color: rgb(var(--klik-color-primary-interaction));
-    color: rgb(var(--klik-color-primary-interaction));
+    border-color: rgb(var(--klik-color-primary-interaction, --klik-color-neutral-200));
+    color: rgb(var(--klik-color-primary-interaction, --klik-color-neutral-600));
+    color: rgb(var(--klik-color-neutral-600));
     box-shadow: none;
   }
 
   .button--outline.button--default:hover:not(.button--disabled) {
-    border-color: rgb(var(--klik-color-primary-interaction));
+    /* border-color: rgb(var(--klik-color-primary-interaction));
     color: rgb(var(--klik-color-primary-interaction));
-    background-color: rgb(var(--klik-button-outline-background-hover));
+    background-color: rgb(var(--klik-button-outline-background-hover)); */
+    border-color: rgb(var(--klik-color-primary-interaction, --klik-color-primary-200));
+    background-color: rgb(var(--klik-color-neutral-100));
+    color: rgb(var(--klik-color-neutral-600));
   }
 
   .button--outline.button--default${focusVisibleSelector}:not(.button--disabled) {
@@ -269,9 +271,15 @@ export default css`
   }
 
   .button--outline.button--default:active:not(.button--disabled) {
-    border-color: rgb(var(--klik-color-primary-interaction));
+    /* border-color: rgb(var(--klik-color-primary-interaction));
     color: rgb(var(--klik-color-primary-interaction));
-    background-color: rgb(var(--klik-button-outline-background-hover));
+    background-color: rgb(var(--klik-button-outline-background-hover)); */
+    /* border-color: rgb(var(--klik-color-primary-700)); */
+    /* background-color: rgb(var(--klik-color-neutral-200)); */
+    /* background-color: rgb(var(--klik-input-color-hover));
+    color: rgb(var(--klik-color-neutral-0)); */
+    border-color: rgb(var(--klik-color-primary-interaction, --klik-color-primary-200));
+    background-color: rgb(var(--klik-color-neutral-100));
   }
 
   /* Primary */
@@ -392,7 +400,8 @@ export default css`
     background-color: transparent;
     border: none;
     box-shadow: none;
-    color: rgb(var(--klik-color-primary-interaction));
+    color: rgb(var(--klik-color-primary-interaction, --klik-color-primary-600));
+    color: rgb(var(--klik-color-neutral-600));
   }
 
   .button--text:hover:not(.button--disabled) {
@@ -419,8 +428,6 @@ export default css`
     height: var(--klik-input-height-small);
     line-height: calc(var(--klik-input-height-small) - var(--klik-input-border-width) * 2);
     border-radius: var(--klik-input-border-radius-small);
-
-    font-size: var(--klik-input-font-size-small);
   }
 
   .button--medium {
@@ -428,8 +435,6 @@ export default css`
     height: var(--klik-input-height-medium);
     line-height: calc(var(--klik-input-height-medium) - var(--klik-input-border-width) * 2);
     border-radius: var(--klik-input-border-radius-medium);
-
-    font-size: var(--klik-input-font-size-medium);
   }
 
   .button--large {
@@ -437,8 +442,6 @@ export default css`
     height: var(--klik-input-height-large);
     line-height: calc(var(--klik-input-height-large) - var(--klik-input-border-width) * 2);
     border-radius: var(--klik-input-border-radius-large);
-
-    font-size: var(--klik-input-font-size-large);
   }
 
   /*
