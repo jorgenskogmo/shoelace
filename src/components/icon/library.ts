@@ -1,6 +1,7 @@
 import defaultLibrary from './library.default';
 import systemLibrary from './library.system';
 import klikLibrary from './library.klik';
+import klikFlagsLibrary from './library.klik-flags';
 import type KlikIcon from '../icon/icon';
 
 export type IconLibraryResolver = (name: string) => string;
@@ -11,7 +12,7 @@ export interface IconLibrary {
   mutator?: IconLibraryMutator;
 }
 
-let registry: IconLibrary[] = [defaultLibrary, systemLibrary, klikLibrary];
+let registry: IconLibrary[] = [defaultLibrary, systemLibrary, klikLibrary, klikFlagsLibrary];
 let watchedIcons: KlikIcon[] = [];
 
 export function watchIcon(icon: KlikIcon) {
