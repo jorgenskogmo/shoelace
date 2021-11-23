@@ -1032,6 +1032,8 @@ export default css`
   --dt-alias-fontfamily-sans: 'Cera Pro';
   --dt-alias-fontfamily-input: 'Cera Pro';
 
+  --klik-input-background-color: #0f0;
+
   /* --dt-alias-color-primary-interaction: 255 0 0;
   --dt-alias-color-primary-interaction-text: 0 0 0; */
 }
@@ -1111,6 +1113,8 @@ export default css`
   --klik-button-icon-size-small: 0.875rem; /* */
   --klik-button-icon-size-medium: 1rem;
   --klik-button-icon-size-large: 1.625rem; /* */
+
+  --klik-input-background-color: 240 240 240; /* check figma */
 }
 
 

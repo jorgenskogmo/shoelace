@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="klik-mode-dark">
+<html lang="en" class="klik-mode-light klik-theme-klikui">
   <head>
     <title>klik-shoelace dt example</title>
     <meta name="description" content="Design Token test page" />
@@ -421,10 +421,13 @@
 
       <p>Forms</p>
 
-      <klik-checkbox>Checkbox</klik-checkbox>
-      <klik-checkbox checked>Checked</klik-checkbox>
-      <klik-checkbox indeterminate>Indeterminate</klik-checkbox>
-      <klik-checkbox disabled>Disabled</klik-checkbox>
+      <klik-checkbox>Checkbox</klik-checkbox><br />
+      <klik-checkbox checked>Checked</klik-checkbox><br />
+      <klik-checkbox indeterminate>Indeterminate</klik-checkbox><br />
+      <klik-checkbox disabled>Disabled</klik-checkbox><br />
+
+      <br />
+      <br />
 
       <klik-radio-group label="Select an option">
         <klik-radio value="1" checked>Option 1</klik-radio>
@@ -433,15 +436,21 @@
         <klik-radio value="4" disabled>Disabled</klik-radio>
       </klik-radio-group>
 
+      <br />
+      <br />
+
       <klik-radio-group label="Select an option (fieldset)" fieldset>
         <klik-radio value="1" checked>Option 1</klik-radio>
         <klik-radio value="2">Option 2</klik-radio>
         <klik-radio value="3">Option 3</klik-radio>
       </klik-radio-group>
 
-      <klik-switch checked>Checked</klik-switch>
-      <klik-switch disabled>Disabled</klik-switch>
-      <klik-switch style="--width: 80px; --height: 32px; --thumb-size: 26px"></klik-switch>
+      <br />
+      <br />
+
+      <klik-switch checked>Checked</klik-switch><br />
+      <klik-switch disabled>Disabled</klik-switch><br />
+      <klik-switch style="--width: 80px; --height: 32px; --thumb-size: 26px"></klik-switch><br />
 
       <p>Dropdown</p>
 
@@ -465,6 +474,9 @@
           </klik-menu-item>
         </klik-menu>
       </klik-dropdown>
+
+      <br />
+      <br />
 
       <klik-form class="input-validation-type">
         <klik-input type="email" Placeholder="Email"></klik-input>
@@ -512,16 +524,15 @@
 
       <p>Progress</p>
 
-      <klik-progress-bar value="50"></klik-progress-bar>
-      <klik-progress-bar value="50" style="--height: 6px"></klik-progress-bar>
-      <klik-progress-bar indeterminate></klik-progress-bar>
+      <klik-progress-bar value="50"></klik-progress-bar><br />
+      <klik-progress-bar value="50" style="--height: 6px"></klik-progress-bar><br />
+      <!-- <klik-progress-bar indeterminate></klik-progress-bar><br /> -->
 
-      <klik-progress-bar value="50" class="progress-bar-values">50%</klik-progress-bar>
-
-      <br />
+      <klik-progress-bar value="50" class="progress-bar-values">50%</klik-progress-bar><br />
 
       <klik-button circle><klik-icon name="dash"></klik-icon></klik-button>
       <klik-button circle><klik-icon name="plus"></klik-icon></klik-button>
+      <br />
 
       <script>
         const progressBar = document.querySelector('.progress-bar-values');
@@ -544,19 +555,22 @@
       <klik-progress-ring value="50" style="--track-width: 10px"></klik-progress-ring>
 
       <p>Range</p>
+
       <klik-range help-text="Controls the volume of the current song."></klik-range>
       <klik-range label="Steps" min="0" max="10" step="1"></klik-range>
       <klik-range label="Free" min="0" max="100"></klik-range>
 
       <p>Rating</p>
-      <klik-rating></klik-rating>
-      <klik-rating precision="0.5" value="2.5"></klik-rating>
-      <klik-rating style="--symbol-size: 2rem"></klik-rating>
-      <klik-rating readonly value="3"></klik-rating>
-      <klik-rating disabled value="3"></klik-rating>
-      <klik-rating class="rating-hearts" style="--symbol-color-active: #ff4136"></klik-rating>
-      <klik-rating class="rating-emojis"></klik-rating>
 
+      <klik-rating></klik-rating><br />
+      <klik-rating precision="0.5" value="2.5"></klik-rating><br />
+      <klik-rating style="--symbol-size: 2rem"></klik-rating><br />
+      <klik-rating readonly value="3"></klik-rating><br />
+      <klik-rating disabled value="3"></klik-rating><br />
+      <klik-rating class="rating-hearts" style="--symbol-color-active: #ff4136"></klik-rating><br />
+
+      <br />
+      <klik-rating class="rating-emojis"></klik-rating>
       <script>
         const rating = document.querySelector('.rating-emojis');
 
@@ -567,8 +581,8 @@
       </script>
 
       <script>
-        const rating = document.querySelector('.rating-hearts');
-        rating.getSymbol = () => '<klik-icon name="heart-fill"></klik-icon>';
+        const rating_hearts = document.querySelector('.rating-hearts');
+        rating_hearts.getSymbol = () => '<klik-icon library="klik" name="heart-bold"></klik-icon>';
       </script>
 
       <p>Select</p>
@@ -583,11 +597,15 @@
         <klik-menu-item value="option-6">Option 6</klik-menu-item>
       </klik-select>
 
+      <br />
+
       <klik-select placeholder="Clearable" clearable>
         <klik-menu-item value="option-1">Option 1</klik-menu-item>
         <klik-menu-item value="option-2">Option 2</klik-menu-item>
         <klik-menu-item value="option-3">Option 3</klik-menu-item>
       </klik-select>
+
+      <br />
 
       <klik-select placeholder="Select a few" multiple clearable>
         <klik-menu-item value="option-1">Option 1</klik-menu-item>
@@ -599,6 +617,8 @@
         <klik-menu-item value="option-6">Option 6</klik-menu-item>
       </klik-select>
 
+      <br />
+
       <klik-select placeholder="Small" size="small">
         <klik-icon name="house" slot="prefix"></klik-icon>
         <klik-menu-item value="option-1">Option 1</klik-menu-item>
@@ -606,7 +626,9 @@
         <klik-menu-item value="option-3">Option 3</klik-menu-item>
         <klik-icon name="chat" slot="suffix"></klik-icon>
       </klik-select>
+
       <br />
+
       <klik-select placeholder="Medium" size="medium">
         <klik-icon name="house" slot="prefix"></klik-icon>
         <klik-menu-item value="option-1">Option 1</klik-menu-item>
@@ -614,7 +636,9 @@
         <klik-menu-item value="option-3">Option 3</klik-menu-item>
         <klik-icon name="chat" slot="suffix"></klik-icon>
       </klik-select>
+
       <br />
+
       <klik-select placeholder="Large" size="large">
         <klik-icon name="house" slot="prefix"></klik-icon>
         <klik-menu-item value="option-1">Option 1</klik-menu-item>
@@ -624,11 +648,16 @@
       </klik-select>
 
       <p>Tags</p>
+
       <klik-tag type="primary">Primary</klik-tag>
       <klik-tag type="success">Success</klik-tag>
       <klik-tag type="neutral">Neutral</klik-tag>
       <klik-tag type="warning">Warning</klik-tag>
       <klik-tag type="danger">Danger</klik-tag>
+
+      <br />
+      <br />
+
       <div class="tags-removable">
         <klik-tag size="small" removable>Small</klik-tag>
         <klik-tag size="medium" removable>Medium</klik-tag>
@@ -652,6 +681,7 @@
       </style>
 
       <p>Responsive Media</p>
+
       <klik-responsive-media aspect-ratio="16:9">
         <iframe
           src="https://player.vimeo.com/video/1053647?title=0&byline=0&portrait=0"
@@ -683,10 +713,10 @@
           console.log('ready');
 
           document.querySelectorAll('klik-button').forEach(el => {
-            el.addEventListener('click', () => {
-              console.log('clicked btn', el);
-              notify(`Button Clicked`, el.type);
-            });
+            // el.addEventListener('click', () => {
+            //   console.log('clicked btn', el);
+            //   notify(`Button Clicked`, el.type);
+            // });
           });
         });
       </script>

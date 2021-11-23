@@ -71,4 +71,6 @@
   --klik-button-icon-size-small: 0.875rem; /* */
   --klik-button-icon-size-medium: 1rem;
   --klik-button-icon-size-large: 1.625rem; /* */
+
+  --klik-input-background-color: 240 240 240; /* check figma */
 }
