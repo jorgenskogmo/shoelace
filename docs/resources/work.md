@@ -2,7 +2,7 @@
 
 **Compat**
 
-- [ ] Build test-page in HTML
+- [x] Build test-page in HTML
 - [ ] Build test-page in React
 - [ ] Build test-page in Angular
 - [ ] Build test-page in Vue

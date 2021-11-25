@@ -92,6 +92,9 @@ mkdirp.sync(outdir);
     copy(outdir, copydir);
   }
 
+  // Force Exports of the React components to use the 'bare name' (e.g. KlikButton -> Button) for legacy compat
+  execSync(`node scripts/pack-react.js --outdir "${outdir}"`, { stdio: 'inherit' });
+
   console.log(chalk.green(`The build has been generated at ${outdir} 📦\n`));
 
   // Dev server
