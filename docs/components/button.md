@@ -5,6 +5,12 @@
 Buttons represent actions that are available to the user.
 
 ```html preview
+<klik-ui-button>Klik UI Button</klik-ui-button>
+```
+
+<hr>
+
+```html preview
 <sl-button>Button</sl-button>
 ```
 
@@ -21,6 +27,18 @@ const App = () => (
 ### Types
 
 Use the `type` attribute to set the button's type.
+
+
+```html preview
+<klik-ui-button type="default">Default</klik-ui-button>
+<klik-ui-button type="primary">Primary</klik-ui-button>
+<klik-ui-button type="success">Success</klik-ui-button>
+<klik-ui-button type="neutral">Neutral</klik-ui-button>
+<klik-ui-button type="warning">Warning</klik-ui-button>
+<klik-ui-button type="danger">Danger</klik-ui-button>
+```
+
+<hr>
 
 ```html preview
 <sl-button type="default">Default</sl-button>

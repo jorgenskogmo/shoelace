@@ -55,3 +55,5 @@ export { default as SlTooltip } from './components/tooltip/tooltip';
 export * from './utilities/animation';
 export * from './utilities/base-path';
 export * from './utilities/icon-library';
+
+export { default as KlikUiButton } from './components/button/klik-ui-button';

@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, CSSResultGroup } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
@@ -29,7 +29,7 @@ import '../spinner/spinner';
  */
 @customElement('sl-button')
 export default class SlButton extends LitElement {
-  static styles = styles;
+  static styles = styles as CSSResultGroup;
 
   @query('.button') button: HTMLButtonElement | HTMLLinkElement;
 
