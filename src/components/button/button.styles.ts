@@ -250,9 +250,9 @@ export default css`
 
   /* Default */
   .button--outline.button--default {
-    border-color: rgb(var(--klik-color-primary-interaction, --klik-color-neutral-200));
-    color: rgb(var(--klik-color-primary-interaction, --klik-color-neutral-600));
-    color: rgb(var(--klik-color-neutral-600));
+    border-color: rgb(var(--klik-color-primary-interaction, var(--klik-color-neutral-200)));
+    color: rgb(var(--klik-color-primary-interaction, var(--klik-color-primary-600)));
+
     box-shadow: none;
   }
 
@@ -263,6 +263,7 @@ export default css`
     border-color: rgb(var(--klik-color-primary-interaction, --klik-color-primary-200));
     background-color: rgb(var(--klik-color-neutral-100));
     color: rgb(var(--klik-color-neutral-600));
+    color: rgb(var(--klik-color-primary-interaction, var(--klik-color-primary-600)));
   }
 
   .button--outline.button--default${focusVisibleSelector}:not(.button--disabled) {
@@ -398,10 +399,9 @@ export default css`
 
   .button--text {
     background-color: transparent;
-    border: none;
+    /* border: none; */
     box-shadow: none;
-    color: rgb(var(--klik-color-primary-interaction, --klik-color-primary-600));
-    color: rgb(var(--klik-color-neutral-600));
+    color: rgb(var(--klik-color-primary-interaction, var(--klik-color-primary-600)));
   }
 
   .button--text:hover:not(.button--disabled) {

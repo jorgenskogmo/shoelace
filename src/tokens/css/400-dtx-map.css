@@ -44,6 +44,7 @@
   /* buttons */
   --klik-button-shadow: var(--dt-global-klikui-shadows-button);
   --klik-button-outline-background-hover: var(--dt-global-klik-color-slate-50);
+  --klik-button-outline-border: var(--dt-global-klikui-border-2px);
 
   --klik-button-font-size-small: var(--dt-global-klikui-fontsize-medium);
   --klik-button-font-size-medium: var(--dt-global-klikui-fontsize-medium);
